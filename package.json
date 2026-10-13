@@ -12,7 +12,7 @@
     "check-size": "node scripts/check-size.mjs"
   },
   "dependencies": {
-    "@astrojs/react": "^4.2.2",
+    "@astrojs/react": "^7.0.1",
     "@astrojs/sitemap": "^3.2.1",
     "@codemirror/lang-xml": "^6.1.0",
     "@codemirror/state": "^6.4.1",
