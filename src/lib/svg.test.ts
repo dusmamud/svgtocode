@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import {
   SAMPLE_SVG,
   encodeSvgDataUri,
+  getOutput,
   getSvgStats,
   hasUnsafeSvg,
   minifySvg,
@@ -9,8 +10,13 @@ import {
   prettifyXml,
   sanitizeSvg,
   svgToBase64,
+  svgToCssMask,
   svgToJsx,
   svgToReactComponent,
+  svgToReactNative,
+  svgToSprite,
+  svgToSvelte,
+  svgToVue,
   toComponentName,
   validateSvg,
 } from './svg';
@@ -178,4 +184,65 @@ describe('optimizeSvg', () => {
     expect(r.data).toContain('viewBox');
     expect(r.savedPct).toBeGreaterThan(0);
   }, 30000);
+});
+
+describe('new output formats', () => {
+  it('vue wraps markup in <template> and keeps original attributes', () => {
+    const out = svgToVue(SAMPLE_SVG);
+    expect(out.startsWith('<template>')).toBe(true);
+    expect(out.endsWith('</template>')).toBe(true);
+    expect(out).toContain('fill="#ffd43b"');
+    expect(out).toContain('stop-color="#4c6ef5"');
+    const viaGet = getOutput(SAMPLE_SVG, 'vue', 'Sample', 'sample.svg');
+    expect(viaGet.downloadName).toBe('sample.vue');
+  });
+
+  it('svelte outputs the raw markup trimmed', () => {
+    const out = svgToSvelte(SAMPLE_SVG);
+    expect(out).toBe(SAMPLE_SVG.trim());
+    const viaGet = getOutput(SAMPLE_SVG, 'svelte', 'Sample', 'sample.svg');
+    expect(viaGet.downloadName).toBe('sample.svelte');
+  });
+
+  it('rn emits react-native-svg component with used-only imports and no xmlns', () => {
+    const out = svgToReactNative(SAMPLE_SVG, 'Sample');
+    expect(out).toContain("from 'react-native-svg'");
+    expect(out).toContain('<Svg');
+    expect(out).toContain('<Path');
+    expect(out).toContain('<Circle');
+    expect(out).not.toContain('xmlns');
+    expect(out).toContain('{...props}');
+    // import lists exactly the components used in the sample (plus Svg itself)
+    const importLine = out.split('\n').find((l) => l.includes('react-native-svg'))!;
+    expect(importLine).toContain('Svg');
+    expect(importLine).toContain('LinearGradient');
+    expect(importLine).not.toContain('Polygon');
+    expect(importLine).not.toMatch(/\bLine\b/);
+    expect(out).not.toMatch(/<svg[\s>]/);
+    const viaGet = getOutput(SAMPLE_SVG, 'rn', 'Sample', 'sample.svg');
+    expect(viaGet.downloadName).toBe('Sample.native.tsx');
+  });
+
+  it('rn renames only tags, not attribute values', () => {
+    const out = svgToReactNative('<svg><path d="M0 0h10v10z" fill="none"/></svg>', 'Icon');
+    expect(out).toContain('<Path');
+    expect(out).toContain('d="M0 0h10v10z"');
+  });
+
+  it('mask outputs mask-image (incl. -webkit-) with a data URI', () => {
+    const out = svgToCssMask(SAMPLE_SVG);
+    expect(out).toContain('-webkit-mask-image: url("data:image/svg+xml,');
+    expect(out).toContain('mask-image: url("data:image/svg+xml,');
+    const viaGet = getOutput(SAMPLE_SVG, 'mask', 'Sample', 'sample.svg');
+    expect(viaGet.downloadName).toBe('sample-mask.css');
+  });
+
+  it('sprite emits a symbol with viewBox and a use snippet', () => {
+    const out = svgToSprite(SAMPLE_SVG, 'Sample');
+    expect(out).toContain('<symbol id="sample" viewBox="0 0 240 240">');
+    expect(out).toContain('<use href="#sample"/>');
+    expect(out).toContain('<path');
+    const viaGet = getOutput(SAMPLE_SVG, 'sprite', 'Sample', 'sample.svg');
+    expect(viaGet.downloadName).toBe('sample.sprite.svg');
+  });
 });

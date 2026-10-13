@@ -1,0 +1,31 @@
+---
+import ToolPage from '../components/ToolPage.astro';
+---
+
+<ToolPage
+  slug="svg-to-jsx"
+  format="jsx"
+  title="SVG to JSX Converter — Free Online Tool | VectorForge"
+  description="Convert SVG markup to JSX in seconds. Free online SVG to JSX converter with automatic attribute renaming, style-object conversion and live preview. Runs 100% in your browser."
+  heading="SVG to JSX Converter"
+  intro="Paste any SVG and get clean JSX, ready for your React components. VectorForge renames attributes automatically (class becomes className, stroke-width becomes strokeWidth), converts inline styles to style objects and turns XML comments into JSX comments — instantly, with a live preview. Nothing is uploaded; everything happens in your browser."
+  steps={[
+    'Paste your SVG markup into the editor, or drop an .svg file anywhere on the page.',
+    'The JSX tab is already selected — review the converted output updating live as you type.',
+    'Copy the JSX with one click, or download it as a .jsx file for your project.',
+  ]}
+  faqs={[
+    {
+      q: 'Does this tool upload my SVG to a server?',
+      a: 'No. All conversion runs locally in your browser using JavaScript. Your files never leave your device.',
+    },
+    {
+      q: 'Why do attribute names change in JSX?',
+      a: 'JSX follows JavaScript naming conventions, so hyphenated SVG attributes like stroke-width must become camelCase (strokeWidth) and class becomes className. This converter applies those mappings automatically.',
+    },
+    {
+      q: 'Can I convert multiple SVGs to JSX at once?',
+      a: 'Yes. Drop several files onto the page, switch between them in the batch bar, and download everything as a ZIP with each file converted to JSX.',
+    },
+  ]}
+/>

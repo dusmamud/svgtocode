@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Converter from '../components/Converter';
+import ThemeToggle from '../components/ThemeToggle';
+import { LOCALES, LOCALE_NAMES, getDict, type Dict } from '../i18n/ui';
+import type { OutputFormat } from '../lib/svg';
+
+interface Props {
+  slug: string;
+  format: OutputFormat;
+  title: string;
+  description: string;
+  heading: string;
+  intro: string;
+  steps: [string, string, string];
+  faqs: { q: string; a: string }[];
+}
+
+const { slug, format, title, description, heading, intro, steps, faqs } = Astro.props;
+const locale = 'en';
+const t: Dict = getDict('en');
+const themeLabels = { light: t.themeLight, dark: t.themeDark, system: t.themeSystem, label: t.themeLabel };
+const canonicalUrl = new URL(`/${slug}/`, Astro.site).toString();
+
+const TOOLS = [
+  { slug: 'svg-to-jsx', label: 'SVG → JSX', desc: 'Convert SVG markup to JSX for React' },
+  { slug: 'svg-to-react', label: 'SVG → React', desc: 'Generate a typed React component' },
+  { slug: 'svg-to-base64', label: 'SVG → Base64', desc: 'Unicode-safe Base64 encoder' },
+  { slug: 'svg-to-data-uri', label: 'SVG → Data URI', desc: 'CSS-ready background-image URIs' },
+  { slug: 'svg-optimizer', label: 'SVG Optimizer', desc: 'Shrink SVGs with SVGO, keep the viewBox' },
+  { slug: 'svg-to-png', label: 'SVG → PNG', desc: 'Export PNGs at 1x, 2x and 4x' },
+];
+const others = TOOLS.filter((x) => x.slug !== slug);
+---
+
+<Layout
+  locale={locale}
+  t={t}
+  title={title}
+  description={description}
+  singleLocale
+  canonicalUrl={canonicalUrl}
+  faqJsonLd={faqs}
+>
+  <header class="border-b border-border bg-surface/80 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3">
+      <a href="/" class="flex items-center gap-2.5" aria-label="VectorForge home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="var(--accent)" />
+          <path d="M9 21 L16 8 L23 21" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+          <path d="M12.5 21 h7" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" />
+          <circle cx="16" cy="24.5" r="1.6" fill="var(--accent-ink)" />
+        </svg>
+        <span class="text-lg font-bold tracking-tight">VectorForge</span>
+      </a>
+      <div class="ms-auto flex items-center gap-2">
+        <label class="sr-only" for="locale-select">{t.languageLabel}</label>
+        <select
+          id="locale-select"
+          aria-label={t.languageLabel}
+          class="min-h-[40px] cursor-pointer rounded-full border border-border bg-surface px-3 text-sm font-medium text-text"
+          data-current={locale}
+        >
+          {LOCALES.map((l) => (
+            <option value={l === 'en' ? '/' : `/${l}/`} selected={l === locale}>
+              {LOCALE_NAMES[l]}
+            </option>
+          ))}
+        </select>
+        <ThemeToggle labels={themeLabels} client:load />
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-8">
+    <div class="mb-6 text-center">
+      <h1 class="mx-auto max-w-3xl text-3xl font-bold tracking-tight sm:text-4xl">{heading}</h1>
+      <p class="mx-auto mt-2 max-w-2xl text-muted">{intro}</p>
+    </div>
+
+    <Converter t={t} initialFormat={format} client:load />
+
+    <section class="mx-auto mt-12 max-w-3xl" aria-labelledby="how-heading">
+      <h2 id="how-heading" class="text-xl font-bold">How to use</h2>
+      <ol class="mt-4 space-y-3 text-[15px] leading-relaxed text-muted">
+        {steps.map((s, i) => (
+          <li class="rounded-2xl border border-border bg-surface p-4 shadow-[var(--shadow-soft)]">
+            <span class="me-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-accent-soft text-xs font-bold text-accent">{i + 1}</span>
+            {s}
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="mx-auto mt-12 max-w-3xl" aria-labelledby="faq-heading">
+      <h2 id="faq-heading" class="text-xl font-bold">Frequently asked questions</h2>
+      <div class="mt-4 space-y-3">
+        {faqs.map((f) => (
+          <details class="rounded-2xl border border-border bg-surface p-4 shadow-[var(--shadow-soft)]">
+            <summary class="cursor-pointer text-[15px] font-semibold">{f.q}</summary>
+            <p class="mt-2 text-[15px] leading-relaxed text-muted">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mx-auto mt-12 max-w-6xl" aria-labelledby="tools-heading">
+      <h2 id="tools-heading" class="text-center text-xl font-bold">More SVG tools</h2>
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {others.map((x) => (
+          <a
+            href={`/${x.slug}/`}
+            class="rounded-2xl border border-border bg-surface p-5 shadow-[var(--shadow-soft)] transition-colors hover:border-accent"
+          >
+            <span class="text-[15px] font-semibold">{x.label}</span>
+            <p class="mt-1 text-sm text-muted">{x.desc}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-12 border-t border-border">
+    <div class="mx-auto max-w-6xl px-4 py-8 text-center">
+      <h2 class="text-sm font-semibold">{t.aboutTitle}</h2>
+      <p class="mx-auto mt-2 max-w-2xl text-sm text-muted">{t.footerMade}</p>
+      <nav class="mt-4 flex items-center justify-center gap-5 text-sm" aria-label="footer">
+        <a
+          href="https://github.com/dusmamud/svgtocode"
+          class="text-muted transition-colors hover:text-accent"
+        >
+          GitHub
+        </a>
+        <a href="/privacy" class="text-muted transition-colors hover:text-accent">
+          Privacy
+        </a>
+      </nav>
+    </div>
+  </footer>
+
+  <script is:inline>
+    (function () {
+      var sel = document.getElementById('locale-select');
+      if (sel) {
+        sel.addEventListener('change', function () {
+          window.location.href = sel.value;
+        });
+      }
+    })();
+  </script>
+</Layout>

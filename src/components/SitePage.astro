@@ -11,6 +11,15 @@ interface Props {
 const { locale } = Astro.props;
 const t: Dict = getDict(locale);
 const themeLabels = { light: t.themeLight, dark: t.themeDark, system: t.themeSystem, label: t.themeLabel };
+
+const TOOLS = [
+  { slug: 'svg-to-jsx', label: 'SVG → JSX', desc: 'Convert SVG markup to JSX for React' },
+  { slug: 'svg-to-react', label: 'SVG → React', desc: 'Generate a typed React component' },
+  { slug: 'svg-to-base64', label: 'SVG → Base64', desc: 'Unicode-safe Base64 encoder' },
+  { slug: 'svg-to-data-uri', label: 'SVG → Data URI', desc: 'CSS-ready background-image URIs' },
+  { slug: 'svg-optimizer', label: 'SVG Optimizer', desc: 'Shrink SVGs with SVGO' },
+  { slug: 'svg-to-png', label: 'SVG → PNG', desc: 'Export PNGs at 1x, 2x and 4x' },
+];
 ---
 
 <Layout locale={locale} t={t}>
@@ -51,6 +60,21 @@ const themeLabels = { light: t.themeLight, dark: t.themeDark, system: t.themeSys
     </div>
 
     <Converter t={t} client:load />
+
+    <section class="mx-auto mt-12 max-w-6xl" aria-labelledby="tools-heading">
+      <h2 id="tools-heading" class="text-center text-xl font-bold">SVG Tools</h2>
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {TOOLS.map((x) => (
+          <a
+            href={`/${x.slug}/`}
+            class="rounded-2xl border border-border bg-surface p-5 shadow-[var(--shadow-soft)] transition-colors hover:border-accent"
+          >
+            <span class="text-[15px] font-semibold">{x.label}</span>
+            <p class="mt-1 text-sm text-muted">{x.desc}</p>
+          </a>
+        ))}
+      </div>
+    </section>
 
     <section class="mx-auto mt-12 max-w-3xl" aria-labelledby="how-heading">
       <h2 id="how-heading" class="text-xl font-bold">{t.howTitle}</h2>

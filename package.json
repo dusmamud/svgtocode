@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "typecheck": "astro check",
-    "test": "vitest run"
+    "test": "vitest run",
+    "check-size": "node scripts/check-size.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.2",
@@ -19,6 +20,7 @@
     "@phosphor-icons/react": "^2.1.7",
     "astro": "^5.10.0",
     "codemirror": "^6.0.1",
+    "jszip": "^3.10.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "svgo": "^3.3.2",
@@ -27,6 +29,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
     "@tailwindcss/vite": "^4.1.11",
+    "@types/jszip": "^3.4.0",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "jsdom": "^30.1.2",

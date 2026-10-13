@@ -1,0 +1,31 @@
+---
+import ToolPage from '../components/ToolPage.astro';
+---
+
+<ToolPage
+  slug="svg-to-react"
+  format="component"
+  title="SVG to React Component Converter — Free Online | VectorForge"
+  description="Turn any SVG into a typed React (.tsx) component instantly. Free SVG to React component converter with props support, clean output and live preview."
+  heading="SVG to React Component Converter"
+  intro="Get a production-ready TypeScript React component from any SVG. The generated component accepts standard SVG props, spreads them onto the root element and strips the unnecessary xmlns declaration that triggers React warnings — ready to drop straight into your codebase."
+  steps={[
+    'Paste your SVG markup into the editor, or drop an .svg file anywhere on the page.',
+    'The React Component tab is already selected — the component name is derived from your file name.',
+    'Copy the .tsx code with one click, or download it and import it like any other component.',
+  ]}
+  faqs={[
+    {
+      q: 'How do I use the generated component?',
+      a: 'Import it like any component and pass standard SVG props, for example <SampleIcon width={24} height={24} fill="currentColor" />. Props spread onto the root element.',
+    },
+    {
+      q: 'Why is xmlns removed from the output?',
+      a: 'React handles SVG namespaces itself; keeping xmlns causes a console warning, so the converter strips it from the root element.',
+    },
+    {
+      q: 'Does this work with React Native?',
+      a: 'This output targets web React. For React Native, switch to the React Native tab to get a react-native-svg component instead.',
+    },
+  ]}
+/>

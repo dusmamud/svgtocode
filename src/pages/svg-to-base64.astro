@@ -1,0 +1,31 @@
+---
+import ToolPage from '../components/ToolPage.astro';
+---
+
+<ToolPage
+  slug="svg-to-base64"
+  format="base64"
+  title="SVG to Base64 Converter — Free Online Encoder | VectorForge"
+  description="Encode SVG as Base64 online. Free SVG to Base64 converter with Unicode-safe encoding, live preview and one-click copy."
+  heading="SVG to Base64 Converter"
+  intro="Base64-encode any SVG for places where raw markup won't fit — CSS files, JSON configs or API payloads. Encoding is Unicode-safe (Devanagari, emoji and CJK text survive the round-trip), and the output updates live as you edit the source."
+  steps={[
+    'Paste your SVG markup into the editor, or drop an .svg file anywhere on the page.',
+    'The Base64 tab is already selected — the encoded string appears in the output pane instantly.',
+    'Copy the Base64 string with one click, or download it as a .txt file.',
+  ]}
+  faqs={[
+    {
+      q: 'Is Base64 output larger than the original SVG?',
+      a: 'Yes — Base64 adds roughly 33% overhead. If size matters, prefer a percent-encoded data URI (the CSS Data-URI tab) for CSS, which is usually smaller for SVG.',
+    },
+    {
+      q: 'Why does my Base64 output end with padding characters (=)?',
+      a: 'Padding is part of the Base64 specification and decoders expect it. Keep it in the output.',
+    },
+    {
+      q: 'Can Base64 handle Unicode text inside my SVG?',
+      a: 'Yes. This tool encodes as UTF-8 first, so non-Latin text and emoji round-trip correctly instead of corrupting.',
+    },
+  ]}
+/>

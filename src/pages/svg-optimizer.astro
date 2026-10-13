@@ -1,0 +1,31 @@
+---
+import ToolPage from '../components/ToolPage.astro';
+---
+
+<ToolPage
+  slug="svg-optimizer"
+  format="raw"
+  title="SVG Optimizer — Free Online SVGO Tool | VectorForge"
+  description="Optimize SVG files online with SVGO. Free SVG optimizer that shrinks file size while preserving the viewBox and visual quality."
+  heading="SVG Optimizer"
+  intro="Shrink SVG files without changing how they look. VectorForge runs SVGO multipass optimization right in your browser — and deliberately preserves the viewBox, so responsive scaling keeps working after optimization. You see exactly how many bytes and what percentage you saved."
+  steps={[
+    'Paste your SVG markup into the editor, or drop an .svg file anywhere on the page.',
+    'Press the Optimize button in the toolbar — the editor updates with the minified result.',
+    'Check the saved-bytes notice, then copy or download the optimized SVG.',
+  ]}
+  faqs={[
+    {
+      q: 'Does optimization change how my SVG looks?',
+      a: 'No. SVGO only removes redundancy — metadata, excess precision, whitespace. Use the live preview to verify the result renders identically.',
+    },
+    {
+      q: 'Why do you keep the viewBox?',
+      a: 'Some optimizers drop the viewBox when width and height are present, which silently breaks responsive scaling. This tool forces viewBox preservation.',
+    },
+    {
+      q: 'Can I get my original SVG back after optimizing?',
+      a: 'Yes — just paste or re-drop the original file. Nothing is overwritten unless you copy or download the optimized result.',
+    },
+  ]}
+/>

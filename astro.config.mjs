@@ -9,10 +9,20 @@ export const LOCALES = [
 ];
 
 // NOTE: this list mirrors FULLY_TRANSLATED in src/i18n/ui.ts.
-// Only fully translated locales (en, hi) get hreflang alternates and sitemap
-// entries; the other 20 locale routes still build and work, but are
+// Only fully translated locales get hreflang alternates and sitemap
+// entries; the other 14 locale routes still build and work, but are
 // de-indexed (noindex meta in Layout.astro) until their translations land.
-const FULLY_TRANSLATED = ['en', 'hi'];
+const FULLY_TRANSLATED = ['en', 'hi', 'es', 'pt', 'fr', 'de', 'id', 'ja'];
+
+// Dedicated English landing pages (each preselects an output format).
+const TOOL_SLUGS = [
+  'svg-to-jsx',
+  'svg-to-react',
+  'svg-to-base64',
+  'svg-to-data-uri',
+  'svg-optimizer',
+  'svg-to-png',
+];
 
 export default defineConfig({
   site: 'https://svgtocode.dusyn.in',
@@ -26,7 +36,11 @@ export default defineConfig({
       },
       filter: (page) => {
         const path = new URL(page).pathname;
-        return path === '/' || path === '/hi/';
+        if (path === '/') return true;
+        const m = path.match(/^\/([a-z0-9-]+)\/$/);
+        if (!m) return false;
+        const seg = m[1];
+        return (FULLY_TRANSLATED.includes(seg) && seg !== 'en') || TOOL_SLUGS.includes(seg);
       },
     }),
   ],

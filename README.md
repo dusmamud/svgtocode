@@ -41,7 +41,7 @@ Requires Node 20+ (tested on Node 24).
 22 locales configured: `en` (default, prefix-less), `hi`, `es`, `fr`, `de`, `pt`, `ru`,
 `ja`, `ko`, `zh-cn`, `ar`, `bn`, `ur`, `ta`, `te`, `mr`, `id`, `tr`, `it`, `nl`, `pl`, `vi`.
 
-- **Full native UI translations: `en` and `hi`.**
+- **Full native UI translations (8/22): `en`, `hi`, `es`, `pt`, `fr`, `de`, `id`, `ja`.**
 - All other locales are **scaffolded**: each gets its own static route, correct
   `<html lang>` (+ `dir="rtl"` for `ar`/`ur`), canonical, and English-fallback
   `<title>`/meta description — but until translated they are excluded from

@@ -384,7 +384,140 @@ export function svgToBase64(code: string): string {
   return btoa(unescape(encodeURIComponent(code)));
 }
 
-export type OutputFormat = 'raw' | 'jsx' | 'component' | 'img' | 'css' | 'base64';
+/** Build a Vue SFC snippet: the raw SVG markup inside a <template>. */
+export function svgToVue(code: string): string {
+  const inner = code
+    .trim()
+    .split('\n')
+    .map((l) => `  ${l}`)
+    .join('\n');
+  return `<template>\n${inner}\n</template>`;
+}
+
+/** Build a Svelte component file content (raw SVG markup). */
+export function svgToSvelte(code: string): string {
+  return code.trim();
+}
+
+/** React Native (react-native-svg) element rename map. */
+const RN_TAG_MAP: Record<string, string> = {
+  svg: 'Svg',
+  circle: 'Circle',
+  ellipse: 'Ellipse',
+  rect: 'Rect',
+  path: 'Path',
+  line: 'Line',
+  polyline: 'Polyline',
+  polygon: 'Polygon',
+  g: 'G',
+  defs: 'Defs',
+  linearGradient: 'LinearGradient',
+  radialGradient: 'RadialGradient',
+  stop: 'Stop',
+  text: 'Text',
+  tspan: 'TSpan',
+  clipPath: 'ClipPath',
+  mask: 'Mask',
+  image: 'Image',
+};
+
+/** Convert raw SVG to a react-native-svg component. */
+export function svgToReactNative(code: string, componentName: string): string {
+  let inner = svgToJsx(code.trim());
+  // Drop xmlns declarations — invalid/ignored in react-native-svg.
+  inner = inner.replace(/\sxmlns(:\w+)?="[^"]*"/g, '');
+  // Rename only actual tags (<tag, </tag, <tag/>), never attribute values.
+  const used = new Set<string>();
+  for (const [tag, comp] of Object.entries(RN_TAG_MAP)) {
+    const openTag = new RegExp(`<${tag}(?=[\\s/>])`);
+    const closeTag = new RegExp(`</${tag}>`);
+    if (openTag.test(inner) || closeTag.test(inner)) {
+      used.add(comp);
+      inner = inner.replace(new RegExp(`<${tag}(?=[\\s/>])`, 'g'), `<${comp}`);
+      inner = inner.replace(new RegExp(`</${tag}>`, 'g'), `</${comp}>`);
+    }
+  }
+  const others = [...used].filter((c) => c !== 'Svg').sort();
+  const importStmt =
+    others.length === 0
+      ? `import Svg from 'react-native-svg';`
+      : `import Svg, { ${others.join(', ')} } from 'react-native-svg';`;
+  // Root <Svg ...> accepts props.
+  inner = inner.replace(/^<Svg[^>]*>/, (match) =>
+    match.endsWith('/>') ? match.replace(/\/>$/, ' {...props} />') : match.replace(/>$/, ' {...props}>'),
+  );
+  return [
+    importStmt,
+    ``,
+    `export default function ${componentName}(props: any) {`,
+    `  return (`,
+    ...inner.split('\n').map((l) => `    ${l}`),
+    `  );`,
+    `}`,
+    ``,
+  ].join('\n');
+}
+
+/** Build a CSS mask-image snippet (with -webkit- prefix). */
+export function svgToCssMask(code: string): string {
+  const uri = encodeSvgDataUri(minifySvg(code));
+  return (
+    `.icon {\n` +
+    `  -webkit-mask-image: url("${uri}");\n` +
+    `  mask-image: url("${uri}");\n` +
+    `  -webkit-mask-repeat: no-repeat;\n` +
+    `  mask-repeat: no-repeat;\n` +
+    `  -webkit-mask-size: contain;\n` +
+    `  mask-size: contain;\n` +
+    `}`
+  );
+}
+
+/** Turn a PascalCase component name into a kebab-case id. */
+function toKebab(name: string): string {
+  return name
+    .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
+    .replace(/[\s_]+/g, '-')
+    .replace(/[^a-zA-Z0-9-]/g, '')
+    .toLowerCase();
+}
+
+/** Build an SVG sprite (<symbol>) + usage snippet. */
+export function svgToSprite(code: string, componentName: string): string {
+  const v = validateSvg(code);
+  const el = v.valid ? v.svgElement : null;
+  const viewBox = el?.getAttribute('viewBox');
+  const vb = viewBox ? ` viewBox="${viewBox}"` : '';
+  const inner = el ? el.innerHTML.trim() : code.trim();
+  const id = toKebab(componentName) || 'icon';
+  const indented = inner
+    .split('\n')
+    .map((l) => `    ${l}`)
+    .join('\n');
+  return [
+    '<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">',
+    `  <symbol id="${id}"${vb}>`,
+    indented,
+    '  </symbol>',
+    '</svg>',
+    '',
+    '<!-- Usage -->',
+    `<svg class="icon" aria-hidden="true"><use href="#${id}"/></svg>`,
+  ].join('\n');
+}
+
+export type OutputFormat =
+  | 'raw'
+  | 'jsx'
+  | 'component'
+  | 'img'
+  | 'css'
+  | 'base64'
+  | 'vue'
+  | 'svelte'
+  | 'rn'
+  | 'mask'
+  | 'sprite';
 
 /** Get the output text + suggested file name for a format tab. */
 export function getOutput(
@@ -404,6 +537,16 @@ export function getOutput(
       return { text: svgToCssDataUri(code), downloadName: 'icon.css', mime: 'text/css' };
     case 'base64':
       return { text: svgToBase64(code), downloadName: 'icon.base64.txt', mime: 'text/plain' };
+    case 'vue':
+      return { text: svgToVue(code), downloadName: fileName.replace(/\.svg$/i, '.vue') || 'icon.vue', mime: 'text/plain' };
+    case 'svelte':
+      return { text: svgToSvelte(code), downloadName: fileName.replace(/\.svg$/i, '.svelte') || 'icon.svelte', mime: 'text/plain' };
+    case 'rn':
+      return { text: svgToReactNative(code, componentName), downloadName: `${componentName}.native.tsx`, mime: 'text/plain' };
+    case 'mask':
+      return { text: svgToCssMask(code), downloadName: (fileName.replace(/\.svg$/i, '') || 'icon') + '-mask.css', mime: 'text/css' };
+    case 'sprite':
+      return { text: svgToSprite(code, componentName), downloadName: fileName.replace(/\.svg$/i, '.sprite.svg') || 'icon.sprite.svg', mime: 'image/svg+xml' };
     case 'raw':
     default:
       return { text: code, downloadName: fileName || 'image.svg', mime: 'image/svg+xml' };

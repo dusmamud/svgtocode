@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
 import { EditorView, basicSetup } from 'codemirror';
 import { xml } from '@codemirror/lang-xml';
 import { Compartment } from '@codemirror/state';
@@ -35,6 +35,13 @@ import {
   type OutputFormat,
 } from '../lib/svg';
 
+/** Interpolate {placeholders} in a dict template string.
+    (Dict entries must be plain strings: function values can't survive
+    Astro's island-prop serialization — they hydrate as null.) */
+function fill(tpl: string, vars: Record<string, string | number>): string {
+  return Object.entries(vars).reduce((s, [k, v]) => s.replace(`{${k}}`, String(v)), tpl);
+}
+
 /** CodeMirror theme synced with our CSS variables. */
 function buildEditorTheme(dark: boolean) {
   return EditorView.theme(
@@ -69,27 +76,41 @@ type Zoom = 'fit' | 0.5 | 1 | 2;
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
 
-const FORMATS: { id: OutputFormat; key: 'tabRaw' | 'tabJsx' | 'tabComponent' | 'tabImg' | 'tabCss' | 'tabBase64' }[] = [
+const FORMATS: { id: OutputFormat; key: 'tabRaw' | 'tabJsx' | 'tabComponent' | 'tabImg' | 'tabCss' | 'tabBase64' | 'tabVue' | 'tabSvelte' | 'tabRn' | 'tabMask' | 'tabSprite' }[] = [
   { id: 'raw', key: 'tabRaw' },
   { id: 'jsx', key: 'tabJsx' },
   { id: 'component', key: 'tabComponent' },
   { id: 'img', key: 'tabImg' },
   { id: 'css', key: 'tabCss' },
   { id: 'base64', key: 'tabBase64' },
+  { id: 'vue', key: 'tabVue' },
+  { id: 'svelte', key: 'tabSvelte' },
+  { id: 'rn', key: 'tabRn' },
+  { id: 'mask', key: 'tabMask' },
+  { id: 'sprite', key: 'tabSprite' },
 ];
 
-export default function Converter({ t }: { t: Dict }) {
+const VALID_FORMATS: OutputFormat[] = FORMATS.map((f) => f.id);
+const VALID_BGS: BgMode[] = ['checker', 'light', 'white', 'dark', 'custom'];
+const VALID_ZOOMS: Zoom[] = ['fit', 0.5, 1, 2];
+const SETTINGS_KEY = 'vf-settings';
+
+export default function Converter({ t, initialFormat }: { t: Dict; initialFormat?: OutputFormat }) {
   const [code, setCode] = useState(SAMPLE_SVG);
   const [fileName, setFileName] = useState('sample.svg');
-  const [format, setFormat] = useState<OutputFormat>('raw');
+  const [format, setFormat] = useState<OutputFormat>(initialFormat ?? 'raw');
   const [bg, setBg] = useState<BgMode>('checker');
   const [customBg, setCustomBg] = useState('#e3e3e3');
   const [zoom, setZoom] = useState<Zoom>('fit');
+  const [split, setSplit] = useState(50);
+  const [isDesktop, setIsDesktop] = useState(false);
   const [copied, setCopied] = useState(false);
   const [notice, setNotice] = useState<string | null>(null);
   const [optimizing, setOptimizing] = useState(false);
   const [exporting, setExporting] = useState<number | null>(null);
   const [dragActive, setDragActive] = useState(false);
+  const [batch, setBatch] = useState<{ name: string; text: string }[]>([]);
+  const [zipping, setZipping] = useState(false);
 
   const editorHost = useRef<HTMLDivElement>(null);
   const viewRef = useRef<EditorView | null>(null);
@@ -98,13 +119,51 @@ export default function Converter({ t }: { t: Dict }) {
   const fileInput = useRef<HTMLInputElement>(null);
   const previewRef = useRef<HTMLDivElement>(null);
   const dragCounter = useRef(0);
+  const splitWrapRef = useRef<HTMLDivElement>(null);
+  const dragSplit = useRef<{ startX: number; startSplit: number; width: number } | null>(null);
+  const panRef = useRef<HTMLDivElement>(null);
+  const panDrag = useRef<{ x: number; y: number; sl: number; st: number } | null>(null);
   const [mounted, setMounted] = useState(false);
   codeRef.current = code;
 
   /* Mounted only in the browser — SSR renders a lightweight placeholder. */
   useEffect(() => {
     setMounted(true);
+    // Load persisted settings (format, bg, zoom, split). An explicit
+    // initialFormat prop (landing pages) wins over the stored format.
+    try {
+      const raw = localStorage.getItem(SETTINGS_KEY);
+      if (raw) {
+        const s = JSON.parse(raw);
+        if (!initialFormat && VALID_FORMATS.includes(s.format)) setFormat(s.format);
+        if (VALID_BGS.includes(s.bg)) setBg(s.bg);
+        if (VALID_ZOOMS.includes(s.zoom)) setZoom(s.zoom);
+        if (typeof s.split === 'number' && s.split >= 30 && s.split <= 70) setSplit(s.split);
+      }
+    } catch {
+      /* ignore */
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Desktop detection (lg breakpoint) — the split divider only applies on lg.
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 1024px)');
+    const onChange = () => setIsDesktop(mq.matches);
+    onChange();
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
+
+  // Persist settings.
+  useEffect(() => {
+    if (!mounted) return;
+    try {
+      localStorage.setItem(SETTINGS_KEY, JSON.stringify({ format, bg, zoom, split }));
+    } catch {
+      /* ignore */
+    }
+  }, [format, bg, zoom, split, mounted]);
 
   /* ---------- CodeMirror ---------- */
   useEffect(() => {
@@ -194,6 +253,7 @@ export default function Converter({ t }: { t: Dict }) {
       img.style.display = 'block';
       img.style.margin = '0 auto';
       img.style.height = 'auto';
+      img.draggable = false;
       img.style.width = zoom === 'fit' ? '100%' : `${Number(zoom) * 100}%`;
       img.style.maxWidth = zoom === 'fit' ? '100%' : 'none';
       host.appendChild(img);
@@ -241,7 +301,7 @@ export default function Converter({ t }: { t: Dict }) {
       if (!cd) return;
       if (cd.files && cd.files.length > 0) {
         e.preventDefault();
-        readFile(cd.files[0]);
+        readFiles(cd.files);
         return;
       }
       const text = cd.getData('text/plain');
@@ -263,8 +323,9 @@ export default function Converter({ t }: { t: Dict }) {
   /* ---------- file handling ---------- */
   const readFile = (file: File | undefined) => {
     if (!file) return;
+    setBatch([]);
     if (file.size > MAX_FILE_SIZE) {
-      flash(t.fileTooBig(formatBytes(MAX_FILE_SIZE)));
+      flash(fill(t.fileTooBig, { max: formatBytes(MAX_FILE_SIZE) }));
       return;
     }
     const reader = new FileReader();
@@ -275,6 +336,124 @@ export default function Converter({ t }: { t: Dict }) {
       setNotice(null);
     };
     reader.readAsText(file);
+  };
+
+  /* Read multiple files (batch mode). Single file → same flow as readFile. */
+  const readFiles = (files: FileList | File[] | undefined | null) => {
+    if (!files) return;
+    const list = Array.from(files);
+    if (list.length <= 1) {
+      readFile(list[0]);
+      return;
+    }
+    const items: { name: string; text: string }[] = [];
+    let pending = list.length;
+    const finish = () => {
+      if (items.length > 0) {
+        setBatch(items);
+        writeEditor(items[0].text);
+        setFileName(items[0].name);
+        setNotice(null);
+      } else {
+        setBatch([]);
+      }
+    };
+    for (const file of list) {
+      if (file.size > MAX_FILE_SIZE) {
+        flash(fill(t.fileTooBig, { max: formatBytes(MAX_FILE_SIZE) }));
+        pending -= 1;
+        if (pending === 0) finish();
+        continue;
+      }
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        items.push({ name: file.name || 'image.svg', text: String(e.target?.result ?? '') });
+        pending -= 1;
+        if (pending === 0) finish();
+      };
+      reader.onerror = () => {
+        pending -= 1;
+        if (pending === 0) finish();
+      };
+      reader.readAsText(file);
+    }
+  };
+
+  /* Download every batch file converted with the current format as a ZIP. */
+  const doBatchZip = async () => {
+    if (batch.length === 0 || zipping) return;
+    setZipping(true);
+    try {
+      const { default: JSZip } = await import('jszip');
+      const zip = new JSZip();
+      let added = 0;
+      for (const item of batch) {
+        if (!validateSvg(item.text).valid) continue;
+        const out = getOutput(item.text, format, toComponentName(item.name), item.name);
+        zip.file(out.downloadName, out.text);
+        added += 1;
+      }
+      if (added === 0) {
+        flash(t.invalidSvg);
+        return;
+      }
+      const blob = await zip.generateAsync({ type: 'blob' });
+      downloadBlob(blob, 'vectorforge-batch.zip');
+    } catch {
+      flash(t.zipFailed);
+    } finally {
+      setZipping(false);
+    }
+  };
+
+  /* Split-pane drag divider (lg screens only). */
+  const onSplitDown = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (e.button !== 0) return;
+    const el = splitWrapRef.current;
+    if (!el) return;
+    try {
+      (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+    } catch {
+      /* synthetic events may have no active pointer; drag still works */
+    }
+    dragSplit.current = { startX: e.clientX, startSplit: split, width: el.getBoundingClientRect().width };
+    document.body.style.userSelect = 'none';
+  };
+  const onSplitMove = (e: ReactPointerEvent<HTMLDivElement>) => {
+    const d = dragSplit.current;
+    if (!d) return;
+    const pct = d.startSplit + ((e.clientX - d.startX) / d.width) * 100;
+    setSplit(Math.min(70, Math.max(30, pct)));
+  };
+  const onSplitUp = () => {
+    dragSplit.current = null;
+    document.body.style.userSelect = '';
+  };
+
+  /* Grab-to-scroll on the preview container. */
+  const onPanDown = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (e.button !== 0 || !panRef.current) return;
+    try {
+      (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+    } catch {
+      /* synthetic events may have no active pointer; pan still works */
+    }
+    panDrag.current = {
+      x: e.clientX,
+      y: e.clientY,
+      sl: panRef.current.scrollLeft,
+      st: panRef.current.scrollTop,
+    };
+  };
+  const onPanMove = (e: ReactPointerEvent<HTMLDivElement>) => {
+    const d = panDrag.current;
+    const el = panRef.current;
+    if (!d || !el) return;
+    el.scrollLeft = d.sl - (e.clientX - d.x);
+    el.scrollTop = d.st - (e.clientY - d.y);
+  };
+  const onPanUp = () => {
+    panDrag.current = null;
   };
 
   /* ---------- actions ---------- */
@@ -323,7 +502,7 @@ export default function Converter({ t }: { t: Dict }) {
     try {
       const r = await optimizeSvg(code);
       writeEditor(r.data);
-      flash(t.optimizedSaved(formatBytes(r.before), formatBytes(r.after), r.savedPct));
+      flash(fill(t.optimizedSaved, { before: formatBytes(r.before), after: formatBytes(r.after), pct: r.savedPct }));
     } catch {
       flash(t.optimizeFailed);
     } finally {
@@ -362,7 +541,7 @@ export default function Converter({ t }: { t: Dict }) {
         e.preventDefault();
         dragCounter.current = 0;
         setDragActive(false);
-        readFile(e.dataTransfer.files?.[0]);
+        readFiles(e.dataTransfer.files);
       }}
     >
       {dragActive && (
@@ -380,9 +559,10 @@ export default function Converter({ t }: { t: Dict }) {
           ref={fileInput}
           type="file"
           accept="image/svg+xml,.svg"
+          multiple
           className="sr-only"
           aria-label={t.upload}
-          onChange={(e) => readFile(e.target.files?.[0] ?? undefined)}
+          onChange={(e) => readFiles(e.target.files)}
         />
         <button className={`${btn} bg-accent !border-transparent text-accent-ink hover:bg-accent-hover`} onClick={() => fileInput.current?.click()}>
           <UploadSimple size={18} weight="bold" /> {t.upload}
@@ -413,14 +593,69 @@ export default function Converter({ t }: { t: Dict }) {
         )}
       </div>
 
+      {/* Batch bar — shown when more than one file was loaded. */}
+      {batch.length > 1 && (
+        <div className="mb-4 flex flex-wrap items-center gap-2 rounded-2xl border border-border bg-surface px-4 py-2.5" role="group" aria-label={fill(t.batchFiles, { n: batch.length })}>
+          <span className="text-sm font-medium text-muted">{fill(t.batchFiles, { n: batch.length })}</span>
+          <div className="flex max-w-full flex-wrap items-center gap-1.5">
+            {batch.map((b, i) => (
+              <button
+                key={`${i}-${b.name}`}
+                onClick={() => {
+                  writeEditor(b.text);
+                  setFileName(b.name);
+                  setNotice(null);
+                }}
+                title={b.name}
+                aria-label={b.name}
+                className={`max-w-[160px] truncate rounded-full border px-3 py-1 text-xs font-medium transition-colors ${
+                  b.name === fileName
+                    ? 'border-accent bg-accent-soft text-accent'
+                    : 'border-border text-muted hover:text-text'
+                }`}
+              >
+                {b.name}
+              </button>
+            ))}
+          </div>
+          <div className="ms-auto flex items-center gap-2">
+            <button className={`${btn}`} onClick={doBatchZip} disabled={zipping}>
+              <DownloadSimple size={18} weight="bold" /> {zipping ? '…' : t.batchDownload}
+            </button>
+            <button className={`${btn}`} onClick={() => setBatch([])} aria-label={t.clear} title={t.clear}>
+              <Trash size={18} weight="bold" />
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Editor + Preview */}
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div
+        ref={splitWrapRef}
+        className="grid gap-4 lg:gap-3"
+        style={isDesktop ? { gridTemplateColumns: `${split}% 14px 1fr` } : undefined}
+      >
         <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-soft)]">
           <div className="flex items-center justify-between border-b border-border px-4 py-2.5">
             <h2 className="text-sm font-semibold">{t.editorLabel}</h2>
             <span className="truncate text-xs text-muted" title={fileName}>{fileName}</span>
           </div>
           <div ref={editorHost} dir="ltr" className="h-[380px] sm:h-[440px]" aria-label={t.editorLabel} />
+        </div>
+
+        {/* Drag handle — desktop (lg) only; hidden below lg so mobile stacks unchanged. */}
+        <div
+          className="hidden select-none items-center justify-center lg:flex"
+          role="separator"
+          aria-orientation="vertical"
+          aria-label="Resize editor and preview"
+          style={{ cursor: 'col-resize' }}
+          onPointerDown={onSplitDown}
+          onPointerMove={onSplitMove}
+          onPointerUp={onSplitUp}
+          onPointerCancel={onSplitUp}
+        >
+          <div className="h-20 w-1.5 rounded-full bg-border" />
         </div>
 
         <div className="flex flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-soft)]">
@@ -474,7 +709,15 @@ export default function Converter({ t }: { t: Dict }) {
               />
             )}
           </div>
-          <div className={`checkerboard relative flex-1 overflow-auto p-6 ${bg === 'checker' ? '' : ''}`} style={previewStyle}>
+          <div
+            ref={panRef}
+            className={`checkerboard relative flex-1 cursor-grab overflow-auto p-6 active:cursor-grabbing ${bg === 'checker' ? '' : ''}`}
+            style={previewStyle}
+            onPointerDown={onPanDown}
+            onPointerMove={onPanMove}
+            onPointerUp={onPanUp}
+            onPointerCancel={onPanUp}
+          >
             {validation.valid ? (
               <div ref={previewRef} className="mx-auto max-w-full" />
             ) : (

@@ -1,0 +1,31 @@
+---
+import ToolPage from '../components/ToolPage.astro';
+---
+
+<ToolPage
+  slug="svg-to-png"
+  format="raw"
+  title="SVG to PNG Converter — Free 1x/2x/4x Export | VectorForge"
+  description="Convert SVG to PNG at 1x, 2x and 4x resolution online. Free, unlimited, in-browser SVG to PNG converter with live preview."
+  heading="SVG to PNG Converter"
+  intro="Export crisp PNGs from any SVG at 1x, 2x or 4x scale — perfect for favicons, app icons and social images. If the SVG lacks explicit dimensions, the viewBox is used automatically, and transparency is preserved."
+  steps={[
+    'Paste your SVG markup into the editor, or drop an .svg file anywhere on the page.',
+    'Preview the SVG on any background to verify it before exporting.',
+    'Pick 1x, 2x or 4x from the PNG export buttons and download your raster image.',
+  ]}
+  faqs={[
+    {
+      q: 'What resolutions can I export?',
+      a: '1x, 2x and 4x of the SVG\u2019s natural size, taken from its width/height attributes or its viewBox.',
+    },
+    {
+      q: 'Is transparency preserved in the PNG?',
+      a: 'Yes — the exported PNG keeps the SVG\u2019s alpha channel.',
+    },
+    {
+      q: 'Why does my PNG look different from the preview?',
+      a: 'External fonts or linked images referenced inside the SVG can\u2019t be rasterized in the browser. Convert text to outlines for pixel-perfect results.',
+    },
+  ]}
+/>
