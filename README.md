@@ -43,11 +43,13 @@ Requires Node 18+ (tested on Node 24).
 
 - **Full native UI translations: `en` and `hi`.**
 - All other locales are **scaffolded**: each gets its own static route, correct
-  `<html lang>` (+ `dir="rtl"` for `ar`/`ur`), localized `<title>`/meta description,
-  canonical, hreflang (incl. `x-default`), and sitemap entries — but the UI strings
-  fall back to English. See `src/i18n/ui.ts` (`getDict` / `isFullyTranslated`).
+  `<html lang>` (+ `dir="rtl"` for `ar`/`ur`), canonical, and English-fallback
+  `<title>`/meta description — but until translated they are excluded from
+  `hreflang` alternates and the sitemap, and carry `<meta name="robots"
+  content="noindex, follow" />` (see `astro.config.mjs` + `Layout.astro`).
 - To translate a locale, add a dictionary next to `en`/`hi` in `src/i18n/ui.ts`
-  and return it from `getDict`.
+  and return it from `getDict`. Once `isFullyTranslated(locale)` is true, add
+  the locale to the `HREFLANG` map / sitemap `filter` in `astro.config.mjs`.
 
 ## Deploy to Cloudflare Pages
 
@@ -75,8 +77,21 @@ src/
   i18n/ui.ts          # dictionaries (en, hi full; others scaffolded)
   styles/global.css   # Tailwind v4 + design tokens
 public/
-  favicon.svg  robots.txt
+  favicon.svg  robots.txt  _headers   # _headers = security/CSP + cache rules (Cloudflare Pages)
 ```
 
 All conversion logic lives in `src/lib/svg.ts` as pure, framework-free functions —
 easy to unit test or reuse.
+
+## Security
+
+This tool processes **untrusted SVG**. Before rendering the preview, the SVG is
+sanitized (`sanitizeSvg` in `src/lib/svg.ts`): dangerous elements (`<script>`,
+`<foreignObject>`, `on*` handlers, `javascript:` URLs, …) are stripped, and a
+warning is shown when anything was removed. The preview is rendered in an image
+context (`<img>` with a blob URL), so previewed SVG cannot run scripts. **Nothing
+is uploaded anywhere** — everything runs 100% in your browser.
+
+## License
+
+MIT — see [LICENSE](./LICENSE).

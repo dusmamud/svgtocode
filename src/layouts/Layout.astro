@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { LOCALES, LOCALE_NAMES, RTL_LOCALES, type Dict } from '../i18n/ui';
+import { LOCALES, LOCALE_NAMES, RTL_LOCALES, isFullyTranslated, type Dict } from '../i18n/ui';
 
 interface Props {
   locale: string;
@@ -41,10 +41,11 @@ const jsonLd = {
     <title>{t.siteTitle}</title>
     <meta name="description" content={t.siteDescription} />
     <link rel="canonical" href={canonical} />
-    {LOCALES.map((l) => (
+    {LOCALES.filter(isFullyTranslated).map((l) => (
       <link rel="alternate" hreflang={hreflangOf(l)} href={new URL(localePath(l), Astro.site).toString()} />
     ))}
     <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site).toString()} />
+    {!isFullyTranslated(locale) && <meta name="robots" content="noindex, follow" />}
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="VectorForge" />

@@ -8,11 +8,15 @@ export const LOCALES = [
   'ta','te','mr','id','tr','it','nl','pl','vi',
 ];
 
+// NOTE: this list mirrors FULLY_TRANSLATED in src/i18n/ui.ts.
+// Only fully translated locales (en, hi) get hreflang alternates and sitemap
+// entries; the other 20 locale routes still build and work, but are
+// de-indexed (noindex meta in Layout.astro) until their translations land.
+const FULLY_TRANSLATED = ['en', 'hi'];
+
 const HREFLANG = {
-  'en': 'en', 'hi': 'hi', 'es': 'es', 'fr': 'fr', 'de': 'de', 'pt': 'pt',
-  'ru': 'ru', 'ja': 'ja', 'ko': 'ko', 'zh-cn': 'zh-CN', 'ar': 'ar',
-  'bn': 'bn', 'ur': 'ur', 'ta': 'ta', 'te': 'te', 'mr': 'mr', 'id': 'id',
-  'tr': 'tr', 'it': 'it', 'nl': 'nl', 'pl': 'pl', 'vi': 'vi',
+  'en': 'en',
+  'hi': 'hi',
 };
 
 export default defineConfig({
@@ -24,6 +28,10 @@ export default defineConfig({
       i18n: {
         defaultLocale: 'en',
         locales: HREFLANG,
+      },
+      filter: (page) => {
+        const path = new URL(page).pathname;
+        return path === '/' || path === '/hi/';
       },
     }),
   ],

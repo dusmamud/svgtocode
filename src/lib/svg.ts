@@ -139,6 +139,68 @@ export function getSvgStats(code: string): SvgStats {
   };
 }
 
+/** Dangerous element names removed from preview/rendered SVG. */
+const DANGEROUS_ELEMENTS = new Set([
+  'script', 'foreignobject', 'iframe', 'object', 'embed', 'form',
+  'input', 'button', 'textarea', 'select', 'link', 'meta', 'base',
+]);
+
+/** Sanitize untrusted SVG for safe preview: removes dangerous elements,
+ *  event-handler attributes and javascript: URLs. Returns the cleaned
+ *  markup plus whether anything was removed. */
+export function sanitizeSvg(code: string): { clean: string; removed: boolean } {
+  let removed = false;
+  try {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(code, 'image/svg+xml');
+    if (doc.querySelector('parsererror')) return { clean: code, removed: false };
+
+    const els = Array.from(doc.querySelectorAll('*'));
+    for (const el of els) {
+      const name = el.localName ? el.localName.toLowerCase() : '';
+      if (DANGEROUS_ELEMENTS.has(name)) {
+        removed = true;
+        el.remove();
+        continue;
+      }
+      if (name === 'style') {
+        const text = (el.textContent || '').toLowerCase();
+        if (text.includes('expression(') || text.includes('javascript:')) {
+          removed = true;
+          el.remove();
+          continue;
+        }
+      }
+      const attrs = Array.from(el.attributes);
+      for (const attr of attrs) {
+        const aName = attr.name.toLowerCase();
+        if (aName.startsWith('on')) {
+          removed = true;
+          el.removeAttribute(attr.name);
+          continue;
+        }
+        if (aName === 'href' || aName === 'xlink:href') {
+          const v = attr.value.trim().toLowerCase();
+          if (v.startsWith('javascript:') || v.startsWith('vbscript:') || v.startsWith('data:text/html')) {
+            removed = true;
+            el.removeAttribute(attr.name);
+          }
+        }
+      }
+    }
+    const serializer = new XMLSerializer();
+    const root = doc.documentElement;
+    return { clean: serializer.serializeToString(root), removed };
+  } catch {
+    return { clean: code, removed: false };
+  }
+}
+
+/** True when sanitizeSvg would strip something from the code. */
+export function hasUnsafeSvg(code: string): boolean {
+  return sanitizeSvg(code).removed;
+}
+
 export function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
   if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
@@ -195,7 +257,15 @@ export async function optimizeSvg(code: string): Promise<OptimizeResult> {
   let data: string;
   try {
     const { optimize } = await import('svgo/dist/svgo.browser.js');
-    const result = optimize(code, { multipass: true, plugins: ['preset-default'] });
+    const result = optimize(code, {
+      multipass: true,
+      plugins: [
+        {
+          name: 'preset-default',
+          params: { overrides: { removeViewBox: false } },
+        },
+      ],
+    });
     data = result.data;
   } catch {
     // Fallback: strip comments, editor metadata namespaces, collapse whitespace.

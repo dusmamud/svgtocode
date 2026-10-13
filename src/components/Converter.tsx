@@ -23,9 +23,11 @@ import {
   formatBytes,
   getOutput,
   getSvgStats,
+  hasUnsafeSvg,
   minifySvg,
   optimizeSvg,
   prettifyXml,
+  sanitizeSvg,
   svgToPng,
   toComponentName,
   validateSvg,
@@ -165,24 +167,44 @@ export default function Converter({ t }: { t: Dict }) {
   );
 
   /* ---------- preview ---------- */
+  const previewUrl = useRef<string | null>(null);
+
   useEffect(() => {
     const host = previewRef.current;
     if (!host) return;
-    if (validation.valid) {
-      host.innerHTML = code;
-      const svg = host.querySelector('svg');
-      if (svg) {
-        const el = svg as unknown as HTMLElement;
-        el.style.maxWidth = '100%';
-        el.style.height = 'auto';
-        el.style.display = 'block';
-        el.style.margin = '0 auto';
-        el.style.width = zoom === 'fit' ? '100%' : `${zoom * 100}%`;
+    const revoke = () => {
+      if (previewUrl.current) {
+        URL.revokeObjectURL(previewUrl.current);
+        previewUrl.current = null;
       }
-    } else {
-      host.innerHTML = '';
+    };
+    host.innerHTML = '';
+    if (mounted && validation.valid) {
+      const { clean } = sanitizeSvg(code);
+      const blob = new Blob([clean], { type: 'image/svg+xml;charset=utf-8' });
+      revoke();
+      const url = URL.createObjectURL(blob);
+      previewUrl.current = url;
+      const img = document.createElement('img');
+      img.src = url;
+      img.alt = t.previewLabel;
+      img.style.display = 'block';
+      img.style.margin = '0 auto';
+      img.style.height = 'auto';
+      img.style.width = zoom === 'fit' ? '100%' : `${Number(zoom) * 100}%`;
+      img.style.maxWidth = zoom === 'fit' ? '100%' : 'none';
+      host.appendChild(img);
     }
-  }, [code, zoom, validation.valid]);
+    return () => {
+      revoke();
+    };
+  }, [code, zoom, validation.valid, mounted, t.previewLabel]);
+
+  /* ---------- unsafe content warning ---------- */
+  const unsafeStripped = useMemo(
+    () => mounted && validation.valid && hasUnsafeSvg(code),
+    [code, validation.valid, mounted],
+  );
 
   const previewStyle: React.CSSProperties =
     bg === 'checker'
@@ -361,6 +383,11 @@ export default function Converter({ t }: { t: Dict }) {
               ))}
             </div>
           </div>
+          {unsafeStripped && (
+            <div role="status" className="border-b border-amber-500/30 bg-amber-500/10 px-4 py-2 text-xs font-medium text-amber-700 dark:text-amber-400">
+              {t.unsafeStripped}
+            </div>
+          )}
           <div className="flex flex-wrap items-center gap-1.5 px-4 py-2" role="group" aria-label={t.background}>
             <span className="me-1 text-xs text-muted">{t.background}:</span>
             {(
