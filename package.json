@@ -23,7 +23,7 @@
     "jszip": "^3.10.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "svgo": "^3.3.2",
+    "svgo": "^4.1.0",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
