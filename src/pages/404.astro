@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getDict } from '../i18n/ui';
+
+const locale = 'en';
+const t = getDict(locale);
+---
+
+<Layout locale={locale} t={t} noindex>
+  <main class="mx-auto flex min-h-[70vh] max-w-6xl flex-col items-center justify-center px-4 text-center">
+    <a href="/" class="flex items-center gap-2.5" aria-label="VectorForge home">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="var(--accent)" />
+        <path d="M9 21 L16 8 L23 21" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        <path d="M12.5 21 h7" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" />
+        <circle cx="16" cy="24.5" r="1.6" fill="var(--accent-ink)" />
+      </svg>
+      <span class="text-lg font-bold tracking-tight">VectorForge</span>
+    </a>
+    <p class="mt-8 text-7xl font-bold tracking-tight">404</p>
+    <p class="mt-3 text-lg text-muted">This page doesn't exist.</p>
+    <a
+      href="/"
+      class="mt-6 inline-flex min-h-[40px] items-center rounded-full bg-accent px-6 py-2 text-sm font-medium text-accent-ink transition-colors hover:bg-accent-hover"
+    >
+      Back to the converter
+    </a>
+  </main>
+</Layout>

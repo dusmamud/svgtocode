@@ -14,7 +14,7 @@ const themeLabels = { light: t.themeLight, dark: t.themeDark, system: t.themeSys
 ---
 
 <Layout locale={locale} t={t}>
-  <header className="border-b border-border bg-surface/80 backdrop-blur">
+  <header class="border-b border-border bg-surface/80 backdrop-blur">
     <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3">
       <a href={locale === 'en' ? '/' : `/${locale}/`} class="flex items-center gap-2.5" aria-label="VectorForge home">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
@@ -75,6 +75,17 @@ const themeLabels = { light: t.themeLight, dark: t.themeDark, system: t.themeSys
     <div class="mx-auto max-w-6xl px-4 py-8 text-center">
       <h2 class="text-sm font-semibold">{t.aboutTitle}</h2>
       <p class="mx-auto mt-2 max-w-2xl text-sm text-muted">{t.footerMade}</p>
+      <nav class="mt-4 flex items-center justify-center gap-5 text-sm" aria-label="footer">
+        <a
+          href="https://github.com/dusmamud/svgtocode"
+          class="text-muted transition-colors hover:text-accent"
+        >
+          GitHub
+        </a>
+        <a href="/privacy" class="text-muted transition-colors hover:text-accent">
+          Privacy
+        </a>
+      </nav>
     </div>
   </footer>
 

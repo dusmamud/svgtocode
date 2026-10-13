@@ -94,6 +94,8 @@ export const ATTRIBUTE_MAPPING: Record<string, string> = {
 export interface ValidationResult {
   valid: boolean;
   error?: string;
+  /** Human-readable parse detail (e.g. from the parsererror element). */
+  detail?: string;
   svgElement?: SVGSVGElement;
 }
 
@@ -113,7 +115,11 @@ export function validateSvg(code: string): ValidationResult {
   const doc = parser.parseFromString(trimmed, 'image/svg+xml');
   const parserError = doc.querySelector('parsererror');
   if (parserError) {
-    return { valid: false, error: 'parse' };
+    const detail = (parserError.textContent || '')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .slice(0, 140);
+    return { valid: false, error: 'parse', detail: detail || undefined };
   }
   const svg = doc.querySelector('svg');
   if (!svg) {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Sun, Moon, Monitor } from '@phosphor-icons/react';
+import { SunIcon, MoonIcon, MonitorIcon } from '@phosphor-icons/react';
 
 type Theme = 'light' | 'dark' | 'system';
 const KEY = 'vf-theme';
@@ -47,9 +47,9 @@ export default function ThemeToggle({ labels }: { labels: { light: string; dark:
   };
 
   const options: { value: Theme; icon: React.ReactNode; text: string }[] = [
-    { value: 'light', icon: <Sun size={18} weight="bold" />, text: labels.light },
-    { value: 'system', icon: <Monitor size={18} weight="bold" />, text: labels.system },
-    { value: 'dark', icon: <Moon size={18} weight="bold" />, text: labels.dark },
+    { value: 'light', icon: <SunIcon size={18} weight="bold" />, text: labels.light },
+    { value: 'system', icon: <MonitorIcon size={18} weight="bold" />, text: labels.system },
+    { value: 'dark', icon: <MoonIcon size={18} weight="bold" />, text: labels.dark },
   ];
 
   return (

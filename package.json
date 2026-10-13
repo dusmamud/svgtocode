@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "typecheck": "astro check",
+    "test": "vitest run"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.2",
@@ -23,9 +25,15 @@
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.10",
     "@tailwindcss/vite": "^4.1.11",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
-    "typescript": "^5.8.3"
+    "jsdom": "^30.1.2",
+    "typescript": "^5.8.3",
+    "vitest": "^5.0.4"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }

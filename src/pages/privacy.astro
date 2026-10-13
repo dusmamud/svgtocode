@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getDict } from '../i18n/ui';
+
+const locale = 'en';
+const t = getDict(locale);
+---
+
+<Layout locale={locale} t={t} noindex>
+  <header class="border-b border-border bg-surface/80 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3">
+      <a href="/" class="flex items-center gap-2.5" aria-label="VectorForge home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="var(--accent)" />
+          <path d="M9 21 L16 8 L23 21" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+          <path d="M12.5 21 h7" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" />
+          <circle cx="16" cy="24.5" r="1.6" fill="var(--accent-ink)" />
+        </svg>
+        <span class="text-lg font-bold tracking-tight">VectorForge</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-3xl px-4 py-12">
+    <h1 class="text-3xl font-bold tracking-tight">Privacy Policy</h1>
+    <p class="mt-2 text-muted">Last updated: October 2026</p>
+
+    <section class="mt-8 space-y-6 text-[15px] leading-relaxed">
+      <div>
+        <h2 class="text-lg font-semibold">Runs entirely in your browser</h2>
+        <p class="mt-2 text-muted">
+          VectorForge processes everything on your device. Files you upload, code
+          you paste or edit, and everything the tool generates stay in your
+          browser — nothing is uploaded to any server, and no conversion work
+          happens anywhere but your own machine.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold">What is stored locally</h2>
+        <p class="mt-2 text-muted">
+          The only thing VectorForge saves is your theme preference (light, dark,
+          or system), kept in your browser's local storage so the site looks
+          right when you come back. It is never sent anywhere.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold">Analytics</h2>
+        <p class="mt-2 text-muted">
+          VectorForge currently runs no analytics at all — no cookies, no
+          trackers. If analytics is ever added in the future, it will be
+          cookieless, and this page will say so first.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold">Third-party requests</h2>
+        <p class="mt-2 text-muted">
+          The site loads its interface fonts (Inter, JetBrains Mono) from
+          Google Fonts. Apart from that, it makes no requests to third-party
+          services.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold">Contact</h2>
+        <p class="mt-2 text-muted">
+          Questions about this policy:{' '}
+          <a
+            href="https://github.com/dusmamud/svgtocode"
+            class="text-accent underline-offset-4 hover:underline"
+          >
+            github.com/dusmamud/svgtocode
+          </a>
+        </p>
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -34,7 +34,7 @@ npm run build    # static build -> dist/
 npm run preview  # serve the built site
 ```
 
-Requires Node 18+ (tested on Node 24).
+Requires Node 20+ (tested on Node 24).
 
 ## i18n status
 
@@ -49,7 +49,9 @@ Requires Node 18+ (tested on Node 24).
   content="noindex, follow" />` (see `astro.config.mjs` + `Layout.astro`).
 - To translate a locale, add a dictionary next to `en`/`hi` in `src/i18n/ui.ts`
   and return it from `getDict`. Once `isFullyTranslated(locale)` is true, add
-  the locale to the `HREFLANG` map / sitemap `filter` in `astro.config.mjs`.
+  the locale to `FULLY_TRANSLATED` in `astro.config.mjs` (sitemap + hreflang
+  pick it up automatically) — or move the canonical locale list to a shared
+  module if `astro.config.mjs` and `ui.ts` drift.
 
 ## Deploy to Cloudflare Pages
 

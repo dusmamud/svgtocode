@@ -14,20 +14,15 @@ export const LOCALES = [
 // de-indexed (noindex meta in Layout.astro) until their translations land.
 const FULLY_TRANSLATED = ['en', 'hi'];
 
-const HREFLANG = {
-  'en': 'en',
-  'hi': 'hi',
-};
-
 export default defineConfig({
-  site: 'https://vectorforge.dev',
+  site: 'https://svgtocode.dusyn.in',
   output: 'static',
   integrations: [
     react(),
     sitemap({
       i18n: {
         defaultLocale: 'en',
-        locales: HREFLANG,
+        locales: Object.fromEntries(FULLY_TRANSLATED.map((l) => [l, l])),
       },
       filter: (page) => {
         const path = new URL(page).pathname;

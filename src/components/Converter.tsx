@@ -11,6 +11,7 @@ import {
   ArrowsIn,
   Copy,
   Check,
+  ClipboardText,
   DownloadSimple,
   Image as ImageIcon,
   X,
@@ -65,6 +66,8 @@ function buildEditorTheme(dark: boolean) {
 
 type BgMode = 'checker' | 'light' | 'white' | 'dark' | 'custom';
 type Zoom = 'fit' | 0.5 | 1 | 2;
+
+const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
 
 const FORMATS: { id: OutputFormat; key: 'tabRaw' | 'tabJsx' | 'tabComponent' | 'tabImg' | 'tabCss' | 'tabBase64' }[] = [
   { id: 'raw', key: 'tabRaw' },
@@ -206,6 +209,52 @@ export default function Converter({ t }: { t: Dict }) {
     [code, validation.valid, mounted],
   );
 
+  /* ---------- paste support ---------- */
+  const applyPastedText = (text: string) => {
+    if (!text.includes('<svg')) return false;
+    writeEditor(text);
+    setFileName('pasted.svg');
+    setNotice(null);
+    return true;
+  };
+
+  const doPaste = async () => {
+    try {
+      const text = await navigator.clipboard.readText();
+      if (!applyPastedText(text)) flash(t.pasteFailed);
+    } catch {
+      flash(t.pasteFailed);
+    }
+  };
+
+  useEffect(() => {
+    const onPaste = (e: ClipboardEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (
+        target &&
+        (target.closest('input, textarea, select') ||
+          target.closest('.cm-content'))
+      ) {
+        return; // let the editor / inputs handle their own paste
+      }
+      const cd = e.clipboardData;
+      if (!cd) return;
+      if (cd.files && cd.files.length > 0) {
+        e.preventDefault();
+        readFile(cd.files[0]);
+        return;
+      }
+      const text = cd.getData('text/plain');
+      if (text && text.includes('<svg')) {
+        e.preventDefault();
+        applyPastedText(text);
+      }
+    };
+    document.addEventListener('paste', onPaste);
+    return () => document.removeEventListener('paste', onPaste);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const previewStyle: React.CSSProperties =
     bg === 'checker'
       ? {}
@@ -214,6 +263,10 @@ export default function Converter({ t }: { t: Dict }) {
   /* ---------- file handling ---------- */
   const readFile = (file: File | undefined) => {
     if (!file) return;
+    if (file.size > MAX_FILE_SIZE) {
+      flash(t.fileTooBig(formatBytes(MAX_FILE_SIZE)));
+      return;
+    }
     const reader = new FileReader();
     reader.onload = (e) => {
       const text = String(e.target?.result ?? '');
@@ -334,6 +387,9 @@ export default function Converter({ t }: { t: Dict }) {
         <button className={`${btn} bg-accent !border-transparent text-accent-ink hover:bg-accent-hover`} onClick={() => fileInput.current?.click()}>
           <UploadSimple size={18} weight="bold" /> {t.upload}
         </button>
+        <button className={btn} onClick={doPaste} aria-label={t.paste}>
+          <ClipboardText size={18} weight="bold" /> {t.paste}
+        </button>
         <button className={btn} onClick={() => { writeEditor(SAMPLE_SVG); setFileName('sample.svg'); setNotice(null); }}>
           <Sparkle size={18} weight="bold" /> {t.sample}
         </button>
@@ -426,6 +482,11 @@ export default function Converter({ t }: { t: Dict }) {
                 <X size={28} weight="bold" className="text-danger" />
                 <p className="font-semibold text-danger">{t.invalidSvg}</p>
                 <p className="max-w-xs text-sm text-muted">{code.trim() ? t.invalidHint : t.emptyHint}</p>
+                {validation.detail && (
+                  <p dir="ltr" className="max-w-md break-words px-4 font-mono text-xs text-muted/80">
+                    {validation.detail}
+                  </p>
+                )}
               </div>
             )}
           </div>

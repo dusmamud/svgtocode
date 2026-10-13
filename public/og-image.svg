@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="20%" cy="20%" r="60%">
+      <stop offset="0" stop-color="#0b57d0" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#0b57d0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#131314"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g transform="translate(150,238) scale(3)">
+    <rect width="32" height="32" rx="8" fill="#0b57d0"/>
+    <path d="M9 21 L16 8 L23 21" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M12.5 21 h7" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/>
+    <circle cx="16" cy="24.5" r="1.6" fill="#ffffff"/>
+  </g>
+  <text x="272" y="288" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="64" font-weight="700" fill="#ffffff">VectorForge</text>
+  <text x="272" y="344" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="30" fill="#c4c7c5">Convert SVG images to code — and code back to images.</text>
+  <text x="272" y="396" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="24" fill="#7dd3fc">JSX · React · Data URI · Base64 · PNG — free, private, in-browser</text>
+</svg>

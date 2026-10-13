@@ -27,6 +27,10 @@ const en = {
   tagline: 'Convert SVG images to code — and code back to images.',
   hint: 'Upload an SVG, drop it anywhere, or paste code below.',
   upload: 'Upload SVG',
+  paste: 'Paste',
+  pasteFailed:
+    'Paste failed — clipboard access was blocked. Paste with Ctrl+V anywhere on the page instead.',
+  fileTooBig: (max: string) => `File is too large — maximum size is ${max}.`,
   dropHere: 'Drop your SVG file here',
   sample: 'Sample',
   clear: 'Clear',
@@ -86,6 +90,10 @@ const hi: typeof en = {
   tagline: 'SVG इमेज को कोड में बदलें — और कोड को वापस इमेज में।',
   hint: 'SVG अपलोड करें, कहीं भी ड्रॉप करें, या नीचे कोड पेस्ट करें।',
   upload: 'SVG अपलोड करें',
+  paste: 'पेस्ट करें',
+  pasteFailed:
+    'पेस्ट विफल — क्लिपबोर्ड एक्सेस रोक दिया गया। इसके बजाय पेज पर कहीं भी Ctrl+V से पेस्ट करें।',
+  fileTooBig: (max: string) => `फ़ाइल बहुत बड़ी है — अधिकतम आकार ${max} है।`,
   dropHere: 'अपनी SVG फ़ाइल यहाँ ड्रॉप करें',
   sample: 'नमूना',
   clear: 'साफ़ करें',

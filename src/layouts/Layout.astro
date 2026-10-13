@@ -1,15 +1,16 @@
 ---
 import '../styles/global.css';
-import { LOCALES, LOCALE_NAMES, RTL_LOCALES, isFullyTranslated, type Dict } from '../i18n/ui';
+import { LOCALES, RTL_LOCALES, isFullyTranslated, type Dict } from '../i18n/ui';
 
 interface Props {
   locale: string;
   t: Dict;
+  noindex?: boolean;
+  children?: unknown;
 }
 
-const { locale, t } = Astro.props;
+const { locale, t, noindex } = Astro.props;
 const isRtl = RTL_LOCALES.has(locale);
-const site = Astro.site?.toString().replace(/\/$/, '') ?? '';
 
 const localePath = (l: string) => (l === 'en' ? '/' : `/${l}/`);
 const canonical = new URL(localePath(locale), Astro.site).toString();
@@ -45,7 +46,7 @@ const jsonLd = {
       <link rel="alternate" hreflang={hreflangOf(l)} href={new URL(localePath(l), Astro.site).toString()} />
     ))}
     <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site).toString()} />
-    {!isFullyTranslated(locale) && <meta name="robots" content="noindex, follow" />}
+    {!isFullyTranslated(locale) || noindex ? <meta name="robots" content="noindex, follow" /> : null}
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="VectorForge" />
@@ -53,13 +54,20 @@ const jsonLd = {
     <meta property="og:description" content={t.siteDescription} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={hreflangOf(locale).replace('-', '_')} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content={new URL('/og-image.png', Astro.site).toString()} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={t.siteTitle} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={new URL('/og-image.png', Astro.site).toString()} />
     <meta name="twitter:title" content={t.siteTitle} />
     <meta name="twitter:description" content={t.siteDescription} />
 
     <meta name="theme-color" content="#f8f9fa" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#131314" media="(prefers-color-scheme: dark)" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
