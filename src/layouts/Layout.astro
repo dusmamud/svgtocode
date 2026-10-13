@@ -1,0 +1,76 @@
+---
+import '../styles/global.css';
+import { LOCALES, LOCALE_NAMES, RTL_LOCALES, type Dict } from '../i18n/ui';
+
+interface Props {
+  locale: string;
+  t: Dict;
+}
+
+const { locale, t } = Astro.props;
+const isRtl = RTL_LOCALES.has(locale);
+const site = Astro.site?.toString().replace(/\/$/, '') ?? '';
+
+const localePath = (l: string) => (l === 'en' ? '/' : `/${l}/`);
+const canonical = new URL(localePath(locale), Astro.site).toString();
+
+const hreflangMap: Record<string, string> = {
+  'zh-cn': 'zh-CN',
+};
+const hreflangOf = (l: string) => hreflangMap[l] ?? l;
+
+const themeScript = `(function(){try{var s=localStorage.getItem('vf-theme');var d=s==='dark'||(s!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d);}catch(e){}})();`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: 'VectorForge',
+  applicationCategory: 'DesignApplication',
+  operatingSystem: 'Any',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  inLanguage: locale,
+  url: canonical,
+  description: t.siteDescription,
+};
+---
+<!doctype html>
+<html lang={locale} dir={isRtl ? 'rtl' : 'ltr'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{t.siteTitle}</title>
+    <meta name="description" content={t.siteDescription} />
+    <link rel="canonical" href={canonical} />
+    {LOCALES.map((l) => (
+      <link rel="alternate" hreflang={hreflangOf(l)} href={new URL(localePath(l), Astro.site).toString()} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site).toString()} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="VectorForge" />
+    <meta property="og:title" content={t.siteTitle} />
+    <meta property="og:description" content={t.siteDescription} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={hreflangOf(locale).replace('-', '_')} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={t.siteTitle} />
+    <meta name="twitter:description" content={t.siteDescription} />
+
+    <meta name="theme-color" content="#f8f9fa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#131314" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script is:inline set:html={themeScript}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
+  </head>
+  <body class="bg-bg text-text antialiased">
+    <slot />
+  </body>
+</html>

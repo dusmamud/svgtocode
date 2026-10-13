@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+/* Dark variant driven by .dark on <html> (set by the pre-paint theme script) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Material 3 tonal + Fluent 2 borders — light */
+  --bg: #f8f9fa;
+  --surface: #ffffff;
+  --surface-2: #f1f3f4;
+  --surface-3: #e8eaed;
+  --border: #e1e3e6;
+  --border-strong: #c4c7c5;
+  --text: #1f1f1f;
+  --muted: #5f6368;
+  --accent: #0b57d0;
+  --accent-hover: #0842a0;
+  --accent-ink: #ffffff;
+  --accent-soft: #d3e3fd;
+  --success: #146c2e;
+  --danger: #b3261e;
+  --warning: #7a4a00;
+  --code-bg: #f6f8fa;
+  --shadow-soft: 0 1px 2px rgba(60, 64, 67, 0.08), 0 4px 16px rgba(60, 64, 67, 0.1);
+  --shadow-pop: 0 4px 12px rgba(60, 64, 67, 0.15), 0 12px 32px rgba(60, 64, 67, 0.14);
+  --font-ui: "Inter", "Noto Sans", "Noto Sans Devanagari", "Noto Sans Arabic", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", "Noto Sans Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.dark {
+  /* NOT pure black: #131314 with #1e1f20 surfaces */
+  --bg: #131314;
+  --surface: #1e1f20;
+  --surface-2: #28292a;
+  --surface-3: #333537;
+  --border: #3c4043;
+  --border-strong: #5f6368;
+  --text: #e3e3e3;
+  --muted: #9aa0a6;
+  --accent: #a8c7fa;
+  --accent-hover: #c2d7fd;
+  --accent-ink: #062e6f;
+  --accent-soft: #0f2a55;
+  --success: #81c995;
+  --danger: #f28b82;
+  --warning: #fdd663;
+  --code-bg: #1b1c1d;
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(0, 0, 0, 0.35);
+  --shadow-pop: 0 4px 12px rgba(0, 0, 0, 0.5), 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+  --color-code-bg: var(--code-bg);
+  --font-sans: var(--font-ui);
+  --font-mono: var(--font-code);
+}
+
+html {
+  font-family: var(--font-ui);
+  background: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Focus visibility for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* CodeMirror sizing */
+.cm-editor {
+  height: 100%;
+  min-height: 320px;
+  font-family: var(--font-code);
+  font-size: 13px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.cm-scroller {
+  overflow: auto;
+}
+
+/* Checkerboard transparency pattern for the preview */
+.checkerboard {
+  background-image:
+    linear-gradient(45deg, #c8c8c8 25%, transparent 25%),
+    linear-gradient(-45deg, #c8c8c8 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #c8c8c8 75%),
+    linear-gradient(-45deg, transparent 75%, #c8c8c8 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+  background-color: #f0f0f0;
+}
+.dark .checkerboard {
+  background-color: #2a2b2c;
+}
+
+/* Slim scrollbars */
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 8px; border: 2px solid transparent; background-clip: content-box; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+/* Editor must stay LTR even in RTL locales */
+.cm-editor, .cm-editor * { direction: ltr; text-align: left; }

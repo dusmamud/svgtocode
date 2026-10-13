@@ -1,0 +1,11 @@
+---
+import SitePage from '../../components/SitePage.astro';
+import { LOCALES } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return LOCALES.filter((l) => l !== 'en').map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+---
+<SitePage locale={locale} />

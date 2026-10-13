@@ -1,0 +1,31 @@
+{
+  "name": "svg2code-pro",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.2.2",
+    "@astrojs/sitemap": "^3.2.1",
+    "@codemirror/lang-xml": "^6.1.0",
+    "@codemirror/state": "^6.4.1",
+    "@codemirror/view": "^6.36.1",
+    "@phosphor-icons/react": "^2.1.7",
+    "astro": "^5.10.0",
+    "codemirror": "^6.0.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "svgo": "^3.3.2",
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "typescript": "^5.8.3"
+  }
+}

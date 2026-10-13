@@ -1,0 +1,1 @@
+{"compilerOptions":{"jsx":"react-jsx","jsxImportSource":"react","noUnusedLocals":false,"noUnusedParameters":false,"strict":true,"types":["astro/client"]},"extends":"astro/tsconfigs/strict","include":["src/**/*","astro.config.mjs"]}
