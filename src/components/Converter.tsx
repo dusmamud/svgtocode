@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
 import { EditorView, basicSetup } from 'codemirror';
 import { xml } from '@codemirror/lang-xml';
 import { Compartment } from '@codemirror/state';
@@ -9,6 +9,7 @@ import {
   Lightning,
   BracketsCurly,
   ArrowsIn,
+  CaretRight,
   Copy,
   Check,
   ClipboardText,
@@ -95,6 +96,40 @@ const VALID_BGS: BgMode[] = ['checker', 'light', 'white', 'dark', 'custom'];
 const VALID_ZOOMS: Zoom[] = ['fit', 0.5, 1, 2];
 const SETTINGS_KEY = 'vf-settings';
 
+/** Tracks whether a horizontal scroll strip has more content hidden past its end edge. */
+function useMoreIndicator<T extends HTMLElement>() {
+  const ref = useRef<T>(null);
+  const [more, setMore] = useState(false);
+  const update = useCallback(() => {
+    const el = ref.current;
+    if (el) setMore(el.scrollWidth - el.clientWidth - Math.abs(el.scrollLeft) > 4);
+  }, []);
+  useEffect(() => {
+    update();
+    const raf = requestAnimationFrame(update);
+    window.addEventListener('resize', update);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener('resize', update);
+    };
+  }, [update]);
+  return { ref, more, update };
+}
+
+/** Fade + chevron pinned to the end edge of a scroll strip, so users can see it scrolls. */
+function ScrollMore({ show, fromClass }: { show: boolean; fromClass: string }) {
+  return (
+    <div
+      aria-hidden="true"
+      className={`pointer-events-none absolute inset-y-0 end-0 z-10 flex w-12 items-center justify-end bg-gradient-to-l rtl:bg-gradient-to-r ${fromClass} to-transparent pe-1.5 transition-opacity duration-200 sm:hidden ${show ? 'opacity-100' : 'opacity-0'}`}
+    >
+      <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full border border-border bg-surface text-muted shadow-[var(--shadow-soft)]">
+        <CaretRight size={14} weight="bold" className="rtl:-scale-x-100" />
+      </span>
+    </div>
+  );
+}
+
 export default function Converter({ t, initialFormat }: { t: Dict; initialFormat?: OutputFormat }) {
   const [code, setCode] = useState(SAMPLE_SVG);
   const [fileName, setFileName] = useState('sample.svg');
@@ -125,6 +160,9 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
   const panRef = useRef<HTMLDivElement>(null);
   const panDrag = useRef<{ x: number; y: number; sl: number; st: number } | null>(null);
   const tabListRef = useRef<HTMLDivElement>(null);
+  const toolbarMore = useMoreIndicator<HTMLDivElement>();
+  const tabsMore = useMoreIndicator<HTMLDivElement>();
+  const bgMore = useMoreIndicator<HTMLDivElement>();
   const [mounted, setMounted] = useState(false);
   codeRef.current = code;
 
@@ -222,6 +260,10 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
       } catch {
         /* ignore */
       }
+      /* Strips inside a display:none pane measure 0 — refresh their "more" fades now that the pane is visible. */
+      toolbarMore.update();
+      tabsMore.update();
+      bgMore.update();
     });
   };
 
@@ -578,7 +620,12 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
       )}
 
       {/* Toolbar — single scrollable row on mobile, wraps on sm+ */}
-      <div className="scrollbar-none mb-4 flex flex-nowrap items-center gap-2 overflow-x-auto sm:flex-wrap sm:overflow-visible">
+      <div className="relative mb-4">
+        <div
+          ref={toolbarMore.ref}
+          onScroll={toolbarMore.update}
+          className="scrollbar-none flex flex-nowrap items-center gap-2 overflow-x-auto pe-10 sm:flex-wrap sm:overflow-visible sm:pe-0"
+        >
         <input
           ref={fileInput}
           type="file"
@@ -615,6 +662,8 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
             {notice}
           </span>
         )}
+        </div>
+        <ScrollMore show={toolbarMore.more} fromClass="from-[var(--bg)]" />
       </div>
 
       {/* Batch bar — shown when more than one file was loaded. */}
@@ -732,7 +781,14 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
               {t.unsafeStripped}
             </div>
           )}
-          <div className="scrollbar-none flex flex-nowrap items-center gap-1.5 overflow-x-auto px-4 py-2 sm:flex-wrap sm:overflow-visible" role="group" aria-label={t.background}>
+          <div className="relative">
+            <div
+              ref={bgMore.ref}
+              onScroll={bgMore.update}
+              className="scrollbar-none flex flex-nowrap items-center gap-1.5 overflow-x-auto py-2 pe-12 ps-4 sm:flex-wrap sm:overflow-visible sm:pe-4"
+              role="group"
+              aria-label={t.background}
+            >
             <span className="me-1 shrink-0 text-xs text-muted">{t.background}:</span>
             {(
               [
@@ -761,6 +817,8 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
                 className="h-8 w-10 cursor-pointer rounded border border-border bg-transparent p-0.5"
               />
             )}
+            </div>
+            <ScrollMore show={bgMore.more} fromClass="from-[var(--surface)]" />
           </div>
           <div
             ref={panRef}
@@ -791,12 +849,17 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
 
       {/* Output formats — scrollable strip on mobile, wraps on sm+ */}
       <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-soft)]">
-        <div
-          ref={tabListRef}
-          className="scrollbar-none flex flex-nowrap items-center gap-1 overflow-x-auto border-b border-border px-3 py-2 sm:flex-wrap sm:overflow-visible"
-          role="tablist"
-          aria-label="output formats"
-        >
+        <div className="relative">
+          <div
+            ref={(el) => {
+              tabListRef.current = el;
+              tabsMore.ref.current = el;
+            }}
+            onScroll={tabsMore.update}
+            className="scrollbar-none flex flex-nowrap items-center gap-1 overflow-x-auto border-b border-border py-2 pe-12 ps-3 sm:flex-wrap sm:overflow-visible sm:pe-3"
+            role="tablist"
+            aria-label="output formats"
+          >
           {FORMATS.map((f) => (
             <button
               key={f.id}
@@ -832,6 +895,8 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
               ))}
             </div>
           </div>
+          </div>
+          <ScrollMore show={tabsMore.more} fromClass="from-[var(--surface)]" />
         </div>
         <pre
           dir="ltr"
