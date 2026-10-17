@@ -1,14 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getDict } from '../i18n/ui';
+import { getDict, LOCALES, RTL_LOCALES } from '../i18n/ui';
 
 const locale = 'en';
 const t = getDict(locale);
+/* A static 404 page is served for every path, so the visitor's locale is
+   only known from the URL at runtime. Ship the two display strings for all
+   locales and swap them client-side based on the first path segment. */
+const nf = Object.fromEntries(
+  LOCALES.map((l) => {
+    const d = getDict(l);
+    return [l, { text: d.notFoundText, back: d.backToConverter, rtl: RTL_LOCALES.has(l) }];
+  }),
+);
 ---
 
 <Layout locale={locale} t={t} noindex>
   <main class="mx-auto flex min-h-[70vh] max-w-6xl flex-col items-center justify-center px-4 text-center">
-    <a href="/" class="flex items-center gap-2.5" aria-label="VectorForge home">
+    <a id="nf-logo" href="/" class="flex items-center gap-2.5" aria-label={t.brandHome}>
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
         <rect width="32" height="32" rx="8" fill="var(--accent)" />
         <path d="M9 21 L16 8 L23 21" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
@@ -18,12 +27,32 @@ const t = getDict(locale);
       <span class="text-lg font-bold tracking-tight">VectorForge</span>
     </a>
     <p class="mt-8 text-7xl font-bold tracking-tight">404</p>
-    <p class="mt-3 text-lg text-muted">This page doesn't exist.</p>
+    <p id="nf-text" class="mt-3 text-lg text-muted">{t.notFoundText}</p>
     <a
+      id="nf-back"
       href="/"
       class="mt-6 inline-flex min-h-[40px] items-center rounded-full bg-accent px-6 py-2 text-sm font-medium text-accent-ink transition-colors hover:bg-accent-hover"
     >
-      Back to the converter
+      {t.backToConverter}
     </a>
   </main>
+  <script define:vars={{ nf }}>
+    (function () {
+      var seg = location.pathname.split('/').filter(Boolean)[0];
+      if (seg && seg !== 'en' && nf[seg]) {
+        var d = nf[seg];
+        document.documentElement.lang = seg;
+        document.documentElement.dir = d.rtl ? 'rtl' : 'ltr';
+        var txt = document.getElementById('nf-text');
+        var back = document.getElementById('nf-back');
+        var logo = document.getElementById('nf-logo');
+        if (txt) txt.textContent = d.text;
+        if (back) {
+          back.textContent = d.back;
+          back.setAttribute('href', '/' + seg + '/');
+        }
+        if (logo) logo.setAttribute('href', '/' + seg + '/');
+      }
+    })();
+  </script>
 </Layout>

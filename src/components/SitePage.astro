@@ -13,19 +13,19 @@ const t: Dict = getDict(locale);
 const themeLabels = { light: t.themeLight, dark: t.themeDark, system: t.themeSystem, label: t.themeLabel };
 
 const TOOLS = [
-  { slug: 'svg-to-jsx', label: 'SVG → JSX', desc: 'Convert SVG markup to JSX for React' },
-  { slug: 'svg-to-react', label: 'SVG → React', desc: 'Generate a typed React component' },
-  { slug: 'svg-to-base64', label: 'SVG → Base64', desc: 'Unicode-safe Base64 encoder' },
-  { slug: 'svg-to-data-uri', label: 'SVG → Data URI', desc: 'CSS-ready background-image URIs' },
-  { slug: 'svg-optimizer', label: 'SVG Optimizer', desc: 'Shrink SVGs with SVGO' },
-  { slug: 'svg-to-png', label: 'SVG → PNG', desc: 'Export PNGs at 1x, 2x and 4x' },
+  { slug: 'svg-to-jsx', label: 'SVG → JSX', desc: t.toolJsxDesc },
+  { slug: 'svg-to-react', label: 'SVG → React', desc: t.toolReactDesc },
+  { slug: 'svg-to-base64', label: 'SVG → Base64', desc: t.toolBase64Desc },
+  { slug: 'svg-to-data-uri', label: 'SVG → Data URI', desc: t.toolDataUriDesc },
+  { slug: 'svg-optimizer', label: 'SVG Optimizer', desc: t.toolOptimizerDesc },
+  { slug: 'svg-to-png', label: 'SVG → PNG', desc: t.toolPngDesc },
 ];
 ---
 
 <Layout locale={locale} t={t}>
   <header class="border-b border-border bg-surface">
     <div class="mx-auto flex h-[60px] max-w-6xl items-center gap-2 px-4">
-      <a href={locale === 'en' ? '/' : `/${locale}/`} class="flex min-w-0 shrink-0 items-center gap-2.5 rounded-lg transition-opacity hover:opacity-80" aria-label="VectorForge home">
+      <a href={locale === 'en' ? '/' : `/${locale}/`} class="flex min-w-0 shrink-0 items-center gap-2.5 rounded-lg transition-opacity hover:opacity-80" aria-label={t.brandHome}>
         <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
           <rect width="32" height="32" rx="8" fill="var(--accent)" />
           <path d="M9 21 L16 8 L23 21" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
@@ -121,7 +121,7 @@ const TOOLS = [
     </div>
     <div id="mobile-menu" class="fixed inset-0 z-[60] hidden flex-col bg-surface lg:hidden" role="dialog" aria-modal="true">
       <div class="flex h-[60px] shrink-0 items-center gap-2 px-4">
-        <a href={locale === 'en' ? '/' : `/${locale}/`} class="flex min-w-0 shrink-0 items-center gap-2.5 rounded-lg" aria-label="VectorForge home">
+        <a href={locale === 'en' ? '/' : `/${locale}/`} class="flex min-w-0 shrink-0 items-center gap-2.5 rounded-lg" aria-label={t.brandHome}>
           <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
             <rect width="32" height="32" rx="8" fill="var(--accent)" />
             <path d="M9 21 L16 8 L23 21" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
@@ -200,7 +200,7 @@ const TOOLS = [
     <Converter t={t} client:load />
 
     <section class="mx-auto mt-8 max-w-6xl lg:mt-12" aria-labelledby="tools-heading">
-      <h2 id="tools-heading" class="text-center text-xl font-bold">SVG Tools</h2>
+      <h2 id="tools-heading" class="text-center text-xl font-bold">{t.toolsHeading}</h2>
       <div class="mt-4 grid gap-3 sm:grid-cols-2 lg:mt-6 lg:grid-cols-3 lg:gap-4">
         {TOOLS.map((x) => (
           <a

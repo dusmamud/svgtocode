@@ -44,7 +44,7 @@ const others = TOOLS.filter((x) => x.slug !== slug);
 >
   <header class="border-b border-border bg-surface">
     <div class="mx-auto flex h-[60px] max-w-6xl items-center gap-2 px-4">
-      <a href="/" class="flex min-w-0 shrink-0 items-center gap-2.5 rounded-lg transition-opacity hover:opacity-80" aria-label="VectorForge home">
+      <a href="/" class="flex min-w-0 shrink-0 items-center gap-2.5 rounded-lg transition-opacity hover:opacity-80" aria-label={t.brandHome}>
         <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
           <rect width="32" height="32" rx="8" fill="var(--accent)" />
           <path d="M9 21 L16 8 L23 21" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
@@ -141,7 +141,7 @@ const others = TOOLS.filter((x) => x.slug !== slug);
     </div>
     <div id="mobile-menu" class="fixed inset-0 z-[60] hidden flex-col bg-surface lg:hidden" role="dialog" aria-modal="true">
       <div class="flex h-[60px] shrink-0 items-center gap-2 px-4">
-        <a href="/" class="flex min-w-0 shrink-0 items-center gap-2.5 rounded-lg" aria-label="VectorForge home">
+        <a href="/" class="flex min-w-0 shrink-0 items-center gap-2.5 rounded-lg" aria-label={t.brandHome}>
           <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
             <rect width="32" height="32" rx="8" fill="var(--accent)" />
             <path d="M9 21 L16 8 L23 21" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />

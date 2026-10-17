@@ -93,6 +93,19 @@ const en = {
   navHowItWorks: 'How it works',
   navAbout: 'About',
   navPrivacy: 'Privacy',
+  toolsHeading: 'SVG Tools',
+  toolJsxDesc: 'Convert SVG markup to JSX for React',
+  toolReactDesc: 'Generate a typed React component',
+  toolBase64Desc: 'Unicode-safe Base64 encoder',
+  toolDataUriDesc: 'CSS-ready background-image URIs',
+  toolOptimizerDesc: 'Shrink SVGs with SVGO',
+  toolPngDesc: 'Export PNGs at 1x, 2x and 4x',
+  resizeLabel: 'Resize editor and preview',
+  formatsLabel: 'Output formats',
+  statsLabel: 'Stats',
+  brandHome: 'VectorForge home',
+  notFoundText: 'This page doesn\'t exist.',
+  backToConverter: 'Back to the converter',
 };
 
 const hi: typeof en = {
@@ -167,6 +180,19 @@ const hi: typeof en = {
   navHowItWorks: 'कैसे काम करता है',
   navAbout: 'परिचय',
   navPrivacy: 'गोपनीयता',
+  toolsHeading: 'SVG टूल्स',
+  toolJsxDesc: 'SVG मार्कअप को React के लिए JSX में बदलें',
+  toolReactDesc: 'टाइप किया हुआ React कंपोनंट बनाएँ',
+  toolBase64Desc: 'Unicode-सुरक्षित Base64 एनकोडर',
+  toolDataUriDesc: 'CSS के लिए तैयार background-image URI',
+  toolOptimizerDesc: 'SVGO से SVG का आकार घटाएँ',
+  toolPngDesc: '1x, 2x और 4x पर PNG एक्सपोर्ट करें',
+  resizeLabel: 'एडिटर और प्रीव्यू का आकार बदलें',
+  formatsLabel: 'आउटपुट फ़ॉर्मेट',
+  statsLabel: 'आँकड़े',
+  brandHome: 'VectorForge होम',
+  notFoundText: 'यह पेज मौजूद नहीं है।',
+  backToConverter: 'कन्वर्टर पर वापस जाएँ',
 };
 
 const es: typeof en = {
@@ -241,6 +267,19 @@ const es: typeof en = {
   navHowItWorks: 'Cómo funciona',
   navAbout: 'Acerca de',
   navPrivacy: 'Privacidad',
+  toolsHeading: 'Herramientas SVG',
+  toolJsxDesc: 'Convierte marcado SVG a JSX para React',
+  toolReactDesc: 'Genera un componente React con tipos',
+  toolBase64Desc: 'Codificador Base64 seguro para Unicode',
+  toolDataUriDesc: 'URI de background-image listas para CSS',
+  toolOptimizerDesc: 'Reduce SVG con SVGO',
+  toolPngDesc: 'Exporta PNG a 1x, 2x y 4x',
+  resizeLabel: 'Redimensionar editor y vista previa',
+  formatsLabel: 'Formatos de salida',
+  statsLabel: 'Estadísticas',
+  brandHome: 'Inicio de VectorForge',
+  notFoundText: 'Esta página no existe.',
+  backToConverter: 'Volver al conversor',
 };
 
 const pt: typeof en = {
@@ -315,6 +354,19 @@ const pt: typeof en = {
   navHowItWorks: 'Como funciona',
   navAbout: 'Sobre',
   navPrivacy: 'Privacidade',
+  toolsHeading: 'Ferramentas SVG',
+  toolJsxDesc: 'Converta marcação SVG em JSX para React',
+  toolReactDesc: 'Gere um componente React tipado',
+  toolBase64Desc: 'Codificador Base64 seguro para Unicode',
+  toolDataUriDesc: 'URIs de background-image prontas para CSS',
+  toolOptimizerDesc: 'Reduza SVGs com SVGO',
+  toolPngDesc: 'Exporte PNGs em 1x, 2x e 4x',
+  resizeLabel: 'Redimensionar editor e pré-visualização',
+  formatsLabel: 'Formatos de saída',
+  statsLabel: 'Estatísticas',
+  brandHome: 'Início do VectorForge',
+  notFoundText: 'Esta página não existe.',
+  backToConverter: 'Voltar ao conversor',
 };
 
 const fr: typeof en = {
@@ -389,6 +441,19 @@ const fr: typeof en = {
   navHowItWorks: 'Comment ça marche',
   navAbout: 'À propos',
   navPrivacy: 'Confidentialité',
+  toolsHeading: 'Outils SVG',
+  toolJsxDesc: 'Convertissez le balisage SVG en JSX pour React',
+  toolReactDesc: 'Générez un composant React typé',
+  toolBase64Desc: 'Encodeur Base64 compatible Unicode',
+  toolDataUriDesc: 'URI background-image prêtes pour CSS',
+  toolOptimizerDesc: 'Réduisez les SVG avec SVGO',
+  toolPngDesc: 'Exportez des PNG en 1x, 2x et 4x',
+  resizeLabel: 'Redimensionner l\'éditeur et l\'aperçu',
+  formatsLabel: 'Formats de sortie',
+  statsLabel: 'Statistiques',
+  brandHome: 'Accueil VectorForge',
+  notFoundText: 'Cette page n\'existe pas.',
+  backToConverter: 'Retour au convertisseur',
 };
 
 const de: typeof en = {
@@ -463,6 +528,19 @@ const de: typeof en = {
   navHowItWorks: 'Funktionsweise',
   navAbout: 'Über',
   navPrivacy: 'Datenschutz',
+  toolsHeading: 'SVG-Tools',
+  toolJsxDesc: 'SVG-Markup in JSX für React umwandeln',
+  toolReactDesc: 'Eine typisierte React-Komponente erzeugen',
+  toolBase64Desc: 'Unicode-sicherer Base64-Encoder',
+  toolDataUriDesc: 'CSS-fertige background-image-URIs',
+  toolOptimizerDesc: 'SVGs mit SVGO verkleinern',
+  toolPngDesc: 'PNGs in 1x, 2x und 4x exportieren',
+  resizeLabel: 'Editor und Vorschau in der Größe ändern',
+  formatsLabel: 'Ausgabeformate',
+  statsLabel: 'Statistiken',
+  brandHome: 'VectorForge Startseite',
+  notFoundText: 'Diese Seite existiert nicht.',
+  backToConverter: 'Zurück zum Konverter',
 };
 
 const id: typeof en = {
@@ -537,6 +615,19 @@ const id: typeof en = {
   navHowItWorks: 'Cara kerja',
   navAbout: 'Tentang',
   navPrivacy: 'Privasi',
+  toolsHeading: 'Alat SVG',
+  toolJsxDesc: 'Konversi markup SVG ke JSX untuk React',
+  toolReactDesc: 'Buat komponen React bertipe',
+  toolBase64Desc: 'Encoder Base64 yang aman untuk Unicode',
+  toolDataUriDesc: 'URI background-image siap pakai untuk CSS',
+  toolOptimizerDesc: 'Kecilkan SVG dengan SVGO',
+  toolPngDesc: 'Ekspor PNG pada 1x, 2x, dan 4x',
+  resizeLabel: 'Ubah ukuran editor dan pratinjau',
+  formatsLabel: 'Format keluaran',
+  statsLabel: 'Statistik',
+  brandHome: 'Beranda VectorForge',
+  notFoundText: 'Halaman ini tidak ada.',
+  backToConverter: 'Kembali ke konverter',
 };
 
 const ja: typeof en = {
@@ -611,6 +702,19 @@ const ja: typeof en = {
   navHowItWorks: '使い方',
   navAbout: '概要',
   navPrivacy: 'プライバシー',
+  toolsHeading: 'SVGツール',
+  toolJsxDesc: 'SVGマークアップをReact用JSXに変換',
+  toolReactDesc: '型付きReactコンポーネントを生成',
+  toolBase64Desc: 'Unicode対応のBase64エンコーダー',
+  toolDataUriDesc: 'CSSですぐ使えるbackground-image URI',
+  toolOptimizerDesc: 'SVGOでSVGを軽量化',
+  toolPngDesc: 'PNGを1x、2x、4xで書き出し',
+  resizeLabel: 'エディターとプレビューのサイズ変更',
+  formatsLabel: '出力形式',
+  statsLabel: '統計',
+  brandHome: 'VectorForge ホーム',
+  notFoundText: 'このページは存在しません。',
+  backToConverter: 'コンバーターに戻る',
 };
 
 const ru: typeof en = {
@@ -685,6 +789,19 @@ const ru: typeof en = {
   navHowItWorks: 'Как это работает',
   navAbout: 'О проекте',
   navPrivacy: 'Конфиденциальность',
+  toolsHeading: 'Инструменты SVG',
+  toolJsxDesc: 'Конвертируйте разметку SVG в JSX для React',
+  toolReactDesc: 'Создавайте типизированный компонент React',
+  toolBase64Desc: 'Кодировщик Base64 с поддержкой Unicode',
+  toolDataUriDesc: 'URI background-image, готовые для CSS',
+  toolOptimizerDesc: 'Уменьшайте SVG с помощью SVGO',
+  toolPngDesc: 'Экспорт PNG в 1x, 2x и 4x',
+  resizeLabel: 'Изменить размер редактора и предпросмотра',
+  formatsLabel: 'Форматы вывода',
+  statsLabel: 'Статистика',
+  brandHome: 'Главная страница VectorForge',
+  notFoundText: 'Эта страница не существует.',
+  backToConverter: 'Назад к конвертеру',
 };
 
 const ko: typeof en = {
@@ -759,6 +876,19 @@ const ko: typeof en = {
   navHowItWorks: '사용 방법',
   navAbout: '정보',
   navPrivacy: '개인정보',
+  toolsHeading: 'SVG 도구',
+  toolJsxDesc: 'SVG 마크업을 React용 JSX로 변환',
+  toolReactDesc: '타입이 지정된 React 컴포넌트 생성',
+  toolBase64Desc: 'Unicode를 지원하는 Base64 인코더',
+  toolDataUriDesc: 'CSS에 바로 쓰는 background-image URI',
+  toolOptimizerDesc: 'SVGO로 SVG 용량 줄이기',
+  toolPngDesc: 'PNG를 1x, 2x, 4x로 내보내기',
+  resizeLabel: '편집기와 미리보기 크기 조절',
+  formatsLabel: '출력 형식',
+  statsLabel: '통계',
+  brandHome: 'VectorForge 홈',
+  notFoundText: '이 페이지가 존재하지 않습니다.',
+  backToConverter: '변환기로 돌아가기',
 };
 
 const zhCn: typeof en = {
@@ -833,6 +963,19 @@ const zhCn: typeof en = {
   navHowItWorks: '工作原理',
   navAbout: '关于',
   navPrivacy: '隐私',
+  toolsHeading: 'SVG 工具',
+  toolJsxDesc: '将 SVG 标记转换为 React 的 JSX',
+  toolReactDesc: '生成带类型的 React 组件',
+  toolBase64Desc: '支持 Unicode 的 Base64 编码器',
+  toolDataUriDesc: '可直接用于 CSS 的 background-image URI',
+  toolOptimizerDesc: '用 SVGO 压缩 SVG',
+  toolPngDesc: '以 1x、2x 和 4x 导出 PNG',
+  resizeLabel: '调整编辑器和预览的大小',
+  formatsLabel: '输出格式',
+  statsLabel: '统计',
+  brandHome: 'VectorForge 首页',
+  notFoundText: '此页面不存在。',
+  backToConverter: '返回转换器',
 };
 
 const ar: typeof en = {
@@ -907,6 +1050,19 @@ const ar: typeof en = {
   navHowItWorks: 'كيف يعمل',
   navAbout: 'حول',
   navPrivacy: 'الخصوصية',
+  toolsHeading: 'أدوات SVG',
+  toolJsxDesc: 'حوّل كود SVG إلى JSX لـ React',
+  toolReactDesc: 'أنشئ مكوّن React مُصنّف الأنواع',
+  toolBase64Desc: 'مُرمّز Base64 يدعم Unicode',
+  toolDataUriDesc: 'عناوين URI لصور الخلفية جاهزة لـ CSS',
+  toolOptimizerDesc: 'قلّص ملفات SVG باستخدام SVGO',
+  toolPngDesc: 'صدّر PNG بمقاسات 1x و2x و4x',
+  resizeLabel: 'تغيير حجم المحرر والمعاينة',
+  formatsLabel: 'تنسيقات الإخراج',
+  statsLabel: 'إحصائيات',
+  brandHome: 'الصفحة الرئيسية لـ VectorForge',
+  notFoundText: 'هذه الصفحة غير موجودة.',
+  backToConverter: 'العودة إلى المحوّل',
 };
 
 const bn: typeof en = {
@@ -981,6 +1137,19 @@ const bn: typeof en = {
   navHowItWorks: 'কীভাবে কাজ করে',
   navAbout: 'সম্পর্কে',
   navPrivacy: 'গোপনীয়তা',
+  toolsHeading: 'SVG টুলস',
+  toolJsxDesc: 'React-এর জন্য SVG মার্কআপকে JSX-এ রূপান্তর করুন',
+  toolReactDesc: 'টাইপসহ React কম্পোনেন্ট তৈরি করুন',
+  toolBase64Desc: 'Unicode-নিরাপদ Base64 এনকোডার',
+  toolDataUriDesc: 'CSS-এর জন্য প্রস্তুত background-image URI',
+  toolOptimizerDesc: 'SVGO দিয়ে SVG ছোট করুন',
+  toolPngDesc: '1x, 2x ও 4x-এ PNG এক্সপোর্ট করুন',
+  resizeLabel: 'এডিটর ও প্রিভিউয়ের আকার বদলান',
+  formatsLabel: 'আউটপুট ফরম্যাট',
+  statsLabel: 'পরিসংখ্যান',
+  brandHome: 'VectorForge হোম',
+  notFoundText: 'এই পৃষ্ঠাটি নেই।',
+  backToConverter: 'কনভার্টারে ফিরে যান',
 };
 
 const ur: typeof en = {
@@ -1055,6 +1224,19 @@ const ur: typeof en = {
   navHowItWorks: 'یہ کیسے کام کرتا ہے',
   navAbout: 'بارے میں',
   navPrivacy: 'رازداری',
+  toolsHeading: 'SVG ٹولز',
+  toolJsxDesc: 'SVG مارک اپ کو React کے لیے JSX میں بدلیں',
+  toolReactDesc: 'ٹائپ شدہ React کمپوننٹ بنائیں',
+  toolBase64Desc: 'Unicode کے لیے محفوظ Base64 انکوڈر',
+  toolDataUriDesc: 'CSS کے لیے تیار background-image URIs',
+  toolOptimizerDesc: 'SVGO سے SVG چھوٹا کریں',
+  toolPngDesc: '1x، 2x اور 4x پر PNG ایکسپورٹ کریں',
+  resizeLabel: 'ایڈیٹر اور پریویو کا سائز بدلیں',
+  formatsLabel: 'آؤٹ پٹ فارمیٹس',
+  statsLabel: 'اعداد و شمار',
+  brandHome: 'VectorForge ہوم',
+  notFoundText: 'یہ صفحہ موجود نہیں ہے۔',
+  backToConverter: 'کنورٹر پر واپس جائیں',
 };
 
 const ta: typeof en = {
@@ -1129,6 +1311,19 @@ const ta: typeof en = {
   navHowItWorks: 'இது எப்படி வேலை செய்கிறது',
   navAbout: 'பற்றி',
   navPrivacy: 'தனியுரிமை',
+  toolsHeading: 'SVG கருவிகள்',
+  toolJsxDesc: 'SVG மார்க்அப்பை React-க்கான JSX-ஆக மாற்றுங்கள்',
+  toolReactDesc: 'வகைப்படுத்தப்பட்ட React கூறை உருவாக்குங்கள்',
+  toolBase64Desc: 'Unicode-பாதுகாப்பான Base64 குறியாக்கி',
+  toolDataUriDesc: 'CSS-க்குத் தயாரான background-image URIகள்',
+  toolOptimizerDesc: 'SVGO மூலம் SVG-களைச் சுருக்குங்கள்',
+  toolPngDesc: 'PNG-களை 1x, 2x, 4x இல் ஏற்றுமதி செய்யுங்கள்',
+  resizeLabel: 'திருத்தி மற்றும் முன்னோட்டத்தின் அளவை மாற்றுங்கள்',
+  formatsLabel: 'வெளியீட்டு வடிவங்கள்',
+  statsLabel: 'புள்ளிவிவரங்கள்',
+  brandHome: 'VectorForge முகப்பு',
+  notFoundText: 'இந்தப் பக்கம் இல்லை.',
+  backToConverter: 'மாற்றிக்குத் திரும்பு',
 };
 
 const te: typeof en = {
@@ -1203,6 +1398,19 @@ const te: typeof en = {
   navHowItWorks: 'ఇది ఎలా పని చేస్తుంది',
   navAbout: 'గురించి',
   navPrivacy: 'గోప్యత',
+  toolsHeading: 'SVG టూల్స్',
+  toolJsxDesc: 'React కోసం SVG మార్కప్‌ను JSXగా మార్చండి',
+  toolReactDesc: 'టైప్ చేసిన React కాంపోనెంట్‌ను రూపొందించండి',
+  toolBase64Desc: 'Unicode-సురక్షిత Base64 ఎన్‌కోడర్',
+  toolDataUriDesc: 'CSS కోసం సిద్ధంగా ఉన్న background-image URIలు',
+  toolOptimizerDesc: 'SVGOతో SVGలను చిన్నదిగా చేయండి',
+  toolPngDesc: '1x, 2x మరియు 4x వద్ద PNGలను ఎగుమతి చేయండి',
+  resizeLabel: 'ఎడిటర్ మరియు ప్రివ్యూ పరిమాణాన్ని మార్చండి',
+  formatsLabel: 'అవుట్‌పుట్ ఫార్మాట్‌లు',
+  statsLabel: 'గణాంకాలు',
+  brandHome: 'VectorForge హోమ్',
+  notFoundText: 'ఈ పేజీ లేదు.',
+  backToConverter: 'కన్వర్టర్‌కు తిరిగి వెళ్లండి',
 };
 
 const mr: typeof en = {
@@ -1277,6 +1485,19 @@ const mr: typeof en = {
   navHowItWorks: 'हे कसे काम करते',
   navAbout: 'बद्दल',
   navPrivacy: 'गोपनीयता',
+  toolsHeading: 'SVG टूल्स',
+  toolJsxDesc: 'React साठी SVG मार्कअप JSX मध्ये रूपांतरित करा',
+  toolReactDesc: 'टाइप केलेला React कंपोनंट तयार करा',
+  toolBase64Desc: 'Unicode-सुरक्षित Base64 एनकोडर',
+  toolDataUriDesc: 'CSS साठी तयार background-image URI',
+  toolOptimizerDesc: 'SVGO ने SVG छोटे करा',
+  toolPngDesc: '1x, 2x आणि 4x वर PNG एक्सपोर्ट करा',
+  resizeLabel: 'एडिटर आणि प्रिव्ह्यूचा आकार बदला',
+  formatsLabel: 'आउटपुट फॉरमॅट',
+  statsLabel: 'आकडेवारी',
+  brandHome: 'VectorForge मुख्यपृष्ठ',
+  notFoundText: 'हे पृष्ठ अस्तित्वात नाही.',
+  backToConverter: 'कन्व्हर्टरकडे परत जा',
 };
 
 const tr: typeof en = {
@@ -1351,6 +1572,19 @@ const tr: typeof en = {
   navHowItWorks: 'Nasıl çalışır',
   navAbout: 'Hakkında',
   navPrivacy: 'Gizlilik',
+  toolsHeading: 'SVG Araçları',
+  toolJsxDesc: 'SVG kodunu React için JSX\'e dönüştürün',
+  toolReactDesc: 'Tipli bir React bileşeni oluşturun',
+  toolBase64Desc: 'Unicode uyumlu Base64 kodlayıcı',
+  toolDataUriDesc: 'CSS\'e hazır background-image URI\'leri',
+  toolOptimizerDesc: 'SVGO ile SVG\'leri küçültün',
+  toolPngDesc: 'PNG\'leri 1x, 2x ve 4x olarak dışa aktarın',
+  resizeLabel: 'Düzenleyici ve önizleme boyutunu değiştir',
+  formatsLabel: 'Çıktı biçimleri',
+  statsLabel: 'İstatistikler',
+  brandHome: 'VectorForge ana sayfa',
+  notFoundText: 'Bu sayfa mevcut değil.',
+  backToConverter: 'Dönüştürücüye geri dön',
 };
 
 const it: typeof en = {
@@ -1425,6 +1659,19 @@ const it: typeof en = {
   navHowItWorks: 'Come funziona',
   navAbout: 'Info',
   navPrivacy: 'Privacy',
+  toolsHeading: 'Strumenti SVG',
+  toolJsxDesc: 'Converti il markup SVG in JSX per React',
+  toolReactDesc: 'Genera un componente React tipizzato',
+  toolBase64Desc: 'Codificatore Base64 compatibile con Unicode',
+  toolDataUriDesc: 'URI background-image pronte per CSS',
+  toolOptimizerDesc: 'Riduci gli SVG con SVGO',
+  toolPngDesc: 'Esporta PNG a 1x, 2x e 4x',
+  resizeLabel: 'Ridimensiona editor e anteprima',
+  formatsLabel: 'Formati di output',
+  statsLabel: 'Statistiche',
+  brandHome: 'Home di VectorForge',
+  notFoundText: 'Questa pagina non esiste.',
+  backToConverter: 'Torna al convertitore',
 };
 
 const nl: typeof en = {
@@ -1499,6 +1746,19 @@ const nl: typeof en = {
   navHowItWorks: 'Hoe het werkt',
   navAbout: 'Over',
   navPrivacy: 'Privacy',
+  toolsHeading: 'SVG-tools',
+  toolJsxDesc: 'Zet SVG-markup om naar JSX voor React',
+  toolReactDesc: 'Genereer een getypeerde React-component',
+  toolBase64Desc: 'Unicode-veilige Base64-encoder',
+  toolDataUriDesc: 'CSS-klare background-image-URI\'s',
+  toolOptimizerDesc: 'Verklein SVG\'s met SVGO',
+  toolPngDesc: 'Exporteer PNG\'s in 1x, 2x en 4x',
+  resizeLabel: 'Pas de grootte van editor en voorbeeld aan',
+  formatsLabel: 'Uitvoerformaten',
+  statsLabel: 'Statistieken',
+  brandHome: 'VectorForge home',
+  notFoundText: 'Deze pagina bestaat niet.',
+  backToConverter: 'Terug naar de converter',
 };
 
 const pl: typeof en = {
@@ -1573,6 +1833,19 @@ const pl: typeof en = {
   navHowItWorks: 'Jak to działa',
   navAbout: 'O nas',
   navPrivacy: 'Prywatność',
+  toolsHeading: 'Narzędzia SVG',
+  toolJsxDesc: 'Konwertuj kod SVG na JSX dla React',
+  toolReactDesc: 'Generuj komponent React z typami',
+  toolBase64Desc: 'Koder Base64 bezpieczny dla Unicode',
+  toolDataUriDesc: 'Adresy URI background-image gotowe do CSS',
+  toolOptimizerDesc: 'Zmniejszaj SVG za pomocą SVGO',
+  toolPngDesc: 'Eksportuj PNG w 1x, 2x i 4x',
+  resizeLabel: 'Zmień rozmiar edytora i podglądu',
+  formatsLabel: 'Formaty wyjściowe',
+  statsLabel: 'Statystyki',
+  brandHome: 'Strona główna VectorForge',
+  notFoundText: 'Ta strona nie istnieje.',
+  backToConverter: 'Wróć do konwertera',
 };
 
 const vi: typeof en = {
@@ -1647,6 +1920,19 @@ const vi: typeof en = {
   navHowItWorks: 'Cách hoạt động',
   navAbout: 'Giới thiệu',
   navPrivacy: 'Quyền riêng tư',
+  toolsHeading: 'Công cụ SVG',
+  toolJsxDesc: 'Chuyển mã SVG thành JSX cho React',
+  toolReactDesc: 'Tạo thành phần React có kiểu',
+  toolBase64Desc: 'Bộ mã hóa Base64 an toàn với Unicode',
+  toolDataUriDesc: 'URI background-image sẵn sàng cho CSS',
+  toolOptimizerDesc: 'Thu nhỏ SVG bằng SVGO',
+  toolPngDesc: 'Xuất PNG ở 1x, 2x và 4x',
+  resizeLabel: 'Thay đổi kích thước trình chỉnh sửa và bản xem trước',
+  formatsLabel: 'Định dạng đầu ra',
+  statsLabel: 'Thống kê',
+  brandHome: 'Trang chủ VectorForge',
+  notFoundText: 'Trang này không tồn tại.',
+  backToConverter: 'Quay lại công cụ chuyển đổi',
 };
 
 export type Dict = typeof en;

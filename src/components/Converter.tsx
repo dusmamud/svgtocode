@@ -752,7 +752,7 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
           className="hidden select-none items-center justify-center lg:flex"
           role="separator"
           aria-orientation="vertical"
-          aria-label="Resize editor and preview"
+          aria-label={t.resizeLabel}
           style={{ cursor: 'col-resize' }}
           onPointerDown={onSplitDown}
           onPointerMove={onSplitMove}
@@ -864,7 +864,7 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
             onScroll={tabsMore.update}
             className="scrollbar-none flex flex-nowrap items-center gap-1 overflow-x-auto border-b border-border py-2 pe-12 ps-3 sm:flex-wrap sm:overflow-visible sm:pe-3"
             role="tablist"
-            aria-label="output formats"
+            aria-label={t.formatsLabel}
           >
             {FORMATS.map((f) => (
               <button
@@ -923,7 +923,7 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
       </div>
 
       {/* Stats bar */}
-      <dl className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4" aria-label="stats">
+      <dl className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4" aria-label={t.statsLabel}>
         {[
           { k: t.statsSize, v: formatBytes(stats.bytes) },
           { k: t.statsElements, v: String(stats.elements) },
