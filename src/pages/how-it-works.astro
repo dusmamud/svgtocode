@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getDict } from '../i18n/ui';
+
+const locale = 'en';
+const t = getDict(locale);
+
+const steps = [
+  {
+    title: '1. Add your SVG',
+    body: 'Upload a file, drag and drop it anywhere on the page, or paste SVG code straight into the editor. Working with several files? Drop them all at once — batch mode loads each one, and can download every result together as a single ZIP.',
+  },
+  {
+    title: '2. Edit with a live preview',
+    body: 'The editor highlights your markup and validates it as you type. The preview updates instantly — on a transparency grid, light, white, dark, or your own custom background, with zoom and pan. If the SVG is invalid, you get the exact parse problem instead of a blank box.',
+  },
+  {
+    title: '3. Optimize and clean up',
+    body: 'One click runs SVGO optimization and shows exactly how much you saved. You can also prettify messy markup or minify it for production. Anything unsafe — scripts, event handlers, foreign objects — is stripped from the preview automatically.',
+  },
+  {
+    title: '4. Pick your format',
+    body: 'Eleven outputs, all generated from the code in the editor: Raw SVG, JSX, a typed React component (.tsx), Vue SFC, Svelte, React Native, an HTML <img> tag, a CSS data-URI, a CSS mask, an SVG sprite, and Base64 — so what you see is exactly what you get.',
+  },
+  {
+    title: '5. Copy, download, or export PNG',
+    body: 'Copy the result straight to your clipboard, download it as a file, or export a crisp PNG at 1x, 2x, or 4x for design tools and documents.',
+  },
+];
+---
+
+<Layout
+  locale={locale}
+  t={t}
+  title="How It Works — VectorForge"
+  description="How VectorForge converts SVG to code entirely in your browser: add an SVG, edit with a live preview, optimize, convert to 11 formats, and export — nothing is ever uploaded."
+>
+  <header class="border-b border-border bg-surface/80 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3">
+      <a href="/" class="flex items-center gap-2.5" aria-label={t.brandHome}>
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="var(--accent)" />
+          <path d="M9 21 L16 8 L23 21" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+          <path d="M12.5 21 h7" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" />
+          <circle cx="16" cy="24.5" r="1.6" fill="var(--accent-ink)" />
+        </svg>
+        <span class="text-lg font-bold tracking-tight">VectorForge</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-3xl px-4 py-12">
+    <h1 class="text-3xl font-bold tracking-tight">How it works</h1>
+    <p class="mt-2 text-muted">
+      From an SVG file to production-ready code in five steps — all of them
+      inside your browser.
+    </p>
+
+    <section class="mt-8 space-y-6 text-[15px] leading-relaxed">
+      {steps.map((s) => (
+        <div>
+          <h2 class="text-lg font-semibold">{s.title}</h2>
+          <p class="mt-2 text-muted">{s.body}</p>
+        </div>
+      ))}
+      <div class="rounded-2xl border border-border bg-surface p-5 shadow-[var(--shadow-soft)]">
+        <h2 class="text-lg font-semibold">100% in your browser</h2>
+        <p class="mt-2 text-muted">
+          Every step above happens on your own device. Your files are never
+          uploaded to a server, there are no accounts, and the converter keeps
+          working offline once it has loaded. Read the{' '}
+          <a href="/privacy" class="text-accent underline-offset-4 hover:underline">privacy policy</a>{' '}
+          for the details.
+        </p>
+      </div>
+      <p>
+        <a
+          href="/"
+          class="inline-flex min-h-[44px] items-center rounded-full bg-accent px-6 py-2 text-sm font-medium text-accent-ink transition-colors hover:bg-accent-hover"
+        >
+          Open the converter
+        </a>
+      </p>
+    </section>
+  </main>
+</Layout>

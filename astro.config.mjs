@@ -17,6 +17,9 @@ const FULLY_TRANSLATED = [
   'tr', 'it', 'nl', 'pl', 'vi',
 ];
 
+// Standalone English content pages linked from the nav.
+const STATIC_PAGES = ['about', 'how-it-works'];
+
 // Dedicated English landing pages (each preselects an output format).
 const TOOL_SLUGS = [
   'svg-to-jsx',
@@ -43,7 +46,7 @@ export default defineConfig({
         const m = path.match(/^\/([a-z0-9-]+)\/$/);
         if (!m) return false;
         const seg = m[1];
-        return (FULLY_TRANSLATED.includes(seg) && seg !== 'en') || TOOL_SLUGS.includes(seg);
+        return (FULLY_TRANSLATED.includes(seg) && seg !== 'en') || TOOL_SLUGS.includes(seg) || STATIC_PAGES.includes(seg);
       },
     }),
   ],

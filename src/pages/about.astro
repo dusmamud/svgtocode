@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getDict } from '../i18n/ui';
+
+const locale = 'en';
+const t = getDict(locale);
+---
+
+<Layout
+  locale={locale}
+  t={t}
+  title="About — VectorForge"
+  description="VectorForge is a free, browser-based SVG toolkit: convert SVG to JSX, React components, data URIs, Base64 and PNG — privately, with no uploads, no sign-up and no watermarks."
+>
+  <header class="border-b border-border bg-surface/80 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3">
+      <a href="/" class="flex items-center gap-2.5" aria-label={t.brandHome}>
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="var(--accent)" />
+          <path d="M9 21 L16 8 L23 21" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+          <path d="M12.5 21 h7" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" />
+          <circle cx="16" cy="24.5" r="1.6" fill="var(--accent-ink)" />
+        </svg>
+        <span class="text-lg font-bold tracking-tight">VectorForge</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-3xl px-4 py-12">
+    <h1 class="text-3xl font-bold tracking-tight">About VectorForge</h1>
+    <p class="mt-2 text-muted">
+      A free SVG toolkit that turns images into code — and code back into
+      images — without your files ever leaving your device.
+    </p>
+
+    <section class="mt-8 space-y-6 text-[15px] leading-relaxed">
+      <div>
+        <h2 class="text-lg font-semibold">Why it exists</h2>
+        <p class="mt-2 text-muted">
+          Developers and designers move SVGs into code every day: an icon
+          pasted inline into a React app, a logo embedded as a data-URI, an
+          illustration exported as PNG. Most converters make you upload your
+          files to a stranger's server for what is, at heart, a text
+          transformation. VectorForge does the whole job locally in your
+          browser instead — faster, and private by design rather than by
+          promise.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold">What you can do</h2>
+        <ul class="mt-2 list-disc space-y-1.5 ps-5 text-muted">
+          <li>Convert one SVG into 11 outputs: Raw SVG, JSX, a typed React component, Vue SFC, Svelte, React Native, an HTML &lt;img&gt; tag, a CSS data-URI, a CSS mask, an SVG sprite, and Base64.</li>
+          <li>Optimize with SVGO and see the exact savings, or prettify and minify markup.</li>
+          <li>Edit with syntax highlighting, validation, and a live preview on five backgrounds with zoom and pan.</li>
+          <li>Convert many files at once in batch mode and download everything as a ZIP.</li>
+          <li>Export crisp PNGs at 1x, 2x, and 4x.</li>
+          <li>Use it in 23 languages — including right-to-left Arabic and Urdu — and install it as an app that works offline.</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold">Principles</h2>
+        <p class="mt-2 text-muted">
+          <strong class="text-text">Private:</strong> no uploads, no accounts, no
+          tracking of your files.{' '}
+          <strong class="text-text">Free:</strong> every feature, no sign-up, no
+          watermarks, no "pro" tier.{' '}
+          <strong class="text-text">Honest:</strong> the code you see in the
+          editor is exactly what gets converted — nothing is silently rewritten
+          on a server.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold">Open source</h2>
+        <p class="mt-2 text-muted">
+          VectorForge is built with modern web technology and SVGO, and its
+          source is available under the MIT license:{' '}
+          <a
+            href="https://github.com/dusmamud/svgtocode"
+            class="text-accent underline-offset-4 hover:underline"
+          >
+            github.com/dusmamud/svgtocode
+          </a>
+        </p>
+      </div>
+      <p>
+        <a
+          href="/"
+          class="inline-flex min-h-[44px] items-center rounded-full bg-accent px-6 py-2 text-sm font-medium text-accent-ink transition-colors hover:bg-accent-hover"
+        >
+          Open the converter
+        </a>
+      </p>
+    </section>
+  </main>
+</Layout>
