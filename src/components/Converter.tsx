@@ -851,7 +851,7 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
         </div>
       </div>
 
-      {/* Output formats — ONE scrollable row on mobile: tabs + Copy/Download/PNG together; wraps on sm+ */}
+      {/* Output formats — tab strip on top (one scrollable row on mobile), actions in the card's bottom bar */}
       <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-soft)]">
         <div className="relative">
           <div
@@ -876,30 +876,6 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
                 {t[f.key]}
               </button>
             ))}
-            <div className="ms-auto flex items-center gap-2 ps-2">
-              <button className={btnPrimary} onClick={doCopy} disabled={!output}>
-                {copied ? <Check size={18} weight="bold" /> : <Copy size={18} weight="bold" />}
-                {copied ? t.copied : t.copy}
-              </button>
-              <button className={btn} onClick={doDownload} disabled={!output}>
-                <DownloadSimple size={18} weight="bold" /> {t.download}
-              </button>
-              <div className="flex items-center gap-1" role="group" aria-label={t.pngExport}>
-                <span className="me-0.5 text-xs font-medium text-muted">{t.pngExport}</span>
-                {[1, 2, 4].map((s) => (
-                  <button
-                    key={s}
-                    className={btn + ' !px-3'}
-                    onClick={() => doPng(s)}
-                    disabled={!validation.valid || exporting !== null}
-                    title={`${t.pngExport} ${s}x`}
-                  >
-                    <ImageIcon size={18} weight="bold" />
-                    {exporting === s ? '…' : `${s}x`}
-                  </button>
-                ))}
-              </div>
-            </div>
           </div>
           <ScrollMore show={tabsMore.more} fromClass="from-[var(--surface)]" />
         </div>
@@ -910,6 +886,31 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
         >
           <code>{output ? output.text : ''}</code>
         </pre>
+        {/* Action bar — bottom of the card on every screen size: the flow is format → code → act. */}
+        <div className="flex flex-wrap items-center gap-2 border-t border-border px-3 py-2.5">
+          <button className={`${btnPrimary} flex-1 justify-center sm:flex-none`} onClick={doCopy} disabled={!output}>
+            {copied ? <Check size={18} weight="bold" /> : <Copy size={18} weight="bold" />}
+            {copied ? t.copied : t.copy}
+          </button>
+          <button className={`${btn} flex-1 justify-center sm:flex-none`} onClick={doDownload} disabled={!output}>
+            <DownloadSimple size={18} weight="bold" /> {t.download}
+          </button>
+          <div className="flex items-center gap-1 sm:ms-auto" role="group" aria-label={t.pngExport}>
+            <span className="me-0.5 text-xs font-medium text-muted">{t.pngExport}</span>
+            {[1, 2, 4].map((s) => (
+              <button
+                key={s}
+                className={btn + ' !px-3'}
+                onClick={() => doPng(s)}
+                disabled={!validation.valid || exporting !== null}
+                title={`${t.pngExport} ${s}x`}
+              >
+                <ImageIcon size={18} weight="bold" />
+                {exporting === s ? '…' : `${s}x`}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Stats bar */}
