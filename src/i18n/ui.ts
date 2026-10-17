@@ -89,6 +89,10 @@ const en = {
   how3: 'Everything runs 100% in your browser. Nothing is uploaded anywhere.',
   footerMade: 'VectorForge — a free SVG toolkit. All processing happens locally in your browser.',
   aboutTitle: 'About this tool',
+  navTools: 'Tools',
+  navHowItWorks: 'How it works',
+  navAbout: 'About',
+  navPrivacy: 'Privacy',
 };
 
 const hi: typeof en = {
@@ -159,6 +163,10 @@ const hi: typeof en = {
   how3: 'सब कुछ 100% आपके ब्राउज़र में चलता है। कुछ भी कहीं अपलोड नहीं होता।',
   footerMade: 'VectorForge — एक मुफ़्त SVG टूलकिट। सारा प्रोसेसिंग आपके ब्राउज़र में ही होती है।',
   aboutTitle: 'इस टूल के बारे में',
+  navTools: 'टूल्स',
+  navHowItWorks: 'कैसे काम करता है',
+  navAbout: 'परिचय',
+  navPrivacy: 'गोपनीयता',
 };
 
 const es: typeof en = {
@@ -229,6 +237,10 @@ const es: typeof en = {
   how3: 'Todo se ejecuta al 100 % en tu navegador. Nada se sube a ningún servidor.',
   footerMade: 'VectorForge: un kit de herramientas SVG gratuito. Todo el procesamiento ocurre localmente en tu navegador.',
   aboutTitle: 'Acerca de esta herramienta',
+  navTools: 'Herramientas',
+  navHowItWorks: 'Cómo funciona',
+  navAbout: 'Acerca de',
+  navPrivacy: 'Privacidad',
 };
 
 const pt: typeof en = {
@@ -299,6 +311,10 @@ const pt: typeof en = {
   how3: 'Tudo roda 100% no seu navegador. Nada é enviado para servidores.',
   footerMade: 'VectorForge — um kit de ferramentas SVG gratuito. Todo o processamento acontece localmente no seu navegador.',
   aboutTitle: 'Sobre esta ferramenta',
+  navTools: 'Ferramentas',
+  navHowItWorks: 'Como funciona',
+  navAbout: 'Sobre',
+  navPrivacy: 'Privacidade',
 };
 
 const fr: typeof en = {
@@ -369,6 +385,10 @@ const fr: typeof en = {
   how3: 'Tout s’exécute à 100 % dans votre navigateur. Rien n’est envoyé sur un serveur.',
   footerMade: 'VectorForge — une boîte à outils SVG gratuite. Tout le traitement se fait localement dans votre navigateur.',
   aboutTitle: 'À propos de cet outil',
+  navTools: 'Outils',
+  navHowItWorks: 'Comment ça marche',
+  navAbout: 'À propos',
+  navPrivacy: 'Confidentialité',
 };
 
 const de: typeof en = {
@@ -439,6 +459,10 @@ const de: typeof en = {
   how3: 'Alles läuft zu 100 % in Ihrem Browser. Nichts wird auf einen Server hochgeladen.',
   footerMade: 'VectorForge — ein kostenloses SVG-Toolkit. Die gesamte Verarbeitung findet lokal in Ihrem Browser statt.',
   aboutTitle: 'Über dieses Tool',
+  navTools: 'Tools',
+  navHowItWorks: 'Funktionsweise',
+  navAbout: 'Über',
+  navPrivacy: 'Datenschutz',
 };
 
 const id: typeof en = {
@@ -509,6 +533,10 @@ const id: typeof en = {
   how3: 'Semuanya berjalan 100% di browser Anda. Tidak ada yang diunggah ke mana pun.',
   footerMade: 'VectorForge — toolkit SVG gratis. Semua pemrosesan terjadi secara lokal di browser Anda.',
   aboutTitle: 'Tentang alat ini',
+  navTools: 'Alat',
+  navHowItWorks: 'Cara kerja',
+  navAbout: 'Tentang',
+  navPrivacy: 'Privasi',
 };
 
 const ja: typeof en = {
@@ -579,6 +607,10 @@ const ja: typeof en = {
   how3: 'すべてがブラウザ内で100%動作します。どこにもアップロードされません。',
   footerMade: 'VectorForge — 無料のSVGツールキット。すべての処理はブラウザ内でローカルに行われます。',
   aboutTitle: 'このツールについて',
+  navTools: 'ツール',
+  navHowItWorks: '使い方',
+  navAbout: '概要',
+  navPrivacy: 'プライバシー',
 };
 
 export type Dict = typeof en;
