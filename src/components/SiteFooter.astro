@@ -1,0 +1,29 @@
+---
+import type { Dict } from '../i18n/ui';
+
+interface Props {
+  locale: string;
+  t: Dict;
+}
+
+const { locale, t } = Astro.props;
+const privacyHref = locale === 'en' ? '/privacy' : `/${locale}/privacy`;
+---
+
+<footer class="mt-12 border-t border-border">
+  <div class="mx-auto max-w-6xl px-4 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-8 text-center">
+    <h2 class="text-sm font-semibold">{t.aboutTitle}</h2>
+    <p class="mx-auto mt-2 max-w-2xl text-sm text-muted">{t.footerMade}</p>
+    <nav class="mt-4 flex items-center justify-center gap-5 text-sm" aria-label="footer">
+      <a
+        href="https://github.com/dusmamud/svgtocode"
+        class="text-muted transition-colors hover:text-accent"
+      >
+        GitHub
+      </a>
+      <a href={privacyHref} class="text-muted transition-colors hover:text-accent">
+        {t.navPrivacy}
+      </a>
+    </nav>
+  </div>
+</footer>

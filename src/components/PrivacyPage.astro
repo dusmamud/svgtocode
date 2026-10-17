@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SiteHeader from './SiteHeader.astro';
+import SiteFooter from './SiteFooter.astro';
+import { getDict } from '../i18n/ui';
+import { getPrivacy } from '../i18n/content';
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const t = getDict(locale);
+const c = getPrivacy(locale);
+const lastIndex = c.sections.length - 1;
+---
+
+<Layout locale={locale} t={t} title={c.pageTitle} subPath="privacy" noindex>
+  <SiteHeader locale={locale} t={t} path="privacy" />
+
+  <main class="mx-auto max-w-3xl px-4 py-12">
+    <h1 class="text-3xl font-bold tracking-tight">{c.heading}</h1>
+    <p class="mt-2 text-muted">{c.updated}</p>
+
+    <section class="mt-8 space-y-6 text-[15px] leading-relaxed">
+      {c.sections.map((s, i) => (
+        <div>
+          <h2 class="text-lg font-semibold">{s.title}</h2>
+          <p class="mt-2 text-muted">
+            {s.body}
+            {i === lastIndex && (
+              <>
+                {' '}
+                <a
+                  href="https://github.com/dusmamud/svgtocode"
+                  class="text-accent underline-offset-4 hover:underline"
+                >
+                  github.com/dusmamud/svgtocode
+                </a>
+              </>
+            )}
+          </p>
+        </div>
+      ))}
+    </section>
+  </main>
+
+  <SiteFooter locale={locale} t={t} />
+</Layout>

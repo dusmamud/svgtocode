@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SiteHeader from './SiteHeader.astro';
+import SiteFooter from './SiteFooter.astro';
+import { getDict } from '../i18n/ui';
+import { getAbout } from '../i18n/content';
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const t = getDict(locale);
+const c = getAbout(locale);
+const homeHref = locale === 'en' ? '/' : `/${locale}/`;
+---
+
+<Layout locale={locale} t={t} title={c.pageTitle} description={c.description} subPath="about">
+  <SiteHeader locale={locale} t={t} path="about" />
+
+  <main class="mx-auto max-w-3xl px-4 py-12">
+    <h1 class="text-3xl font-bold tracking-tight">{c.heading}</h1>
+    <p class="mt-2 text-muted">{c.intro}</p>
+
+    <section class="mt-8 space-y-6 text-[15px] leading-relaxed">
+      <div>
+        <h2 class="text-lg font-semibold">{c.whyTitle}</h2>
+        <p class="mt-2 text-muted">{c.whyBody}</p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold">{c.whatTitle}</h2>
+        <ul class="mt-2 list-disc space-y-1.5 ps-5 text-muted">
+          {c.whatItems.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold">{c.principlesTitle}</h2>
+        <p class="mt-2 text-muted">
+          {c.principles.map((p) => (
+            <>
+              <strong class="text-text">{p.label}</strong> {p.text}{' '}
+            </>
+          ))}
+        </p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold">{c.ossTitle}</h2>
+        <p class="mt-2 text-muted">
+          {c.ossBefore}{' '}
+          <a
+            href="https://github.com/dusmamud/svgtocode"
+            class="text-accent underline-offset-4 hover:underline"
+          >
+            github.com/dusmamud/svgtocode
+          </a>
+        </p>
+      </div>
+      <p>
+        <a
+          href={homeHref}
+          class="inline-flex min-h-[44px] items-center rounded-full bg-accent px-6 py-2 text-sm font-medium text-accent-ink transition-colors hover:bg-accent-hover"
+        >
+          {c.cta}
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <SiteFooter locale={locale} t={t} />
+</Layout>

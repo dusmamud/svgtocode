@@ -43,10 +43,15 @@ export default defineConfig({
       filter: (page) => {
         const path = new URL(page).pathname;
         if (path === '/') return true;
-        const m = path.match(/^\/([a-z0-9-]+)\/$/);
+        const m = path.match(/^\/([a-z0-9-]+)(?:\/([a-z0-9-]+))?\/$/);
         if (!m) return false;
-        const seg = m[1];
-        return (FULLY_TRANSLATED.includes(seg) && seg !== 'en') || TOOL_SLUGS.includes(seg) || STATIC_PAGES.includes(seg);
+        const [, a, b] = m;
+        if (!b) {
+          return (FULLY_TRANSLATED.includes(a) && a !== 'en') || TOOL_SLUGS.includes(a) || STATIC_PAGES.includes(a);
+        }
+        // Localized content pages: /<locale>/about/ and /<locale>/how-it-works/
+        // (privacy stays out everywhere — it is noindex by design).
+        return FULLY_TRANSLATED.includes(a) && a !== 'en' && STATIC_PAGES.includes(b);
       },
     }),
   ],

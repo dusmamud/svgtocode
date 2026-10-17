@@ -9,16 +9,20 @@ interface Props {
   title?: string;
   description?: string;
   singleLocale?: boolean;
+  subPath?: string;
   canonicalUrl?: string;
   faqJsonLd?: { q: string; a: string }[];
   children?: unknown;
 }
 
-const { locale, t, noindex, title, description, singleLocale, canonicalUrl, faqJsonLd } = Astro.props;
+const { locale, t, noindex, title, description, singleLocale, subPath, canonicalUrl, faqJsonLd } = Astro.props;
 const isRtl = RTL_LOCALES.has(locale);
 
 const localePath = (l: string) => (l === 'en' ? '/' : `/${l}/`);
-const canonical = canonicalUrl ?? new URL(localePath(locale), Astro.site).toString();
+/* For localized sub-pages (about, how-it-works, privacy) the canonical and
+   hreflang URLs point at the same sub-page in every locale, not the homepage. */
+const pagePath = (l: string) => (subPath ? (l === 'en' ? `/${subPath}/` : `/${l}/${subPath}/`) : localePath(l));
+const canonical = canonicalUrl ?? new URL(pagePath(locale), Astro.site).toString();
 
 const pageTitle = title ?? t.siteTitle;
 const pageDescription = description ?? t.siteDescription;
@@ -52,9 +56,9 @@ const jsonLd = {
     <meta name="description" content={pageDescription} />
     <link rel="canonical" href={canonical} />
     {hreflangLocales.map((l) => (
-      <link rel="alternate" hreflang={hreflangOf(l)} href={new URL(localePath(l), Astro.site).toString()} />
+      <link rel="alternate" hreflang={hreflangOf(l)} href={new URL(pagePath(l), Astro.site).toString()} />
     ))}
-    <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site).toString()} />
+    <link rel="alternate" hreflang="x-default" href={new URL(subPath ? `/${subPath}/` : '/', Astro.site).toString()} />
     {!isFullyTranslated(locale) || noindex ? <meta name="robots" content="noindex, follow" /> : null}
 
     <meta property="og:type" content="website" />

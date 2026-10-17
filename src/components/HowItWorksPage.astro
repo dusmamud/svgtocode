@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SiteHeader from './SiteHeader.astro';
+import SiteFooter from './SiteFooter.astro';
+import { getDict } from '../i18n/ui';
+import { getHow } from '../i18n/content';
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const t = getDict(locale);
+const c = getHow(locale);
+const homeHref = locale === 'en' ? '/' : `/${locale}/`;
+const privacyHref = locale === 'en' ? '/privacy' : `/${locale}/privacy`;
+---
+
+<Layout locale={locale} t={t} title={c.pageTitle} description={c.description} subPath="how-it-works">
+  <SiteHeader locale={locale} t={t} path="how-it-works" />
+
+  <main class="mx-auto max-w-3xl px-4 py-12">
+    <h1 class="text-3xl font-bold tracking-tight">{c.heading}</h1>
+    <p class="mt-2 text-muted">{c.intro}</p>
+
+    <section class="mt-8 space-y-6 text-[15px] leading-relaxed">
+      {c.steps.map((s) => (
+        <div>
+          <h2 class="text-lg font-semibold">{s.title}</h2>
+          <p class="mt-2 text-muted">{s.body}</p>
+        </div>
+      ))}
+      <div class="rounded-2xl border border-border bg-surface p-5 shadow-[var(--shadow-soft)]">
+        <h2 class="text-lg font-semibold">{c.localTitle}</h2>
+        <p class="mt-2 text-muted">
+          {c.localBefore}
+          <a href={privacyHref} class="text-accent underline-offset-4 hover:underline">{c.localLink}</a>
+          {c.localAfter}
+        </p>
+      </div>
+      <p>
+        <a
+          href={homeHref}
+          class="inline-flex min-h-[44px] items-center rounded-full bg-accent px-6 py-2 text-sm font-medium text-accent-ink transition-colors hover:bg-accent-hover"
+        >
+          {c.cta}
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <SiteFooter locale={locale} t={t} />
+</Layout>
