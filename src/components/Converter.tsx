@@ -163,6 +163,7 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
   const toolbarMore = useMoreIndicator<HTMLDivElement>();
   const tabsMore = useMoreIndicator<HTMLDivElement>();
   const bgMore = useMoreIndicator<HTMLDivElement>();
+  const barMore = useMoreIndicator<HTMLDivElement>();
   const [mounted, setMounted] = useState(false);
   codeRef.current = code;
 
@@ -264,6 +265,7 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
       toolbarMore.update();
       tabsMore.update();
       bgMore.update();
+      barMore.update();
     });
   };
 
@@ -886,30 +888,37 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
         >
           <code>{output ? output.text : ''}</code>
         </pre>
-        {/* Action bar — bottom of the card on every screen size: the flow is format → code → act. */}
-        <div className="flex flex-wrap items-center gap-2 border-t border-border px-3 py-2.5">
-          <button className={`${btnPrimary} flex-1 justify-center sm:flex-none`} onClick={doCopy} disabled={!output}>
-            {copied ? <Check size={18} weight="bold" /> : <Copy size={18} weight="bold" />}
-            {copied ? t.copied : t.copy}
-          </button>
-          <button className={`${btn} flex-1 justify-center sm:flex-none`} onClick={doDownload} disabled={!output}>
-            <DownloadSimple size={18} weight="bold" /> {t.download}
-          </button>
-          <div className="flex items-center gap-1 sm:ms-auto" role="group" aria-label={t.pngExport}>
-            <span className="me-0.5 text-xs font-medium text-muted">{t.pngExport}</span>
-            {[1, 2, 4].map((s) => (
-              <button
-                key={s}
-                className={btn + ' !px-3'}
-                onClick={() => doPng(s)}
-                disabled={!validation.valid || exporting !== null}
-                title={`${t.pngExport} ${s}x`}
-              >
-                <ImageIcon size={18} weight="bold" />
-                {exporting === s ? '…' : `${s}x`}
-              </button>
-            ))}
+        {/* Action bar — bottom of the card; ONE scrollable row like the other strips. */}
+        <div className="relative border-t border-border">
+          <div
+            ref={barMore.ref}
+            onScroll={barMore.update}
+            className="scrollbar-none flex flex-nowrap items-center gap-2 overflow-x-auto py-2.5 pe-12 ps-3 sm:flex-wrap sm:overflow-visible sm:pe-3"
+          >
+            <button className={btnPrimary} onClick={doCopy} disabled={!output}>
+              {copied ? <Check size={18} weight="bold" /> : <Copy size={18} weight="bold" />}
+              {copied ? t.copied : t.copy}
+            </button>
+            <button className={btn} onClick={doDownload} disabled={!output}>
+              <DownloadSimple size={18} weight="bold" /> {t.download}
+            </button>
+            <div className="flex items-center gap-1 sm:ms-auto" role="group" aria-label={t.pngExport}>
+              <span className="me-0.5 text-xs font-medium text-muted">{t.pngExport}</span>
+              {[1, 2, 4].map((s) => (
+                <button
+                  key={s}
+                  className={btn + ' !px-3'}
+                  onClick={() => doPng(s)}
+                  disabled={!validation.valid || exporting !== null}
+                  title={`${t.pngExport} ${s}x`}
+                >
+                  <ImageIcon size={18} weight="bold" />
+                  {exporting === s ? '…' : `${s}x`}
+                </button>
+              ))}
+            </div>
           </div>
+          <ScrollMore show={barMore.more} fromClass="from-[var(--surface)]" />
         </div>
       </div>
 
