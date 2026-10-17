@@ -578,6 +578,10 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
 
   const btn =
     'inline-flex min-h-[44px] shrink-0 items-center gap-2 rounded-full border border-border bg-surface px-4 py-2 text-sm font-medium text-text transition-colors hover:bg-surface-2 disabled:cursor-not-allowed disabled:opacity-50';
+  /* Primary variant without bg-surface/text-text: in the generated CSS those
+     utilities sort after bg-accent/text-accent-ink and would override them. */
+  const btnPrimary =
+    'inline-flex min-h-[44px] shrink-0 items-center gap-2 rounded-full border border-transparent bg-accent px-4 py-2 text-sm font-medium text-accent-ink transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-50';
 
   if (!mounted) {
     return (
@@ -635,7 +639,7 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
           aria-label={t.upload}
           onChange={(e) => readFiles(e.target.files)}
         />
-        <button className={`${btn} bg-accent !border-transparent text-accent-ink hover:bg-accent-hover`} onClick={() => fileInput.current?.click()}>
+        <button className={btnPrimary} onClick={() => fileInput.current?.click()}>
           <UploadSimple size={18} weight="bold" /> {t.upload}
         </button>
         <button className={btn} onClick={doPaste} aria-label={t.paste}>
@@ -847,40 +851,45 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
         </div>
       </div>
 
-      {/* Output formats — scrollable strip on mobile, wraps on sm+ */}
+      {/* Output formats — scrollable tab strip on mobile, wraps on sm+; actions get their own row on mobile */}
       <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-soft)]">
-        <div className="relative">
-          <div
-            ref={(el) => {
-              tabListRef.current = el;
-              tabsMore.ref.current = el;
-            }}
-            onScroll={tabsMore.update}
-            className="scrollbar-none flex flex-nowrap items-center gap-1 overflow-x-auto border-b border-border py-2 pe-12 ps-3 sm:flex-wrap sm:overflow-visible sm:pe-3"
-            role="tablist"
-            aria-label="output formats"
-          >
-          {FORMATS.map((f) => (
-            <button
-              key={f.id}
-              role="tab"
-              data-format={f.id}
-              aria-selected={format === f.id}
-              onClick={() => setFormat(f.id)}
-              className={`min-h-[44px] shrink-0 rounded-xl px-4 text-sm font-medium transition-colors ${format === f.id ? 'bg-accent text-accent-ink' : 'text-muted hover:bg-surface-2 hover:text-text'}`}
+        <div className="border-b border-border sm:flex sm:items-center">
+          <div className="relative sm:min-w-0 sm:flex-1">
+            <div
+              ref={(el) => {
+                tabListRef.current = el;
+                tabsMore.ref.current = el;
+              }}
+              onScroll={tabsMore.update}
+              className="scrollbar-none flex flex-nowrap items-center gap-1 overflow-x-auto py-2 pe-12 ps-3 sm:flex-wrap sm:overflow-visible sm:pe-3"
+              role="tablist"
+              aria-label="output formats"
             >
-              {t[f.key]}
-            </button>
-          ))}
-          <div className="ms-auto flex flex-wrap items-center gap-2 py-1">
-            <button className={btn} onClick={doCopy} disabled={!output}>
+              {FORMATS.map((f) => (
+                <button
+                  key={f.id}
+                  role="tab"
+                  data-format={f.id}
+                  aria-selected={format === f.id}
+                  onClick={() => setFormat(f.id)}
+                  className={`min-h-[44px] shrink-0 rounded-full px-3.5 text-sm font-medium transition-colors ${format === f.id ? 'bg-accent text-accent-ink' : 'text-muted hover:bg-surface-2 hover:text-text'}`}
+                >
+                  {t[f.key]}
+                </button>
+              ))}
+            </div>
+            <ScrollMore show={tabsMore.more} fromClass="from-[var(--surface)]" />
+          </div>
+          <div className="flex flex-wrap items-center gap-2 px-3 pb-3 sm:shrink-0 sm:py-2">
+            <button className={`${btnPrimary} flex-1 justify-center sm:flex-none`} onClick={doCopy} disabled={!output}>
               {copied ? <Check size={18} weight="bold" /> : <Copy size={18} weight="bold" />}
               {copied ? t.copied : t.copy}
             </button>
-            <button className={btn} onClick={doDownload} disabled={!output}>
+            <button className={`${btn} flex-1 justify-center sm:flex-none`} onClick={doDownload} disabled={!output}>
               <DownloadSimple size={18} weight="bold" /> {t.download}
             </button>
             <div className="flex items-center gap-1" role="group" aria-label={t.pngExport}>
+              <span className="me-0.5 text-xs font-medium text-muted">{t.pngExport}</span>
               {[1, 2, 4].map((s) => (
                 <button
                   key={s}
@@ -895,8 +904,6 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
               ))}
             </div>
           </div>
-          </div>
-          <ScrollMore show={tabsMore.more} fromClass="from-[var(--surface)]" />
         </div>
         <pre
           dir="ltr"
