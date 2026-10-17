@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://svgtocode.dusyn.in/sitemap-index.xml
+Sitemap: https://svgtocode.dusrel.com/sitemap-index.xml

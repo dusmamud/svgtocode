@@ -25,7 +25,7 @@ const TOOL_SLUGS = [
 ];
 
 export default defineConfig({
-  site: 'https://svgtocode.dusyn.in',
+  site: 'https://svgtocode.dusrel.com',
   output: 'static',
   integrations: [
     react(),

@@ -55,13 +55,20 @@ Requires Node 20+ (tested on Node 24).
 
 ## Deploy to Cloudflare Pages
 
-1. Push this folder to a Git repo (GitHub/GitLab).
-2. Cloudflare dashboard → **Workers & Pages** → Create → Pages → connect repo.
-3. Build settings: **Framework preset:** Astro · **Build command:** `npm run build` ·
-   **Build output directory:** `dist` · Node 20+ (set `NODE_VERSION=20` env var if needed).
-4. Deploy. Every locale is a static HTML file, so no functions/SSR config is needed.
-5. (Optional) Add your custom domain and update `site:` in `astro.config.mjs`,
-   plus the `Sitemap:` line in `public/robots.txt`.
+Production deploys run through **GitHub Actions** (`.github/workflows/deploy.yml`) —
+Cloudflare's Git integration is not used.
+
+- **Target:** Cloudflare Pages project `svg2code-dr` (https://svg2code-dr.pages.dev),
+  production domain https://svgtocode.dusrel.com.
+- **Flow:** every push to `main` runs a verify job (typecheck + tests + build) first;
+  only if it passes does the deploy job publish the built `dist/` with Wrangler
+  (`pages deploy dist --project-name=svg2code-dr --branch main`).
+- **Required repo secrets** (Settings → Secrets and variables → Actions):
+  `CLOUDFLARE_API_TOKEN` (custom token, single permission
+  *Account → Cloudflare Pages → Edit*) and `CLOUDFLARE_ACCOUNT_ID`.
+  Never commit these values anywhere.
+- Node version comes from `.nvmrc`. Every locale is a static HTML file,
+  so no functions/SSR config is needed.
 
 ## Project structure
 
