@@ -1,11 +1,11 @@
 /* UI string dictionaries for VectorForge.
-   All 22 locales now have full native translations (completed 2026-10-18):
-   en, hi, es, pt, fr, de, id, ja, ru, ko, zh-cn, ar, bn, ur, ta, te, mr,
-   tr, it, nl, pl, vi. Every locale gets its own route, <html lang>, and
-   localized UI strings, <title> and <description> meta. */
+   All 23 locales have full native translations (completed 2026-10-18):
+   en, hi, es, pt, fr, de, id, ja, ru, ko, zh-cn, ar, bn, as, ur, ta, te,
+   mr, tr, it, nl, pl, vi. Every locale gets its own route, <html lang>,
+   and localized UI strings, <title> and <description> meta. */
 
 export const LOCALES = [
-  'en','hi','es','fr','de','pt','ru','ja','ko','zh-cn','ar','bn','ur',
+  'en','hi','es','fr','de','pt','ru','ja','ko','zh-cn','ar','bn','as','ur',
   'ta','te','mr','id','tr','it','nl','pl','vi',
 ] as const;
 
@@ -16,7 +16,7 @@ export const RTL_LOCALES = new Set(['ar', 'ur']);
 export const LOCALE_NAMES: Record<string, string> = {
   en: 'English', hi: 'हिन्दी', es: 'Español', fr: 'Français', de: 'Deutsch',
   pt: 'Português', ru: 'Русский', ja: '日本語', ko: '한국어', 'zh-cn': '简体中文',
-  ar: 'العربية', bn: 'বাংলা', ur: 'اردو', ta: 'தமிழ்', te: 'తెలుగు',
+  ar: 'العربية', bn: 'বাংলা', as: 'অসমীয়া', ur: 'اردو', ta: 'தமிழ்', te: 'తెలుగు',
   mr: 'मराठी', id: 'Bahasa Indonesia', tr: 'Türkçe', it: 'Italiano',
   nl: 'Nederlands', pl: 'Polski', vi: 'Tiếng Việt',
 };
@@ -1935,12 +1935,99 @@ const vi: typeof en = {
   backToConverter: 'Quay lại công cụ chuyển đổi',
 };
 
+const asm: typeof en = {
+  siteTitle: 'VectorForge — SVG ৰ পৰা কোড ৰূপান্তৰক',
+  siteDescription:
+    'SVG ছবিবোৰ কোডলৈ আৰু কোডক পুনৰ ছবিলৈ ৰূপান্তৰ কৰক: JSX, React কম্পোনেন্ট, data URI আৰু অধিক। বিনামূলীয়া, গোপনীয় আৰু সম্পূৰ্ণ আপোনাৰ ব্ৰাউজাৰতেই চলে।',
+  tagline: 'SVG ছবিবোৰ কোডলৈ ৰূপান্তৰ কৰক — আৰু কোডক পুনৰ ছবিলৈ।',
+  hint: 'এটা SVG আপলোড কৰক, যিকোনো ঠাইত ড্ৰপ কৰক, অথবা তলত কোড পেষ্ট কৰক।',
+  upload: 'SVG আপলোড',
+  paste: 'পেষ্ট',
+  pasteFailed:
+    'পেষ্ট ব্যৰ্থ — ক্লিপবোৰ্ডৰ প্ৰৱেশ ব্লক কৰা হৈছে। ইয়াৰ সলনি পৃষ্ঠাৰ যিকোনো ঠাইত Ctrl+V ৰে পেষ্ট কৰক।',
+  fileTooBig: 'ফাইলটো অতি ডাঙৰ — সৰ্বোচ্চ আকাৰ {max}।',
+  dropHere: 'আপোনাৰ SVG ফাইলটো ইয়াত ড্ৰপ কৰক',
+  sample: 'নমুনা',
+  clear: 'মচি দিয়ক',
+  optimize: 'অপ্টিমাইজ',
+  prettify: 'সুন্দৰ কৰক',
+  minify: 'সৰু কৰক',
+  copy: 'কপি',
+  copied: 'কপি হ’ল!',
+  download: 'ডাউনলোড',
+  batchFiles: '{n}টা ফাইল লোড হ’ল',
+  batchDownload: 'সকলো ডাউনলোড কৰক (.zip)',
+  zipFailed: 'ZIP সৃষ্টি ব্যৰ্থ হ’ল।',
+  pngExport: 'PNG',
+  editorLabel: 'SVG কোড সম্পাদক',
+  previewLabel: 'SVG পূৰ্বদৰ্শন',
+  invalidSvg: 'বৈধ SVG নহয়',
+  invalidHint: 'পূৰ্বদৰ্শন চাবলৈ SVG মাৰ্কআপ পেষ্ট কৰক অথবা .svg ফাইল ড্ৰপ কৰক।',
+  emptyHint: 'আপোনাৰ SVG পূৰ্বদৰ্শন ইয়াত দেখা যাব।',
+  unsafeStripped: 'অনিৰাপদ বিষয়বস্তু (স্ক্ৰিপ্ট বা ইভেন্ট হেণ্ডলাৰ) পূৰ্বদৰ্শনৰ পৰা আঁতৰোৱা হ’ল।',
+  background: 'পটভূমি',
+  bgChecker: 'স্বচ্ছতা',
+  bgLight: 'পোহৰ',
+  bgWhite: 'বগা',
+  bgDark: 'আন্ধাৰ',
+  bgCustom: 'কাষ্টম',
+  zoom: 'জুম',
+  zoomFit: 'ফিট',
+  statsSize: 'আকাৰ',
+  statsElements: 'উপাদান',
+  statsViewBox: 'ViewBox',
+  statsDimensions: 'মাত্ৰা',
+  tabRaw: 'Raw SVG',
+  tabJsx: 'JSX',
+  tabComponent: 'React Component',
+  tabImg: 'HTML <img>',
+  tabCss: 'CSS Data-URI',
+  tabBase64: 'Base64',
+  tabVue: 'Vue SFC',
+  tabSvelte: 'Svelte',
+  tabRn: 'React Native',
+  tabMask: 'CSS Mask',
+  tabSprite: 'SVG Sprite',
+  optimizedSaved: 'অপ্টিমাইজ হ’ল: {before} → {after} (−{pct}%)',
+  optimizeFailed: 'অপ্টিমাইজ ব্যৰ্থ হ’ল।',
+  copyFailed: 'কপি ব্যৰ্থ — আপোনাৰ ব্ৰাউজাৰে ক্লিপবোৰ্ডৰ প্ৰৱেশ ব্লক কৰিলে।',
+  pngFailed: 'এই SVG ৰ বাবে PNG ৰপ্তানি ব্যৰ্থ হ’ল।',
+  themeLabel: 'থিম',
+  themeLight: 'পোহৰ',
+  themeDark: 'আন্ধাৰ',
+  themeSystem: 'ছিষ্টেম',
+  languageLabel: 'ভাষা',
+  howTitle: 'ই কেনেকৈ কাম কৰে',
+  how1: 'SVG ফাইলবোৰ আচলতে কোডেই। এটা ড্ৰপ কৰক আৰু ইয়াৰ মাৰ্কআপ সম্পাদকত আহিব — সম্পাদনা কৰিলেই পূৰ্বদৰ্শন লাইভ আপডেট হ’ব।',
+  how2: 'আউটপুট টেব সলাই JSX, টাইপসহ React কম্পোনেন্ট, data-URI অথবা Base64 পাওক — তাৰ পিছত কপি বা ডাউনলোড কৰক।',
+  how3: 'সকলো 100% আপোনাৰ ব্ৰাউজাৰতেই চলে। ক’তো একো আপলোড নহয়।',
+  footerMade: 'VectorForge — এটা বিনামূলীয়া SVG টুলকিট। সকলো প্ৰচেছিং আপোনাৰ ব্ৰাউজাৰত স্থানীয়ভাৱে হয়।',
+  aboutTitle: 'এই টুলৰ বিষয়ে',
+  navTools: 'টুলছ',
+  navHowItWorks: 'ই কেনেকৈ কাম কৰে',
+  navAbout: 'বিষয়ে',
+  navPrivacy: 'গোপনীয়তা',
+  toolsHeading: 'SVG টুলছ',
+  toolJsxDesc: 'React ৰ বাবে SVG মাৰ্কআপক JSX লৈ ৰূপান্তৰ কৰক',
+  toolReactDesc: 'টাইপসহ React কম্পোনেন্ট সৃষ্টি কৰক',
+  toolBase64Desc: 'Unicode-নিৰাপদ Base64 এনকোডাৰ',
+  toolDataUriDesc: 'CSS ৰ বাবে সাজু background-image URI',
+  toolOptimizerDesc: 'SVGO ৰে SVG সৰু কৰক',
+  toolPngDesc: '1x, 2x আৰু 4x ত PNG ৰপ্তানি কৰক',
+  resizeLabel: 'সম্পাদক আৰু পূৰ্বদৰ্শনৰ আকাৰ সলনি কৰক',
+  formatsLabel: 'আউটপুট ফৰ্মেট',
+  statsLabel: 'পৰিসংখ্যা',
+  brandHome: 'VectorForge মুখ্যপৃষ্ঠা',
+  notFoundText: 'এই পৃষ্ঠাটো নাই।',
+  backToConverter: 'ৰূপান্তৰকলৈ ঘূৰি যাওক',
+};
+
 export type Dict = typeof en;
 
 /** Locales with complete native translations. */
 export const FULLY_TRANSLATED = [
   'en', 'hi', 'es', 'pt', 'fr', 'de', 'id', 'ja',
-  'ru', 'ko', 'zh-cn', 'ar', 'bn', 'ur', 'ta', 'te', 'mr',
+  'ru', 'ko', 'zh-cn', 'ar', 'bn', 'as', 'ur', 'ta', 'te', 'mr',
   'tr', 'it', 'nl', 'pl', 'vi',
 ] as const;
 
@@ -1959,6 +2046,7 @@ export function getDict(locale: string): Dict {
     case 'zh-cn': return zhCn;
     case 'ar': return ar;
     case 'bn': return bn;
+    case 'as': return asm;
     case 'ur': return ur;
     case 'ta': return ta;
     case 'te': return te;

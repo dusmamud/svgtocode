@@ -38,10 +38,10 @@ Requires Node 20+ (tested on Node 24).
 
 ## i18n status
 
-22 locales configured: `en` (default, prefix-less), `hi`, `es`, `fr`, `de`, `pt`, `ru`,
-`ja`, `ko`, `zh-cn`, `ar`, `bn`, `ur`, `ta`, `te`, `mr`, `id`, `tr`, `it`, `nl`, `pl`, `vi`.
+23 locales configured: `en` (default, prefix-less), `hi`, `es`, `fr`, `de`, `pt`, `ru`,
+`ja`, `ko`, `zh-cn`, `ar`, `bn`, `as`, `ur`, `ta`, `te`, `mr`, `id`, `tr`, `it`, `nl`, `pl`, `vi`.
 
-- **Full native UI translations (22/22)** — completed 2026-10-18. Every locale
+- **Full native UI translations (23/23)** — completed 2026-10-18. Every locale
   has a complete dictionary in `src/i18n/ui.ts`, its own static route, correct
   `<html lang>` (+ `dir="rtl"` for `ar`/`ur`), canonical, localized
   `<title>`/meta description, and is included in `hreflang` alternates and the
@@ -81,7 +81,7 @@ src/
     index.astro       # en (prefix-less)
     [locale]/index.astro # 21 other locales via getStaticPaths
   lib/svg.ts          # pure conversion/validation/stats logic
-  i18n/ui.ts          # dictionaries (all 22 locales fully translated)
+  i18n/ui.ts          # dictionaries (all 23 locales fully translated)
   styles/global.css   # Tailwind v4 + design tokens
 public/
   favicon.svg  robots.txt  _headers   # _headers = security/CSP + cache rules (Cloudflare Pages)

@@ -4,16 +4,16 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
 export const LOCALES = [
-  'en','hi','es','fr','de','pt','ru','ja','ko','zh-cn','ar','bn','ur',
+  'en','hi','es','fr','de','pt','ru','ja','ko','zh-cn','ar','bn','as','ur',
   'ta','te','mr','id','tr','it','nl','pl','vi',
 ];
 
 // NOTE: this list mirrors FULLY_TRANSLATED in src/i18n/ui.ts.
-// All 22 locales have full translations (completed 2026-10-18), so every
+// All 23 locales have full translations (completed 2026-10-18), so every
 // locale gets hreflang alternates and sitemap entries.
 const FULLY_TRANSLATED = [
   'en', 'hi', 'es', 'pt', 'fr', 'de', 'id', 'ja',
-  'ru', 'ko', 'zh-cn', 'ar', 'bn', 'ur', 'ta', 'te', 'mr',
+  'ru', 'ko', 'zh-cn', 'ar', 'bn', 'as', 'ur', 'ta', 'te', 'mr',
   'tr', 'it', 'nl', 'pl', 'vi',
 ];
 
