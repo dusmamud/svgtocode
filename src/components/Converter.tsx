@@ -104,6 +104,7 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
   const [zoom, setZoom] = useState<Zoom>('fit');
   const [split, setSplit] = useState(50);
   const [isDesktop, setIsDesktop] = useState(false);
+  const [mobilePane, setMobilePane] = useState<'code' | 'preview'>('code');
   const [copied, setCopied] = useState(false);
   const [notice, setNotice] = useState<string | null>(null);
   const [optimizing, setOptimizing] = useState(false);
@@ -123,6 +124,7 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
   const dragSplit = useRef<{ startX: number; startSplit: number; width: number } | null>(null);
   const panRef = useRef<HTMLDivElement>(null);
   const panDrag = useRef<{ x: number; y: number; sl: number; st: number } | null>(null);
+  const tabListRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
   codeRef.current = code;
 
@@ -209,6 +211,28 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
       view.dispatch({ changes: { from: 0, to: view.state.doc.length, insert: next } });
     }
   };
+
+  /* When the code pane reappears after being display:none (mobile pane
+     switcher), force CodeMirror to re-measure so content renders correctly. */
+  const switchPane = (p: 'code' | 'preview') => {
+    setMobilePane(p);
+    requestAnimationFrame(() => {
+      try {
+        viewRef.current?.requestMeasure();
+      } catch {
+        /* ignore */
+      }
+    });
+  };
+
+  /* Keep the active format tab scrolled into view in the scrollable strip. */
+  useEffect(() => {
+    if (!mounted || !tabListRef.current) return;
+    const el = tabListRef.current.querySelector<HTMLElement>(`[data-format="${format}"]`);
+    if (el) {
+      el.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+    }
+  }, [format, mounted]);
 
   /* ---------- derived (DOM-dependent: browser only) ---------- */
   const validation = useMemo(
@@ -511,7 +535,7 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
   };
 
   const btn =
-    'inline-flex min-h-[40px] items-center gap-2 rounded-full border border-border bg-surface px-4 py-2 text-sm font-medium text-text transition-colors hover:bg-surface-2 disabled:cursor-not-allowed disabled:opacity-50';
+    'inline-flex min-h-[44px] shrink-0 items-center gap-2 rounded-full border border-border bg-surface px-4 py-2 text-sm font-medium text-text transition-colors hover:bg-surface-2 disabled:cursor-not-allowed disabled:opacity-50';
 
   if (!mounted) {
     return (
@@ -553,8 +577,8 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
         </div>
       )}
 
-      {/* Toolbar */}
-      <div className="mb-4 flex flex-wrap items-center gap-2">
+      {/* Toolbar — single scrollable row on mobile, wraps on sm+ */}
+      <div className="scrollbar-none mb-4 flex flex-nowrap items-center gap-2 overflow-x-auto sm:flex-wrap sm:overflow-visible">
         <input
           ref={fileInput}
           type="file"
@@ -629,13 +653,38 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
         </div>
       )}
 
+      {/* Mobile pane switcher — below lg only; on lg both panes always show. */}
+      <div
+        className="mb-3 flex items-center gap-1 rounded-full border border-border bg-surface p-1 lg:hidden"
+        role="tablist"
+        aria-label={`${t.editorLabel} / ${t.previewLabel}`}
+      >
+        {(['code', 'preview'] as const).map((p) => (
+          <button
+            key={p}
+            role="tab"
+            aria-selected={mobilePane === p}
+            onClick={() => switchPane(p)}
+            className={`flex min-h-[44px] flex-1 items-center justify-center rounded-full px-3 text-sm font-medium transition-colors ${
+              mobilePane === p ? 'bg-accent text-accent-ink' : 'text-muted hover:bg-surface-2 hover:text-text'
+            }`}
+          >
+            {p === 'code' ? t.editorLabel : t.previewLabel}
+          </button>
+        ))}
+      </div>
+
       {/* Editor + Preview */}
       <div
         ref={splitWrapRef}
         className="grid gap-4 lg:gap-3"
         style={isDesktop ? { gridTemplateColumns: `${split}% 14px 1fr` } : undefined}
       >
-        <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-soft)]">
+        <div
+          className={`overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-soft)] ${
+            mobilePane === 'code' ? 'block' : 'hidden'
+          } lg:block`}
+        >
           <div className="flex items-center justify-between border-b border-border px-4 py-2.5">
             <h2 className="text-sm font-semibold">{t.editorLabel}</h2>
             <span className="truncate text-xs text-muted" title={fileName}>{fileName}</span>
@@ -658,7 +707,11 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
           <div className="h-20 w-1.5 rounded-full bg-border" />
         </div>
 
-        <div className="flex flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-soft)]">
+        <div
+          className={`flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-soft)] ${
+            mobilePane === 'preview' ? 'flex' : 'hidden'
+          } lg:flex`}
+        >
           <div className="flex flex-wrap items-center gap-2 border-b border-border px-4 py-2.5">
             <h2 className="me-auto text-sm font-semibold">{t.previewLabel}</h2>
             <div className="flex items-center gap-1" role="group" aria-label={t.zoom}>
@@ -667,7 +720,7 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
                   key={String(z)}
                   onClick={() => setZoom(z)}
                   aria-pressed={zoom === z}
-                  className={`min-h-[32px] rounded-lg px-2.5 text-xs font-medium ${zoom === z ? 'bg-accent text-accent-ink' : 'text-muted hover:bg-surface-2 hover:text-text'}`}
+                  className={`min-h-[40px] rounded-lg px-2.5 text-xs font-medium ${zoom === z ? 'bg-accent text-accent-ink' : 'text-muted hover:bg-surface-2 hover:text-text'}`}
                 >
                   {z === 'fit' ? t.zoomFit : `${Number(z) * 100}%`}
                 </button>
@@ -679,8 +732,8 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
               {t.unsafeStripped}
             </div>
           )}
-          <div className="flex flex-wrap items-center gap-1.5 px-4 py-2" role="group" aria-label={t.background}>
-            <span className="me-1 text-xs text-muted">{t.background}:</span>
+          <div className="scrollbar-none flex flex-nowrap items-center gap-1.5 overflow-x-auto px-4 py-2 sm:flex-wrap sm:overflow-visible" role="group" aria-label={t.background}>
+            <span className="me-1 shrink-0 text-xs text-muted">{t.background}:</span>
             {(
               [
                 { id: 'checker', label: t.bgChecker },
@@ -694,7 +747,7 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
                 key={o.id}
                 onClick={() => setBg(o.id)}
                 aria-pressed={bg === o.id}
-                className={`min-h-[32px] rounded-full border px-3 text-xs font-medium ${bg === o.id ? 'border-accent bg-accent-soft text-accent' : 'border-border text-muted hover:text-text'}`}
+                className={`min-h-[40px] shrink-0 rounded-full border px-3 text-xs font-medium ${bg === o.id ? 'border-accent bg-accent-soft text-accent' : 'border-border text-muted hover:text-text'}`}
               >
                 {o.label}
               </button>
@@ -736,16 +789,22 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
         </div>
       </div>
 
-      {/* Output formats */}
+      {/* Output formats — scrollable strip on mobile, wraps on sm+ */}
       <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-soft)]">
-        <div className="flex flex-wrap items-center gap-1 border-b border-border px-3 py-2" role="tablist" aria-label="output formats">
+        <div
+          ref={tabListRef}
+          className="scrollbar-none flex flex-nowrap items-center gap-1 overflow-x-auto border-b border-border px-3 py-2 sm:flex-wrap sm:overflow-visible"
+          role="tablist"
+          aria-label="output formats"
+        >
           {FORMATS.map((f) => (
             <button
               key={f.id}
               role="tab"
+              data-format={f.id}
               aria-selected={format === f.id}
               onClick={() => setFormat(f.id)}
-              className={`min-h-[40px] rounded-xl px-4 text-sm font-medium transition-colors ${format === f.id ? 'bg-accent text-accent-ink' : 'text-muted hover:bg-surface-2 hover:text-text'}`}
+              className={`min-h-[44px] shrink-0 rounded-xl px-4 text-sm font-medium transition-colors ${format === f.id ? 'bg-accent text-accent-ink' : 'text-muted hover:bg-surface-2 hover:text-text'}`}
             >
               {t[f.key]}
             </button>

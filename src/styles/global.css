@@ -123,3 +123,11 @@ body {
 
 /* Editor must stay LTR even in RTL locales */
 .cm-editor, .cm-editor * { direction: ltr; text-align: left; }
+
+/* Responsive utilities */
+.scrollbar-none { scrollbar-width: none; -ms-overflow-style: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body { overflow-x: clip; }

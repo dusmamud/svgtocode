@@ -43,22 +43,22 @@ const others = TOOLS.filter((x) => x.slug !== slug);
   faqJsonLd={faqs}
 >
   <header class="border-b border-border bg-surface/80 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3">
-      <a href="/" class="flex items-center gap-2.5" aria-label="VectorForge home">
+    <div class="mx-auto flex max-w-6xl flex-nowrap items-center gap-2 px-4 py-3 sm:gap-3">
+      <a href="/" class="flex min-w-0 shrink-0 items-center gap-2.5" aria-label="VectorForge home">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
           <rect width="32" height="32" rx="8" fill="var(--accent)" />
           <path d="M9 21 L16 8 L23 21" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
           <path d="M12.5 21 h7" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" />
           <circle cx="16" cy="24.5" r="1.6" fill="var(--accent-ink)" />
         </svg>
-        <span class="text-lg font-bold tracking-tight">VectorForge</span>
+        <span class="truncate text-lg font-bold tracking-tight">VectorForge</span>
       </a>
       <div class="ms-auto flex items-center gap-2">
         <label class="sr-only" for="locale-select">{t.languageLabel}</label>
         <select
           id="locale-select"
           aria-label={t.languageLabel}
-          class="min-h-[40px] cursor-pointer rounded-full border border-border bg-surface px-3 text-sm font-medium text-text"
+          class="min-h-[40px] cursor-pointer rounded-full border border-border bg-surface px-3 text-base font-medium text-text lg:text-sm"
           data-current={locale}
         >
           {LOCALES.map((l) => (
@@ -72,15 +72,15 @@ const others = TOOLS.filter((x) => x.slug !== slug);
     </div>
   </header>
 
-  <main class="mx-auto max-w-6xl px-4 py-8">
-    <div class="mb-6 text-center">
-      <h1 class="mx-auto max-w-3xl text-3xl font-bold tracking-tight sm:text-4xl">{heading}</h1>
-      <p class="mx-auto mt-2 max-w-2xl text-muted">{intro}</p>
+  <main class="mx-auto max-w-6xl px-4 py-8 lg:py-14">
+    <div class="mb-6 text-center lg:mb-8">
+      <h1 class="mx-auto max-w-3xl text-[clamp(1.8rem,6vw,3.2rem)] font-bold leading-[1.08] tracking-tight">{heading}</h1>
+      <p class="mx-auto mt-2 max-w-2xl text-base text-muted">{intro}</p>
     </div>
 
     <Converter t={t} initialFormat={format} client:load />
 
-    <section class="mx-auto mt-12 max-w-3xl" aria-labelledby="how-heading">
+    <section class="mx-auto mt-8 max-w-3xl lg:mt-12" aria-labelledby="how-heading">
       <h2 id="how-heading" class="text-xl font-bold">How to use</h2>
       <ol class="mt-4 space-y-3 text-[15px] leading-relaxed text-muted">
         {steps.map((s, i) => (
@@ -92,7 +92,7 @@ const others = TOOLS.filter((x) => x.slug !== slug);
       </ol>
     </section>
 
-    <section class="mx-auto mt-12 max-w-3xl" aria-labelledby="faq-heading">
+    <section class="mx-auto mt-8 max-w-3xl lg:mt-12" aria-labelledby="faq-heading">
       <h2 id="faq-heading" class="text-xl font-bold">Frequently asked questions</h2>
       <div class="mt-4 space-y-3">
         {faqs.map((f) => (
@@ -104,9 +104,9 @@ const others = TOOLS.filter((x) => x.slug !== slug);
       </div>
     </section>
 
-    <section class="mx-auto mt-12 max-w-6xl" aria-labelledby="tools-heading">
+    <section class="mx-auto mt-8 max-w-6xl lg:mt-12" aria-labelledby="tools-heading">
       <h2 id="tools-heading" class="text-center text-xl font-bold">More SVG tools</h2>
-      <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="mt-4 grid gap-3 sm:grid-cols-2 lg:mt-6 lg:grid-cols-3 lg:gap-4">
         {others.map((x) => (
           <a
             href={`/${x.slug}/`}
@@ -121,7 +121,7 @@ const others = TOOLS.filter((x) => x.slug !== slug);
   </main>
 
   <footer class="mt-12 border-t border-border">
-    <div class="mx-auto max-w-6xl px-4 py-8 text-center">
+    <div class="mx-auto max-w-6xl px-4 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-8 text-center">
       <h2 class="text-sm font-semibold">{t.aboutTitle}</h2>
       <p class="mx-auto mt-2 max-w-2xl text-sm text-muted">{t.footerMade}</p>
       <nav class="mt-4 flex items-center justify-center gap-5 text-sm" aria-label="footer">
