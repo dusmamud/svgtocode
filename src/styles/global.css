@@ -131,3 +131,16 @@ body {
 html { -webkit-text-size-adjust: 100%; }
 
 body { overflow-x: clip; }
+
+/* Full-screen mobile menu entrance */
+@keyframes vf-menu-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#mobile-menu:not(.hidden) {
+  animation: vf-menu-in 0.18s ease-out;
+}
