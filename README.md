@@ -41,17 +41,15 @@ Requires Node 20+ (tested on Node 24).
 22 locales configured: `en` (default, prefix-less), `hi`, `es`, `fr`, `de`, `pt`, `ru`,
 `ja`, `ko`, `zh-cn`, `ar`, `bn`, `ur`, `ta`, `te`, `mr`, `id`, `tr`, `it`, `nl`, `pl`, `vi`.
 
-- **Full native UI translations (8/22): `en`, `hi`, `es`, `pt`, `fr`, `de`, `id`, `ja`.**
-- All other locales are **scaffolded**: each gets its own static route, correct
-  `<html lang>` (+ `dir="rtl"` for `ar`/`ur`), canonical, and English-fallback
-  `<title>`/meta description — but until translated they are excluded from
-  `hreflang` alternates and the sitemap, and carry `<meta name="robots"
-  content="noindex, follow" />` (see `astro.config.mjs` + `Layout.astro`).
-- To translate a locale, add a dictionary next to `en`/`hi` in `src/i18n/ui.ts`
-  and return it from `getDict`. Once `isFullyTranslated(locale)` is true, add
-  the locale to `FULLY_TRANSLATED` in `astro.config.mjs` (sitemap + hreflang
-  pick it up automatically) — or move the canonical locale list to a shared
-  module if `astro.config.mjs` and `ui.ts` drift.
+- **Full native UI translations (22/22)** — completed 2026-10-18. Every locale
+  has a complete dictionary in `src/i18n/ui.ts`, its own static route, correct
+  `<html lang>` (+ `dir="rtl"` for `ar`/`ur`), canonical, localized
+  `<title>`/meta description, and is included in `hreflang` alternates and the
+  sitemap (driven by `FULLY_TRANSLATED` in `src/i18n/ui.ts`, consumed by
+  `astro.config.mjs` + `Layout.astro`).
+- To add a locale, add it to `LOCALES`, add a dictionary next to the others in
+  `src/i18n/ui.ts`, return it from `getDict`, and add it to `FULLY_TRANSLATED`
+  (sitemap + hreflang pick it up automatically).
 
 ## Deploy to Cloudflare Pages
 
@@ -83,7 +81,7 @@ src/
     index.astro       # en (prefix-less)
     [locale]/index.astro # 21 other locales via getStaticPaths
   lib/svg.ts          # pure conversion/validation/stats logic
-  i18n/ui.ts          # dictionaries (en, hi full; others scaffolded)
+  i18n/ui.ts          # dictionaries (all 22 locales fully translated)
   styles/global.css   # Tailwind v4 + design tokens
 public/
   favicon.svg  robots.txt  _headers   # _headers = security/CSP + cache rules (Cloudflare Pages)

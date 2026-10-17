@@ -9,10 +9,13 @@ export const LOCALES = [
 ];
 
 // NOTE: this list mirrors FULLY_TRANSLATED in src/i18n/ui.ts.
-// Only fully translated locales get hreflang alternates and sitemap
-// entries; the other 14 locale routes still build and work, but are
-// de-indexed (noindex meta in Layout.astro) until their translations land.
-const FULLY_TRANSLATED = ['en', 'hi', 'es', 'pt', 'fr', 'de', 'id', 'ja'];
+// All 22 locales have full translations (completed 2026-10-18), so every
+// locale gets hreflang alternates and sitemap entries.
+const FULLY_TRANSLATED = [
+  'en', 'hi', 'es', 'pt', 'fr', 'de', 'id', 'ja',
+  'ru', 'ko', 'zh-cn', 'ar', 'bn', 'ur', 'ta', 'te', 'mr',
+  'tr', 'it', 'nl', 'pl', 'vi',
+];
 
 // Dedicated English landing pages (each preselects an output format).
 const TOOL_SLUGS = [
