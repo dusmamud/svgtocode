@@ -4,6 +4,8 @@ import { SunIcon, MoonIcon, MonitorIcon } from '@phosphor-icons/react';
 type Theme = 'light' | 'dark' | 'system';
 const KEY = 'vf-theme';
 
+const ORDER: Theme[] = ['light', 'dark', 'system'];
+
 function applyTheme(theme: Theme) {
   const root = document.documentElement;
   const dark =
@@ -21,6 +23,12 @@ function readStored(): Theme {
   }
 }
 
+const ICONS: Record<Theme, React.ReactNode> = {
+  light: <SunIcon size={20} weight="bold" />,
+  dark: <MoonIcon size={20} weight="bold" />,
+  system: <MonitorIcon size={20} weight="bold" />,
+};
+
 export default function ThemeToggle({ labels }: { labels: { light: string; dark: string; system: string; label: string } }) {
   const [theme, setTheme] = useState<Theme>('system');
 
@@ -36,7 +44,8 @@ export default function ThemeToggle({ labels }: { labels: { light: string; dark:
     return () => mq.removeEventListener('change', onChange);
   }, []);
 
-  const pick = (next: Theme) => {
+  const cycle = () => {
+    const next = ORDER[(ORDER.indexOf(theme) + 1) % ORDER.length];
     setTheme(next);
     try {
       localStorage.setItem(KEY, next);
@@ -46,35 +55,24 @@ export default function ThemeToggle({ labels }: { labels: { light: string; dark:
     applyTheme(next);
   };
 
-  const options: { value: Theme; icon: React.ReactNode; text: string }[] = [
-    { value: 'light', icon: <SunIcon size={18} weight="bold" />, text: labels.light },
-    { value: 'system', icon: <MonitorIcon size={18} weight="bold" />, text: labels.system },
-    { value: 'dark', icon: <MoonIcon size={18} weight="bold" />, text: labels.dark },
-  ];
+  const currentLabel = labels[theme];
+  const hint = `${labels.label}: ${currentLabel}`;
 
   return (
-    <div
-      role="radiogroup"
-      aria-label={labels.label}
-      className="flex items-center gap-1 rounded-full border border-border bg-surface p-1"
+    <button
+      type="button"
+      onClick={cycle}
+      aria-label={hint}
+      title={hint}
+      className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-border bg-surface text-text transition-colors hover:bg-surface-2 active:scale-90 lg:h-10 lg:w-10"
     >
-      {options.map((o) => (
-        <button
-          key={o.value}
-          role="radio"
-          aria-checked={theme === o.value}
-          title={o.text}
-          onClick={() => pick(o.value)}
-          className={`flex min-h-[40px] min-w-[40px] items-center justify-center gap-1.5 rounded-full px-2 text-sm font-medium transition-colors ${
-            theme === o.value
-              ? 'bg-accent text-accent-ink shadow'
-              : 'text-muted hover:bg-surface-2 hover:text-text'
-          }`}
-        >
-          {o.icon}
-          <span className="hidden sm:inline">{o.text}</span>
-        </button>
-      ))}
-    </div>
+      <span
+        key={theme}
+        className="grid place-items-center transition-all duration-150 starting:scale-90 starting:opacity-0"
+        aria-hidden="true"
+      >
+        {ICONS[theme]}
+      </span>
+    </button>
   );
 }

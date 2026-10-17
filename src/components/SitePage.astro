@@ -23,18 +23,18 @@ const TOOLS = [
 ---
 
 <Layout locale={locale} t={t}>
-  <header class="sticky top-0 z-50 border-b border-border bg-surface/80 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl flex-nowrap items-center gap-2 px-4 py-3 sm:gap-3">
-      <a href={locale === 'en' ? '/' : `/${locale}/`} class="flex min-w-0 shrink-0 items-center gap-2.5" aria-label="VectorForge home">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+  <header class="border-b border-border bg-surface">
+    <div class="mx-auto flex h-[60px] max-w-6xl items-center gap-2 px-4">
+      <a href={locale === 'en' ? '/' : `/${locale}/`} class="flex min-w-0 shrink-0 items-center gap-2.5 rounded-lg transition-opacity hover:opacity-80" aria-label="VectorForge home">
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
           <rect width="32" height="32" rx="8" fill="var(--accent)" />
           <path d="M9 21 L16 8 L23 21" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
           <path d="M12.5 21 h7" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round" />
           <circle cx="16" cy="24.5" r="1.6" fill="var(--accent-ink)" />
         </svg>
-        <span class="truncate text-lg font-bold tracking-tight">VectorForge</span>
+        <span class="truncate text-[17px] font-bold tracking-tight">VectorForge</span>
       </a>
-      <nav class="ms-6 hidden lg:block" aria-label="Primary">
+      <nav class="ms-8 hidden lg:block" aria-label="Primary">
         <ul class="flex items-center gap-1">
           <li class="relative">
             <button
@@ -43,22 +43,22 @@ const TOOLS = [
               aria-haspopup="true"
               aria-expanded="false"
               aria-controls="nav-tools-menu"
-              class="inline-flex min-h-[44px] items-center gap-1.5 rounded-full px-3 text-sm font-medium text-muted transition-colors hover:bg-accent-soft hover:text-text"
+              class="inline-flex min-h-[44px] items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium text-muted transition-colors hover:bg-surface-2 hover:text-text"
             >
               {t.navTools}
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <svg id="nav-tools-chevron" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="transition-transform">
                 <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </button>
             <ul
               id="nav-tools-menu"
-              class="absolute start-0 top-full z-50 mt-2 hidden min-w-64 overflow-hidden rounded-2xl border border-border bg-surface p-1.5 shadow-[var(--shadow-soft)]"
+              class="absolute start-0 top-full z-50 mt-2 hidden w-80 rounded-2xl border border-border bg-surface p-2 shadow-xl"
             >
               {TOOLS.map((x) => (
                 <li>
                   <a
                     href={`/${x.slug}/`}
-                    class="flex min-h-[44px] flex-col justify-center rounded-xl px-3 py-1.5 transition-colors hover:bg-accent-soft"
+                    class="flex min-h-[44px] flex-col justify-center rounded-xl px-3 py-2.5 transition-colors hover:bg-surface-2"
                   >
                     <span class="text-sm font-semibold">{x.label}</span>
                     <span class="text-xs text-muted">{x.desc}</span>
@@ -68,13 +68,13 @@ const TOOLS = [
             </ul>
           </li>
           <li>
-            <a href="/how-it-works" class="inline-flex min-h-[44px] items-center rounded-full px-3 text-sm font-medium text-muted transition-colors hover:bg-accent-soft hover:text-text">{t.navHowItWorks}</a>
+            <a href="/how-it-works" class="inline-flex min-h-[44px] items-center rounded-lg px-3 py-2 text-sm font-medium text-muted transition-colors hover:bg-surface-2 hover:text-text">{t.navHowItWorks}</a>
           </li>
           <li>
-            <a href="/about" class="inline-flex min-h-[44px] items-center rounded-full px-3 text-sm font-medium text-muted transition-colors hover:bg-accent-soft hover:text-text">{t.navAbout}</a>
+            <a href="/about" class="inline-flex min-h-[44px] items-center rounded-lg px-3 py-2 text-sm font-medium text-muted transition-colors hover:bg-surface-2 hover:text-text">{t.navAbout}</a>
           </li>
           <li>
-            <a href="/privacy" class="inline-flex min-h-[44px] items-center rounded-full px-3 text-sm font-medium text-muted transition-colors hover:bg-accent-soft hover:text-text">{t.navPrivacy}</a>
+            <a href="/privacy" class="inline-flex min-h-[44px] items-center rounded-lg px-3 py-2 text-sm font-medium text-muted transition-colors hover:bg-surface-2 hover:text-text">{t.navPrivacy}</a>
           </li>
         </ul>
       </nav>
@@ -84,7 +84,7 @@ const TOOLS = [
           id="locale-select"
           data-locale-select
           aria-label={t.languageLabel}
-          class="hidden min-h-[44px] cursor-pointer rounded-full border border-border bg-surface px-3 text-base font-medium text-text lg:block lg:text-sm"
+          class="hidden h-10 cursor-pointer rounded-full border border-border bg-surface px-3 text-sm font-medium text-text lg:block"
           data-current={locale}
         >
           {LOCALES.map((l) => (
@@ -93,11 +93,22 @@ const TOOLS = [
             </option>
           ))}
         </select>
+        <a
+          href="https://github.com/dusmamud/svgtocode"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="GitHub"
+          class="hidden h-10 w-10 shrink-0 place-items-center rounded-full border border-border text-text transition-colors hover:bg-surface-2 lg:grid"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+          </svg>
+        </a>
         <ThemeToggle labels={themeLabels} client:load />
         <button
           id="nav-toggle"
           type="button"
-          class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-text transition-colors hover:bg-accent-soft lg:hidden"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-text transition-colors hover:bg-surface-2 lg:hidden"
           aria-expanded="false"
           aria-controls="mobile-menu"
           aria-label="Menu"
@@ -113,25 +124,38 @@ const TOOLS = [
     </div>
     <div id="mobile-menu" class="hidden border-t border-border bg-surface lg:hidden">
       <nav class="mx-auto max-w-6xl px-4 py-2" aria-label="Mobile">
-        <ul>
+        <ul class="divide-y divide-border/70">
           <li>
-            <p class="px-3 pb-1 pt-2 text-xs font-semibold uppercase tracking-wider text-muted">{t.navTools}</p>
+            <p class="px-4 pb-1 pt-2 text-xs font-semibold uppercase tracking-wider text-muted">{t.navTools}</p>
           </li>
           {TOOLS.map((x) => (
             <li>
-              <a href={`/${x.slug}/`} class="flex min-h-[48px] items-center border-t border-border/70 px-3 text-[15px] font-medium transition-colors hover:text-accent">{x.label}</a>
+              <a href={`/${x.slug}/`} class="flex min-h-[48px] items-center px-4 text-[15px] font-medium transition-colors hover:text-accent">{x.label}</a>
             </li>
           ))}
           <li>
-            <a href="/how-it-works" class="flex min-h-[48px] items-center border-t border-border/70 px-3 text-[15px] font-medium transition-colors hover:text-accent">{t.navHowItWorks}</a>
+            <a href="/how-it-works" class="flex min-h-[48px] items-center px-4 text-[15px] font-medium transition-colors hover:text-accent">{t.navHowItWorks}</a>
           </li>
           <li>
-            <a href="/about" class="flex min-h-[48px] items-center border-t border-border/70 px-3 text-[15px] font-medium transition-colors hover:text-accent">{t.navAbout}</a>
+            <a href="/about" class="flex min-h-[48px] items-center px-4 text-[15px] font-medium transition-colors hover:text-accent">{t.navAbout}</a>
           </li>
           <li>
-            <a href="/privacy" class="flex min-h-[48px] items-center border-t border-border/70 px-3 text-[15px] font-medium transition-colors hover:text-accent">{t.navPrivacy}</a>
+            <a href="/privacy" class="flex min-h-[48px] items-center px-4 text-[15px] font-medium transition-colors hover:text-accent">{t.navPrivacy}</a>
           </li>
-          <li class="border-t border-border/70 px-3 py-3">
+          <li>
+            <a
+              href="https://github.com/dusmamud/svgtocode"
+              target="_blank"
+              rel="noreferrer"
+              class="flex min-h-[48px] items-center gap-3 px-4 text-[15px] font-medium transition-colors hover:text-accent"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+              GitHub
+            </a>
+          </li>
+          <li class="px-4 py-3">
             <label class="sr-only" for="locale-select-mobile">{t.languageLabel}</label>
             <select
               id="locale-select-mobile"
@@ -238,6 +262,8 @@ const TOOLS = [
         if (!toolsToggle || !toolsMenu) return;
         toolsToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
         toolsMenu.classList.toggle('hidden', !open);
+        var chev = document.getElementById('nav-tools-chevron');
+        if (chev) chev.classList.toggle('rotate-180', open);
       }
 
       if (toggle && menu) {
