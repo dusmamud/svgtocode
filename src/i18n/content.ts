@@ -101,8 +101,8 @@ const aboutEn: AboutContent = {
     { label: 'Free:', text: 'every feature, no sign-up, no watermarks, no "pro" tier.' },
     { label: 'Honest:', text: 'the code you see in the editor is exactly what gets converted — nothing is silently rewritten on a server.' },
   ],
-  ossTitle: 'Open source',
-  ossBefore: 'VectorForge is built with modern web technology and SVGO, and its source is available under the MIT license:',
+  ossTitle: "Source code",
+  ossBefore: "VectorForge is built with modern web technology and SVGO. Its source code is publicly viewable on GitHub for reference only — all rights are reserved, and it may not be copied, modified, or hosted without written permission:",
   cta: 'Open the converter',
 };
 
@@ -193,8 +193,8 @@ const aboutHi: AboutContent = {
     { label: 'मुफ़्त:', text: 'हर सुविधा, बिना साइन-अप, बिना वॉटरमार्क, कोई "प्रो" टियर नहीं।' },
     { label: 'ईमानदार:', text: 'एडिटर में जो कोड दिखता है, वही बदलता है — कोई सर्वर चुपके से कुछ नहीं बदलता।' },
   ],
-  ossTitle: 'ओपन सोर्स',
-  ossBefore: 'VectorForge आधुनिक वेब तकनीक और SVGO से बना है, और इसका सोर्स MIT लाइसेंस के तहत उपलब्ध है:',
+  ossTitle: "सोर्स कोड",
+  ossBefore: "VectorForge आधुनिक वेब तकनीक और SVGO से बना है। इसका सोर्स कोड GitHub पर केवल संदर्भ के लिए सार्वजनिक रूप से देखा जा सकता है — सभी अधिकार सुरक्षित हैं, और लिखित अनुमति के बिना इसे कॉपी, बदला या होस्ट नहीं किया जा सकता:",
   cta: 'कन्वर्टर खोलें',
 };
 
@@ -285,8 +285,8 @@ const aboutEs: AboutContent = {
     { label: 'Gratuito:', text: 'todas las funciones, sin registro, sin marcas de agua, sin nivel «pro».' },
     { label: 'Honesto:', text: 'el código que ves en el editor es exactamente el que se convierte; ningún servidor reescribe nada en silencio.' },
   ],
-  ossTitle: 'Código abierto',
-  ossBefore: 'VectorForge está construido con tecnología web moderna y SVGO, y su código está disponible bajo la licencia MIT:',
+  ossTitle: "Código fuente",
+  ossBefore: "VectorForge está construido con tecnología web moderna y SVGO. Su código fuente puede verse públicamente en GitHub solo como referencia — todos los derechos están reservados y no puede copiarse, modificarse ni alojarse sin permiso por escrito:",
   cta: 'Abrir el conversor',
 };
 
@@ -377,8 +377,8 @@ const aboutPt: AboutContent = {
     { label: 'Gratuito:', text: 'todos os recursos, sem cadastro, sem marcas d’água, sem plano “pro”.' },
     { label: 'Honesto:', text: 'o código que você vê no editor é exatamente o que é convertido — nada é reescrito em silêncio em um servidor.' },
   ],
-  ossTitle: 'Código aberto',
-  ossBefore: 'O VectorForge é construído com tecnologia web moderna e SVGO, e seu código está disponível sob a licença MIT:',
+  ossTitle: "Código-fonte",
+  ossBefore: "O VectorForge é construído com tecnologia web moderna e SVGO. Seu código-fonte pode ser visto publicamente no GitHub apenas como referência — todos os direitos reservados, e ele não pode ser copiado, modificado ou hospedado sem permissão por escrito:",
   cta: 'Abrir o conversor',
 };
 
@@ -469,8 +469,8 @@ const aboutFr: AboutContent = {
     { label: 'Gratuit :', text: 'toutes les fonctions, sans inscription, sans filigrane, sans formule « pro ».' },
     { label: 'Honnête :', text: 'le code que vous voyez dans l’éditeur est exactement celui qui est converti — rien n’est réécrit en silence sur un serveur.' },
   ],
-  ossTitle: 'Open source',
-  ossBefore: 'VectorForge est construit avec des technologies web modernes et SVGO, et son code source est disponible sous licence MIT :',
+  ossTitle: "Code source",
+  ossBefore: "VectorForge est construit avec une technologie web moderne et SVGO. Son code source peut être consulté publiquement sur GitHub à titre de référence uniquement — tous droits réservés, et il ne peut être copié, modifié ni hébergé sans autorisation écrite :",
   cta: 'Ouvrir le convertisseur',
 };
 
@@ -561,8 +561,8 @@ const aboutDe: AboutContent = {
     { label: 'Kostenlos:', text: 'jede Funktion, keine Anmeldung, keine Wasserzeichen, keine „Pro“-Stufe.' },
     { label: 'Ehrlich:', text: 'der Code, den Sie im Editor sehen, ist genau der, der umgewandelt wird — kein Server schreibt still etwas um.' },
   ],
-  ossTitle: 'Open Source',
-  ossBefore: 'VectorForge ist mit moderner Webtechnik und SVGO gebaut, und sein Quellcode steht unter der MIT-Lizenz bereit:',
+  ossTitle: "Quellcode",
+  ossBefore: "VectorForge ist mit moderner Webtechnologie und SVGO gebaut. Sein Quellcode kann auf GitHub öffentlich nur als Referenz eingesehen werden — alle Rechte vorbehalten; er darf ohne schriftliche Genehmigung nicht kopiert, verändert oder gehostet werden:",
   cta: 'Konverter öffnen',
 };
 
@@ -653,8 +653,8 @@ const aboutId: AboutContent = {
     { label: 'Gratis:', text: 'setiap fitur, tanpa pendaftaran, tanpa tanda air, tanpa tingkat "pro".' },
     { label: 'Jujur:', text: 'kode yang Anda lihat di editor adalah persis yang dikonversi — tidak ada server yang diam-diam menulis ulang apa pun.' },
   ],
-  ossTitle: 'Sumber terbuka',
-  ossBefore: 'VectorForge dibangun dengan teknologi web modern dan SVGO, dan kode sumbernya tersedia di bawah lisensi MIT:',
+  ossTitle: "Kode sumber",
+  ossBefore: "VectorForge dibangun dengan teknologi web modern dan SVGO. Kode sumbernya dapat dilihat publik di GitHub hanya sebagai referensi — semua hak dilindungi, dan kode itu tidak boleh disalin, dimodifikasi, atau dihosting tanpa izin tertulis:",
   cta: 'Buka konverter',
 };
 
@@ -745,8 +745,8 @@ const aboutJa: AboutContent = {
     { label: '無料：', text: '全機能が使え、登録なし、透かしなし、「Pro」プランなし。' },
     { label: '正直：', text: 'エディタで見えるコードがそのまま変換されます — サーバーが密かに書き換えることはありません。' },
   ],
-  ossTitle: 'オープンソース',
-  ossBefore: 'VectorForge はモダンな Web 技術と SVGO で構築されており、ソースコードは MIT ライセンスで公開されています：',
+  ossTitle: "ソースコード",
+  ossBefore: "VectorForge はモダンな Web テクノロジーと SVGO で構築されています。ソースコードは GitHub で参照用にのみ公開されています — 全著作権所有。書面による許可なくコピー、改変、ホスティングはできません：",
   cta: 'コンバーターを開く',
 };
 
@@ -837,8 +837,8 @@ const aboutRu: AboutContent = {
     { label: 'Бесплатность:', text: 'все функции, без регистрации, без водяных знаков, без «pro»-тарифа.' },
     { label: 'Честность:', text: 'код, который вы видите в редакторе, — это ровно то, что конвертируется; сервер ничего не переписывает исподтишка.' },
   ],
-  ossTitle: 'Открытый исходный код',
-  ossBefore: 'VectorForge построен на современных веб-технологиях и SVGO, а его исходный код доступен по лицензии MIT:',
+  ossTitle: "Исходный код",
+  ossBefore: "VectorForge построен на современной веб-технологии и SVGO. Его исходный код можно публично просматривать на GitHub только в справочных целях — все права защищены, и его нельзя копировать, изменять или размещать без письменного разрешения:",
   cta: 'Открыть конвертер',
 };
 
@@ -929,8 +929,8 @@ const aboutKo: AboutContent = {
     { label: '무료:', text: '모든 기능, 가입 없음, 워터마크 없음, "프로" 요금제 없음.' },
     { label: '정직:', text: '편집기에서 보이는 코드가 정확히 변환되는 코드이며, 서버가 몰래 다시 쓰는 일은 없습니다.' },
   ],
-  ossTitle: '오픈 소스',
-  ossBefore: 'VectorForge는 최신 웹 기술과 SVGO로 만들어졌으며, 소스 코드는 MIT 라이선스로 공개되어 있습니다:',
+  ossTitle: "소스 코드",
+  ossBefore: "VectorForge는 최신 웹 기술과 SVGO로 구축되었습니다. 소스 코드는 GitHub에서 참고용으로만 공개 열람할 수 있습니다 — 모든 권리 보유. 서면 허가 없이 복사, 수정 또는 호스팅할 수 없습니다:",
   cta: '변환기 열기',
 };
 
@@ -1021,8 +1021,8 @@ const aboutZhCn: AboutContent = {
     { label: '免费：', text: '全部功能、无需注册、无水印、没有“专业版”层级。' },
     { label: '诚实：', text: '您在编辑器中看到的代码正是被转换的代码——没有任何服务器会悄悄改写。' },
   ],
-  ossTitle: '开源',
-  ossBefore: 'VectorForge 使用现代 Web 技术和 SVGO 构建，其源代码以 MIT 许可证发布：',
+  ossTitle: "源代码",
+  ossBefore: "VectorForge 使用现代 Web 技术和 SVGO 构建。其源代码可在 GitHub 上公开查看，仅供参考 — 保留所有权利，未经书面许可不得复制、修改或托管：",
   cta: '打开转换器',
 };
 
@@ -1113,8 +1113,8 @@ const aboutAr: AboutContent = {
     { label: 'المجانية:', text: 'كل المزايا، دون تسجيل، دون علامات مائية، دون فئة «احترافية».' },
     { label: 'الصدق:', text: 'الكود الذي تراه في المحرر هو بالضبط ما يُحوَّل — لا خادم يعيد كتابة أي شيء في الخفاء.' },
   ],
-  ossTitle: 'مفتوح المصدر',
-  ossBefore: 'بُني VectorForge بتقنيات ويب حديثة وSVGO، وشيفرته المصدرية متاحة برخصة MIT:',
+  ossTitle: "الشفرة المصدرية",
+  ossBefore: "بُني VectorForge بتقنية ويب حديثة وSVGO. يمكن الاطلاع على شفرته المصدرية علنًا في GitHub للمرجعية فقط — جميع الحقوق محفوظة، ولا يجوز نسخها أو تعديلها أو استضافتها دون إذن كتابي:",
   cta: 'افتح المحوّل',
 };
 
@@ -1205,8 +1205,8 @@ const aboutBn: AboutContent = {
     { label: 'বিনামূল্যে:', text: 'প্রতিটি সুবিধা, সাইন-আপ ছাড়া, ওয়াটারমার্ক ছাড়া, কোনো "প্রো" স্তর নেই।' },
     { label: 'সৎ:', text: 'সম্পাদকে যে কোড দেখছেন, হুবহু সেটাই রূপান্তরিত হয় — কোনো সার্ভার নীরবে কিছু বদলে দেয় না।' },
   ],
-  ossTitle: 'ওপেন সোর্স',
-  ossBefore: 'VectorForge আধুনিক ওয়েব প্রযুক্তি ও SVGO দিয়ে তৈরি, এবং এর সোর্স MIT লাইসেন্সে উপলব্ধ:',
+  ossTitle: "সোর্স কোড",
+  ossBefore: "VectorForge আধুনিক ওয়েব প্রযুক্তি এবং SVGO দিয়ে তৈরি। এর সোর্স কোড GitHub-এ শুধুমাত্র তথ্যের জন্য সর্বজনীনভাবে দেখা যায় — সর্বস্বত্ব সংরক্ষিত, এবং লিখিত অনুমতি ছাড়া এটি কপি, পরিবর্তন বা হোস্ট করা যাবে না:",
   cta: 'রূপান্তরকারী খুলুন',
 };
 
@@ -1297,8 +1297,8 @@ const aboutAsm: AboutContent = {
     { label: 'বিনামূলীয়া:', text: 'প্ৰতিটো সুবিধা, চাইন-আপ অবিহনে, ৱাটাৰমাৰ্ক অবিহনে, কোনো "প্ৰো" স্তৰ নাই।' },
     { label: 'সৎ:', text: 'সম্পাদকত যি কোড দেখিছে, ঠিক সেইটোৱেই ৰূপান্তৰিত হয় — কোনো চাৰ্ভাৰে নিৰৱে একো সলনি নকৰে।' },
   ],
-  ossTitle: 'মুক্ত উৎস',
-  ossBefore: 'VectorForge আধুনিক ৱেব প্ৰযুক্তি আৰু SVGO ৰে নিৰ্মিত, আৰু ইয়াৰ উৎস MIT অনুজ্ঞাপত্ৰৰ অধীনত উপলব্ধ:',
+  ossTitle: "উৎস কোড",
+  ossBefore: "VectorForge আধুনিক ৱেব প্ৰযুক্তি আৰু SVGO ৰে নিৰ্মিত। ইয়াৰ উৎস কোড GitHub ত কেৱল প্ৰসংগৰ বাবে ৰাজহুৱাভাৱে চাব পাৰি — সকলো অধিকাৰ সংৰক্ষিত, আৰু লিখিত অনুমতি অবিহনে ইয়াক কপি, সলনি বা হোষ্ট কৰিব নোৱাৰি:",
   cta: 'ৰূপান্তৰক খোলক',
 };
 
@@ -1389,8 +1389,8 @@ const aboutUr: AboutContent = {
     { label: 'مفت:', text: 'ہر سہولت، بغیر سائن اپ، بغیر واٹر مارک، کوئی "پرو" درجہ نہیں۔' },
     { label: 'ایماندار:', text: 'ایڈیٹر میں جو کوڈ دکھتا ہے، وہی بدلتا ہے — کوئی سرور چپکے سے کچھ نہیں بدلتا۔' },
   ],
-  ossTitle: 'اوپن سورس',
-  ossBefore: 'VectorForge جدید ویب ٹیکنالوجی اور SVGO سے بنا ہے، اور اس کا سورس MIT لائسنس کے تحت دستیاب ہے:',
+  ossTitle: "سورس کوڈ",
+  ossBefore: "VectorForge جدید ویب ٹیکنالوجی اور SVGO سے بنا ہے۔ اس کا سورس کوڈ GitHub پر صرف حوالے کے لیے عوامی طور پر دیکھا جا سکتا ہے — جملہ حقوق محفوظ ہیں، اور تحریری اجازت کے بغیر اسے کاپی، تبدیل یا ہوسٹ نہیں کیا جا سکتا:",
   cta: 'کنورٹر کھولیں',
 };
 
@@ -1481,8 +1481,8 @@ const aboutTa: AboutContent = {
     { label: 'இலவசம்:', text: 'ஒவ்வொரு அம்சமும், பதிவு இல்லாமல், நீர்க்குறிகள் இல்லாமல், "புரோ" அடுக்கு இல்லாமல்.' },
     { label: 'நேர்மை:', text: 'ஆசிரியரில் நீங்கள் காணும் குறியீடு சரியாக அதுவே மாற்றப்படுகிறது — எந்தச் சேவையகமும் அமைதியாக எதையும் மீண்டும் எழுதுவதில்லை.' },
   ],
-  ossTitle: 'திறந்த மூலம்',
-  ossBefore: 'VectorForge நவீன வலைத் தொழில்நுட்பம் மற்றும் SVGO மூலம் உருவாக்கப்பட்டது, அதன் மூலம் MIT உரிமத்தின் கீழ் கிடைக்கிறது:',
+  ossTitle: "மூலக் குறியீடு",
+  ossBefore: "VectorForge நவீன வலைத் தொழில்நுட்பம் மற்றும் SVGO மூலம் உருவாக்கப்பட்டது. அதன் மூலக் குறியீட்டை GitHub இல் குறிப்புக்காக மட்டுமே பொதுவில் பார்க்க முடியும் — அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை, எழுத்துப்பூர்வ அனுமதியின்றி அதை நகலெடுக்கவோ, மாற்றவோ, புரவலன் செய்யவோ முடியாது:",
   cta: 'மாற்றியைத் திறக்கவும்',
 };
 
@@ -1573,8 +1573,8 @@ const aboutTe: AboutContent = {
     { label: 'ఉచితం:', text: 'ప్రతి ఫీచర్, సైన్-అప్ లేకుండా, వాటర్‌మార్క్‌లు లేకుండా, "ప్రో" స్థాయి లేకుండా.' },
     { label: 'నిజాయితీ:', text: 'ఎడిటర్‌లో మీరు చూసే కోడ్ ఖచ్చితంగా అదే మార్చబడుతుంది — ఏ సర్వరూ నిశ్శబ్దంగా దేనినీ తిరిగి రాయదు.' },
   ],
-  ossTitle: 'ఓపెన్ సోర్స్',
-  ossBefore: 'VectorForge ఆధునిక వెబ్ సాంకేతికత మరియు SVGOతో నిర్మించబడింది, దాని సోర్స్ MIT లైసెన్స్ కింద అందుబాటులో ఉంది:',
+  ossTitle: "సోర్స్ కోడ్",
+  ossBefore: "VectorForge ఆధునిక వెబ్ సాంకేతికత మరియు SVGOతో నిర్మించబడింది. దాని సోర్స్ కోడ్‌ను GitHubలో కేవలం సూచన కోసం మాత్రమే పబ్లిక్‌గా చూడవచ్చు — అన్ని హక్కులు ప్రత్యేకించబడ్డాయి, మరియు వ్రాతపూర్వక అనుమతి లేకుండా దానిని కాపీ చేయడం, మార్చడం లేదా హోస్ట్ చేయడం కుదరదు:",
   cta: 'కన్వర్టర్‌ను తెరవండి',
 };
 
@@ -1665,8 +1665,8 @@ const aboutMr: AboutContent = {
     { label: 'विनामूल्य:', text: 'प्रत्येक सुविधा, साइन-अपशिवाय, वॉटरमार्कशिवाय, कोणताही "प्रो" स्तर नाही.' },
     { label: 'प्रामाणिक:', text: 'संपादकात जो कोड दिसतो, तोच बदलला जातो — कोणताही सर्व्हर गुपचूप काही बदलत नाही.' },
   ],
-  ossTitle: 'मुक्त स्रोत',
-  ossBefore: 'VectorForge आधुनिक वेब तंत्रज्ञान आणि SVGO ने बनवलेले आहे, आणि याचा स्रोत MIT परवान्याअंतर्गत उपलब्ध आहे:',
+  ossTitle: "स्रोत कोड",
+  ossBefore: "VectorForge आधुनिक वेब तंत्रज्ञान आणि SVGO ने बनवलेले आहे. याचा स्रोत कोड GitHub वर फक्त संदर्भासाठी सार्वजनिकरित्या पाहता येतो — सर्व हक्क राखीव आहेत, आणि लेखी परवानगीशिवाय तो कॉपी, बदलता किंवा होस्ट करता येत नाही:",
   cta: 'रूपांतरक उघडा',
 };
 
@@ -1757,8 +1757,8 @@ const aboutTr: AboutContent = {
     { label: 'Ücretsiz:', text: 'her özellik, kayıt yok, filigran yok, "pro" katmanı yok.' },
     { label: 'Dürüst:', text: 'düzenleyicide gördüğünüz kod, dönüştürülen kodun ta kendisidir — hiçbir sunucu sessizce bir şeyleri yeniden yazmaz.' },
   ],
-  ossTitle: 'Açık kaynak',
-  ossBefore: 'VectorForge, modern web teknolojisi ve SVGO ile inşa edilmiştir ve kaynak kodu MIT lisansı altında mevcuttur:',
+  ossTitle: "Kaynak kodu",
+  ossBefore: "VectorForge, modern web teknolojisi ve SVGO ile inşa edilmiştir. Kaynak kodu GitHub'da yalnızca referans amaçlı herkese açık olarak görüntülenebilir — tüm hakları saklıdır ve yazılı izin olmadan kopyalanamaz, değiştirilemez veya barındırılamaz:",
   cta: 'Dönüştürücüyü aç',
 };
 
@@ -1849,8 +1849,8 @@ const aboutIt: AboutContent = {
     { label: 'Gratuito:', text: 'ogni funzione, nessuna registrazione, nessuna filigrana, nessun piano «pro».' },
     { label: 'Onesto:', text: 'il codice che vedi nell’editor è esattamente quello che viene convertito — nessun server riscrive nulla in silenzio.' },
   ],
-  ossTitle: 'Open source',
-  ossBefore: 'VectorForge è costruito con moderne tecnologie web e SVGO, e il suo codice sorgente è disponibile con licenza MIT:',
+  ossTitle: "Codice sorgente",
+  ossBefore: "VectorForge è costruito con moderne tecnologie web e SVGO. Il suo codice sorgente può essere consultato pubblicamente su GitHub solo come riferimento — tutti i diritti riservati, e non può essere copiato, modificato né ospitato senza autorizzazione scritta:",
   cta: 'Apri il convertitore',
 };
 
@@ -1941,8 +1941,8 @@ const aboutNl: AboutContent = {
     { label: 'Gratis:', text: 'elke functie, geen aanmelding, geen watermerken, geen "pro"-laag.' },
     { label: 'Eerlijk:', text: 'de code die je in de editor ziet, is precies de code die wordt omgezet — geen server herschrijft stilletjes iets.' },
   ],
-  ossTitle: 'Open source',
-  ossBefore: 'VectorForge is gebouwd met moderne webtechnologie en SVGO, en de broncode is beschikbaar onder de MIT-licentie:',
+  ossTitle: "Broncode",
+  ossBefore: "VectorForge is gebouwd met moderne webtechnologie en SVGO. De broncode kan op GitHub openbaar worden ingezien, uitsluitend ter referentie — alle rechten voorbehouden; hij mag zonder schriftelijke toestemming niet worden gekopieerd, gewijzigd of gehost:",
   cta: 'Open de converter',
 };
 
@@ -2033,8 +2033,8 @@ const aboutPl: AboutContent = {
     { label: 'Darmowość:', text: 'każda funkcja, bez rejestracji, bez znaków wodnych, bez poziomu „pro”.' },
     { label: 'Uczciwość:', text: 'kod, który widzisz w edytorze, jest dokładnie tym, który jest konwertowany — żaden serwer nie przepisuje niczego po cichu.' },
   ],
-  ossTitle: 'Otwarte źródło',
-  ossBefore: 'VectorForge jest zbudowany w nowoczesnej technologii webowej i SVGO, a jego kod źródłowy jest dostępny na licencji MIT:',
+  ossTitle: "Kod źródłowy",
+  ossBefore: "VectorForge jest zbudowany w nowoczesnej technologii webowej i SVGO. Jego kod źródłowy można publicznie przeglądać na GitHub wyłącznie w celach informacyjnych — wszelkie prawa zastrzeżone; nie wolno go kopiować, modyfikować ani hostować bez pisemnej zgody:",
   cta: 'Otwórz konwerter',
 };
 
@@ -2125,8 +2125,8 @@ const aboutVi: AboutContent = {
     { label: 'Miễn phí:', text: 'mọi tính năng, không đăng ký, không hình mờ, không gói "pro".' },
     { label: 'Trung thực:', text: 'mã bạn thấy trong trình soạn thảo chính xác là mã được chuyển đổi — không máy chủ nào âm thầm viết lại bất cứ thứ gì.' },
   ],
-  ossTitle: 'Mã nguồn mở',
-  ossBefore: 'VectorForge được xây dựng bằng công nghệ web hiện đại và SVGO, mã nguồn của nó được phát hành theo giấy phép MIT:',
+  ossTitle: "Mã nguồn",
+  ossBefore: "VectorForge được xây dựng bằng công nghệ web hiện đại và SVGO. Mã nguồn của nó có thể xem công khai trên GitHub chỉ để tham khảo — mọi quyền được bảo lưu, và không được sao chép, sửa đổi hoặc lưu trữ nếu không có sự cho phép bằng văn bản:",
   cta: 'Mở bộ chuyển đổi',
 };
 
