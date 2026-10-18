@@ -22,6 +22,7 @@ const TOOLS = [
   { slug: 'svg-optimizer', label: 'SVG Optimizer', desc: t.toolOptimizerDesc },
   { slug: 'svg-to-png', label: 'SVG → PNG', desc: t.toolPngDesc },
 ];
+const toolHref = (s: string) => (locale === 'en' ? `/${s}/` : `/${locale}/${s}/`);
 
 const homeHref = locale === 'en' ? '/' : `/${locale}/`;
 const pageHref = (p: string) => (locale === 'en' ? `/${p}` : `/${locale}/${p}`);
@@ -63,7 +64,7 @@ const localeUrl = (l: string) => (l === 'en' ? '/' : `/${l}/`) + (path ? `${path
             {TOOLS.map((x) => (
               <li>
                 <a
-                  href={`/${x.slug}/`}
+                  href={toolHref(x.slug)}
                   aria-current={x.slug === activeTool ? 'page' : undefined}
                   class="flex min-h-[44px] flex-col justify-center rounded-xl px-3 py-2.5 transition-colors hover:bg-surface-2"
                 >
@@ -152,7 +153,7 @@ const localeUrl = (l: string) => (l === 'en' ? '/' : `/${l}/`) + (path ? `${path
         </li>
         {TOOLS.map((x) => (
           <li>
-            <a href={`/${x.slug}/`} aria-current={x.slug === activeTool ? 'page' : undefined} class="flex min-h-[56px] items-center px-2 text-[17px] font-medium transition-colors hover:text-accent">{x.label}</a>
+            <a href={toolHref(x.slug)} aria-current={x.slug === activeTool ? 'page' : undefined} class="flex min-h-[56px] items-center px-2 text-[17px] font-medium transition-colors hover:text-accent">{x.label}</a>
           </li>
         ))}
         <li>

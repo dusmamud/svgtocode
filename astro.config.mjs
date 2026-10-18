@@ -49,9 +49,9 @@ export default defineConfig({
         if (!b) {
           return (FULLY_TRANSLATED.includes(a) && a !== 'en') || TOOL_SLUGS.includes(a) || STATIC_PAGES.includes(a);
         }
-        // Localized content pages: /<locale>/about/ and /<locale>/how-it-works/
-        // (privacy stays out everywhere — it is noindex by design).
-        return FULLY_TRANSLATED.includes(a) && a !== 'en' && STATIC_PAGES.includes(b);
+        // Localized sub-pages: /<locale>/about/, /<locale>/how-it-works/ and
+        // /<locale>/<tool-slug>/ (privacy stays out everywhere — noindex by design).
+        return FULLY_TRANSLATED.includes(a) && a !== 'en' && (STATIC_PAGES.includes(b) || TOOL_SLUGS.includes(b));
       },
     }),
   ],

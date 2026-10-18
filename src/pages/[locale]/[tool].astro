@@ -1,0 +1,15 @@
+---
+import ToolPage from '../../components/ToolPage.astro';
+import { LOCALES } from '../../i18n/ui';
+import { TOOL_SLUGS } from '../../i18n/tools';
+
+export function getStaticPaths() {
+  return LOCALES.filter((l) => l !== 'en').flatMap((locale) =>
+    TOOL_SLUGS.map((tool) => ({ params: { locale, tool } })),
+  );
+}
+
+const { locale, tool } = Astro.params;
+---
+
+<ToolPage slug={tool} locale={locale} />

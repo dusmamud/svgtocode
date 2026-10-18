@@ -2,30 +2,4 @@
 import ToolPage from '../components/ToolPage.astro';
 ---
 
-<ToolPage
-  slug="svg-to-data-uri"
-  format="css"
-  title="SVG to Data URI / CSS Background Generator — Free | VectorForge"
-  description="Convert SVG to a CSS-ready data URI for background-image. Free generator with minification, optimized encoding and live preview."
-  heading="SVG to Data URI Converter"
-  intro="Turn any SVG into a compact data URI you can paste straight into background-image. VectorForge minifies the SVG first and percent-encodes it, which keeps the URI smaller than Base64 for typical icons — and you can see it render in the live preview before copying."
-  steps={[
-    'Paste your SVG markup into the editor, or drop an .svg file anywhere on the page.',
-    'The CSS Data-URI tab is already selected — the snippet updates live as you edit.',
-    'Copy the CSS snippet with one click, or download it as a .css file.',
-  ]}
-  faqs={[
-    {
-      q: 'Data URI or Base64 — which one is smaller?',
-      a: 'For SVG, a percent-encoded data URI is usually smaller than Base64 (you avoid the ~33% encoding overhead), and this tool minifies the SVG first to shrink it further.',
-    },
-    {
-      q: 'Why is the SVG minified before encoding?',
-      a: 'Stripping comments, whitespace and metadata shrinks the URI without changing how the image renders.',
-    },
-    {
-      q: 'Does the data URI keep the xmlns attribute?',
-      a: 'Yes. Standalone usage (img tags, CSS backgrounds) requires xmlns, so it is preserved here — unlike JSX or React component output.',
-    },
-  ]}
-/>
+<ToolPage slug="svg-to-data-uri" locale="en" />

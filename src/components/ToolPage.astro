@@ -3,59 +3,46 @@ import Layout from '../layouts/Layout.astro';
 import Converter from '../components/Converter';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
-import { getDict, type Dict } from '../i18n/ui';
-import type { OutputFormat } from '../lib/svg';
+import { getDict } from '../i18n/ui';
+import { getToolContent, TOOL_FORMATS, type ToolSlug } from '../i18n/tools';
 
 interface Props {
   slug: string;
-  format: OutputFormat;
-  title: string;
-  description: string;
-  heading: string;
-  intro: string;
-  steps: [string, string, string];
-  faqs: { q: string; a: string }[];
+  locale: string;
 }
 
-const { slug, format, title, description, heading, intro, steps, faqs } = Astro.props;
-const locale = 'en';
-const t: Dict = getDict('en');
-const canonicalUrl = new URL(`/${slug}/`, Astro.site).toString();
+const { slug, locale } = Astro.props;
+const t = getDict(locale);
+const c = getToolContent(slug, locale);
+const format = TOOL_FORMATS[slug as ToolSlug];
 
-const TOOLS = [
-  { slug: 'svg-to-jsx', label: 'SVG → JSX', desc: 'Convert SVG markup to JSX for React' },
-  { slug: 'svg-to-react', label: 'SVG → React', desc: 'Generate a typed React component' },
-  { slug: 'svg-to-base64', label: 'SVG → Base64', desc: 'Unicode-safe Base64 encoder' },
-  { slug: 'svg-to-data-uri', label: 'SVG → Data URI', desc: 'CSS-ready background-image URIs' },
-  { slug: 'svg-optimizer', label: 'SVG Optimizer', desc: 'Shrink SVGs with SVGO, keep the viewBox' },
-  { slug: 'svg-to-png', label: 'SVG → PNG', desc: 'Export PNGs at 1x, 2x and 4x' },
+const TOOLS: { slug: ToolSlug; label: string; desc: string }[] = [
+  { slug: 'svg-to-jsx', label: 'SVG → JSX', desc: t.toolJsxDesc },
+  { slug: 'svg-to-react', label: 'SVG → React', desc: t.toolReactDesc },
+  { slug: 'svg-to-base64', label: 'SVG → Base64', desc: t.toolBase64Desc },
+  { slug: 'svg-to-data-uri', label: 'SVG → Data URI', desc: t.toolDataUriDesc },
+  { slug: 'svg-optimizer', label: 'SVG Optimizer', desc: t.toolOptimizerDesc },
+  { slug: 'svg-to-png', label: 'SVG → PNG', desc: t.toolPngDesc },
 ];
+const toolHref = (s: string) => (locale === 'en' ? `/${s}/` : `/${locale}/${s}/`);
 const others = TOOLS.filter((x) => x.slug !== slug);
 ---
 
-<Layout
-  locale={locale}
-  t={t}
-  title={title}
-  description={description}
-  singleLocale
-  canonicalUrl={canonicalUrl}
-  faqJsonLd={faqs}
->
-  <SiteHeader locale={locale} t={t} activeTool={slug} />
+<Layout locale={locale} t={t} title={c.title} description={c.description} subPath={slug} faqJsonLd={c.faqs}>
+  <SiteHeader locale={locale} t={t} path={slug} activeTool={slug} />
 
   <main class="mx-auto max-w-6xl px-4 py-8 lg:py-14">
     <div class="mb-6 text-center lg:mb-8">
-      <h1 class="mx-auto max-w-3xl text-[clamp(1.8rem,6vw,3.2rem)] font-bold leading-[1.08] tracking-tight">{heading}</h1>
-      <p class="mx-auto mt-2 max-w-2xl text-base text-muted">{intro}</p>
+      <h1 class="mx-auto max-w-3xl text-[clamp(1.8rem,6vw,3.2rem)] font-bold leading-[1.08] tracking-tight">{c.heading}</h1>
+      <p class="mx-auto mt-2 max-w-2xl text-base text-muted">{c.intro}</p>
     </div>
 
     <Converter t={t} initialFormat={format} client:load />
 
     <section class="mx-auto mt-8 max-w-3xl lg:mt-12" aria-labelledby="how-heading">
-      <h2 id="how-heading" class="text-xl font-bold">How to use</h2>
+      <h2 id="how-heading" class="text-xl font-bold">{c.howToUse}</h2>
       <ol class="mt-4 space-y-3 text-[15px] leading-relaxed text-muted">
-        {steps.map((s, i) => (
+        {c.steps.map((s, i) => (
           <li class="rounded-2xl border border-border bg-surface p-4 shadow-[var(--shadow-soft)]">
             <span class="me-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-accent-soft text-xs font-bold text-accent">{i + 1}</span>
             {s}
@@ -65,9 +52,9 @@ const others = TOOLS.filter((x) => x.slug !== slug);
     </section>
 
     <section class="mx-auto mt-8 max-w-3xl lg:mt-12" aria-labelledby="faq-heading">
-      <h2 id="faq-heading" class="text-xl font-bold">Frequently asked questions</h2>
+      <h2 id="faq-heading" class="text-xl font-bold">{c.faqHeading}</h2>
       <div class="mt-4 space-y-3">
-        {faqs.map((f) => (
+        {c.faqs.map((f) => (
           <details class="rounded-2xl border border-border bg-surface p-4 shadow-[var(--shadow-soft)]">
             <summary class="cursor-pointer text-[15px] font-semibold">{f.q}</summary>
             <p class="mt-2 text-[15px] leading-relaxed text-muted">{f.a}</p>
@@ -77,11 +64,11 @@ const others = TOOLS.filter((x) => x.slug !== slug);
     </section>
 
     <section class="mx-auto mt-8 max-w-6xl lg:mt-12" aria-labelledby="tools-heading">
-      <h2 id="tools-heading" class="text-center text-xl font-bold">More SVG tools</h2>
+      <h2 id="tools-heading" class="text-center text-xl font-bold">{c.moreTools}</h2>
       <div class="mt-4 grid gap-3 sm:grid-cols-2 lg:mt-6 lg:grid-cols-3 lg:gap-4">
         {others.map((x) => (
           <a
-            href={`/${x.slug}/`}
+            href={toolHref(x.slug)}
             class="rounded-2xl border border-border bg-surface p-5 shadow-[var(--shadow-soft)] transition-colors hover:border-accent"
           >
             <span class="text-[15px] font-semibold">{x.label}</span>
@@ -93,5 +80,4 @@ const others = TOOLS.filter((x) => x.slug !== slug);
   </main>
 
   <SiteFooter locale={locale} t={t} />
-
 </Layout>
