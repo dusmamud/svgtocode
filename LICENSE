@@ -1,24 +1,307 @@
+=====================================================================
+                    ALL RIGHTS RESERVED LICENSE
+=====================================================================
+
 Copyright (c) 2026 dusmamud. All rights reserved.
 
-This software — VectorForge (svgtocode) — and its source code are the
-exclusive property of the copyright holder.
+Project:      VectorForge — SVG to Code Converter ("the Software")
+Repository:   https://github.com/dusmamud/svgtocode
+Website:      https://svgtocode.dusrel.com
+Holder:       dusmamud ("the Copyright Holder")
+Effective:    18 October 2026 — Version 1.0
 
-No permission is granted to any person to copy, modify, merge, publish,
-distribute, sublicense, sell, or host this software or any derivative work
-based on it, in whole or in part, in original or modified form, except with
-the prior written permission of the copyright holder.
+---------------------------------------------------------------------
+1. DEFINITIONS
+---------------------------------------------------------------------
 
-The source code is made publicly viewable for reference only. Viewing,
-accessing, or forking the repository does not grant any license or right
-to use the software.
+1.1 "Software" means this project in its entirety: its source code,
+    compiled and bundled output, build scripts, configuration files,
+    documentation, text, translations, graphics, icons, logos, and
+    every other file contained in this repository, in any form or
+    medium, and including all updates and revisions (subject to
+    Section 13 for earlier versions).
 
-Unauthorized copying, modification, distribution, or hosting of this
-software, via any medium, is strictly prohibited.
+1.2 "Copyright Holder" means dusmamud, the author and owner of the
+    Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
-OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+1.3 "You" means any individual or entity that accesses, views,
+    downloads, clones, forks, or otherwise interacts with the
+    Software.
+
+1.4 "Derivative Work" means any work based on, adapted from, or
+    incorporating the Software or any part of it, including
+    modifications, ports, translations, re-implementations that
+    copy its design or code, and combinations with other software.
+
+1.5 "Hosting" means making the Software or any Derivative Work
+    available to any person over a network in any way, including
+    web hosting, software-as-a-service (SaaS), deployment on public
+    or private servers, embedding in another application or site,
+    and offering it through an API.
+
+1.6 "Written Permission" means explicit consent given in writing
+    (including by email) by the Copyright Holder, which identifies
+    the person, the material, and the use being permitted.
+
+---------------------------------------------------------------------
+2. OWNERSHIP AND COPYRIGHT
+---------------------------------------------------------------------
+
+2.1 The Software is the sole and exclusive property of the Copyright
+    Holder. All title, ownership rights, and intellectual property
+    rights in and to the Software belong to the Copyright Holder.
+
+2.2 The Software is protected by the copyright laws of India and by
+    international copyright treaties, including the Berne Convention
+    and the TRIPS Agreement.
+
+2.3 No ownership or intellectual property right is transferred to
+    You by accessing, viewing, downloading, or possessing a copy of
+    the Software.
+
+---------------------------------------------------------------------
+3. NOT OPEN SOURCE — NO LICENSE GRANTED
+---------------------------------------------------------------------
+
+3.1 This Software is NOT open source, free software, public domain,
+    or copyleft software. It must not be described as open source.
+
+3.2 Except where a separate written agreement signed by the
+    Copyright Holder expressly grants rights, NO license or right
+    of any kind — express, implied, or otherwise — is granted to
+    any person in or to the Software.
+
+3.3 The fact that the source code is publicly viewable grants no
+    rights whatsoever. Public visibility is not a license.
+
+---------------------------------------------------------------------
+4. RESERVATION OF RIGHTS
+---------------------------------------------------------------------
+
+The Copyright Holder reserves ALL rights in the Software, including
+without limitation the exclusive rights to reproduce it, prepare
+Derivative Works, distribute copies, publicly display it, host it,
+sublicense it, and to authorise or prohibit any of these acts by
+others.
+
+---------------------------------------------------------------------
+5. PROHIBITED ACTIONS
+---------------------------------------------------------------------
+
+Without prior Written Permission from the Copyright Holder, You may
+NOT, directly or indirectly, in whole or in part:
+
+  (a) copy, reproduce, or duplicate the Software or its source
+      code, in source or compiled form;
+  (b) modify, adapt, translate, or create any Derivative Work;
+  (c) distribute, publish, share, transmit, sublicense, sell,
+      rent, lease, or otherwise make the Software available to any
+      third party;
+  (d) engage in Hosting of the Software or any Derivative Work,
+      whether modified or unmodified, publicly or privately,
+      commercially or non-commercially, on your own infrastructure
+      or on any third-party platform;
+  (e) use the Software's code, design, interface, text, or
+      translations in any other project, product, website, or
+      service;
+  (f) mirror this repository or the content of the project website;
+  (g) use the Software, its source code, or its content to train,
+      fine-tune, or evaluate any machine-learning or artificial-
+      intelligence model, or include it in any dataset for such
+      purposes;
+  (h) decompile, deobfuscate, or reverse-engineer the Software's
+      distributed assets, except where applicable law expressly
+      permits this despite this clause;
+  (i) remove, alter, hide, or obscure any copyright, authorship,
+      or other proprietary notice in the Software;
+  (j) claim the Software, or any part of it, as your own work, or
+      misrepresent its authorship or origin.
+
+---------------------------------------------------------------------
+6. NAME AND BRANDING
+---------------------------------------------------------------------
+
+6.1 The name "VectorForge", the project logo, and associated
+    branding are identifiers of the Copyright Holder's project.
+    No right to use them is granted.
+
+6.2 You may not name, brand, or market any product, service,
+    repository, or website using the "VectorForge" name or logo,
+    or any confusingly similar name or logo. A plain factual
+    reference to the project (for example, in an article) must not
+    imply endorsement by the Copyright Holder.
+
+---------------------------------------------------------------------
+7. PUBLIC VIEWING ON GITHUB
+---------------------------------------------------------------------
+
+7.1 The source code is publicly viewable on GitHub for reference
+    and evaluation purposes only.
+
+7.2 The limited rights that the GitHub Terms of Service grant to
+    platform users — to view the code and to fork the repository
+    within GitHub — are acknowledged. They do not include any
+    right to deploy, host, distribute, or use the Software outside
+    GitHub, and no fork may be hosted or used in violation of
+    Section 5.
+
+---------------------------------------------------------------------
+8. USE OF THE HOSTED WEBSITE
+---------------------------------------------------------------------
+
+8.1 Anyone may use the live converter at https://svgtocode.dusrel.com
+    free of charge, for its intended purpose of converting files
+    that they own or have the right to use.
+
+8.2 Output generated by the converter from files that You provide
+    belongs to You, and You may use that output freely, including
+    commercially. This Section concerns converter output only and
+    grants no rights in the Software itself.
+
+---------------------------------------------------------------------
+9. REQUESTING PERMISSION
+---------------------------------------------------------------------
+
+9.1 Permission requests may be sent through the Copyright Holder's
+    GitHub profile at https://github.com/dusmamud. A request should
+    state who You are, exactly what You wish to use, and for what
+    purpose and duration.
+
+9.2 Permission is effective only if given by Written Permission.
+    Silence, or the absence of a reply, is NOT permission.
+
+9.3 Any permission granted is personal to the recipient,
+    non-transferable, and may not be sublicensed, unless the
+    Written Permission expressly states otherwise.
+
+---------------------------------------------------------------------
+10. CONTRIBUTIONS
+---------------------------------------------------------------------
+
+10.1 By submitting any contribution to this project (including
+     pull requests, patches, code, text, or translations), You
+     grant the Copyright Holder a perpetual, irrevocable,
+     worldwide, royalty-free right to use, reproduce, modify, and
+     include that contribution in the Software, under the same
+     ownership and terms as the rest of the Software.
+
+10.2 You confirm that your contribution is your own original work
+     and that You have the right to grant the above rights.
+
+---------------------------------------------------------------------
+11. THIRD-PARTY COMPONENTS
+---------------------------------------------------------------------
+
+11.1 The Software uses third-party open-source libraries and tools
+     (such as Astro, React, and SVGO). Those components are NOT
+     owned by the Copyright Holder and remain governed by their
+     own respective licenses.
+
+11.2 This notice applies only to the original code, design, text,
+     and content of the Software created by the Copyright Holder.
+     Nothing in this notice limits the rights granted under the
+     licenses of those third-party components.
+
+---------------------------------------------------------------------
+12. NO OTHER GRANTS
+---------------------------------------------------------------------
+
+No patent license, trademark license, or any other intellectual
+property license is granted by this notice, by implication, estoppel,
+or otherwise.
+
+---------------------------------------------------------------------
+13. PRIOR VERSIONS
+---------------------------------------------------------------------
+
+Versions of the Software that were publicly released before
+18 October 2026 were offered under the MIT License. Copies lawfully
+obtained under that license remain governed by the MIT License as it
+applied to those copies. This notice applies to the current version
+of the Software and to all versions released on or after
+18 October 2026, and it replaces the MIT License for those versions.
+
+---------------------------------------------------------------------
+14. TERM AND TERMINATION
+---------------------------------------------------------------------
+
+14.1 Any permission ever granted in respect of the Software
+     terminates automatically and immediately if the recipient
+     breaches this notice or the terms of that permission.
+
+14.2 On termination, the recipient must immediately stop all use
+     of the Software and destroy or delete all copies in their
+     possession or control.
+
+---------------------------------------------------------------------
+15. ENFORCEMENT
+---------------------------------------------------------------------
+
+Unauthorized use, copying, modification, distribution, or Hosting
+of the Software violates copyright law. The Copyright Holder
+reserves the right to pursue all remedies available under applicable
+law, including issuing takedown notices (such as DMCA notices) to
+GitHub, hosting providers, and other platforms carrying infringing
+copies or hosted instances, and bringing legal proceedings for
+infringement.
+
+---------------------------------------------------------------------
+16. NO WARRANTY
+---------------------------------------------------------------------
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NONINFRINGEMENT, AND ANY WARRANTY THAT THE SOFTWARE WILL BE
+ERROR-FREE OR UNINTERRUPTED.
+
+---------------------------------------------------------------------
+17. LIMITATION OF LIABILITY
+---------------------------------------------------------------------
+
+IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM,
+DAMAGES, LOSS, OR OTHER LIABILITY — INCLUDING DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES — WHETHER IN AN
+ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OF OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+---------------------------------------------------------------------
+18. GOVERNING LAW
+---------------------------------------------------------------------
+
+This notice and the rights in the Software are governed by the laws
+of India. Any dispute relating to the Software or this notice shall
+be subject to the jurisdiction of the competent courts of India,
+without prejudice to the Copyright Holder's rights under
+international copyright treaties in other jurisdictions.
+
+---------------------------------------------------------------------
+19. GENERAL
+---------------------------------------------------------------------
+
+19.1 Controlling terms. If any other file or page in this project
+     suggests different terms for the Copyright Holder's original
+     code, this notice controls to the extent of any conflict.
+
+19.2 Severability. If any provision of this notice is held to be
+     unenforceable or invalid, that provision will be limited to
+     the minimum extent necessary, and the remaining provisions
+     will continue in full force and effect.
+
+19.3 No waiver. A failure by the Copyright Holder to enforce any
+     provision of this notice at any time is not a waiver of that
+     provision or of the right to enforce it later.
+
+19.4 Amendments. The Copyright Holder may publish revised versions
+     of this notice for future versions of the Software. A revised
+     notice applies only to versions of the Software released
+     after its publication.
+
+19.5 Headings. Section headings are for convenience only and do
+     not affect interpretation. "Including" means "including
+     without limitation".
+
+=====================================================================
+Copyright (c) 2026 dusmamud. All rights reserved.
+=====================================================================
