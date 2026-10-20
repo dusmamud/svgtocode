@@ -13,10 +13,10 @@ const { locale } = Astro.props;
 const t = getDict(locale);
 const c = getHow(locale);
 const homeHref = locale === 'en' ? '/' : `/${locale}/`;
-const privacyHref = locale === 'en' ? '/privacy' : `/${locale}/privacy`;
+const privacyHref = locale === 'en' ? '/privacy/' : `/${locale}/privacy/`;
 ---
 
-<Layout locale={locale} t={t} title={c.pageTitle} description={c.description} subPath="how-it-works">
+<Layout locale={locale} t={t} title={c.pageTitle} description={c.description} subPath="how-it-works" breadcrumbName={c.heading}>
   <SiteHeader locale={locale} t={t} path="how-it-works" />
 
   <main class="mx-auto max-w-3xl px-4 py-12">

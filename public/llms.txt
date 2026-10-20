@@ -1,0 +1,29 @@
+# SvgToCode
+
+> SvgToCode is a free online SVG converter that turns SVG images into production-ready code — and code back into images — entirely in the visitor's browser. Nothing is uploaded to a server; there are no accounts, no sign-ups, and no watermarks.
+
+SvgToCode converts one SVG into 11 outputs: raw SVG, JSX, a typed React component (.tsx), a Vue single-file component, a Svelte component, React Native (react-native-svg), an HTML <img> tag, a CSS data URI, a CSS mask, an SVG sprite symbol, and Base64. It also optimizes SVGs with SVGO (showing the exact bytes and percentage saved), prettifies or minifies markup, exports PNGs at 1x, 2x and 4x, converts many files at once in batch mode with a single ZIP download, and works offline as an installable PWA. Unsafe content (scripts, event handlers, foreign objects) is stripped from previews automatically.
+
+## Main pages
+
+- [SVG converter](https://svgtocode.dusrel.com/): the converter itself — code editor with syntax highlighting and validation, live preview on five backgrounds with zoom and pan, optimizer, batch mode and PNG export
+- [How it works](https://svgtocode.dusrel.com/how-it-works): the five steps — add an SVG, edit with live preview, optimize and clean up, choose a format, copy/download/export — and how everything runs 100% locally
+- [About SvgToCode](https://svgtocode.dusrel.com/about): what SvgToCode is, the full feature list, and its principles — private, free, honest
+- [Privacy policy](https://svgtocode.dusrel.com/privacy): everything is processed on the visitor's device; the only thing stored locally is the theme preference; no analytics, no cookies, no trackers
+
+## Tools
+
+- [SVG to JSX converter](https://svgtocode.dusrel.com/svg-to-jsx/): converts SVG markup to JSX with automatic attribute renaming (class to className, stroke-width to strokeWidth), style-object conversion and JSX comments
+- [SVG to React component converter](https://svgtocode.dusrel.com/svg-to-react/): generates a typed TypeScript React (.tsx) component that accepts standard SVG props and spreads them onto the root element
+- [SVG to Base64 converter](https://svgtocode.dusrel.com/svg-to-base64/): Unicode-safe Base64 encoding for CSS files, JSON configs and API payloads
+- [SVG to Data URI converter](https://svgtocode.dusrel.com/svg-to-data-uri/): produces a minified, percent-encoded CSS data URI for background-image, usually smaller than Base64 for SVG
+- [SVG optimizer](https://svgtocode.dusrel.com/svg-optimizer/): SVGO multipass optimization in the browser that deliberately preserves the viewBox so responsive scaling keeps working
+- [SVG to PNG converter](https://svgtocode.dusrel.com/svg-to-png/): exports crisp PNGs at 1x, 2x and 4x, using the viewBox automatically when the SVG has no explicit size; transparency is preserved
+
+## Key facts
+
+- Price: completely free — every feature, no sign-up, no watermarks, no paid tier
+- Privacy: files never leave the device; all conversion runs client-side in JavaScript
+- Languages: the interface and every page are published in 23 languages — English, Hindi, Spanish, Portuguese, French, German, Indonesian, Japanese, Russian, Korean, Chinese (Simplified), Arabic, Bengali, Assamese, Urdu, Tamil, Telugu, Marathi, Turkish, Italian, Dutch, Polish and Vietnamese — with localized versions of every page under /<locale>/ (for example https://svgtocode.dusrel.com/hi/svg-to-jsx/)
+- Availability: works offline after the first load (PWA with service worker)
+- Source: publicly viewable for reference only at https://github.com/dusmamud/svgtocode — © dusmamud, all rights reserved

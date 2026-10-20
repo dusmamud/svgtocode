@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { locale, t } = Astro.props;
-const privacyHref = locale === 'en' ? '/privacy' : `/${locale}/privacy`;
+const privacyHref = locale === 'en' ? '/privacy/' : `/${locale}/privacy/`;
 ---
 
 <footer class="mt-12 border-t border-border">

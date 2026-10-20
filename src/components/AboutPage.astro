@@ -15,7 +15,7 @@ const c = getAbout(locale);
 const homeHref = locale === 'en' ? '/' : `/${locale}/`;
 ---
 
-<Layout locale={locale} t={t} title={c.pageTitle} description={c.description} subPath="about">
+<Layout locale={locale} t={t} title={c.pageTitle} description={c.description} subPath="about" breadcrumbName={c.heading}>
   <SiteHeader locale={locale} t={t} path="about" />
 
   <main class="mx-auto max-w-3xl px-4 py-12">

@@ -28,7 +28,7 @@ const toolHref = (s: string) => (locale === 'en' ? `/${s}/` : `/${locale}/${s}/`
 const others = TOOLS.filter((x) => x.slug !== slug);
 ---
 
-<Layout locale={locale} t={t} title={c.title} description={c.description} subPath={slug} faqJsonLd={c.faqs}>
+<Layout locale={locale} t={t} title={c.title} description={c.description} subPath={slug} faqJsonLd={c.faqs} breadcrumbName={c.heading}>
   <SiteHeader locale={locale} t={t} path={slug} activeTool={slug} />
 
   <main class="mx-auto max-w-6xl px-4 py-8 lg:py-14">

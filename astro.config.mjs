@@ -40,6 +40,22 @@ export default defineConfig({
         defaultLocale: 'en',
         locales: Object.fromEntries(FULLY_TRANSLATED.map((l) => [l, l])),
       },
+      serialize: (item) => {
+        const path = new URL(item.url).pathname;
+        const segs = path.split('/').filter(Boolean);
+        let priority = 0.6;
+        let changefreq = 'monthly';
+        if (path === '/') {
+          priority = 1.0;
+          changefreq = 'weekly';
+        } else if (segs.length === 1) {
+          // Locale homes and English tool pages are the main entry points.
+          priority = FULLY_TRANSLATED.includes(segs[0]) || TOOL_SLUGS.includes(segs[0]) ? 0.9 : 0.5;
+        } else if (segs.length === 2) {
+          priority = TOOL_SLUGS.includes(segs[1]) ? 0.8 : 0.5;
+        }
+        return { ...item, priority, changefreq };
+      },
       filter: (page) => {
         const path = new URL(page).pathname;
         if (path === '/') return true;

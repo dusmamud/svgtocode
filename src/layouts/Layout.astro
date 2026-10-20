@@ -12,10 +12,11 @@ interface Props {
   subPath?: string;
   canonicalUrl?: string;
   faqJsonLd?: { q: string; a: string }[];
+  breadcrumbName?: string;
   children?: unknown;
 }
 
-const { locale, t, noindex, title, description, singleLocale, subPath, canonicalUrl, faqJsonLd } = Astro.props;
+const { locale, t, noindex, title, description, singleLocale, subPath, canonicalUrl, faqJsonLd, breadcrumbName } = Astro.props;
 const isRtl = RTL_LOCALES.has(locale);
 
 const localePath = (l: string) => (l === 'en' ? '/' : `/${l}/`);
@@ -35,17 +36,61 @@ const hreflangOf = (l: string) => hreflangMap[l] ?? l;
 
 const themeScript = `(function(){try{var s=localStorage.getItem('vf-theme');var d=s==='dark'||(s!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d);}catch(e){}})();`;
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebApplication',
-  name: 'SvgToCode',
-  applicationCategory: 'DesignApplication',
-  operatingSystem: 'Any',
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-  inLanguage: locale,
-  url: canonical,
-  description: t.siteDescription,
-};
+const siteRoot = new URL('/', Astro.site).toString();
+const graph: Record<string, unknown>[] = [
+  {
+    '@type': 'WebApplication',
+    '@id': `${siteRoot}#app`,
+    name: 'SvgToCode',
+    url: siteRoot,
+    applicationCategory: 'DesignApplication',
+    operatingSystem: 'Any',
+    browserRequirements: 'Requires a modern web browser with JavaScript enabled',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    featureList: [
+      'Convert SVG to JSX',
+      'Convert SVG to typed React components',
+      'Convert SVG to Vue and Svelte components',
+      'Convert SVG to React Native',
+      'SVG to Base64 encoder (Unicode-safe)',
+      'SVG to CSS data URI and CSS mask',
+      'SVG sprite generator',
+      'SVG optimizer powered by SVGO',
+      'SVG to PNG export at 1x, 2x and 4x',
+      'Batch SVG conversion with ZIP download',
+      'Runs 100% in the browser — files are never uploaded',
+    ],
+    inLanguage: locale,
+    description: t.siteDescription,
+    publisher: { '@id': `${siteRoot}#org` },
+  },
+  {
+    '@type': 'Organization',
+    '@id': `${siteRoot}#org`,
+    name: 'SvgToCode',
+    url: siteRoot,
+    logo: new URL('/icon-512.png', Astro.site).toString(),
+    sameAs: ['https://github.com/dusmamud/svgtocode'],
+  },
+  {
+    '@type': 'WebSite',
+    '@id': `${siteRoot}#site`,
+    name: 'SvgToCode',
+    url: siteRoot,
+    inLanguage: locale,
+    publisher: { '@id': `${siteRoot}#org` },
+  },
+];
+if (breadcrumbName) {
+  graph.push({
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'SvgToCode', item: new URL(localePath(locale), Astro.site).toString() },
+      { '@type': 'ListItem', position: 2, name: breadcrumbName, item: canonical },
+    ],
+  });
+}
+const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
 ---
 <!doctype html>
 <html lang={locale} dir={isRtl ? 'rtl' : 'ltr'}>
@@ -59,7 +104,11 @@ const jsonLd = {
       <link rel="alternate" hreflang={hreflangOf(l)} href={new URL(pagePath(l), Astro.site).toString()} />
     ))}
     <link rel="alternate" hreflang="x-default" href={new URL(subPath ? `/${subPath}/` : '/', Astro.site).toString()} />
-    {!isFullyTranslated(locale) || noindex ? <meta name="robots" content="noindex, follow" /> : null}
+    {!isFullyTranslated(locale) || noindex ? (
+      <meta name="robots" content="noindex, follow" />
+    ) : (
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    )}
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="SvgToCode" />
@@ -67,6 +116,9 @@ const jsonLd = {
     <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={hreflangOf(locale).replace('-', '_')} />
+    {hreflangLocales.filter((l) => l !== locale).map((l) => (
+      <meta property="og:locale:alternate" content={hreflangOf(l).replace('-', '_')} />
+    ))}
     <meta property="og:image" content={new URL('/og-image.png', Astro.site).toString()} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -85,9 +137,22 @@ const jsonLd = {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
     <script is:inline set:html={themeScript}></script>
     <script is:inline>

@@ -25,7 +25,7 @@ const TOOLS = [
 const toolHref = (s: string) => (locale === 'en' ? `/${s}/` : `/${locale}/${s}/`);
 
 const homeHref = locale === 'en' ? '/' : `/${locale}/`;
-const pageHref = (p: string) => (locale === 'en' ? `/${p}` : `/${locale}/${p}`);
+const pageHref = (p: string) => (locale === 'en' ? `/${p}/` : `/${locale}/${p}/`);
 /* Language switching stays on the same page (home or the current sub-page). */
 const localeUrl = (l: string) => (l === 'en' ? '/' : `/${l}/`) + (path ? `${path}/` : '');
 ---
