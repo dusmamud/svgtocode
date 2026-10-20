@@ -1,4 +1,4 @@
-/* Pure SVG conversion / validation / stats helpers for VectorForge.
+/* Pure SVG conversion / validation / stats helpers for SvgToCode.
    All functions are framework-free and unit-testable. Browser APIs
    (DOMParser, Blob, canvas) are used — these run inside the client island. */
 

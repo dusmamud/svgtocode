@@ -1,4 +1,4 @@
-/* UI string dictionaries for VectorForge.
+/* UI string dictionaries for SvgToCode.
    All 23 locales have full native translations (completed 2026-10-18):
    en, hi, es, pt, fr, de, id, ja, ru, ko, zh-cn, ar, bn, as, ur, ta, te,
    mr, tr, it, nl, pl, vi. Every locale gets its own route, <html lang>,
@@ -22,7 +22,7 @@ export const LOCALE_NAMES: Record<string, string> = {
 };
 
 const en = {
-  siteTitle: 'VectorForge — SVG to Code Converter',
+  siteTitle: 'SvgToCode — SVG to Code Converter',
   siteDescription:
     'Convert SVG images to code and back: JSX, React components, data URIs and more. Free, private, and runs entirely in your browser.',
   tagline: 'Convert SVG images to code — and code back to images.',
@@ -87,7 +87,7 @@ const en = {
   how1: 'SVG files are already code. Drop one in and its markup appears in the editor — edit it and the preview updates live.',
   how2: 'Switch output tabs to get JSX, a typed React component, a data-URI, or Base64 — then copy or download.',
   how3: 'Everything runs 100% in your browser. Nothing is uploaded anywhere.',
-  footerMade: 'VectorForge — a free SVG toolkit. All processing happens locally in your browser.',
+  footerMade: 'SvgToCode — a free SVG toolkit. All processing happens locally in your browser.',
   aboutTitle: 'About this tool',
   navTools: 'Tools',
   navHowItWorks: 'How it works',
@@ -103,13 +103,13 @@ const en = {
   resizeLabel: 'Resize editor and preview',
   formatsLabel: 'Output formats',
   statsLabel: 'Stats',
-  brandHome: 'VectorForge home',
+  brandHome: 'SvgToCode home',
   notFoundText: 'This page doesn\'t exist.',
   backToConverter: 'Back to the converter',
 };
 
 const hi: typeof en = {
-  siteTitle: 'VectorForge — SVG to Code Converter',
+  siteTitle: 'SvgToCode — SVG to Code Converter',
   siteDescription:
     'SVG इमेज को कोड में और कोड को इमेज में बदलें: JSX, React components, data URIs और भी बहुत कुछ। मुफ़्त, प्राइवेट, और पूरी तरह आपके ब्राउज़र में चलता है।',
   tagline: 'SVG इमेज को कोड में बदलें — और कोड को वापस इमेज में।',
@@ -174,7 +174,7 @@ const hi: typeof en = {
   how1: 'SVG फ़ाइलें असल में कोड ही होती हैं। एक फ़ाइल ड्रॉप करें और उसका मार्कअप एडिटर में आ जाएगा — एडिट करते ही प्रीव्यू लाइव अपडेट होगा।',
   how2: 'आउटपुट टैब बदलकर JSX, typed React component, data-URI या Base64 पाएँ — फिर कॉपी या डाउनलोड करें।',
   how3: 'सब कुछ 100% आपके ब्राउज़र में चलता है। कुछ भी कहीं अपलोड नहीं होता।',
-  footerMade: 'VectorForge — एक मुफ़्त SVG टूलकिट। सारा प्रोसेसिंग आपके ब्राउज़र में ही होती है।',
+  footerMade: 'SvgToCode — एक मुफ़्त SVG टूलकिट। सारा प्रोसेसिंग आपके ब्राउज़र में ही होती है।',
   aboutTitle: 'इस टूल के बारे में',
   navTools: 'टूल्स',
   navHowItWorks: 'कैसे काम करता है',
@@ -190,13 +190,13 @@ const hi: typeof en = {
   resizeLabel: 'एडिटर और प्रीव्यू का आकार बदलें',
   formatsLabel: 'आउटपुट फ़ॉर्मेट',
   statsLabel: 'आँकड़े',
-  brandHome: 'VectorForge होम',
+  brandHome: 'SvgToCode होम',
   notFoundText: 'यह पेज मौजूद नहीं है।',
   backToConverter: 'कन्वर्टर पर वापस जाएँ',
 };
 
 const es: typeof en = {
-  siteTitle: 'VectorForge — SVG to Code Converter',
+  siteTitle: 'SvgToCode — SVG to Code Converter',
   siteDescription:
     'Convierte imágenes SVG a código y viceversa: JSX, componentes de React, data URIs y más. Gratis, privado y funciona por completo en tu navegador.',
   tagline: 'Convierte imágenes SVG a código, y código a imágenes.',
@@ -261,7 +261,7 @@ const es: typeof en = {
   how1: 'Los archivos SVG ya son código. Suelta uno y su código aparecerá en el editor; edítalo y la vista previa se actualizará al instante.',
   how2: 'Cambia las pestañas de salida para obtener JSX, un componente de React con tipos, un data-URI o Base64, y luego copia o descarga.',
   how3: 'Todo se ejecuta al 100 % en tu navegador. Nada se sube a ningún servidor.',
-  footerMade: 'VectorForge: un kit de herramientas SVG gratuito. Todo el procesamiento ocurre localmente en tu navegador.',
+  footerMade: 'SvgToCode: un kit de herramientas SVG gratuito. Todo el procesamiento ocurre localmente en tu navegador.',
   aboutTitle: 'Acerca de esta herramienta',
   navTools: 'Herramientas',
   navHowItWorks: 'Cómo funciona',
@@ -277,13 +277,13 @@ const es: typeof en = {
   resizeLabel: 'Redimensionar editor y vista previa',
   formatsLabel: 'Formatos de salida',
   statsLabel: 'Estadísticas',
-  brandHome: 'Inicio de VectorForge',
+  brandHome: 'Inicio de SvgToCode',
   notFoundText: 'Esta página no existe.',
   backToConverter: 'Volver al conversor',
 };
 
 const pt: typeof en = {
-  siteTitle: 'VectorForge — SVG to Code Converter',
+  siteTitle: 'SvgToCode — SVG to Code Converter',
   siteDescription:
     'Converta imagens SVG em código e vice-versa: JSX, componentes React, data URIs e muito mais. Gratuito, privado e executado totalmente no seu navegador.',
   tagline: 'Converta imagens SVG em código — e código de volta em imagens.',
@@ -348,7 +348,7 @@ const pt: typeof en = {
   how1: 'Arquivos SVG já são código. Arraste um para cá e o código aparecerá no editor — edite e a pré-visualização será atualizada ao vivo.',
   how2: 'Alterne as abas de saída para obter JSX, um componente React tipado, um data-URI ou Base64 — depois copie ou baixe.',
   how3: 'Tudo roda 100% no seu navegador. Nada é enviado para servidores.',
-  footerMade: 'VectorForge — um kit de ferramentas SVG gratuito. Todo o processamento acontece localmente no seu navegador.',
+  footerMade: 'SvgToCode — um kit de ferramentas SVG gratuito. Todo o processamento acontece localmente no seu navegador.',
   aboutTitle: 'Sobre esta ferramenta',
   navTools: 'Ferramentas',
   navHowItWorks: 'Como funciona',
@@ -364,13 +364,13 @@ const pt: typeof en = {
   resizeLabel: 'Redimensionar editor e pré-visualização',
   formatsLabel: 'Formatos de saída',
   statsLabel: 'Estatísticas',
-  brandHome: 'Início do VectorForge',
+  brandHome: 'Início do SvgToCode',
   notFoundText: 'Esta página não existe.',
   backToConverter: 'Voltar ao conversor',
 };
 
 const fr: typeof en = {
-  siteTitle: 'VectorForge — SVG to Code Converter',
+  siteTitle: 'SvgToCode — SVG to Code Converter',
   siteDescription:
     'Convertissez des images SVG en code et inversement : JSX, composants React, data URIs et plus. Gratuit, privé et exécuté entièrement dans votre navigateur.',
   tagline: 'Convertissez des images SVG en code — et du code en images.',
@@ -435,7 +435,7 @@ const fr: typeof en = {
   how1: 'Les fichiers SVG sont déjà du code. Déposez-en un et son code apparaît dans l’éditeur — modifiez-le et l’aperçu se met à jour en direct.',
   how2: 'Changez d’onglet de sortie pour obtenir du JSX, un composant React typé, un data-URI ou du Base64 — puis copiez ou téléchargez.',
   how3: 'Tout s’exécute à 100 % dans votre navigateur. Rien n’est envoyé sur un serveur.',
-  footerMade: 'VectorForge — une boîte à outils SVG gratuite. Tout le traitement se fait localement dans votre navigateur.',
+  footerMade: 'SvgToCode — une boîte à outils SVG gratuite. Tout le traitement se fait localement dans votre navigateur.',
   aboutTitle: 'À propos de cet outil',
   navTools: 'Outils',
   navHowItWorks: 'Comment ça marche',
@@ -451,13 +451,13 @@ const fr: typeof en = {
   resizeLabel: 'Redimensionner l\'éditeur et l\'aperçu',
   formatsLabel: 'Formats de sortie',
   statsLabel: 'Statistiques',
-  brandHome: 'Accueil VectorForge',
+  brandHome: 'Accueil SvgToCode',
   notFoundText: 'Cette page n\'existe pas.',
   backToConverter: 'Retour au convertisseur',
 };
 
 const de: typeof en = {
-  siteTitle: 'VectorForge — SVG to Code Converter',
+  siteTitle: 'SvgToCode — SVG to Code Converter',
   siteDescription:
     'Wandeln Sie SVG-Bilder in Code um und zurück: JSX, React-Komponenten, Data-URIs und mehr. Kostenlos, privat und läuft vollständig in Ihrem Browser.',
   tagline: 'SVG-Bilder in Code umwandeln — und Code zurück in Bilder.',
@@ -522,7 +522,7 @@ const de: typeof en = {
   how1: 'SVG-Dateien sind bereits Code. Legen Sie eine Datei ab und ihr Code erscheint im Editor — bearbeiten Sie ihn und die Vorschau wird live aktualisiert.',
   how2: 'Wechseln Sie die Ausgabe-Tabs, um JSX, eine typisierte React-Komponente, eine Data-URI oder Base64 zu erhalten — dann kopieren oder herunterladen.',
   how3: 'Alles läuft zu 100 % in Ihrem Browser. Nichts wird auf einen Server hochgeladen.',
-  footerMade: 'VectorForge — ein kostenloses SVG-Toolkit. Die gesamte Verarbeitung findet lokal in Ihrem Browser statt.',
+  footerMade: 'SvgToCode — ein kostenloses SVG-Toolkit. Die gesamte Verarbeitung findet lokal in Ihrem Browser statt.',
   aboutTitle: 'Über dieses Tool',
   navTools: 'Tools',
   navHowItWorks: 'Funktionsweise',
@@ -538,13 +538,13 @@ const de: typeof en = {
   resizeLabel: 'Editor und Vorschau in der Größe ändern',
   formatsLabel: 'Ausgabeformate',
   statsLabel: 'Statistiken',
-  brandHome: 'VectorForge Startseite',
+  brandHome: 'SvgToCode Startseite',
   notFoundText: 'Diese Seite existiert nicht.',
   backToConverter: 'Zurück zum Konverter',
 };
 
 const id: typeof en = {
-  siteTitle: 'VectorForge — SVG to Code Converter',
+  siteTitle: 'SvgToCode — SVG to Code Converter',
   siteDescription:
     'Ubah gambar SVG menjadi kode dan sebaliknya: JSX, komponen React, data URI, dan lainnya. Gratis, privat, dan berjalan sepenuhnya di browser Anda.',
   tagline: 'Ubah gambar SVG menjadi kode — dan kode kembali menjadi gambar.',
@@ -609,7 +609,7 @@ const id: typeof en = {
   how1: 'Berkas SVG pada dasarnya sudah berupa kode. Jatuhkan satu berkas dan markup-nya akan muncul di editor — edit dan pratinjau akan diperbarui langsung.',
   how2: 'Ganti tab keluaran untuk mendapatkan JSX, komponen React bertipe, data-URI, atau Base64 — lalu salin atau unduh.',
   how3: 'Semuanya berjalan 100% di browser Anda. Tidak ada yang diunggah ke mana pun.',
-  footerMade: 'VectorForge — toolkit SVG gratis. Semua pemrosesan terjadi secara lokal di browser Anda.',
+  footerMade: 'SvgToCode — toolkit SVG gratis. Semua pemrosesan terjadi secara lokal di browser Anda.',
   aboutTitle: 'Tentang alat ini',
   navTools: 'Alat',
   navHowItWorks: 'Cara kerja',
@@ -625,13 +625,13 @@ const id: typeof en = {
   resizeLabel: 'Ubah ukuran editor dan pratinjau',
   formatsLabel: 'Format keluaran',
   statsLabel: 'Statistik',
-  brandHome: 'Beranda VectorForge',
+  brandHome: 'Beranda SvgToCode',
   notFoundText: 'Halaman ini tidak ada.',
   backToConverter: 'Kembali ke konverter',
 };
 
 const ja: typeof en = {
-  siteTitle: 'VectorForge — SVG to Code Converter',
+  siteTitle: 'SvgToCode — SVG to Code Converter',
   siteDescription:
     'SVG画像をコードに変換、その逆も：JSX、Reactコンポーネント、データURIなど。無料・プライベートで、すべてブラウザ内で動作します。',
   tagline: 'SVG画像をコードに変換 — コードを画像に戻す。',
@@ -696,7 +696,7 @@ const ja: typeof en = {
   how1: 'SVGファイルはすでにコードです。ドロップするとマークアップがエディタに表示されます — 編集すればプレビューがリアルタイムで更新されます。',
   how2: '出力タブを切り替えてJSX、型付きReactコンポーネント、データURI、Base64を取得 — コピーまたはダウンロード。',
   how3: 'すべてがブラウザ内で100%動作します。どこにもアップロードされません。',
-  footerMade: 'VectorForge — 無料のSVGツールキット。すべての処理はブラウザ内でローカルに行われます。',
+  footerMade: 'SvgToCode — 無料のSVGツールキット。すべての処理はブラウザ内でローカルに行われます。',
   aboutTitle: 'このツールについて',
   navTools: 'ツール',
   navHowItWorks: '使い方',
@@ -712,13 +712,13 @@ const ja: typeof en = {
   resizeLabel: 'エディターとプレビューのサイズ変更',
   formatsLabel: '出力形式',
   statsLabel: '統計',
-  brandHome: 'VectorForge ホーム',
+  brandHome: 'SvgToCode ホーム',
   notFoundText: 'このページは存在しません。',
   backToConverter: 'コンバーターに戻る',
 };
 
 const ru: typeof en = {
-  siteTitle: 'VectorForge — конвертер SVG в код',
+  siteTitle: 'SvgToCode — конвертер SVG в код',
   siteDescription:
     'Конвертируйте SVG-изображения в код и обратно: JSX, компоненты React, data URI и многое другое. Бесплатно, приватно и полностью в вашем браузере.',
   tagline: 'Конвертируйте SVG-изображения в код — а код обратно в изображения.',
@@ -783,7 +783,7 @@ const ru: typeof en = {
   how1: 'Файлы SVG — это уже код. Перетащите файл, и его разметка появится в редакторе: правки сразу отображаются в предпросмотре.',
   how2: 'Переключайте вкладки вывода, чтобы получить JSX, типизированный компонент React, data-URI или Base64, — затем копируйте или скачивайте.',
   how3: 'Всё работает на 100% в вашем браузере. Ничего никуда не загружается.',
-  footerMade: 'VectorForge — бесплатный набор инструментов для SVG. Вся обработка происходит локально в вашем браузере.',
+  footerMade: 'SvgToCode — бесплатный набор инструментов для SVG. Вся обработка происходит локально в вашем браузере.',
   aboutTitle: 'Об этом инструменте',
   navTools: 'Инструменты',
   navHowItWorks: 'Как это работает',
@@ -799,13 +799,13 @@ const ru: typeof en = {
   resizeLabel: 'Изменить размер редактора и предпросмотра',
   formatsLabel: 'Форматы вывода',
   statsLabel: 'Статистика',
-  brandHome: 'Главная страница VectorForge',
+  brandHome: 'Главная страница SvgToCode',
   notFoundText: 'Эта страница не существует.',
   backToConverter: 'Назад к конвертеру',
 };
 
 const ko: typeof en = {
-  siteTitle: 'VectorForge — SVG 코드 변환기',
+  siteTitle: 'SvgToCode — SVG 코드 변환기',
   siteDescription:
     'SVG 이미지를 코드로, 코드를 이미지로 변환하세요: JSX, React 컴포넌트, data URI 등. 무료이고 개인정보가 보호되며, 전 과정이 브라우저에서 실행됩니다.',
   tagline: 'SVG 이미지를 코드로 — 그리고 코드를 다시 이미지로 변환하세요.',
@@ -870,7 +870,7 @@ const ko: typeof en = {
   how1: 'SVG 파일은 그 자체가 코드입니다. 파일을 끌어다 놓으면 마크업이 편집기에 나타나고, 편집하면 미리보기가 실시간으로 업데이트됩니다.',
   how2: '출력 탭을 전환해 JSX, 타입이 지정된 React 컴포넌트, data-URI 또는 Base64를 얻은 뒤 복사하거나 다운로드하세요.',
   how3: '모든 작업은 브라우저에서 100% 실행됩니다. 어디에도 업로드되지 않습니다.',
-  footerMade: 'VectorForge — 무료 SVG 도구 모음. 모든 처리는 브라우저에서 로컬로 이루어집니다.',
+  footerMade: 'SvgToCode — 무료 SVG 도구 모음. 모든 처리는 브라우저에서 로컬로 이루어집니다.',
   aboutTitle: '이 도구 정보',
   navTools: '도구',
   navHowItWorks: '사용 방법',
@@ -886,13 +886,13 @@ const ko: typeof en = {
   resizeLabel: '편집기와 미리보기 크기 조절',
   formatsLabel: '출력 형식',
   statsLabel: '통계',
-  brandHome: 'VectorForge 홈',
+  brandHome: 'SvgToCode 홈',
   notFoundText: '이 페이지가 존재하지 않습니다.',
   backToConverter: '변환기로 돌아가기',
 };
 
 const zhCn: typeof en = {
-  siteTitle: 'VectorForge — SVG 代码转换器',
+  siteTitle: 'SvgToCode — SVG 代码转换器',
   siteDescription:
     '将 SVG 图像转换为代码，也可将代码转换回图像：JSX、React 组件、data URI 等。免费、私密，完全在你的浏览器中运行。',
   tagline: '将 SVG 图像转换为代码——再将代码转换回图像。',
@@ -957,7 +957,7 @@ const zhCn: typeof en = {
   how1: 'SVG 文件本身就是代码。拖入一个文件，它的标记就会出现在编辑器中——编辑时预览会实时更新。',
   how2: '切换输出选项卡即可获得 JSX、带类型的 React 组件、data-URI 或 Base64——然后复制或下载。',
   how3: '一切都在你的浏览器中 100% 运行。不会上传到任何地方。',
-  footerMade: 'VectorForge——免费的 SVG 工具包。所有处理都在你的浏览器中本地完成。',
+  footerMade: 'SvgToCode——免费的 SVG 工具包。所有处理都在你的浏览器中本地完成。',
   aboutTitle: '关于此工具',
   navTools: '工具',
   navHowItWorks: '工作原理',
@@ -973,13 +973,13 @@ const zhCn: typeof en = {
   resizeLabel: '调整编辑器和预览的大小',
   formatsLabel: '输出格式',
   statsLabel: '统计',
-  brandHome: 'VectorForge 首页',
+  brandHome: 'SvgToCode 首页',
   notFoundText: '此页面不存在。',
   backToConverter: '返回转换器',
 };
 
 const ar: typeof en = {
-  siteTitle: 'VectorForge — محوّل SVG إلى كود',
+  siteTitle: 'SvgToCode — محوّل SVG إلى كود',
   siteDescription:
     'حوّل صور SVG إلى كود والعكس: JSX ومكوّنات React وdata URI والمزيد. مجاني وخاص ويعمل بالكامل في متصفحك.',
   tagline: 'حوّل صور SVG إلى كود — والكود مجددًا إلى صور.',
@@ -1044,7 +1044,7 @@ const ar: typeof en = {
   how1: 'ملفات SVG هي كود في الأصل. أسقط ملفًا وسيظهر كوده في المحرر — عدّله وستتحدث المعاينة مباشرة.',
   how2: 'بدّل بين علامات تبويب الإخراج للحصول على JSX أو مكوّن React مُصنّف الأنواع أو data-URI أو Base64 — ثم انسخ أو نزّل.',
   how3: 'كل شيء يعمل بنسبة 100% في متصفحك. لا يتم رفع أي شيء إلى أي مكان.',
-  footerMade: 'VectorForge — مجموعة أدوات SVG مجانية. تتم كل المعالجة محليًا في متصفحك.',
+  footerMade: 'SvgToCode — مجموعة أدوات SVG مجانية. تتم كل المعالجة محليًا في متصفحك.',
   aboutTitle: 'حول هذه الأداة',
   navTools: 'الأدوات',
   navHowItWorks: 'كيف يعمل',
@@ -1060,13 +1060,13 @@ const ar: typeof en = {
   resizeLabel: 'تغيير حجم المحرر والمعاينة',
   formatsLabel: 'تنسيقات الإخراج',
   statsLabel: 'إحصائيات',
-  brandHome: 'الصفحة الرئيسية لـ VectorForge',
+  brandHome: 'الصفحة الرئيسية لـ SvgToCode',
   notFoundText: 'هذه الصفحة غير موجودة.',
   backToConverter: 'العودة إلى المحوّل',
 };
 
 const bn: typeof en = {
-  siteTitle: 'VectorForge — SVG থেকে কোড কনভার্টার',
+  siteTitle: 'SvgToCode — SVG থেকে কোড কনভার্টার',
   siteDescription:
     'SVG ছবিকে কোডে এবং কোডকে ছবিতে রূপান্তর করুন: JSX, React কম্পোনেন্ট, data URI আরও অনেক কিছু। বিনামূল্যে, গোপনীয় এবং সম্পূর্ণ আপনার ব্রাউজারেই চলে।',
   tagline: 'SVG ছবিকে কোডে রূপান্তর করুন — আর কোডকে আবার ছবিতে।',
@@ -1131,7 +1131,7 @@ const bn: typeof en = {
   how1: 'SVG ফাইল আসলে কোডই। একটি ফাইল ড্রপ করলেই তার মার্কআপ এডিটরে চলে আসে — এডিট করলেই প্রিভিউ লাইভ আপডেট হয়।',
   how2: 'আউটপুট ট্যাব বদলে JSX, টাইপসহ React কম্পোনেন্ট, data-URI অথবা Base64 পান — তারপর কপি বা ডাউনলোড করুন।',
   how3: 'সবকিছু 100% আপনার ব্রাউজারেই চলে। কোথাও কিছু আপলোড হয় না।',
-  footerMade: 'VectorForge — একটি বিনামূল্যের SVG টুলকিট। সমস্ত প্রসেসিং আপনার ব্রাউজারে স্থানীয়ভাবে হয়।',
+  footerMade: 'SvgToCode — একটি বিনামূল্যের SVG টুলকিট। সমস্ত প্রসেসিং আপনার ব্রাউজারে স্থানীয়ভাবে হয়।',
   aboutTitle: 'এই টুল সম্পর্কে',
   navTools: 'টুলস',
   navHowItWorks: 'কীভাবে কাজ করে',
@@ -1147,13 +1147,13 @@ const bn: typeof en = {
   resizeLabel: 'এডিটর ও প্রিভিউয়ের আকার বদলান',
   formatsLabel: 'আউটপুট ফরম্যাট',
   statsLabel: 'পরিসংখ্যান',
-  brandHome: 'VectorForge হোম',
+  brandHome: 'SvgToCode হোম',
   notFoundText: 'এই পৃষ্ঠাটি নেই।',
   backToConverter: 'কনভার্টারে ফিরে যান',
 };
 
 const ur: typeof en = {
-  siteTitle: 'VectorForge — SVG سے کوڈ کنورٹر',
+  siteTitle: 'SvgToCode — SVG سے کوڈ کنورٹر',
   siteDescription:
     'SVG تصاویر کو کوڈ میں اور کوڈ کو واپس تصاویر میں بدلیں: JSX، React کمپوننٹس، data URI اور مزید۔ مفت، نجی، اور مکمل طور پر آپ کے براؤزر میں چلتا ہے۔',
   tagline: 'SVG تصاویر کو کوڈ میں بدلیں — اور کوڈ کو واپس تصاویر میں۔',
@@ -1218,7 +1218,7 @@ const ur: typeof en = {
   how1: 'SVG فائلیں دراصل کوڈ ہی ہوتی ہیں۔ ایک فائل ڈراپ کریں اور اس کا مارک اپ ایڈیٹر میں آ جائے گا — تبدیلی کرتے ہی پریویو لائیو اپ ڈیٹ ہوگا۔',
   how2: 'آؤٹ پٹ ٹیبز بدل کر JSX، ٹائپ شدہ React کمپوننٹ، data-URI یا Base64 حاصل کریں — پھر کاپی یا ڈاؤن لوڈ کریں۔',
   how3: 'سب کچھ 100% آپ کے براؤزر میں چلتا ہے۔ کچھ بھی کہیں اپ لوڈ نہیں ہوتا۔',
-  footerMade: 'VectorForge — ایک مفت SVG ٹول کٹ۔ تمام پروسیسنگ آپ کے براؤزر میں مقامی طور پر ہوتی ہے۔',
+  footerMade: 'SvgToCode — ایک مفت SVG ٹول کٹ۔ تمام پروسیسنگ آپ کے براؤزر میں مقامی طور پر ہوتی ہے۔',
   aboutTitle: 'اس ٹول کے بارے میں',
   navTools: 'ٹولز',
   navHowItWorks: 'یہ کیسے کام کرتا ہے',
@@ -1234,13 +1234,13 @@ const ur: typeof en = {
   resizeLabel: 'ایڈیٹر اور پریویو کا سائز بدلیں',
   formatsLabel: 'آؤٹ پٹ فارمیٹس',
   statsLabel: 'اعداد و شمار',
-  brandHome: 'VectorForge ہوم',
+  brandHome: 'SvgToCode ہوم',
   notFoundText: 'یہ صفحہ موجود نہیں ہے۔',
   backToConverter: 'کنورٹر پر واپس جائیں',
 };
 
 const ta: typeof en = {
-  siteTitle: 'VectorForge — SVG-ஐ குறியீடாக மாற்றி',
+  siteTitle: 'SvgToCode — SVG-ஐ குறியீடாக மாற்றி',
   siteDescription:
     'SVG படங்களைக் குறியீடாகவும், குறியீட்டை மீண்டும் படங்களாகவும் மாற்றுங்கள்: JSX, React கூறுகள், data URI மற்றும் பல. இலவசம், தனிப்பட்டது, முழுவதும் உங்கள் உலாவியிலேயே இயங்கும்.',
   tagline: 'SVG படங்களைக் குறியீடாக மாற்றுங்கள் — குறியீட்டை மீண்டும் படங்களாகவும்.',
@@ -1305,7 +1305,7 @@ const ta: typeof en = {
   how1: 'SVG கோப்புகள் ஏற்கனவே குறியீடுதான். ஒன்றை விடுங்கள், அதன் மார்க்அப் திருத்தியில் தோன்றும் — திருத்துங்கள், முன்னோட்டம் உடனடியாகப் புதுப்பிக்கப்படும்.',
   how2: 'வெளியீட்டுத் தாவல்களை மாற்றி JSX, வகைப்படுத்தப்பட்ட React கூறு, data-URI அல்லது Base64-ஐப் பெறுங்கள் — பிறகு நகலெடுங்கள் அல்லது பதிவிறக்குங்கள்.',
   how3: 'எல்லாமே உங்கள் உலாவியில் 100% இயங்குகிறது. எதுவும் எங்கும் பதிவேற்றப்படுவதில்லை.',
-  footerMade: 'VectorForge — இலவச SVG கருவித்தொகுப்பு. அனைத்துச் செயலாக்கமும் உங்கள் உலாவியில் உள்ளூரிலேயே நடைபெறுகிறது.',
+  footerMade: 'SvgToCode — இலவச SVG கருவித்தொகுப்பு. அனைத்துச் செயலாக்கமும் உங்கள் உலாவியில் உள்ளூரிலேயே நடைபெறுகிறது.',
   aboutTitle: 'இந்தக் கருவி பற்றி',
   navTools: 'கருவிகள்',
   navHowItWorks: 'இது எப்படி வேலை செய்கிறது',
@@ -1321,13 +1321,13 @@ const ta: typeof en = {
   resizeLabel: 'திருத்தி மற்றும் முன்னோட்டத்தின் அளவை மாற்றுங்கள்',
   formatsLabel: 'வெளியீட்டு வடிவங்கள்',
   statsLabel: 'புள்ளிவிவரங்கள்',
-  brandHome: 'VectorForge முகப்பு',
+  brandHome: 'SvgToCode முகப்பு',
   notFoundText: 'இந்தப் பக்கம் இல்லை.',
   backToConverter: 'மாற்றிக்குத் திரும்பு',
 };
 
 const te: typeof en = {
-  siteTitle: 'VectorForge — SVG నుండి కోడ్ కన్వర్టర్',
+  siteTitle: 'SvgToCode — SVG నుండి కోడ్ కన్వర్టర్',
   siteDescription:
     'SVG చిత్రాలను కోడ్‌గా మరియు కోడ్‌ను తిరిగి చిత్రాలుగా మార్చండి: JSX, React కాంపోనెంట్‌లు, data URI మరియు మరిన్ని. ఉచితం, ప్రైవేట్, మరియు పూర్తిగా మీ బ్రౌజర్‌లోనే నడుస్తుంది.',
   tagline: 'SVG చిత్రాలను కోడ్‌గా మార్చండి — మరియు కోడ్‌ను తిరిగి చిత్రాలుగా.',
@@ -1392,7 +1392,7 @@ const te: typeof en = {
   how1: 'SVG ఫైళ్లు ఇప్పటికే కోడే. ఒకదాన్ని డ్రాప్ చేయండి, దాని మార్కప్ ఎడిటర్‌లో కనిపిస్తుంది — సవరించండి, ప్రివ్యూ లైవ్‌గా అప్‌డేట్ అవుతుంది.',
   how2: 'JSX, టైప్ చేసిన React కాంపోనెంట్, data-URI లేదా Base64 పొందడానికి అవుట్‌పుట్ ట్యాబ్‌లను మార్చండి — తర్వాత కాపీ లేదా డౌన్‌లోడ్ చేయండి.',
   how3: 'అంతా 100% మీ బ్రౌజర్‌లోనే నడుస్తుంది. ఏదీ ఎక్కడికీ అప్‌లోడ్ కాదు.',
-  footerMade: 'VectorForge — ఉచిత SVG టూల్‌కిట్. అన్ని ప్రాసెసింగ్ మీ బ్రౌజర్‌లో స్థానికంగానే జరుగుతుంది.',
+  footerMade: 'SvgToCode — ఉచిత SVG టూల్‌కిట్. అన్ని ప్రాసెసింగ్ మీ బ్రౌజర్‌లో స్థానికంగానే జరుగుతుంది.',
   aboutTitle: 'ఈ టూల్ గురించి',
   navTools: 'టూల్‌లు',
   navHowItWorks: 'ఇది ఎలా పని చేస్తుంది',
@@ -1408,13 +1408,13 @@ const te: typeof en = {
   resizeLabel: 'ఎడిటర్ మరియు ప్రివ్యూ పరిమాణాన్ని మార్చండి',
   formatsLabel: 'అవుట్‌పుట్ ఫార్మాట్‌లు',
   statsLabel: 'గణాంకాలు',
-  brandHome: 'VectorForge హోమ్',
+  brandHome: 'SvgToCode హోమ్',
   notFoundText: 'ఈ పేజీ లేదు.',
   backToConverter: 'కన్వర్టర్‌కు తిరిగి వెళ్లండి',
 };
 
 const mr: typeof en = {
-  siteTitle: 'VectorForge — SVG ते कोड कन्व्हर्टर',
+  siteTitle: 'SvgToCode — SVG ते कोड कन्व्हर्टर',
   siteDescription:
     'SVG प्रतिमा कोडमध्ये आणि कोड पुन्हा प्रतिमांमध्ये रूपांतरित करा: JSX, React कंपोनंट, data URI आणि बरेच काही. मोफत, खाजगी आणि पूर्णपणे तुमच्या ब्राउझरमध्येच चालते.',
   tagline: 'SVG प्रतिमा कोडमध्ये रूपांतरित करा — आणि कोड पुन्हा प्रतिमांमध्ये.',
@@ -1479,7 +1479,7 @@ const mr: typeof en = {
   how1: 'SVG फाइल्स मुळात कोडच असतात. एक ड्रॉप करा आणि तिचा मार्कअप एडिटरमध्ये येईल — संपादित करा आणि प्रिव्ह्यू थेट अपडेट होईल.',
   how2: 'JSX, टाइप केलेला React कंपोनंट, data-URI किंवा Base64 मिळवण्यासाठी आउटपुट टॅब बदला — नंतर कॉपी किंवा डाउनलोड करा.',
   how3: 'सर्व काही 100% तुमच्या ब्राउझरमध्ये चालते. काहीही कुठेही अपलोड होत नाही.',
-  footerMade: 'VectorForge — एक मोफत SVG टूलकिट. सर्व प्रक्रिया तुमच्या ब्राउझरमध्ये स्थानिक पातळीवर होते.',
+  footerMade: 'SvgToCode — एक मोफत SVG टूलकिट. सर्व प्रक्रिया तुमच्या ब्राउझरमध्ये स्थानिक पातळीवर होते.',
   aboutTitle: 'या टूलबद्दल',
   navTools: 'टूल्स',
   navHowItWorks: 'हे कसे काम करते',
@@ -1495,13 +1495,13 @@ const mr: typeof en = {
   resizeLabel: 'एडिटर आणि प्रिव्ह्यूचा आकार बदला',
   formatsLabel: 'आउटपुट फॉरमॅट',
   statsLabel: 'आकडेवारी',
-  brandHome: 'VectorForge मुख्यपृष्ठ',
+  brandHome: 'SvgToCode मुख्यपृष्ठ',
   notFoundText: 'हे पृष्ठ अस्तित्वात नाही.',
   backToConverter: 'कन्व्हर्टरकडे परत जा',
 };
 
 const tr: typeof en = {
-  siteTitle: 'VectorForge — SVG Kod Dönüştürücü',
+  siteTitle: 'SvgToCode — SVG Kod Dönüştürücü',
   siteDescription:
     'SVG görsellerini koda, kodu da görsele dönüştürün: JSX, React bileşenleri, data URI ve daha fazlası. Ücretsiz, gizli ve tamamen tarayıcınızda çalışır.',
   tagline: 'SVG görsellerini koda dönüştürün — kodu da yeniden görsele.',
@@ -1566,7 +1566,7 @@ const tr: typeof en = {
   how1: 'SVG dosyaları zaten koddur. Bir dosya bırakın, kodu düzenleyicide belirir — düzenleyin, önizleme canlı güncellenir.',
   how2: 'JSX, tipli bir React bileşeni, data-URI veya Base64 almak için çıktı sekmelerini değiştirin — sonra kopyalayın veya indirin.',
   how3: 'Her şey %100 tarayıcınızda çalışır. Hiçbir şey hiçbir yere yüklenmez.',
-  footerMade: 'VectorForge — ücretsiz bir SVG araç seti. Tüm işlemler tarayıcınızda yerel olarak yapılır.',
+  footerMade: 'SvgToCode — ücretsiz bir SVG araç seti. Tüm işlemler tarayıcınızda yerel olarak yapılır.',
   aboutTitle: 'Bu araç hakkında',
   navTools: 'Araçlar',
   navHowItWorks: 'Nasıl çalışır',
@@ -1582,13 +1582,13 @@ const tr: typeof en = {
   resizeLabel: 'Düzenleyici ve önizleme boyutunu değiştir',
   formatsLabel: 'Çıktı biçimleri',
   statsLabel: 'İstatistikler',
-  brandHome: 'VectorForge ana sayfa',
+  brandHome: 'SvgToCode ana sayfa',
   notFoundText: 'Bu sayfa mevcut değil.',
   backToConverter: 'Dönüştürücüye geri dön',
 };
 
 const it: typeof en = {
-  siteTitle: 'VectorForge — Convertitore da SVG a codice',
+  siteTitle: 'SvgToCode — Convertitore da SVG a codice',
   siteDescription:
     'Converti immagini SVG in codice e viceversa: JSX, componenti React, data URI e altro. Gratuito, privato e funziona interamente nel tuo browser.',
   tagline: 'Converti immagini SVG in codice — e il codice di nuovo in immagini.',
@@ -1653,7 +1653,7 @@ const it: typeof en = {
   how1: 'I file SVG sono già codice. Rilasciane uno e il suo markup appare nell’editor — modificalo e l’anteprima si aggiorna in tempo reale.',
   how2: 'Cambia scheda di output per ottenere JSX, un componente React tipizzato, un data-URI o Base64 — poi copia o scarica.',
   how3: 'Tutto funziona al 100% nel tuo browser. Niente viene caricato da nessuna parte.',
-  footerMade: 'VectorForge — un toolkit SVG gratuito. Tutta l’elaborazione avviene localmente nel tuo browser.',
+  footerMade: 'SvgToCode — un toolkit SVG gratuito. Tutta l’elaborazione avviene localmente nel tuo browser.',
   aboutTitle: 'Informazioni su questo strumento',
   navTools: 'Strumenti',
   navHowItWorks: 'Come funziona',
@@ -1669,13 +1669,13 @@ const it: typeof en = {
   resizeLabel: 'Ridimensiona editor e anteprima',
   formatsLabel: 'Formati di output',
   statsLabel: 'Statistiche',
-  brandHome: 'Home di VectorForge',
+  brandHome: 'Home di SvgToCode',
   notFoundText: 'Questa pagina non esiste.',
   backToConverter: 'Torna al convertitore',
 };
 
 const nl: typeof en = {
-  siteTitle: 'VectorForge — SVG naar code-converter',
+  siteTitle: 'SvgToCode — SVG naar code-converter',
   siteDescription:
     'Zet SVG-afbeeldingen om naar code en code weer naar afbeeldingen: JSX, React-componenten, data-URI’s en meer. Gratis, privé en volledig in je browser.',
   tagline: 'Zet SVG-afbeeldingen om naar code — en code weer naar afbeeldingen.',
@@ -1740,7 +1740,7 @@ const nl: typeof en = {
   how1: 'SVG-bestanden zijn al code. Sleep er een in en de markup verschijnt in de editor — bewerk hem en het voorbeeld werkt live bij.',
   how2: 'Wissel van uitvoertab om JSX, een getypeerde React-component, een data-URI of Base64 te krijgen — kopieer of download daarna.',
   how3: 'Alles draait 100% in je browser. Er wordt nergens iets geüpload.',
-  footerMade: 'VectorForge — een gratis SVG-toolkit. Alle verwerking gebeurt lokaal in je browser.',
+  footerMade: 'SvgToCode — een gratis SVG-toolkit. Alle verwerking gebeurt lokaal in je browser.',
   aboutTitle: 'Over deze tool',
   navTools: 'Tools',
   navHowItWorks: 'Hoe het werkt',
@@ -1756,13 +1756,13 @@ const nl: typeof en = {
   resizeLabel: 'Pas de grootte van editor en voorbeeld aan',
   formatsLabel: 'Uitvoerformaten',
   statsLabel: 'Statistieken',
-  brandHome: 'VectorForge home',
+  brandHome: 'SvgToCode home',
   notFoundText: 'Deze pagina bestaat niet.',
   backToConverter: 'Terug naar de converter',
 };
 
 const pl: typeof en = {
-  siteTitle: 'VectorForge — konwerter SVG na kod',
+  siteTitle: 'SvgToCode — konwerter SVG na kod',
   siteDescription:
     'Konwertuj obrazy SVG na kod i kod z powrotem na obrazy: JSX, komponenty React, data URI i więcej. Za darmo, prywatnie i w całości w Twojej przeglądarce.',
   tagline: 'Konwertuj obrazy SVG na kod — a kod z powrotem na obrazy.',
@@ -1827,7 +1827,7 @@ const pl: typeof en = {
   how1: 'Pliki SVG to już kod. Upuść plik, a jego kod pojawi się w edytorze — edytuj go, a podgląd zaktualizuje się na żywo.',
   how2: 'Przełączaj karty wyników, aby otrzymać JSX, komponent React z typami, data-URI lub Base64 — potem kopiuj lub pobieraj.',
   how3: 'Wszystko działa w 100% w Twojej przeglądarce. Nic nie jest nigdzie wysyłane.',
-  footerMade: 'VectorForge — darmowy zestaw narzędzi SVG. Całe przetwarzanie odbywa się lokalnie w Twojej przeglądarce.',
+  footerMade: 'SvgToCode — darmowy zestaw narzędzi SVG. Całe przetwarzanie odbywa się lokalnie w Twojej przeglądarce.',
   aboutTitle: 'O tym narzędziu',
   navTools: 'Narzędzia',
   navHowItWorks: 'Jak to działa',
@@ -1843,13 +1843,13 @@ const pl: typeof en = {
   resizeLabel: 'Zmień rozmiar edytora i podglądu',
   formatsLabel: 'Formaty wyjściowe',
   statsLabel: 'Statystyki',
-  brandHome: 'Strona główna VectorForge',
+  brandHome: 'Strona główna SvgToCode',
   notFoundText: 'Ta strona nie istnieje.',
   backToConverter: 'Wróć do konwertera',
 };
 
 const vi: typeof en = {
-  siteTitle: 'VectorForge — Công cụ chuyển SVG thành mã',
+  siteTitle: 'SvgToCode — Công cụ chuyển SVG thành mã',
   siteDescription:
     'Chuyển hình ảnh SVG thành mã và mã trở lại thành hình ảnh: JSX, thành phần React, data URI và hơn nữa. Miễn phí, riêng tư và chạy hoàn toàn trong trình duyệt của bạn.',
   tagline: 'Chuyển hình ảnh SVG thành mã — và mã trở lại thành hình ảnh.',
@@ -1914,7 +1914,7 @@ const vi: typeof en = {
   how1: 'Tệp SVG vốn đã là mã. Thả một tệp vào và mã của nó sẽ xuất hiện trong trình chỉnh sửa — chỉnh sửa và bản xem trước sẽ cập nhật trực tiếp.',
   how2: 'Chuyển các thẻ đầu ra để lấy JSX, thành phần React có kiểu, data-URI hoặc Base64 — rồi sao chép hoặc tải xuống.',
   how3: 'Mọi thứ chạy 100% trong trình duyệt của bạn. Không có gì được tải lên bất cứ đâu.',
-  footerMade: 'VectorForge — bộ công cụ SVG miễn phí. Mọi xử lý đều diễn ra cục bộ trong trình duyệt của bạn.',
+  footerMade: 'SvgToCode — bộ công cụ SVG miễn phí. Mọi xử lý đều diễn ra cục bộ trong trình duyệt của bạn.',
   aboutTitle: 'Giới thiệu công cụ này',
   navTools: 'Công cụ',
   navHowItWorks: 'Cách hoạt động',
@@ -1930,13 +1930,13 @@ const vi: typeof en = {
   resizeLabel: 'Thay đổi kích thước trình chỉnh sửa và bản xem trước',
   formatsLabel: 'Định dạng đầu ra',
   statsLabel: 'Thống kê',
-  brandHome: 'Trang chủ VectorForge',
+  brandHome: 'Trang chủ SvgToCode',
   notFoundText: 'Trang này không tồn tại.',
   backToConverter: 'Quay lại công cụ chuyển đổi',
 };
 
 const asm: typeof en = {
-  siteTitle: 'VectorForge — SVG ৰ পৰা কোড ৰূপান্তৰক',
+  siteTitle: 'SvgToCode — SVG ৰ পৰা কোড ৰূপান্তৰক',
   siteDescription:
     'SVG ছবিবোৰ কোডলৈ আৰু কোডক পুনৰ ছবিলৈ ৰূপান্তৰ কৰক: JSX, React কম্পোনেন্ট, data URI আৰু অধিক। বিনামূলীয়া, গোপনীয় আৰু সম্পূৰ্ণ আপোনাৰ ব্ৰাউজাৰতেই চলে।',
   tagline: 'SVG ছবিবোৰ কোডলৈ ৰূপান্তৰ কৰক — আৰু কোডক পুনৰ ছবিলৈ।',
@@ -2001,7 +2001,7 @@ const asm: typeof en = {
   how1: 'SVG ফাইলবোৰ আচলতে কোডেই। এটা ড্ৰপ কৰক আৰু ইয়াৰ মাৰ্কআপ সম্পাদকত আহিব — সম্পাদনা কৰিলেই পূৰ্বদৰ্শন লাইভ আপডেট হ’ব।',
   how2: 'আউটপুট টেব সলাই JSX, টাইপসহ React কম্পোনেন্ট, data-URI অথবা Base64 পাওক — তাৰ পিছত কপি বা ডাউনলোড কৰক।',
   how3: 'সকলো 100% আপোনাৰ ব্ৰাউজাৰতেই চলে। ক’তো একো আপলোড নহয়।',
-  footerMade: 'VectorForge — এটা বিনামূলীয়া SVG টুলকিট। সকলো প্ৰচেছিং আপোনাৰ ব্ৰাউজাৰত স্থানীয়ভাৱে হয়।',
+  footerMade: 'SvgToCode — এটা বিনামূলীয়া SVG টুলকিট। সকলো প্ৰচেছিং আপোনাৰ ব্ৰাউজাৰত স্থানীয়ভাৱে হয়।',
   aboutTitle: 'এই টুলৰ বিষয়ে',
   navTools: 'টুলছ',
   navHowItWorks: 'ই কেনেকৈ কাম কৰে',
@@ -2017,7 +2017,7 @@ const asm: typeof en = {
   resizeLabel: 'সম্পাদক আৰু পূৰ্বদৰ্শনৰ আকাৰ সলনি কৰক',
   formatsLabel: 'আউটপুট ফৰ্মেট',
   statsLabel: 'পৰিসংখ্যা',
-  brandHome: 'VectorForge মুখ্যপৃষ্ঠা',
+  brandHome: 'SvgToCode মুখ্যপৃষ্ঠা',
   notFoundText: 'এই পৃষ্ঠাটো নাই।',
   backToConverter: 'ৰূপান্তৰকলৈ ঘূৰি যাওক',
 };

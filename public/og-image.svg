@@ -13,7 +13,7 @@
     <path d="M12.5 21 h7" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/>
     <circle cx="16" cy="24.5" r="1.6" fill="#ffffff"/>
   </g>
-  <text x="272" y="288" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="64" font-weight="700" fill="#ffffff">VectorForge</text>
+  <text x="272" y="288" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="64" font-weight="700" fill="#ffffff">SvgToCode</text>
   <text x="272" y="344" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="30" fill="#c4c7c5">Convert SVG images to code — and code back to images.</text>
   <text x="272" y="396" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="24" fill="#7dd3fc">JSX · React · Data URI · Base64 · PNG — free, private, in-browser</text>
 </svg>

@@ -466,7 +466,7 @@ export default function Converter({ t, initialFormat }: { t: Dict; initialFormat
         return;
       }
       const blob = await zip.generateAsync({ type: 'blob' });
-      downloadBlob(blob, 'vectorforge-batch.zip');
+      downloadBlob(blob, 'svgtocode-batch.zip');
     } catch {
       flash(t.zipFailed);
     } finally {

@@ -1,4 +1,4 @@
-# VectorForge — SVG to Code Converter
+# SvgToCode — SVG to Code Converter
 
 A professional, premium, privacy-first SVG ⇄ code converter. 100% client-side:
 nothing is ever uploaded to a server.

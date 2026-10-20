@@ -39,12 +39,12 @@ export interface ToolContent {
 /* ---------------- English ---------------- */
 
 const jsxEn: ToolContent = {
-  title: 'SVG to JSX Converter — Free Online Tool | VectorForge',
+  title: 'SVG to JSX Converter — Free Online Tool | SvgToCode',
   description:
     'Convert SVG markup to JSX in seconds. Free online SVG to JSX converter with automatic attribute renaming, style-object conversion and live preview. Runs 100% in your browser.',
   heading: 'SVG to JSX Converter',
   intro:
-    'Paste any SVG and get clean JSX, ready for your React components. VectorForge renames attributes automatically (class becomes className, stroke-width becomes strokeWidth), converts inline styles to style objects and turns XML comments into JSX comments — instantly, with a live preview. Nothing is uploaded; everything happens in your browser.',
+    'Paste any SVG and get clean JSX, ready for your React components. SvgToCode renames attributes automatically (class becomes className, stroke-width becomes strokeWidth), converts inline styles to style objects and turns XML comments into JSX comments — instantly, with a live preview. Nothing is uploaded; everything happens in your browser.',
   steps: [
     'Paste your SVG markup into the editor, or drop an .svg file anywhere on the page.',
     'The JSX tab is already selected — review the converted output updating live as you type.',
@@ -70,7 +70,7 @@ const jsxEn: ToolContent = {
 };
 
 const reactEn: ToolContent = {
-  title: 'SVG to React Component Converter — Free Online | VectorForge',
+  title: 'SVG to React Component Converter — Free Online | SvgToCode',
   description:
     'Turn any SVG into a typed React (.tsx) component instantly. Free SVG to React component converter with props support, clean output and live preview.',
   heading: 'SVG to React Component Converter',
@@ -101,7 +101,7 @@ const reactEn: ToolContent = {
 };
 
 const base64En: ToolContent = {
-  title: 'SVG to Base64 Converter — Free Online Encoder | VectorForge',
+  title: 'SVG to Base64 Converter — Free Online Encoder | SvgToCode',
   description:
     'Encode SVG as Base64 online. Free SVG to Base64 converter with Unicode-safe encoding, live preview and one-click copy.',
   heading: 'SVG to Base64 Converter',
@@ -132,12 +132,12 @@ const base64En: ToolContent = {
 };
 
 const dataUriEn: ToolContent = {
-  title: 'SVG to Data URI / CSS Background Generator — Free | VectorForge',
+  title: 'SVG to Data URI / CSS Background Generator — Free | SvgToCode',
   description:
     'Convert SVG to a CSS-ready data URI for background-image. Free generator with minification, optimized encoding and live preview.',
   heading: 'SVG to Data URI Converter',
   intro:
-    'Turn any SVG into a compact data URI you can paste straight into background-image. VectorForge minifies the SVG first and percent-encodes it, which keeps the URI smaller than Base64 for typical icons — and you can see it render in the live preview before copying.',
+    'Turn any SVG into a compact data URI you can paste straight into background-image. SvgToCode minifies the SVG first and percent-encodes it, which keeps the URI smaller than Base64 for typical icons — and you can see it render in the live preview before copying.',
   steps: [
     'Paste your SVG markup into the editor, or drop an .svg file anywhere on the page.',
     'The CSS Data-URI tab is already selected — the snippet updates live as you edit.',
@@ -163,12 +163,12 @@ const dataUriEn: ToolContent = {
 };
 
 const optimizerEn: ToolContent = {
-  title: 'SVG Optimizer — Free Online SVGO Tool | VectorForge',
+  title: 'SVG Optimizer — Free Online SVGO Tool | SvgToCode',
   description:
     'Optimize SVG files online with SVGO. Free SVG optimizer that shrinks file size while preserving the viewBox and visual quality.',
   heading: 'SVG Optimizer',
   intro:
-    'Shrink SVG files without changing how they look. VectorForge runs SVGO multipass optimization right in your browser — and deliberately preserves the viewBox, so responsive scaling keeps working after optimization. You see exactly how many bytes and what percentage you saved.',
+    'Shrink SVG files without changing how they look. SvgToCode runs SVGO multipass optimization right in your browser — and deliberately preserves the viewBox, so responsive scaling keeps working after optimization. You see exactly how many bytes and what percentage you saved.',
   steps: [
     'Paste your SVG markup into the editor, or drop an .svg file anywhere on the page.',
     'Press the Optimize button in the toolbar — the editor updates with the minified result.',
@@ -194,7 +194,7 @@ const optimizerEn: ToolContent = {
 };
 
 const pngEn: ToolContent = {
-  title: 'SVG to PNG Converter — Free 1x/2x/4x Export | VectorForge',
+  title: 'SVG to PNG Converter — Free 1x/2x/4x Export | SvgToCode',
   description:
     'Convert SVG to PNG at 1x, 2x and 4x resolution online. Free, unlimited, in-browser SVG to PNG converter with live preview.',
   heading: 'SVG to PNG Converter',
@@ -227,12 +227,12 @@ const pngEn: ToolContent = {
 /* ---------------- Hindi ---------------- */
 
 const jsxHi: ToolContent = {
-  title: 'SVG से JSX कन्वर्टर — मुफ़्त ऑनलाइन टूल | VectorForge',
+  title: 'SVG से JSX कन्वर्टर — मुफ़्त ऑनलाइन टूल | SvgToCode',
   description:
     'सेकंडों में SVG मार्कअप को JSX में बदलें। मुफ़्त ऑनलाइन SVG से JSX कन्वर्टर — ऑटोमैटिक एट्रिब्यूट नाम बदलना, स्टाइल-ऑब्जेक्ट रूपांतरण और लाइव प्रीव्यू के साथ। 100% आपके ब्राउज़र में चलता है।',
   heading: 'SVG से JSX कन्वर्टर',
   intro:
-    'कोई भी SVG पेस्ट करें और अपने React कॉम्पोनेंट के लिए तैयार साफ़ JSX पाएं। VectorForge एट्रिब्यूट अपने आप बदल देता है (class बनता है className, stroke-width बनता है strokeWidth), इनलाइन स्टाइल को स्टाइल ऑब्जेक्ट में बदलता है और XML टिप्पणियों को JSX टिप्पणियों में बदल देता है — तुरंत, लाइव प्रीव्यू के साथ। कुछ भी अपलोड नहीं होता; सब कुछ आपके ब्राउज़र में होता है।',
+    'कोई भी SVG पेस्ट करें और अपने React कॉम्पोनेंट के लिए तैयार साफ़ JSX पाएं। SvgToCode एट्रिब्यूट अपने आप बदल देता है (class बनता है className, stroke-width बनता है strokeWidth), इनलाइन स्टाइल को स्टाइल ऑब्जेक्ट में बदलता है और XML टिप्पणियों को JSX टिप्पणियों में बदल देता है — तुरंत, लाइव प्रीव्यू के साथ। कुछ भी अपलोड नहीं होता; सब कुछ आपके ब्राउज़र में होता है।',
   steps: [
     'अपना SVG मार्कअप एडिटर में पेस्ट करें, या .svg फ़ाइल पेज पर कहीं भी छोड़ें।',
     'JSX टैब पहले से चुना हुआ है — टाइप करते ही बदलता हुआ आउटपुट लाइव देखें।',
@@ -258,7 +258,7 @@ const jsxHi: ToolContent = {
 };
 
 const reactHi: ToolContent = {
-  title: 'SVG से React कॉम्पोनेंट कन्वर्टर — मुफ़्त ऑनलाइन | VectorForge',
+  title: 'SVG से React कॉम्पोनेंट कन्वर्टर — मुफ़्त ऑनलाइन | SvgToCode',
   description:
     'किसी भी SVG को तुरंत टाइप किए हुए React (.tsx) कॉम्पोनेंट में बदलें। मुफ़्त SVG से React कॉम्पोनेंट कन्वर्टर — प्रॉप्स समर्थन, साफ़ आउटपुट और लाइव प्रीव्यू के साथ।',
   heading: 'SVG से React कॉम्पोनेंट कन्वर्टर',
@@ -289,7 +289,7 @@ const reactHi: ToolContent = {
 };
 
 const base64Hi: ToolContent = {
-  title: 'SVG से Base64 कन्वर्टर — मुफ़्त ऑनलाइन एनकोडर | VectorForge',
+  title: 'SVG से Base64 कन्वर्टर — मुफ़्त ऑनलाइन एनकोडर | SvgToCode',
   description:
     'SVG को Base64 में ऑनलाइन एनकोड करें। मुफ़्त SVG से Base64 कन्वर्टर — Unicode-सुरक्षित एनकोडिंग, लाइव प्रीव्यू और एक-क्लिक कॉपी के साथ।',
   heading: 'SVG से Base64 कन्वर्टर',
@@ -320,12 +320,12 @@ const base64Hi: ToolContent = {
 };
 
 const dataUriHi: ToolContent = {
-  title: 'SVG से Data URI / CSS बैकग्राउंड जनरेटर — मुफ़्त | VectorForge',
+  title: 'SVG से Data URI / CSS बैकग्राउंड जनरेटर — मुफ़्त | SvgToCode',
   description:
     'SVG को background-image के लिए तैयार CSS data URI में बदलें। मुफ़्त जनरेटर — मिनिफ़िकेशन, बेहतर एनकोडिंग और लाइव प्रीव्यू के साथ।',
   heading: 'SVG से Data URI कन्वर्टर',
   intro:
-    'किसी भी SVG को एक संक्षिप्त data URI में बदलें जिसे आप सीधे background-image में पेस्ट कर सकें। VectorForge पहले SVG को मिनिफ़ाई करता है और फिर प्रतिशत-एनकोड करता है, जिससे सामान्य आइकनों के लिए URI Base64 से छोटा रहता है — और कॉपी करने से पहले आप उसे लाइव प्रीव्यू में रेंडर होते देख सकते हैं।',
+    'किसी भी SVG को एक संक्षिप्त data URI में बदलें जिसे आप सीधे background-image में पेस्ट कर सकें। SvgToCode पहले SVG को मिनिफ़ाई करता है और फिर प्रतिशत-एनकोड करता है, जिससे सामान्य आइकनों के लिए URI Base64 से छोटा रहता है — और कॉपी करने से पहले आप उसे लाइव प्रीव्यू में रेंडर होते देख सकते हैं।',
   steps: [
     'अपना SVG मार्कअप एडिटर में पेस्ट करें, या .svg फ़ाइल पेज पर कहीं भी छोड़ें।',
     'CSS Data-URI टैब पहले से चुना हुआ है — संपादित करते ही स्निपेट लाइव अपडेट होता है।',
@@ -351,12 +351,12 @@ const dataUriHi: ToolContent = {
 };
 
 const optimizerHi: ToolContent = {
-  title: 'SVG ऑप्टिमाइज़र — मुफ़्त ऑनलाइन SVGO टूल | VectorForge',
+  title: 'SVG ऑप्टिमाइज़र — मुफ़्त ऑनलाइन SVGO टूल | SvgToCode',
   description:
     'SVGO से SVG फ़ाइलों को ऑनलाइन ऑप्टिमाइज़ करें। मुफ़्त SVG ऑप्टिमाइज़र जो viewBox और दृश्य गुणवत्ता बनाए रखते हुए फ़ाइल का आकार घटाता है।',
   heading: 'SVG ऑप्टिमाइज़र',
   intro:
-    'SVG फ़ाइलों को बिना उनका रूप बदले छोटा करें। VectorForge SVGO मल्टीपास ऑप्टिमाइज़ेशन सीधे आपके ब्राउज़र में चलाता है — और जानबूझकर viewBox बनाए रखता है, ताकि ऑप्टिमाइज़ेशन के बाद भी रेस्पॉन्सिव स्केलिंग काम करती रहे। आप ठीक-ठीक देखते हैं कि कितने बाइट और कितने प्रतिशत की बचत हुई।',
+    'SVG फ़ाइलों को बिना उनका रूप बदले छोटा करें। SvgToCode SVGO मल्टीपास ऑप्टिमाइज़ेशन सीधे आपके ब्राउज़र में चलाता है — और जानबूझकर viewBox बनाए रखता है, ताकि ऑप्टिमाइज़ेशन के बाद भी रेस्पॉन्सिव स्केलिंग काम करती रहे। आप ठीक-ठीक देखते हैं कि कितने बाइट और कितने प्रतिशत की बचत हुई।',
   steps: [
     'अपना SVG मार्कअप एडिटर में पेस्ट करें, या .svg फ़ाइल पेज पर कहीं भी छोड़ें।',
     'टूलबार में Optimize बटन दबाएं — एडिटर मिनिफ़ाई किए परिणाम के साथ अपडेट हो जाता है।',
@@ -382,7 +382,7 @@ const optimizerHi: ToolContent = {
 };
 
 const pngHi: ToolContent = {
-  title: 'SVG से PNG कन्वर्टर — मुफ़्त 1x/2x/4x एक्सपोर्ट | VectorForge',
+  title: 'SVG से PNG कन्वर्टर — मुफ़्त 1x/2x/4x एक्सपोर्ट | SvgToCode',
   description:
     'SVG को 1x, 2x और 4x रिज़ॉल्यूशन पर PNG में ऑनलाइन बदलें। मुफ़्त, असीमित, ब्राउज़र-मध्य SVG से PNG कन्वर्टर — लाइव प्रीव्यू के साथ।',
   heading: 'SVG से PNG कन्वर्टर',
@@ -415,12 +415,12 @@ const pngHi: ToolContent = {
 /* ---------------- Spanish ---------------- */
 
 const jsxEs: ToolContent = {
-  title: 'Conversor de SVG a JSX — Herramienta en línea gratuita | VectorForge',
+  title: 'Conversor de SVG a JSX — Herramienta en línea gratuita | SvgToCode',
   description:
     'Convierte marcado SVG a JSX en segundos. Conversor en línea gratuito de SVG a JSX con cambio automático de nombres de atributos, conversión de estilos a objetos y vista previa en vivo. Funciona 100 % en tu navegador.',
   heading: 'Conversor de SVG a JSX',
   intro:
-    'Pega cualquier SVG y obtén JSX limpio, listo para tus componentes React. VectorForge renombra los atributos automáticamente (class se convierte en className, stroke-width en strokeWidth), convierte los estilos en línea en objetos de estilo y transforma los comentarios XML en comentarios JSX — al instante, con vista previa en vivo. No se sube nada; todo ocurre en tu navegador.',
+    'Pega cualquier SVG y obtén JSX limpio, listo para tus componentes React. SvgToCode renombra los atributos automáticamente (class se convierte en className, stroke-width en strokeWidth), convierte los estilos en línea en objetos de estilo y transforma los comentarios XML en comentarios JSX — al instante, con vista previa en vivo. No se sube nada; todo ocurre en tu navegador.',
   steps: [
     'Pega tu marcado SVG en el editor, o suelta un archivo .svg en cualquier parte de la página.',
     'La pestaña JSX ya está seleccionada: revisa la salida convertida que se actualiza en vivo mientras escribes.',
@@ -446,7 +446,7 @@ const jsxEs: ToolContent = {
 };
 
 const reactEs: ToolContent = {
-  title: 'Conversor de SVG a componente React — Gratis en línea | VectorForge',
+  title: 'Conversor de SVG a componente React — Gratis en línea | SvgToCode',
   description:
     'Convierte cualquier SVG en un componente React tipado (.tsx) al instante. Conversor gratuito de SVG a componente React con soporte de props, salida limpia y vista previa en vivo.',
   heading: 'Conversor de SVG a componente React',
@@ -477,7 +477,7 @@ const reactEs: ToolContent = {
 };
 
 const base64Es: ToolContent = {
-  title: 'Conversor de SVG a Base64 — Codificador en línea gratuito | VectorForge',
+  title: 'Conversor de SVG a Base64 — Codificador en línea gratuito | SvgToCode',
   description:
     'Codifica SVG como Base64 en línea. Conversor gratuito de SVG a Base64 con codificación segura para Unicode, vista previa en vivo y copia con un clic.',
   heading: 'Conversor de SVG a Base64',
@@ -508,12 +508,12 @@ const base64Es: ToolContent = {
 };
 
 const dataUriEs: ToolContent = {
-  title: 'Generador de SVG a Data URI / fondo CSS — Gratis | VectorForge',
+  title: 'Generador de SVG a Data URI / fondo CSS — Gratis | SvgToCode',
   description:
     'Convierte SVG en un data URI listo para CSS y background-image. Generador gratuito con minificación, codificación optimizada y vista previa en vivo.',
   heading: 'Conversor de SVG a Data URI',
   intro:
-    'Convierte cualquier SVG en un data URI compacto que puedes pegar directamente en background-image. VectorForge minifica primero el SVG y lo codifica porcentualmente, lo que mantiene el URI más pequeño que Base64 para iconos típicos — y puedes verlo renderizado en la vista previa antes de copiarlo.',
+    'Convierte cualquier SVG en un data URI compacto que puedes pegar directamente en background-image. SvgToCode minifica primero el SVG y lo codifica porcentualmente, lo que mantiene el URI más pequeño que Base64 para iconos típicos — y puedes verlo renderizado en la vista previa antes de copiarlo.',
   steps: [
     'Pega tu marcado SVG en el editor, o suelta un archivo .svg en cualquier parte de la página.',
     'La pestaña CSS Data-URI ya está seleccionada: el fragmento se actualiza en vivo mientras editas.',
@@ -539,12 +539,12 @@ const dataUriEs: ToolContent = {
 };
 
 const optimizerEs: ToolContent = {
-  title: 'Optimizador de SVG — Herramienta SVGO en línea gratuita | VectorForge',
+  title: 'Optimizador de SVG — Herramienta SVGO en línea gratuita | SvgToCode',
   description:
     'Optimiza archivos SVG en línea con SVGO. Optimizador de SVG gratuito que reduce el tamaño del archivo preservando el viewBox y la calidad visual.',
   heading: 'Optimizador de SVG',
   intro:
-    'Reduce archivos SVG sin cambiar su aspecto. VectorForge ejecuta la optimización multipase de SVGO directamente en tu navegador — y preserva deliberadamente el viewBox, para que el escalado adaptable siga funcionando tras la optimización. Ves exactamente cuántos bytes y qué porcentaje has ahorrado.',
+    'Reduce archivos SVG sin cambiar su aspecto. SvgToCode ejecuta la optimización multipase de SVGO directamente en tu navegador — y preserva deliberadamente el viewBox, para que el escalado adaptable siga funcionando tras la optimización. Ves exactamente cuántos bytes y qué porcentaje has ahorrado.',
   steps: [
     'Pega tu marcado SVG en el editor, o suelta un archivo .svg en cualquier parte de la página.',
     'Pulsa el botón Optimize en la barra de herramientas: el editor se actualiza con el resultado minificado.',
@@ -570,7 +570,7 @@ const optimizerEs: ToolContent = {
 };
 
 const pngEs: ToolContent = {
-  title: 'Conversor de SVG a PNG — Exportación gratuita 1x/2x/4x | VectorForge',
+  title: 'Conversor de SVG a PNG — Exportación gratuita 1x/2x/4x | SvgToCode',
   description:
     'Convierte SVG a PNG en resolución 1x, 2x y 4x en línea. Conversor de SVG a PNG gratuito, ilimitado y en el navegador, con vista previa en vivo.',
   heading: 'Conversor de SVG a PNG',
@@ -603,12 +603,12 @@ const pngEs: ToolContent = {
 /* ---------------- Portuguese ---------------- */
 
 const jsxPt: ToolContent = {
-  title: 'Conversor de SVG para JSX — Ferramenta online gratuita | VectorForge',
+  title: 'Conversor de SVG para JSX — Ferramenta online gratuita | SvgToCode',
   description:
     'Converta marcação SVG em JSX em segundos. Conversor online gratuito de SVG para JSX com renomeação automática de atributos, conversão de estilos em objetos e pré-visualização ao vivo. Funciona 100% no seu navegador.',
   heading: 'Conversor de SVG para JSX',
   intro:
-    'Cole qualquer SVG e obtenha JSX limpo, pronto para os seus componentes React. O VectorForge renomeia os atributos automaticamente (class vira className, stroke-width vira strokeWidth), converte estilos inline em objetos de estilo e transforma comentários XML em comentários JSX — instantaneamente, com pré-visualização ao vivo. Nada é enviado; tudo acontece no seu navegador.',
+    'Cole qualquer SVG e obtenha JSX limpo, pronto para os seus componentes React. O SvgToCode renomeia os atributos automaticamente (class vira className, stroke-width vira strokeWidth), converte estilos inline em objetos de estilo e transforma comentários XML em comentários JSX — instantaneamente, com pré-visualização ao vivo. Nada é enviado; tudo acontece no seu navegador.',
   steps: [
     'Cole a marcação SVG no editor, ou solte um arquivo .svg em qualquer lugar da página.',
     'A guia JSX já está selecionada — revise a saída convertida atualizando ao vivo enquanto você digita.',
@@ -634,7 +634,7 @@ const jsxPt: ToolContent = {
 };
 
 const reactPt: ToolContent = {
-  title: 'Conversor de SVG para componente React — Grátis online | VectorForge',
+  title: 'Conversor de SVG para componente React — Grátis online | SvgToCode',
   description:
     'Transforme qualquer SVG em um componente React tipado (.tsx) instantaneamente. Conversor gratuito de SVG para componente React com suporte a props, saída limpa e pré-visualização ao vivo.',
   heading: 'Conversor de SVG para componente React',
@@ -665,7 +665,7 @@ const reactPt: ToolContent = {
 };
 
 const base64Pt: ToolContent = {
-  title: 'Conversor de SVG para Base64 — Codificador online gratuito | VectorForge',
+  title: 'Conversor de SVG para Base64 — Codificador online gratuito | SvgToCode',
   description:
     'Codifique SVG como Base64 online. Conversor gratuito de SVG para Base64 com codificação segura para Unicode, pré-visualização ao vivo e cópia com um clique.',
   heading: 'Conversor de SVG para Base64',
@@ -696,12 +696,12 @@ const base64Pt: ToolContent = {
 };
 
 const dataUriPt: ToolContent = {
-  title: 'Gerador de SVG para Data URI / fundo CSS — Grátis | VectorForge',
+  title: 'Gerador de SVG para Data URI / fundo CSS — Grátis | SvgToCode',
   description:
     'Converta SVG em um data URI pronto para CSS e background-image. Gerador gratuito com minificação, codificação otimizada e pré-visualização ao vivo.',
   heading: 'Conversor de SVG para Data URI',
   intro:
-    'Transforme qualquer SVG em um data URI compacto que você pode colar direto em background-image. O VectorForge minifica o SVG primeiro e o codifica percentualmente, o que mantém o URI menor que o Base64 para ícones típicos — e você pode vê-lo renderizado na pré-visualização antes de copiar.',
+    'Transforme qualquer SVG em um data URI compacto que você pode colar direto em background-image. O SvgToCode minifica o SVG primeiro e o codifica percentualmente, o que mantém o URI menor que o Base64 para ícones típicos — e você pode vê-lo renderizado na pré-visualização antes de copiar.',
   steps: [
     'Cole a marcação SVG no editor, ou solte um arquivo .svg em qualquer lugar da página.',
     'A guia CSS Data-URI já está selecionada — o trecho atualiza ao vivo enquanto você edita.',
@@ -727,12 +727,12 @@ const dataUriPt: ToolContent = {
 };
 
 const optimizerPt: ToolContent = {
-  title: 'Otimizador de SVG — Ferramenta SVGO online gratuita | VectorForge',
+  title: 'Otimizador de SVG — Ferramenta SVGO online gratuita | SvgToCode',
   description:
     'Otimize arquivos SVG online com SVGO. Otimizador de SVG gratuito que reduz o tamanho do arquivo preservando o viewBox e a qualidade visual.',
   heading: 'Otimizador de SVG',
   intro:
-    'Encolha arquivos SVG sem mudar a aparência deles. O VectorForge executa a otimização multipasse do SVGO direto no seu navegador — e preserva deliberadamente o viewBox, para que o dimensionamento responsivo continue funcionando após a otimização. Você vê exatamente quantos bytes e qual porcentagem economizou.',
+    'Encolha arquivos SVG sem mudar a aparência deles. O SvgToCode executa a otimização multipasse do SVGO direto no seu navegador — e preserva deliberadamente o viewBox, para que o dimensionamento responsivo continue funcionando após a otimização. Você vê exatamente quantos bytes e qual porcentagem economizou.',
   steps: [
     'Cole a marcação SVG no editor, ou solte um arquivo .svg em qualquer lugar da página.',
     'Pressione o botão Optimize na barra de ferramentas — o editor atualiza com o resultado minificado.',
@@ -758,7 +758,7 @@ const optimizerPt: ToolContent = {
 };
 
 const pngPt: ToolContent = {
-  title: 'Conversor de SVG para PNG — Exportação gratuita 1x/2x/4x | VectorForge',
+  title: 'Conversor de SVG para PNG — Exportação gratuita 1x/2x/4x | SvgToCode',
   description:
     'Converta SVG para PNG nas resoluções 1x, 2x e 4x online. Conversor de SVG para PNG gratuito, ilimitado e no navegador, com pré-visualização ao vivo.',
   heading: 'Conversor de SVG para PNG',
@@ -791,12 +791,12 @@ const pngPt: ToolContent = {
 /* ---------------- French ---------------- */
 
 const jsxFr: ToolContent = {
-  title: 'Convertisseur SVG en JSX — Outil en ligne gratuit | VectorForge',
+  title: 'Convertisseur SVG en JSX — Outil en ligne gratuit | SvgToCode',
   description:
     'Convertissez le balisage SVG en JSX en quelques secondes. Convertisseur SVG en JSX en ligne gratuit avec renommage automatique des attributs, conversion des styles en objets et aperçu en direct. Fonctionne à 100 % dans votre navigateur.',
   heading: 'Convertisseur SVG en JSX',
   intro:
-    'Collez n’importe quel SVG et obtenez du JSX propre, prêt pour vos composants React. VectorForge renomme les attributs automatiquement (class devient className, stroke-width devient strokeWidth), convertit les styles inline en objets de style et transforme les commentaires XML en commentaires JSX — instantanément, avec un aperçu en direct. Rien n’est téléversé ; tout se passe dans votre navigateur.',
+    'Collez n’importe quel SVG et obtenez du JSX propre, prêt pour vos composants React. SvgToCode renomme les attributs automatiquement (class devient className, stroke-width devient strokeWidth), convertit les styles inline en objets de style et transforme les commentaires XML en commentaires JSX — instantanément, avec un aperçu en direct. Rien n’est téléversé ; tout se passe dans votre navigateur.',
   steps: [
     'Collez votre balisage SVG dans l’éditeur, ou déposez un fichier .svg n’importe où sur la page.',
     'L’onglet JSX est déjà sélectionné — vérifiez la sortie convertie qui se met à jour en direct pendant la saisie.',
@@ -822,7 +822,7 @@ const jsxFr: ToolContent = {
 };
 
 const reactFr: ToolContent = {
-  title: 'Convertisseur SVG en composant React — Gratuit en ligne | VectorForge',
+  title: 'Convertisseur SVG en composant React — Gratuit en ligne | SvgToCode',
   description:
     'Transformez n’importe quel SVG en composant React typé (.tsx) instantanément. Convertisseur gratuit de SVG en composant React avec prise en charge des props, sortie propre et aperçu en direct.',
   heading: 'Convertisseur SVG en composant React',
@@ -853,7 +853,7 @@ const reactFr: ToolContent = {
 };
 
 const base64Fr: ToolContent = {
-  title: 'Convertisseur SVG en Base64 — Encodeur en ligne gratuit | VectorForge',
+  title: 'Convertisseur SVG en Base64 — Encodeur en ligne gratuit | SvgToCode',
   description:
     'Encodez le SVG en Base64 en ligne. Convertisseur gratuit de SVG en Base64 avec encodage sûr pour Unicode, aperçu en direct et copie en un clic.',
   heading: 'Convertisseur SVG en Base64',
@@ -884,12 +884,12 @@ const base64Fr: ToolContent = {
 };
 
 const dataUriFr: ToolContent = {
-  title: 'Générateur SVG en Data URI / arrière-plan CSS — Gratuit | VectorForge',
+  title: 'Générateur SVG en Data URI / arrière-plan CSS — Gratuit | SvgToCode',
   description:
     'Convertissez le SVG en data URI prêt pour le CSS et background-image. Générateur gratuit avec minification, encodage optimisé et aperçu en direct.',
   heading: 'Convertisseur SVG en Data URI',
   intro:
-    'Transformez n’importe quel SVG en data URI compact que vous pouvez coller directement dans background-image. VectorForge minifie d’abord le SVG puis l’encode en pour-cent, ce qui garde l’URI plus petit que le Base64 pour les icônes typiques — et vous pouvez le voir s’afficher dans l’aperçu en direct avant de le copier.',
+    'Transformez n’importe quel SVG en data URI compact que vous pouvez coller directement dans background-image. SvgToCode minifie d’abord le SVG puis l’encode en pour-cent, ce qui garde l’URI plus petit que le Base64 pour les icônes typiques — et vous pouvez le voir s’afficher dans l’aperçu en direct avant de le copier.',
   steps: [
     'Collez votre balisage SVG dans l’éditeur, ou déposez un fichier .svg n’importe où sur la page.',
     'L’onglet CSS Data-URI est déjà sélectionné — l’extrait se met à jour en direct pendant vos modifications.',
@@ -915,12 +915,12 @@ const dataUriFr: ToolContent = {
 };
 
 const optimizerFr: ToolContent = {
-  title: 'Optimiseur SVG — Outil SVGO en ligne gratuit | VectorForge',
+  title: 'Optimiseur SVG — Outil SVGO en ligne gratuit | SvgToCode',
   description:
     'Optimisez les fichiers SVG en ligne avec SVGO. Optimiseur SVG gratuit qui réduit la taille des fichiers tout en préservant le viewBox et la qualité visuelle.',
   heading: 'Optimiseur SVG',
   intro:
-    'Réduisez les fichiers SVG sans changer leur apparence. VectorForge exécute l’optimisation multipasse SVGO directement dans votre navigateur — et préserve délibérément le viewBox, afin que la mise à l’échelle adaptative continue de fonctionner après l’optimisation. Vous voyez exactement combien d’octets et quel pourcentage vous avez économisés.',
+    'Réduisez les fichiers SVG sans changer leur apparence. SvgToCode exécute l’optimisation multipasse SVGO directement dans votre navigateur — et préserve délibérément le viewBox, afin que la mise à l’échelle adaptative continue de fonctionner après l’optimisation. Vous voyez exactement combien d’octets et quel pourcentage vous avez économisés.',
   steps: [
     'Collez votre balisage SVG dans l’éditeur, ou déposez un fichier .svg n’importe où sur la page.',
     'Appuyez sur le bouton Optimize dans la barre d’outils — l’éditeur se met à jour avec le résultat minifié.',
@@ -946,7 +946,7 @@ const optimizerFr: ToolContent = {
 };
 
 const pngFr: ToolContent = {
-  title: 'Convertisseur SVG en PNG — Export gratuit 1x/2x/4x | VectorForge',
+  title: 'Convertisseur SVG en PNG — Export gratuit 1x/2x/4x | SvgToCode',
   description:
     'Convertissez le SVG en PNG aux résolutions 1x, 2x et 4x en ligne. Convertisseur SVG en PNG gratuit, illimité et dans le navigateur, avec aperçu en direct.',
   heading: 'Convertisseur SVG en PNG',
@@ -979,12 +979,12 @@ const pngFr: ToolContent = {
 /* ---------------- German ---------------- */
 
 const jsxDe: ToolContent = {
-  title: 'SVG zu JSX Konverter — Kostenloses Online-Tool | VectorForge',
+  title: 'SVG zu JSX Konverter — Kostenloses Online-Tool | SvgToCode',
   description:
     'Wandeln Sie SVG-Markup in Sekunden in JSX um. Kostenloser Online-Konverter von SVG zu JSX mit automatischer Attributumbenennung, Style-Objekt-Umwandlung und Live-Vorschau. Läuft zu 100 % in Ihrem Browser.',
   heading: 'SVG zu JSX Konverter',
   intro:
-    'Fügen Sie ein beliebiges SVG ein und erhalten Sie sauberes JSX, bereit für Ihre React-Komponenten. VectorForge benennt Attribute automatisch um (aus class wird className, aus stroke-width wird strokeWidth), wandelt Inline-Styles in Style-Objekte um und macht aus XML-Kommentaren JSX-Kommentare — sofort, mit Live-Vorschau. Nichts wird hochgeladen; alles geschieht in Ihrem Browser.',
+    'Fügen Sie ein beliebiges SVG ein und erhalten Sie sauberes JSX, bereit für Ihre React-Komponenten. SvgToCode benennt Attribute automatisch um (aus class wird className, aus stroke-width wird strokeWidth), wandelt Inline-Styles in Style-Objekte um und macht aus XML-Kommentaren JSX-Kommentare — sofort, mit Live-Vorschau. Nichts wird hochgeladen; alles geschieht in Ihrem Browser.',
   steps: [
     'Fügen Sie Ihr SVG-Markup in den Editor ein oder ziehen Sie eine .svg-Datei irgendwo auf die Seite.',
     'Der JSX-Tab ist bereits ausgewählt — prüfen Sie die umgewandelte Ausgabe, die sich beim Tippen live aktualisiert.',
@@ -1010,7 +1010,7 @@ const jsxDe: ToolContent = {
 };
 
 const reactDe: ToolContent = {
-  title: 'SVG zu React-Komponenten Konverter — Kostenlos online | VectorForge',
+  title: 'SVG zu React-Komponenten Konverter — Kostenlos online | SvgToCode',
   description:
     'Verwandeln Sie jedes SVG sofort in eine typisierte React-Komponente (.tsx). Kostenloser Konverter von SVG zu React-Komponente mit Props-Unterstützung, sauberer Ausgabe und Live-Vorschau.',
   heading: 'SVG zu React-Komponenten Konverter',
@@ -1041,7 +1041,7 @@ const reactDe: ToolContent = {
 };
 
 const base64De: ToolContent = {
-  title: 'SVG zu Base64 Konverter — Kostenloser Online-Encoder | VectorForge',
+  title: 'SVG zu Base64 Konverter — Kostenloser Online-Encoder | SvgToCode',
   description:
     'Kodieren Sie SVG online als Base64. Kostenloser Konverter von SVG zu Base64 mit Unicode-sicherer Kodierung, Live-Vorschau und Kopieren mit einem Klick.',
   heading: 'SVG zu Base64 Konverter',
@@ -1072,12 +1072,12 @@ const base64De: ToolContent = {
 };
 
 const dataUriDe: ToolContent = {
-  title: 'SVG zu Data-URI / CSS-Hintergrund Generator — Kostenlos | VectorForge',
+  title: 'SVG zu Data-URI / CSS-Hintergrund Generator — Kostenlos | SvgToCode',
   description:
     'Wandeln Sie SVG in eine CSS-fertige Data-URI für background-image um. Kostenloser Generator mit Minifizierung, optimierter Kodierung und Live-Vorschau.',
   heading: 'SVG zu Data-URI Konverter',
   intro:
-    'Verwandeln Sie ein beliebiges SVG in eine kompakte Data-URI, die Sie direkt in background-image einfügen können. VectorForge minifiziert das SVG zuerst und prozentkodiert es, was die URI für typische Icons kleiner hält als Base64 — und Sie sehen sie vor dem Kopieren in der Live-Vorschau gerendert.',
+    'Verwandeln Sie ein beliebiges SVG in eine kompakte Data-URI, die Sie direkt in background-image einfügen können. SvgToCode minifiziert das SVG zuerst und prozentkodiert es, was die URI für typische Icons kleiner hält als Base64 — und Sie sehen sie vor dem Kopieren in der Live-Vorschau gerendert.',
   steps: [
     'Fügen Sie Ihr SVG-Markup in den Editor ein oder ziehen Sie eine .svg-Datei irgendwo auf die Seite.',
     'Der Tab „CSS Data-URI“ ist bereits ausgewählt — der Ausschnitt aktualisiert sich live beim Bearbeiten.',
@@ -1103,12 +1103,12 @@ const dataUriDe: ToolContent = {
 };
 
 const optimizerDe: ToolContent = {
-  title: 'SVG Optimizer — Kostenloses Online-SVGO-Tool | VectorForge',
+  title: 'SVG Optimizer — Kostenloses Online-SVGO-Tool | SvgToCode',
   description:
     'Optimieren Sie SVG-Dateien online mit SVGO. Kostenloser SVG-Optimizer, der die Dateigröße verkleinert und dabei viewBox und visuelle Qualität erhält.',
   heading: 'SVG Optimizer',
   intro:
-    'Verkleinern Sie SVG-Dateien, ohne ihr Aussehen zu verändern. VectorForge führt die SVGO-Multipass-Optimierung direkt in Ihrem Browser aus — und erhält bewusst die viewBox, damit responsives Skalieren nach der Optimierung weiter funktioniert. Sie sehen genau, wie viele Bytes und wie viel Prozent Sie gespart haben.',
+    'Verkleinern Sie SVG-Dateien, ohne ihr Aussehen zu verändern. SvgToCode führt die SVGO-Multipass-Optimierung direkt in Ihrem Browser aus — und erhält bewusst die viewBox, damit responsives Skalieren nach der Optimierung weiter funktioniert. Sie sehen genau, wie viele Bytes und wie viel Prozent Sie gespart haben.',
   steps: [
     'Fügen Sie Ihr SVG-Markup in den Editor ein oder ziehen Sie eine .svg-Datei irgendwo auf die Seite.',
     'Drücken Sie den Optimize-Button in der Werkzeugleiste — der Editor aktualisiert sich mit dem minifizierten Ergebnis.',
@@ -1134,7 +1134,7 @@ const optimizerDe: ToolContent = {
 };
 
 const pngDe: ToolContent = {
-  title: 'SVG zu PNG Konverter — Kostenloser 1x/2x/4x Export | VectorForge',
+  title: 'SVG zu PNG Konverter — Kostenloser 1x/2x/4x Export | SvgToCode',
   description:
     'Wandeln Sie SVG online in PNG mit 1x-, 2x- und 4x-Auflösung um. Kostenloser, unbegrenzter SVG-zu-PNG-Konverter im Browser mit Live-Vorschau.',
   heading: 'SVG zu PNG Konverter',
@@ -1167,12 +1167,12 @@ const pngDe: ToolContent = {
 /* ---------------- Indonesian ---------------- */
 
 const jsxId: ToolContent = {
-  title: 'Konverter SVG ke JSX — Alat Online Gratis | VectorForge',
+  title: 'Konverter SVG ke JSX — Alat Online Gratis | SvgToCode',
   description:
     'Ubah markup SVG menjadi JSX dalam hitungan detik. Konverter SVG ke JSX online gratis dengan penggantian nama atribut otomatis, konversi gaya menjadi objek, dan pratinjau langsung. Berjalan 100% di browser Anda.',
   heading: 'Konverter SVG ke JSX',
   intro:
-    'Tempel SVG apa pun dan dapatkan JSX yang bersih, siap untuk komponen React Anda. VectorForge mengganti nama atribut secara otomatis (class menjadi className, stroke-width menjadi strokeWidth), mengubah gaya sebaris menjadi objek gaya, dan mengubah komentar XML menjadi komentar JSX — seketika, dengan pratinjau langsung. Tidak ada yang diunggah; semuanya terjadi di browser Anda.',
+    'Tempel SVG apa pun dan dapatkan JSX yang bersih, siap untuk komponen React Anda. SvgToCode mengganti nama atribut secara otomatis (class menjadi className, stroke-width menjadi strokeWidth), mengubah gaya sebaris menjadi objek gaya, dan mengubah komentar XML menjadi komentar JSX — seketika, dengan pratinjau langsung. Tidak ada yang diunggah; semuanya terjadi di browser Anda.',
   steps: [
     'Tempel markup SVG Anda ke editor, atau letakkan file .svg di mana saja pada halaman.',
     'Tab JSX sudah dipilih — tinjau keluaran terkonversi yang diperbarui secara langsung saat Anda mengetik.',
@@ -1198,7 +1198,7 @@ const jsxId: ToolContent = {
 };
 
 const reactId: ToolContent = {
-  title: 'Konverter SVG ke Komponen React — Gratis Online | VectorForge',
+  title: 'Konverter SVG ke Komponen React — Gratis Online | SvgToCode',
   description:
     'Ubah SVG apa pun menjadi komponen React bertipe (.tsx) seketika. Konverter SVG ke komponen React gratis dengan dukungan props, keluaran bersih, dan pratinjau langsung.',
   heading: 'Konverter SVG ke Komponen React',
@@ -1229,7 +1229,7 @@ const reactId: ToolContent = {
 };
 
 const base64Id: ToolContent = {
-  title: 'Konverter SVG ke Base64 — Pengenkode Online Gratis | VectorForge',
+  title: 'Konverter SVG ke Base64 — Pengenkode Online Gratis | SvgToCode',
   description:
     'Enkode SVG sebagai Base64 secara online. Konverter SVG ke Base64 gratis dengan pengkodean aman Unicode, pratinjau langsung, dan penyalinan sekali klik.',
   heading: 'Konverter SVG ke Base64',
@@ -1260,12 +1260,12 @@ const base64Id: ToolContent = {
 };
 
 const dataUriId: ToolContent = {
-  title: 'Generator SVG ke Data URI / Latar CSS — Gratis | VectorForge',
+  title: 'Generator SVG ke Data URI / Latar CSS — Gratis | SvgToCode',
   description:
     'Ubah SVG menjadi data URI siap CSS untuk background-image. Generator gratis dengan minifikasi, pengkodean teroptimalkan, dan pratinjau langsung.',
   heading: 'Konverter SVG ke Data URI',
   intro:
-    'Ubah SVG apa pun menjadi data URI ringkas yang dapat Anda tempel langsung ke background-image. VectorForge meminifikasi SVG terlebih dahulu dan mengenkodenya secara persen, yang membuat URI lebih kecil daripada Base64 untuk ikon pada umumnya — dan Anda dapat melihatnya dirender di pratinjau langsung sebelum menyalin.',
+    'Ubah SVG apa pun menjadi data URI ringkas yang dapat Anda tempel langsung ke background-image. SvgToCode meminifikasi SVG terlebih dahulu dan mengenkodenya secara persen, yang membuat URI lebih kecil daripada Base64 untuk ikon pada umumnya — dan Anda dapat melihatnya dirender di pratinjau langsung sebelum menyalin.',
   steps: [
     'Tempel markup SVG Anda ke editor, atau letakkan file .svg di mana saja pada halaman.',
     'Tab CSS Data-URI sudah dipilih — cuplikan diperbarui secara langsung saat Anda mengedit.',
@@ -1291,12 +1291,12 @@ const dataUriId: ToolContent = {
 };
 
 const optimizerId: ToolContent = {
-  title: 'Pengoptimal SVG — Alat SVGO Online Gratis | VectorForge',
+  title: 'Pengoptimal SVG — Alat SVGO Online Gratis | SvgToCode',
   description:
     'Optimalkan file SVG secara online dengan SVGO. Pengoptimal SVG gratis yang mengecilkan ukuran file sambil mempertahankan viewBox dan kualitas visual.',
   heading: 'Pengoptimal SVG',
   intro:
-    'Kecilkan file SVG tanpa mengubah tampilannya. VectorForge menjalankan optimasi multipass SVGO langsung di browser Anda — dan dengan sengaja mempertahankan viewBox, sehingga penskalaan responsif tetap bekerja setelah optimasi. Anda melihat dengan tepat berapa byte dan berapa persen yang Anda hemat.',
+    'Kecilkan file SVG tanpa mengubah tampilannya. SvgToCode menjalankan optimasi multipass SVGO langsung di browser Anda — dan dengan sengaja mempertahankan viewBox, sehingga penskalaan responsif tetap bekerja setelah optimasi. Anda melihat dengan tepat berapa byte dan berapa persen yang Anda hemat.',
   steps: [
     'Tempel markup SVG Anda ke editor, atau letakkan file .svg di mana saja pada halaman.',
     'Tekan tombol Optimize di bilah alat — editor diperbarui dengan hasil yang diminifikasi.',
@@ -1322,7 +1322,7 @@ const optimizerId: ToolContent = {
 };
 
 const pngId: ToolContent = {
-  title: 'Konverter SVG ke PNG — Ekspor Gratis 1x/2x/4x | VectorForge',
+  title: 'Konverter SVG ke PNG — Ekspor Gratis 1x/2x/4x | SvgToCode',
   description:
     'Ubah SVG menjadi PNG pada resolusi 1x, 2x, dan 4x secara online. Konverter SVG ke PNG gratis, tanpa batas, di browser, dengan pratinjau langsung.',
   heading: 'Konverter SVG ke PNG',
@@ -1355,12 +1355,12 @@ const pngId: ToolContent = {
 /* ---------------- Japanese ---------------- */
 
 const jsxJa: ToolContent = {
-  title: 'SVG から JSX へのコンバーター — 無料オンラインツール | VectorForge',
+  title: 'SVG から JSX へのコンバーター — 無料オンラインツール | SvgToCode',
   description:
     'SVG マークアップを数秒で JSX に変換。属性の自動リネーム、スタイルオブジェクト変換、ライブプレビューを備えた無料のオンライン SVG→JSX コンバーター。ブラウザで 100% 動作します。',
   heading: 'SVG から JSX へのコンバーター',
   intro:
-    '任意の SVG を貼り付けるだけで、React コンポーネントに使えるクリーンな JSX が得られます。VectorForge は属性を自動的にリネームし（class は className に、stroke-width は strokeWidth に）、インラインスタイルをスタイルオブジェクトに変換し、XML コメントを JSX コメントに変えます — ライブプレビュー付きで即座に。アップロードは一切なく、すべてブラウザの中で行われます。',
+    '任意の SVG を貼り付けるだけで、React コンポーネントに使えるクリーンな JSX が得られます。SvgToCode は属性を自動的にリネームし（class は className に、stroke-width は strokeWidth に）、インラインスタイルをスタイルオブジェクトに変換し、XML コメントを JSX コメントに変えます — ライブプレビュー付きで即座に。アップロードは一切なく、すべてブラウザの中で行われます。',
   steps: [
     'SVG マークアップをエディタに貼り付けるか、.svg ファイルをページのどこへでもドロップしてください。',
     'JSX タブはすでに選択されています — 入力しながらライブで更新される変換結果を確認してください。',
@@ -1386,7 +1386,7 @@ const jsxJa: ToolContent = {
 };
 
 const reactJa: ToolContent = {
-  title: 'SVG から React コンポーネントへのコンバーター — 無料オンライン | VectorForge',
+  title: 'SVG から React コンポーネントへのコンバーター — 無料オンライン | SvgToCode',
   description:
     '任意の SVG を型付き React（.tsx）コンポーネントに即座に変換。props 対応、クリーンな出力、ライブプレビューを備えた無料の SVG→React コンポーネントコンバーター。',
   heading: 'SVG から React コンポーネントへのコンバーター',
@@ -1417,7 +1417,7 @@ const reactJa: ToolContent = {
 };
 
 const base64Ja: ToolContent = {
-  title: 'SVG から Base64 へのコンバーター — 無料オンラインエンコーダー | VectorForge',
+  title: 'SVG から Base64 へのコンバーター — 無料オンラインエンコーダー | SvgToCode',
   description:
     'SVG をオンラインで Base64 にエンコード。Unicode セーフなエンコーディング、ライブプレビュー、ワンクリックコピーを備えた無料の SVG→Base64 コンバーター。',
   heading: 'SVG から Base64 へのコンバーター',
@@ -1448,12 +1448,12 @@ const base64Ja: ToolContent = {
 };
 
 const dataUriJa: ToolContent = {
-  title: 'SVG からデータ URI / CSS 背景ジェネレーター — 無料 | VectorForge',
+  title: 'SVG からデータ URI / CSS 背景ジェネレーター — 無料 | SvgToCode',
   description:
     'SVG を background-image 用の CSS 対応データ URI に変換。ミニファイ、最適化されたエンコーディング、ライブプレビューを備えた無料ジェネレーター。',
   heading: 'SVG からデータ URI へのコンバーター',
   intro:
-    '任意の SVG を、background-image にそのまま貼れるコンパクトなデータ URI に変えます。VectorForge はまず SVG をミニファイしてからパーセントエンコードするため、典型的なアイコンでは URI が Base64 より小さくなります — コピーする前にライブプレビューで描画を確認できます。',
+    '任意の SVG を、background-image にそのまま貼れるコンパクトなデータ URI に変えます。SvgToCode はまず SVG をミニファイしてからパーセントエンコードするため、典型的なアイコンでは URI が Base64 より小さくなります — コピーする前にライブプレビューで描画を確認できます。',
   steps: [
     'SVG マークアップをエディタに貼り付けるか、.svg ファイルをページのどこへでもドロップしてください。',
     'CSS Data-URI タブはすでに選択されています — 編集中にスニペットがライブで更新されます。',
@@ -1479,12 +1479,12 @@ const dataUriJa: ToolContent = {
 };
 
 const optimizerJa: ToolContent = {
-  title: 'SVG オプティマイザー — 無料オンライン SVGO ツール | VectorForge',
+  title: 'SVG オプティマイザー — 無料オンライン SVGO ツール | SvgToCode',
   description:
     'SVGO で SVG ファイルをオンライン最適化。viewBox と視覚品質を保ちながらファイルサイズを縮小する無料の SVG オプティマイザー。',
   heading: 'SVG オプティマイザー',
   intro:
-    '見た目を変えずに SVG ファイルを縮小します。VectorForge はブラウザの中で直接 SVGO のマルチパス最適化を実行し、意図的に viewBox を保持するため、最適化後もレスポンシブなスケーリングが機能し続けます。何バイト、何パーセント節約できたかが正確に分かります。',
+    '見た目を変えずに SVG ファイルを縮小します。SvgToCode はブラウザの中で直接 SVGO のマルチパス最適化を実行し、意図的に viewBox を保持するため、最適化後もレスポンシブなスケーリングが機能し続けます。何バイト、何パーセント節約できたかが正確に分かります。',
   steps: [
     'SVG マークアップをエディタに貼り付けるか、.svg ファイルをページのどこへでもドロップしてください。',
     'ツールバーの Optimize ボタンを押してください — エディタがミニファイ結果で更新されます。',
@@ -1510,7 +1510,7 @@ const optimizerJa: ToolContent = {
 };
 
 const pngJa: ToolContent = {
-  title: 'SVG から PNG へのコンバーター — 無料 1x/2x/4x 書き出し | VectorForge',
+  title: 'SVG から PNG へのコンバーター — 無料 1x/2x/4x 書き出し | SvgToCode',
   description:
     'SVG を 1x、2x、4x 解像度で PNG にオンライン変換。ライブプレビュー付きの無料・無制限・ブラウザ内 SVG→PNG コンバーター。',
   heading: 'SVG から PNG へのコンバーター',
@@ -1543,12 +1543,12 @@ const pngJa: ToolContent = {
 /* ---------------- Russian ---------------- */
 
 const jsxRu: ToolContent = {
-  title: 'Конвертер SVG в JSX — бесплатный онлайн-инструмент | VectorForge',
+  title: 'Конвертер SVG в JSX — бесплатный онлайн-инструмент | SvgToCode',
   description:
     'Преобразуйте разметку SVG в JSX за секунды. Бесплатный онлайн-конвертер SVG в JSX с автоматическим переименованием атрибутов, преобразованием стилей в объекты и живым предпросмотром. Работает на 100 % в вашем браузере.',
   heading: 'Конвертер SVG в JSX',
   intro:
-    'Вставьте любой SVG и получите чистый JSX, готовый для ваших компонентов React. VectorForge автоматически переименовывает атрибуты (class становится className, stroke-width становится strokeWidth), превращает встроенные стили в объекты стилей, а комментарии XML — в комментарии JSX — мгновенно, с живым предпросмотром. Ничего не загружается на сервер; всё происходит в вашем браузере.',
+    'Вставьте любой SVG и получите чистый JSX, готовый для ваших компонентов React. SvgToCode автоматически переименовывает атрибуты (class становится className, stroke-width становится strokeWidth), превращает встроенные стили в объекты стилей, а комментарии XML — в комментарии JSX — мгновенно, с живым предпросмотром. Ничего не загружается на сервер; всё происходит в вашем браузере.',
   steps: [
     'Вставьте разметку SVG в редактор или перетащите файл .svg в любое место страницы.',
     'Вкладка JSX уже выбрана — проверяйте преобразованный результат, который обновляется вживую по мере ввода.',
@@ -1574,7 +1574,7 @@ const jsxRu: ToolContent = {
 };
 
 const reactRu: ToolContent = {
-  title: 'Конвертер SVG в компонент React — бесплатно онлайн | VectorForge',
+  title: 'Конвертер SVG в компонент React — бесплатно онлайн | SvgToCode',
   description:
     'Превратите любой SVG в типизированный компонент React (.tsx) мгновенно. Бесплатный конвертер SVG в компонент React с поддержкой пропсов, чистой выдачей и живым предпросмотром.',
   heading: 'Конвертер SVG в компонент React',
@@ -1605,7 +1605,7 @@ const reactRu: ToolContent = {
 };
 
 const base64Ru: ToolContent = {
-  title: 'Конвертер SVG в Base64 — бесплатный онлайн-кодировщик | VectorForge',
+  title: 'Конвертер SVG в Base64 — бесплатный онлайн-кодировщик | SvgToCode',
   description:
     'Кодируйте SVG в Base64 онлайн. Бесплатный конвертер SVG в Base64 с кодировкой, безопасной для Юникода, живым предпросмотром и копированием в один щелчок.',
   heading: 'Конвертер SVG в Base64',
@@ -1636,12 +1636,12 @@ const base64Ru: ToolContent = {
 };
 
 const dataUriRu: ToolContent = {
-  title: 'Генератор SVG в Data URI / фон CSS — бесплатно | VectorForge',
+  title: 'Генератор SVG в Data URI / фон CSS — бесплатно | SvgToCode',
   description:
     'Преобразуйте SVG в готовый для CSS data URI для background-image. Бесплатный генератор с минификацией, оптимизированной кодировкой и живым предпросмотром.',
   heading: 'Конвертер SVG в Data URI',
   intro:
-    'Превратите любой SVG в компактный data URI, который можно вставить прямо в background-image. VectorForge сначала минифицирует SVG, а затем кодирует его процентами, что для типичных значков даёт URI меньше, чем Base64, — и вы можете увидеть его отрисовку в живом предпросмотре перед копированием.',
+    'Превратите любой SVG в компактный data URI, который можно вставить прямо в background-image. SvgToCode сначала минифицирует SVG, а затем кодирует его процентами, что для типичных значков даёт URI меньше, чем Base64, — и вы можете увидеть его отрисовку в живом предпросмотре перед копированием.',
   steps: [
     'Вставьте разметку SVG в редактор или перетащите файл .svg в любое место страницы.',
     'Вкладка «CSS Data-URI» уже выбрана — фрагмент обновляется вживую по мере редактирования.',
@@ -1667,12 +1667,12 @@ const dataUriRu: ToolContent = {
 };
 
 const optimizerRu: ToolContent = {
-  title: 'Оптимизатор SVG — бесплатный онлайн-инструмент SVGO | VectorForge',
+  title: 'Оптимизатор SVG — бесплатный онлайн-инструмент SVGO | SvgToCode',
   description:
     'Оптимизируйте файлы SVG онлайн с помощью SVGO. Бесплатный оптимизатор SVG, который уменьшает размер файла, сохраняя viewBox и визуальное качество.',
   heading: 'Оптимизатор SVG',
   intro:
-    'Уменьшайте файлы SVG, не меняя их внешний вид. VectorForge выполняет многопроходную оптимизацию SVGO прямо в вашем браузере — и намеренно сохраняет viewBox, чтобы адаптивное масштабирование продолжало работать после оптимизации. Вы видите, сколько именно байтов и какой процент вы сэкономили.',
+    'Уменьшайте файлы SVG, не меняя их внешний вид. SvgToCode выполняет многопроходную оптимизацию SVGO прямо в вашем браузере — и намеренно сохраняет viewBox, чтобы адаптивное масштабирование продолжало работать после оптимизации. Вы видите, сколько именно байтов и какой процент вы сэкономили.',
   steps: [
     'Вставьте разметку SVG в редактор или перетащите файл .svg в любое место страницы.',
     'Нажмите кнопку Optimize на панели инструментов — редактор обновится минифицированным результатом.',
@@ -1698,7 +1698,7 @@ const optimizerRu: ToolContent = {
 };
 
 const pngRu: ToolContent = {
-  title: 'Конвертер SVG в PNG — бесплатный экспорт 1x/2x/4x | VectorForge',
+  title: 'Конвертер SVG в PNG — бесплатный экспорт 1x/2x/4x | SvgToCode',
   description:
     'Преобразуйте SVG в PNG с разрешением 1x, 2x и 4x онлайн. Бесплатный, безлимитный конвертер SVG в PNG в браузере с живым предпросмотром.',
   heading: 'Конвертер SVG в PNG',
@@ -1731,12 +1731,12 @@ const pngRu: ToolContent = {
 /* ---------------- Korean ---------------- */
 
 const jsxKo: ToolContent = {
-  title: 'SVG를 JSX로 변환 — 무료 온라인 도구 | VectorForge',
+  title: 'SVG를 JSX로 변환 — 무료 온라인 도구 | SvgToCode',
   description:
     'SVG 마크업을 몇 초 만에 JSX로 변환하세요. 속성 이름 자동 변경, 스타일 객체 변환, 실시간 미리보기를 제공하는 무료 온라인 SVG→JSX 변환기. 브라우저에서 100% 실행됩니다.',
   heading: 'SVG를 JSX로 변환',
   intro:
-    'SVG를 붙여넣기만 하면 React 컴포넌트에 바로 쓸 수 있는 깔끔한 JSX를 얻을 수 있습니다. VectorForge는 속성을 자동으로 바꿔주고(class는 className으로, stroke-width는 strokeWidth로), 인라인 스타일을 스타일 객체로 변환하며, XML 주석을 JSX 주석으로 바꿉니다 — 실시간 미리보기와 함께 즉시. 업로드는 전혀 없으며 모든 것이 브라우저 안에서 이루어집니다.',
+    'SVG를 붙여넣기만 하면 React 컴포넌트에 바로 쓸 수 있는 깔끔한 JSX를 얻을 수 있습니다. SvgToCode는 속성을 자동으로 바꿔주고(class는 className으로, stroke-width는 strokeWidth로), 인라인 스타일을 스타일 객체로 변환하며, XML 주석을 JSX 주석으로 바꿉니다 — 실시간 미리보기와 함께 즉시. 업로드는 전혀 없으며 모든 것이 브라우저 안에서 이루어집니다.',
   steps: [
     'SVG 마크업을 편집기에 붙여넣거나 .svg 파일을 페이지 어디에든 놓으세요.',
     'JSX 탭이 이미 선택되어 있습니다 — 입력하면서 실시간으로 업데이트되는 변환 결과를 확인하세요.',
@@ -1762,7 +1762,7 @@ const jsxKo: ToolContent = {
 };
 
 const reactKo: ToolContent = {
-  title: 'SVG를 React 컴포넌트로 변환 — 무료 온라인 | VectorForge',
+  title: 'SVG를 React 컴포넌트로 변환 — 무료 온라인 | SvgToCode',
   description:
     '모든 SVG를 타입이 있는 React(.tsx) 컴포넌트로 즉시 바꾸세요. props 지원, 깔끔한 출력, 실시간 미리보기를 제공하는 무료 SVG→React 컴포넌트 변환기.',
   heading: 'SVG를 React 컴포넌트로 변환',
@@ -1793,7 +1793,7 @@ const reactKo: ToolContent = {
 };
 
 const base64Ko: ToolContent = {
-  title: 'SVG를 Base64로 변환 — 무료 온라인 인코더 | VectorForge',
+  title: 'SVG를 Base64로 변환 — 무료 온라인 인코더 | SvgToCode',
   description:
     'SVG를 온라인으로 Base64로 인코딩하세요. 유니코드 안전 인코딩, 실시간 미리보기, 원클릭 복사를 제공하는 무료 SVG→Base64 변환기.',
   heading: 'SVG를 Base64로 변환',
@@ -1824,12 +1824,12 @@ const base64Ko: ToolContent = {
 };
 
 const dataUriKo: ToolContent = {
-  title: 'SVG를 데이터 URI / CSS 배경으로 — 무료 생성기 | VectorForge',
+  title: 'SVG를 데이터 URI / CSS 배경으로 — 무료 생성기 | SvgToCode',
   description:
     'SVG를 background-image용 CSS 대응 데이터 URI로 변환하세요. 축소, 최적화된 인코딩, 실시간 미리보기를 제공하는 무료 생성기.',
   heading: 'SVG를 데이터 URI로 변환',
   intro:
-    '모든 SVG를 background-image에 바로 붙여넣을 수 있는 간결한 데이터 URI로 바꾸세요. VectorForge는 먼저 SVG를 축소한 뒤 퍼센트 인코딩하므로, 일반적인 아이콘에서는 URI가 Base64보다 작게 유지됩니다 — 복사하기 전에 실시간 미리보기에서 렌더링되는 모습을 볼 수 있습니다.',
+    '모든 SVG를 background-image에 바로 붙여넣을 수 있는 간결한 데이터 URI로 바꾸세요. SvgToCode는 먼저 SVG를 축소한 뒤 퍼센트 인코딩하므로, 일반적인 아이콘에서는 URI가 Base64보다 작게 유지됩니다 — 복사하기 전에 실시간 미리보기에서 렌더링되는 모습을 볼 수 있습니다.',
   steps: [
     'SVG 마크업을 편집기에 붙여넣거나 .svg 파일을 페이지 어디에든 놓으세요.',
     'CSS Data-URI 탭이 이미 선택되어 있습니다 — 편집하면서 스니펫이 실시간으로 업데이트됩니다.',
@@ -1855,12 +1855,12 @@ const dataUriKo: ToolContent = {
 };
 
 const optimizerKo: ToolContent = {
-  title: 'SVG 최적화 도구 — 무료 온라인 SVGO 도구 | VectorForge',
+  title: 'SVG 최적화 도구 — 무료 온라인 SVGO 도구 | SvgToCode',
   description:
     'SVGO로 SVG 파일을 온라인에서 최적화하세요. viewBox와 시각적 품질을 유지하면서 파일 크기를 줄이는 무료 SVG 최적화 도구.',
   heading: 'SVG 최적화 도구',
   intro:
-    '모습을 바꾸지 않고 SVG 파일을 줄이세요. VectorForge는 브라우저 안에서 직접 SVGO 다중 패스 최적화를 실행하고, 의도적으로 viewBox를 유지하므로 최적화 후에도 반응형 크기 조정이 계속 작동합니다. 몇 바이트, 몇 퍼센트를 절약했는지 정확히 볼 수 있습니다.',
+    '모습을 바꾸지 않고 SVG 파일을 줄이세요. SvgToCode는 브라우저 안에서 직접 SVGO 다중 패스 최적화를 실행하고, 의도적으로 viewBox를 유지하므로 최적화 후에도 반응형 크기 조정이 계속 작동합니다. 몇 바이트, 몇 퍼센트를 절약했는지 정확히 볼 수 있습니다.',
   steps: [
     'SVG 마크업을 편집기에 붙여넣거나 .svg 파일을 페이지 어디에든 놓으세요.',
     '도구 모음의 Optimize 버튼을 누르세요 — 편집기가 축소된 결과로 업데이트됩니다.',
@@ -1886,7 +1886,7 @@ const optimizerKo: ToolContent = {
 };
 
 const pngKo: ToolContent = {
-  title: 'SVG를 PNG로 변환 — 무료 1x/2x/4x 내보내기 | VectorForge',
+  title: 'SVG를 PNG로 변환 — 무료 1x/2x/4x 내보내기 | SvgToCode',
   description:
     'SVG를 1x, 2x, 4x 해상도의 PNG로 온라인 변환하세요. 실시간 미리보기를 제공하는 무료, 무제한, 브라우저 내 SVG→PNG 변환기.',
   heading: 'SVG를 PNG로 변환',
@@ -1919,12 +1919,12 @@ const pngKo: ToolContent = {
 /* ---------------- Chinese (Simplified) ---------------- */
 
 const jsxZhCn: ToolContent = {
-  title: 'SVG 转 JSX 转换器 — 免费在线工具 | VectorForge',
+  title: 'SVG 转 JSX 转换器 — 免费在线工具 | SvgToCode',
   description:
     '几秒钟内将 SVG 标记转换为 JSX。免费的在线 SVG 转 JSX 转换器，具有自动属性重命名、样式对象转换和实时预览功能。100% 在您的浏览器中运行。',
   heading: 'SVG 转 JSX 转换器',
   intro:
-    '粘贴任何 SVG，即可获得干净的 JSX，可直接用于您的 React 组件。VectorForge 会自动重命名属性（class 变为 className，stroke-width 变为 strokeWidth），将内联样式转换为样式对象，并将 XML 注释转换为 JSX 注释——即时完成，并提供实时预览。没有任何上传；一切都发生在您的浏览器中。',
+    '粘贴任何 SVG，即可获得干净的 JSX，可直接用于您的 React 组件。SvgToCode 会自动重命名属性（class 变为 className，stroke-width 变为 strokeWidth），将内联样式转换为样式对象，并将 XML 注释转换为 JSX 注释——即时完成，并提供实时预览。没有任何上传；一切都发生在您的浏览器中。',
   steps: [
     '将 SVG 标记粘贴到编辑器中，或将 .svg 文件拖放到页面上的任何位置。',
     'JSX 选项卡已预先选中——在您输入时实时查看转换后的输出更新。',
@@ -1950,7 +1950,7 @@ const jsxZhCn: ToolContent = {
 };
 
 const reactZhCn: ToolContent = {
-  title: 'SVG 转 React 组件转换器 — 免费在线 | VectorForge',
+  title: 'SVG 转 React 组件转换器 — 免费在线 | SvgToCode',
   description:
     '立即将任何 SVG 转换为带类型的 React（.tsx）组件。免费的 SVG 转 React 组件转换器，支持 props、输出干净、实时预览。',
   heading: 'SVG 转 React 组件转换器',
@@ -1981,7 +1981,7 @@ const reactZhCn: ToolContent = {
 };
 
 const base64ZhCn: ToolContent = {
-  title: 'SVG 转 Base64 转换器 — 免费在线编码器 | VectorForge',
+  title: 'SVG 转 Base64 转换器 — 免费在线编码器 | SvgToCode',
   description:
     '在线将 SVG 编码为 Base64。免费的 SVG 转 Base64 转换器，具有 Unicode 安全编码、实时预览和一键复制功能。',
   heading: 'SVG 转 Base64 转换器',
@@ -2012,12 +2012,12 @@ const base64ZhCn: ToolContent = {
 };
 
 const dataUriZhCn: ToolContent = {
-  title: 'SVG 转数据 URI / CSS 背景生成器 — 免费 | VectorForge',
+  title: 'SVG 转数据 URI / CSS 背景生成器 — 免费 | SvgToCode',
   description:
     '将 SVG 转换为可用于 background-image 的 CSS 数据 URI。免费生成器，具有压缩、优化编码和实时预览功能。',
   heading: 'SVG 转数据 URI 转换器',
   intro:
-    '将任何 SVG 转换为紧凑的数据 URI，可直接粘贴到 background-image 中。VectorForge 先压缩 SVG，然后对其进行百分比编码，这使 URI 对典型图标来说比 Base64 更小——并且您可以在复制前在实时预览中看到它渲染出来。',
+    '将任何 SVG 转换为紧凑的数据 URI，可直接粘贴到 background-image 中。SvgToCode 先压缩 SVG，然后对其进行百分比编码，这使 URI 对典型图标来说比 Base64 更小——并且您可以在复制前在实时预览中看到它渲染出来。',
   steps: [
     '将 SVG 标记粘贴到编辑器中，或将 .svg 文件拖放到页面上的任何位置。',
     'CSS Data-URI 选项卡已预先选中——在您编辑时代码片段会实时更新。',
@@ -2043,12 +2043,12 @@ const dataUriZhCn: ToolContent = {
 };
 
 const optimizerZhCn: ToolContent = {
-  title: 'SVG 优化器 — 免费在线 SVGO 工具 | VectorForge',
+  title: 'SVG 优化器 — 免费在线 SVGO 工具 | SvgToCode',
   description:
     '使用 SVGO 在线优化 SVG 文件。免费的 SVG 优化器，在缩小文件大小的同时保留 viewBox 和视觉质量。',
   heading: 'SVG 优化器',
   intro:
-    '在不改变外观的情况下缩小 SVG 文件。VectorForge 直接在您的浏览器中运行 SVGO 多遍优化——并有意保留 viewBox，因此优化后响应式缩放仍能继续工作。您可以准确看到节省了多少字节和百分比。',
+    '在不改变外观的情况下缩小 SVG 文件。SvgToCode 直接在您的浏览器中运行 SVGO 多遍优化——并有意保留 viewBox，因此优化后响应式缩放仍能继续工作。您可以准确看到节省了多少字节和百分比。',
   steps: [
     '将 SVG 标记粘贴到编辑器中，或将 .svg 文件拖放到页面上的任何位置。',
     '按下工具栏中的 Optimize 按钮——编辑器会更新为压缩后的结果。',
@@ -2074,7 +2074,7 @@ const optimizerZhCn: ToolContent = {
 };
 
 const pngZhCn: ToolContent = {
-  title: 'SVG 转 PNG 转换器 — 免费 1x/2x/4x 导出 | VectorForge',
+  title: 'SVG 转 PNG 转换器 — 免费 1x/2x/4x 导出 | SvgToCode',
   description:
     '在线将 SVG 以 1x、2x 和 4x 分辨率转换为 PNG。免费、无限制、浏览器内的 SVG 转 PNG 转换器，具有实时预览功能。',
   heading: 'SVG 转 PNG 转换器',
@@ -2107,12 +2107,12 @@ const pngZhCn: ToolContent = {
 /* ---------------- Arabic ---------------- */
 
 const jsxAr: ToolContent = {
-  title: 'محوّل SVG إلى JSX — أداة مجانية عبر الإنترنت | VectorForge',
+  title: 'محوّل SVG إلى JSX — أداة مجانية عبر الإنترنت | SvgToCode',
   description:
     'حوّل ترميز SVG إلى JSX في ثوانٍ. محوّل مجاني عبر الإنترنت من SVG إلى JSX مع إعادة تسمية السمات تلقائيًا وتحويل الأنماط إلى كائنات ومعاينة مباشرة. يعمل بنسبة 100٪ داخل متصفحك.',
   heading: 'محوّل SVG إلى JSX',
   intro:
-    'الصق أي ملف SVG واحصل على JSX نظيف جاهز لمكونات React الخاصة بك. يعيد VectorForge تسمية السمات تلقائيًا (تصبح class ‏className، وتصبح stroke-width ‏strokeWidth)، ويحوّل الأنماط المضمنة إلى كائنات أنماط، ويحوّل تعليقات XML إلى تعليقات JSX — فورًا، مع معاينة مباشرة. لا يُرفع أي شيء؛ كل شيء يحدث في متصفحك.',
+    'الصق أي ملف SVG واحصل على JSX نظيف جاهز لمكونات React الخاصة بك. يعيد SvgToCode تسمية السمات تلقائيًا (تصبح class ‏className، وتصبح stroke-width ‏strokeWidth)، ويحوّل الأنماط المضمنة إلى كائنات أنماط، ويحوّل تعليقات XML إلى تعليقات JSX — فورًا، مع معاينة مباشرة. لا يُرفع أي شيء؛ كل شيء يحدث في متصفحك.',
   steps: [
     'الصق ترميز SVG في المحرر، أو أفلت ملف .svg في أي مكان بالصفحة.',
     'علامة تبويب JSX محددة مسبقًا — راجع الناتج المحوَّل الذي يتحدث مباشرة أثناء الكتابة.',
@@ -2138,7 +2138,7 @@ const jsxAr: ToolContent = {
 };
 
 const reactAr: ToolContent = {
-  title: 'محوّل SVG إلى مكوّن React — مجاني عبر الإنترنت | VectorForge',
+  title: 'محوّل SVG إلى مكوّن React — مجاني عبر الإنترنت | SvgToCode',
   description:
     'حوّل أي ملف SVG إلى مكوّن React مُنمّط (.tsx) فورًا. محوّل مجاني من SVG إلى مكوّن React مع دعم الخصائص وناتج نظيف ومعاينة مباشرة.',
   heading: 'محوّل SVG إلى مكوّن React',
@@ -2169,7 +2169,7 @@ const reactAr: ToolContent = {
 };
 
 const base64Ar: ToolContent = {
-  title: 'محوّل SVG إلى Base64 — مُشفّر مجاني عبر الإنترنت | VectorForge',
+  title: 'محوّل SVG إلى Base64 — مُشفّر مجاني عبر الإنترنت | SvgToCode',
   description:
     'شفّر SVG كـ Base64 عبر الإنترنت. محوّل مجاني من SVG إلى Base64 مع تشفير آمن ليونيكود ومعاينة مباشرة ونسخ بنقرة واحدة.',
   heading: 'محوّل SVG إلى Base64',
@@ -2200,12 +2200,12 @@ const base64Ar: ToolContent = {
 };
 
 const dataUriAr: ToolContent = {
-  title: 'مولّد SVG إلى Data URI / خلفية CSS — مجاني | VectorForge',
+  title: 'مولّد SVG إلى Data URI / خلفية CSS — مجاني | SvgToCode',
   description:
     'حوّل SVG إلى data URI جاهز لـ CSS من أجل background-image. مولّد مجاني مع تصغير وتشفير مُحسَّن ومعاينة مباشرة.',
   heading: 'محوّل SVG إلى Data URI',
   intro:
-    'حوّل أي ملف SVG إلى data URI مدمج يمكنك لصقه مباشرة في background-image. يصغّر VectorForge ملف SVG أولًا ثم يشفّره بالنسبة المئوية، ما يجعل URI أصغر من Base64 للرموز المعتادة — ويمكنك رؤيته يُعرَض في المعاينة المباشرة قبل النسخ.',
+    'حوّل أي ملف SVG إلى data URI مدمج يمكنك لصقه مباشرة في background-image. يصغّر SvgToCode ملف SVG أولًا ثم يشفّره بالنسبة المئوية، ما يجعل URI أصغر من Base64 للرموز المعتادة — ويمكنك رؤيته يُعرَض في المعاينة المباشرة قبل النسخ.',
   steps: [
     'الصق ترميز SVG في المحرر، أو أفلت ملف .svg في أي مكان بالصفحة.',
     'علامة تبويب CSS Data-URI محددة مسبقًا — يتحدث المقتطف مباشرة أثناء التحرير.',
@@ -2231,12 +2231,12 @@ const dataUriAr: ToolContent = {
 };
 
 const optimizerAr: ToolContent = {
-  title: 'مُحسّن SVG — أداة SVGO مجانية عبر الإنترنت | VectorForge',
+  title: 'مُحسّن SVG — أداة SVGO مجانية عبر الإنترنت | SvgToCode',
   description:
     'حسّن ملفات SVG عبر الإنترنت بـ SVGO. مُحسّن SVG مجاني يقلّص حجم الملف مع الحفاظ على viewBox والجودة البصرية.',
   heading: 'مُحسّن SVG',
   intro:
-    'قلّص ملفات SVG دون تغيير مظهرها. يشغّل VectorForge تحسين SVGO متعدد التمريرات مباشرة في متصفحك — ويحافظ عمدًا على viewBox، لكي يستمر القياس المتجاوب في العمل بعد التحسين. ترى بالضبط كم بايتًا وأي نسبة وفّرت.',
+    'قلّص ملفات SVG دون تغيير مظهرها. يشغّل SvgToCode تحسين SVGO متعدد التمريرات مباشرة في متصفحك — ويحافظ عمدًا على viewBox، لكي يستمر القياس المتجاوب في العمل بعد التحسين. ترى بالضبط كم بايتًا وأي نسبة وفّرت.',
   steps: [
     'الصق ترميز SVG في المحرر، أو أفلت ملف .svg في أي مكان بالصفحة.',
     'اضغط زر Optimize في شريط الأدوات — يتحدث المحرر بالنتيجة المصغّرة.',
@@ -2262,7 +2262,7 @@ const optimizerAr: ToolContent = {
 };
 
 const pngAr: ToolContent = {
-  title: 'محوّل SVG إلى PNG — تصدير مجاني 1x/2x/4x | VectorForge',
+  title: 'محوّل SVG إلى PNG — تصدير مجاني 1x/2x/4x | SvgToCode',
   description:
     'حوّل SVG إلى PNG بدقة 1x و2x و4x عبر الإنترنت. محوّل SVG إلى PNG مجاني وغير محدود داخل المتصفح مع معاينة مباشرة.',
   heading: 'محوّل SVG إلى PNG',
@@ -2295,12 +2295,12 @@ const pngAr: ToolContent = {
 /* ---------------- Bengali ---------------- */
 
 const jsxBn: ToolContent = {
-  title: 'SVG থেকে JSX রূপান্তরকারী — বিনামূল্যের অনলাইন টুল | VectorForge',
+  title: 'SVG থেকে JSX রূপান্তরকারী — বিনামূল্যের অনলাইন টুল | SvgToCode',
   description:
     'সেকেন্ডের মধ্যে SVG মার্কআপকে JSX-এ রূপান্তর করুন। বিনামূল্যের অনলাইন SVG থেকে JSX রূপান্তরকারী — স্বয়ংক্রিয় বৈশিষ্ট্য পুনঃনামকরণ, স্টাইল-অবজেক্ট রূপান্তর এবং লাইভ প্রিভিউসহ। আপনার ব্রাউজারে ১০০% চলে।',
   heading: 'SVG থেকে JSX রূপান্তরকারী',
   intro:
-    'যেকোনো SVG পেস্ট করুন এবং আপনার React কম্পোনেন্টের জন্য প্রস্তুত পরিষ্কার JSX পান। VectorForge বৈশিষ্ট্যগুলো স্বয়ংক্রিয়ভাবে পুনঃনামকরণ করে (class হয়ে যায় className, stroke-width হয়ে যায় strokeWidth), ইনলাইন স্টাইলকে স্টাইল অবজেক্টে রূপান্তর করে এবং XML মন্তব্যকে JSX মন্তব্যে বদলে দেয় — তাৎক্ষণিকভাবে, লাইভ প্রিভিউসহ। কিছুই আপলোড হয় না; সবকিছু আপনার ব্রাউজারেই ঘটে।',
+    'যেকোনো SVG পেস্ট করুন এবং আপনার React কম্পোনেন্টের জন্য প্রস্তুত পরিষ্কার JSX পান। SvgToCode বৈশিষ্ট্যগুলো স্বয়ংক্রিয়ভাবে পুনঃনামকরণ করে (class হয়ে যায় className, stroke-width হয়ে যায় strokeWidth), ইনলাইন স্টাইলকে স্টাইল অবজেক্টে রূপান্তর করে এবং XML মন্তব্যকে JSX মন্তব্যে বদলে দেয় — তাৎক্ষণিকভাবে, লাইভ প্রিভিউসহ। কিছুই আপলোড হয় না; সবকিছু আপনার ব্রাউজারেই ঘটে।',
   steps: [
     'আপনার SVG মার্কআপ সম্পাদকে পেস্ট করুন, অথবা পৃষ্ঠার যেকোনো জায়গায় একটি .svg ফাইল ছেড়ে দিন।',
     'JSX ট্যাবটি ইতিমধ্যে নির্বাচিত — আপনি টাইপ করার সময় লাইভ আপডেট হওয়া রূপান্তরিত আউটপুট পর্যালোচনা করুন।',
@@ -2326,7 +2326,7 @@ const jsxBn: ToolContent = {
 };
 
 const reactBn: ToolContent = {
-  title: 'SVG থেকে React কম্পোনেন্ট রূপান্তরকারী — বিনামূল্যে অনলাইন | VectorForge',
+  title: 'SVG থেকে React কম্পোনেন্ট রূপান্তরকারী — বিনামূল্যে অনলাইন | SvgToCode',
   description:
     'যেকোনো SVG-কে তাৎক্ষণিকভাবে টাইপসহ React (.tsx) কম্পোনেন্টে বদলে দিন। বিনামূল্যের SVG থেকে React কম্পোনেন্ট রূপান্তরকারী — প্রপস সমর্থন, পরিষ্কার আউটপুট এবং লাইভ প্রিভিউসহ।',
   heading: 'SVG থেকে React কম্পোনেন্ট রূপান্তরকারী',
@@ -2357,7 +2357,7 @@ const reactBn: ToolContent = {
 };
 
 const base64Bn: ToolContent = {
-  title: 'SVG থেকে Base64 রূপান্তরকারী — বিনামূল্যের অনলাইন এনকোডার | VectorForge',
+  title: 'SVG থেকে Base64 রূপান্তরকারী — বিনামূল্যের অনলাইন এনকোডার | SvgToCode',
   description:
     'SVG-কে Base64 হিসেবে অনলাইনে এনকোড করুন। বিনামূল্যের SVG থেকে Base64 রূপান্তরকারী — Unicode-নিরাপদ এনকোডিং, লাইভ প্রিভিউ এবং এক-ক্লিক কপিসহ।',
   heading: 'SVG থেকে Base64 রূপান্তরকারী',
@@ -2388,12 +2388,12 @@ const base64Bn: ToolContent = {
 };
 
 const dataUriBn: ToolContent = {
-  title: 'SVG থেকে Data URI / CSS ব্যাকগ্রাউন্ড জেনারেটর — বিনামূল্যে | VectorForge',
+  title: 'SVG থেকে Data URI / CSS ব্যাকগ্রাউন্ড জেনারেটর — বিনামূল্যে | SvgToCode',
   description:
     'SVG-কে background-image-এর জন্য প্রস্তুত CSS data URI-তে রূপান্তর করুন। বিনামূল্যের জেনারেটর — মিনিফিকেশন, সেরা এনকোডিং এবং লাইভ প্রিভিউসহ।',
   heading: 'SVG থেকে Data URI রূপান্তরকারী',
   intro:
-    'যেকোনো SVG-কে একটি সংক্ষিপ্ত data URI-তে বদলে দিন যা আপনি সরাসরি background-image-তে পেস্ট করতে পারেন। VectorForge প্রথমে SVG-কে মিনিফাই করে এবং শতাংশ-এনকোড করে, যা সাধারণ আইকনের জন্য URI-কে Base64-এর চেয়ে ছোট রাখে — এবং কপি করার আগে আপনি লাইভ প্রিভিউতে এটি রেন্ডার হতে দেখতে পারেন।',
+    'যেকোনো SVG-কে একটি সংক্ষিপ্ত data URI-তে বদলে দিন যা আপনি সরাসরি background-image-তে পেস্ট করতে পারেন। SvgToCode প্রথমে SVG-কে মিনিফাই করে এবং শতাংশ-এনকোড করে, যা সাধারণ আইকনের জন্য URI-কে Base64-এর চেয়ে ছোট রাখে — এবং কপি করার আগে আপনি লাইভ প্রিভিউতে এটি রেন্ডার হতে দেখতে পারেন।',
   steps: [
     'আপনার SVG মার্কআপ সম্পাদকে পেস্ট করুন, অথবা পৃষ্ঠার যেকোনো জায়গায় একটি .svg ফাইল ছেড়ে দিন।',
     'CSS Data-URI ট্যাবটি ইতিমধ্যে নির্বাচিত — আপনি সম্পাদনা করার সময় স্নিপেট লাইভ আপডেট হয়।',
@@ -2419,12 +2419,12 @@ const dataUriBn: ToolContent = {
 };
 
 const optimizerBn: ToolContent = {
-  title: 'SVG অপ্টিমাইজার — বিনামূল্যের অনলাইন SVGO টুল | VectorForge',
+  title: 'SVG অপ্টিমাইজার — বিনামূল্যের অনলাইন SVGO টুল | SvgToCode',
   description:
     'SVGO দিয়ে SVG ফাইল অনলাইনে অপ্টিমাইজ করুন। বিনামূল্যের SVG অপ্টিমাইজার যা viewBox এবং দৃশ্য মান বজায় রেখে ফাইলের আকার কমায়।',
   heading: 'SVG অপ্টিমাইজার',
   intro:
-    'SVG ফাইলের চেহারা না বদলেই সেগুলোকে ছোট করুন। VectorForge SVGO মাল্টিপাস অপ্টিমাইজেশন সরাসরি আপনার ব্রাউজারেই চালায় — এবং ইচ্ছাকৃতভাবে viewBox সংরক্ষণ করে, যাতে অপ্টিমাইজেশনের পরেও রেসপন্সিভ স্কেলিং কাজ করে। আপনি ঠিক কত বাইট এবং কত শতাংশ সাশ্রয় করলেন তা দেখতে পান।',
+    'SVG ফাইলের চেহারা না বদলেই সেগুলোকে ছোট করুন। SvgToCode SVGO মাল্টিপাস অপ্টিমাইজেশন সরাসরি আপনার ব্রাউজারেই চালায় — এবং ইচ্ছাকৃতভাবে viewBox সংরক্ষণ করে, যাতে অপ্টিমাইজেশনের পরেও রেসপন্সিভ স্কেলিং কাজ করে। আপনি ঠিক কত বাইট এবং কত শতাংশ সাশ্রয় করলেন তা দেখতে পান।',
   steps: [
     'আপনার SVG মার্কআপ সম্পাদকে পেস্ট করুন, অথবা পৃষ্ঠার যেকোনো জায়গায় একটি .svg ফাইল ছেড়ে দিন।',
     'টুলবারে Optimize বোতাম টিপুন — সম্পাদক মিনিফাই করা ফলাফল নিয়ে আপডেট হয়।',
@@ -2450,7 +2450,7 @@ const optimizerBn: ToolContent = {
 };
 
 const pngBn: ToolContent = {
-  title: 'SVG থেকে PNG রূপান্তরকারী — বিনামূল্যে 1x/2x/4x রপ্তানি | VectorForge',
+  title: 'SVG থেকে PNG রূপান্তরকারী — বিনামূল্যে 1x/2x/4x রপ্তানি | SvgToCode',
   description:
     'SVG-কে 1x, 2x এবং 4x রেজোলিউশনে PNG-তে অনলাইনে রূপান্তর করুন। বিনামূল্যে, সীমাহীন, ব্রাউজার-মধ্যস্থ SVG থেকে PNG রূপান্তরকারী — লাইভ প্রিভিউসহ।',
   heading: 'SVG থেকে PNG রূপান্তরকারী',
@@ -2483,12 +2483,12 @@ const pngBn: ToolContent = {
 /* ---------------- Assamese ---------------- */
 
 const jsxAsm: ToolContent = {
-  title: 'SVG ৰ পৰা JSX ৰূপান্তৰক — বিনামূলীয়া অনলাইন টুল | VectorForge',
+  title: 'SVG ৰ পৰা JSX ৰূপান্তৰক — বিনামূলীয়া অনলাইন টুল | SvgToCode',
   description:
     'ছেকেণ্ডৰ ভিতৰত SVG মাৰ্কআপ JSX লৈ ৰূপান্তৰ কৰক। বিনামূলীয়া অনলাইন SVG ৰ পৰা JSX ৰূপান্তৰক — স্বয়ংক্ৰিয় বৈশিষ্ট্য পুনৰ্নামকৰণ, ষ্টাইল-অবজেক্ট ৰূপান্তৰ আৰু লাইভ পূৰ্বদৰ্শনসহ। আপোনাৰ ব্ৰাউজাৰত ১০০% চলে।',
   heading: 'SVG ৰ পৰা JSX ৰূপান্তৰক',
   intro:
-    'যিকোনো SVG পেষ্ট কৰক আৰু আপোনাৰ React কম্পোনেন্টৰ বাবে সাজু পৰিষ্কাৰ JSX পাওক। VectorForge এ বৈশিষ্ট্যবোৰ স্বয়ংক্ৰিয়ভাৱে পুনৰ্নামকৰণ কৰে (class হয় className, stroke-width হয় strokeWidth), ইনলাইন ষ্টাইলক ষ্টাইল অবজেক্টলৈ ৰূপান্তৰ কৰে আৰু XML মন্তব্যক JSX মন্তব্যলৈ বদলায় — লগে লগে, লাইভ পূৰ্বদৰ্শনসহ। একো আপলোড নহয়; সকলো আপোনাৰ ব্ৰাউজাৰতেই ঘটে।',
+    'যিকোনো SVG পেষ্ট কৰক আৰু আপোনাৰ React কম্পোনেন্টৰ বাবে সাজু পৰিষ্কাৰ JSX পাওক। SvgToCode এ বৈশিষ্ট্যবোৰ স্বয়ংক্ৰিয়ভাৱে পুনৰ্নামকৰণ কৰে (class হয় className, stroke-width হয় strokeWidth), ইনলাইন ষ্টাইলক ষ্টাইল অবজেক্টলৈ ৰূপান্তৰ কৰে আৰু XML মন্তব্যক JSX মন্তব্যলৈ বদলায় — লগে লগে, লাইভ পূৰ্বদৰ্শনসহ। একো আপলোড নহয়; সকলো আপোনাৰ ব্ৰাউজাৰতেই ঘটে।',
   steps: [
     'আপোনাৰ SVG মাৰ্কআপ সম্পাদকত পেষ্ট কৰক, অথবা পৃষ্ঠাৰ যিকোনো ঠাইত .svg ফাইল এৰক।',
     'JSX টেবটো ইতিমধ্যে বাছনি কৰা আছে — আপুনি টাইপ কৰি থাকোঁতে লাইভ আপডেট হোৱা ৰূপান্তৰিত আউটপুট চাওক।',
@@ -2514,7 +2514,7 @@ const jsxAsm: ToolContent = {
 };
 
 const reactAsm: ToolContent = {
-  title: 'SVG ৰ পৰা React কম্পোনেন্ট ৰূপান্তৰক — বিনামূলীয়া অনলাইন | VectorForge',
+  title: 'SVG ৰ পৰা React কম্পোনেন্ট ৰূপান্তৰক — বিনামূলীয়া অনলাইন | SvgToCode',
   description:
     'যিকোনো SVG ক লগে লগে টাইপসহ React (.tsx) কম্পোনেন্টলৈ বদলাওক। বিনামূলীয়া SVG ৰ পৰা React কম্পোনেন্ট ৰূপান্তৰক — প্ৰপছ সমৰ্থন, পৰিষ্কাৰ আউটপুট আৰু লাইভ পূৰ্বদৰ্শনসহ।',
   heading: 'SVG ৰ পৰা React কম্পোনেন্ট ৰূপান্তৰক',
@@ -2545,7 +2545,7 @@ const reactAsm: ToolContent = {
 };
 
 const base64Asm: ToolContent = {
-  title: 'SVG ৰ পৰা Base64 ৰূপান্তৰক — বিনামূলীয়া অনলাইন এনকোডাৰ | VectorForge',
+  title: 'SVG ৰ পৰা Base64 ৰূপান্তৰক — বিনামূলীয়া অনলাইন এনকোডাৰ | SvgToCode',
   description:
     'SVG ক Base64 হিচাপে অনলাইনত এনকোড কৰক। বিনামূলীয়া SVG ৰ পৰা Base64 ৰূপান্তৰক — Unicode-নিৰাপদ এনকোডিং, লাইভ পূৰ্বদৰ্শন আৰু এক-ক্লিক কপিসহ।',
   heading: 'SVG ৰ পৰা Base64 ৰূপান্তৰক',
@@ -2576,12 +2576,12 @@ const base64Asm: ToolContent = {
 };
 
 const dataUriAsm: ToolContent = {
-  title: 'SVG ৰ পৰা Data URI / CSS পটভূমি সৃষ্টিকৰ্তা — বিনামূলীয়া | VectorForge',
+  title: 'SVG ৰ পৰা Data URI / CSS পটভূমি সৃষ্টিকৰ্তা — বিনামূলীয়া | SvgToCode',
   description:
     'SVG ক background-image ৰ বাবে সাজু CSS data URI লৈ ৰূপান্তৰ কৰক। বিনামূলীয়া সৃষ্টিকৰ্তা — মিনিফিকেচন, উন্নত এনকোডিং আৰু লাইভ পূৰ্বদৰ্শনসহ।',
   heading: 'SVG ৰ পৰা Data URI ৰূপান্তৰক',
   intro:
-    'যিকোনো SVG ক এটা সংক্ষিপ্ত data URI লৈ বদলাওক যাক আপুনি পোনে পোনে background-image ত পেষ্ট কৰিব পাৰে। VectorForge এ প্ৰথমে SVG ক মিনিফাই কৰে আৰু শতাংশ-এনকোড কৰে, যিয়ে সাধাৰণ আইকনৰ বাবে URI ক Base64 তকৈ সৰু ৰাখে — আৰু কপি কৰাৰ আগতে আপুনি লাইভ পূৰ্বদৰ্শনত তাক ৰেণ্ডাৰ হোৱা দেখিব পাৰে।',
+    'যিকোনো SVG ক এটা সংক্ষিপ্ত data URI লৈ বদলাওক যাক আপুনি পোনে পোনে background-image ত পেষ্ট কৰিব পাৰে। SvgToCode এ প্ৰথমে SVG ক মিনিফাই কৰে আৰু শতাংশ-এনকোড কৰে, যিয়ে সাধাৰণ আইকনৰ বাবে URI ক Base64 তকৈ সৰু ৰাখে — আৰু কপি কৰাৰ আগতে আপুনি লাইভ পূৰ্বদৰ্শনত তাক ৰেণ্ডাৰ হোৱা দেখিব পাৰে।',
   steps: [
     'আপোনাৰ SVG মাৰ্কআপ সম্পাদকত পেষ্ট কৰক, অথবা পৃষ্ঠাৰ যিকোনো ঠাইত .svg ফাইল এৰক।',
     'CSS Data-URI টেবটো ইতিমধ্যে বাছনি কৰা আছে — আপুনি সম্পাদনা কৰি থাকোঁতে স্নিপেট লাইভ আপডেট হয়।',
@@ -2607,12 +2607,12 @@ const dataUriAsm: ToolContent = {
 };
 
 const optimizerAsm: ToolContent = {
-  title: 'SVG অপ্টিমাইজাৰ — বিনামূলীয়া অনলাইন SVGO টুল | VectorForge',
+  title: 'SVG অপ্টিমাইজাৰ — বিনামূলীয়া অনলাইন SVGO টুল | SvgToCode',
   description:
     'SVGO ৰে SVG ফাইল অনলাইনত অপ্টিমাইজ কৰক। বিনামূলীয়া SVG অপ্টিমাইজাৰ যিয়ে viewBox আৰু দৃশ্য মান ৰাখি ফাইলৰ আকাৰ কমায়।',
   heading: 'SVG অপ্টিমাইজাৰ',
   intro:
-    'SVG ফাইলৰ চেহেৰা নবদলাকৈ সেইবোৰ সৰু কৰক। VectorForge এ SVGO মাল্টিপাছ অপ্টিমাইজেচন পোনে পোনে আপোনাৰ ব্ৰাউজাৰতেই চলায় — আৰু ইচ্ছাকৃতভাৱে viewBox সংৰক্ষণ কৰে, যাতে অপ্টিমাইজেচনৰ পিছতো ৰেছপন্সিভ স্কেলিং কাম কৰি থাকে। আপুনি ঠিক কিমান বাইট আৰু কিমান শতাংশ ৰাহি কৰিলে দেখিব পায়।',
+    'SVG ফাইলৰ চেহেৰা নবদলাকৈ সেইবোৰ সৰু কৰক। SvgToCode এ SVGO মাল্টিপাছ অপ্টিমাইজেচন পোনে পোনে আপোনাৰ ব্ৰাউজাৰতেই চলায় — আৰু ইচ্ছাকৃতভাৱে viewBox সংৰক্ষণ কৰে, যাতে অপ্টিমাইজেচনৰ পিছতো ৰেছপন্সিভ স্কেলিং কাম কৰি থাকে। আপুনি ঠিক কিমান বাইট আৰু কিমান শতাংশ ৰাহি কৰিলে দেখিব পায়।',
   steps: [
     'আপোনাৰ SVG মাৰ্কআপ সম্পাদকত পেষ্ট কৰক, অথবা পৃষ্ঠাৰ যিকোনো ঠাইত .svg ফাইল এৰক।',
     'টুলবাৰত Optimize বুটাম টিপক — সম্পাদক মিনিফাই কৰা ফলাফল লৈ আপডেট হয়।',
@@ -2638,7 +2638,7 @@ const optimizerAsm: ToolContent = {
 };
 
 const pngAsm: ToolContent = {
-  title: 'SVG ৰ পৰা PNG ৰূপান্তৰক — বিনামূলীয়া 1x/2x/4x ৰপ্তানি | VectorForge',
+  title: 'SVG ৰ পৰা PNG ৰূপান্তৰক — বিনামূলীয়া 1x/2x/4x ৰপ্তানি | SvgToCode',
   description:
     'SVG ক 1x, 2x আৰু 4x ৰিজোলিউচনত PNG লৈ অনলাইনত ৰূপান্তৰ কৰক। বিনামূলীয়া, সীমাহীন, ব্ৰাউজাৰ-মধ্যস্থ SVG ৰ পৰা PNG ৰূপান্তৰক — লাইভ পূৰ্বদৰ্শনসহ।',
   heading: 'SVG ৰ পৰা PNG ৰূপান্তৰক',
@@ -2671,12 +2671,12 @@ const pngAsm: ToolContent = {
 /* ---------------- Urdu ---------------- */
 
 const jsxUr: ToolContent = {
-  title: 'SVG سے JSX کنورٹر — مفت آن لائن ٹول | VectorForge',
+  title: 'SVG سے JSX کنورٹر — مفت آن لائن ٹول | SvgToCode',
   description:
     'سیکنڈوں میں SVG مارک اپ کو JSX میں بدلیں۔ مفت آن لائن SVG سے JSX کنورٹر — خودکار خصوصیت کی تبدیلی نام، اسٹائل آبجیکٹ کی تبدیلی اور لائیو پیش منظر کے ساتھ۔ 100% آپ کے براؤزر میں چلتا ہے۔',
   heading: 'SVG سے JSX کنورٹر',
   intro:
-    'کوئی بھی SVG چسپاں کریں اور اپنے React کمپوننٹس کے لیے تیار صاف JSX پائیں۔ VectorForge خصوصیات کو خود ہی بدل دیتا ہے (class بنتا ہے className، stroke-width بنتا ہے strokeWidth)، اِن لائن اسٹائل کو اسٹائل آبجیکٹ میں بدلتا ہے اور XML تبصروں کو JSX تبصروں میں بدل دیتا ہے — فوراً، لائیو پیش منظر کے ساتھ۔ کچھ بھی اپ لوڈ نہیں ہوتا؛ سب کچھ آپ کے براؤزر میں ہوتا ہے۔',
+    'کوئی بھی SVG چسپاں کریں اور اپنے React کمپوننٹس کے لیے تیار صاف JSX پائیں۔ SvgToCode خصوصیات کو خود ہی بدل دیتا ہے (class بنتا ہے className، stroke-width بنتا ہے strokeWidth)، اِن لائن اسٹائل کو اسٹائل آبجیکٹ میں بدلتا ہے اور XML تبصروں کو JSX تبصروں میں بدل دیتا ہے — فوراً، لائیو پیش منظر کے ساتھ۔ کچھ بھی اپ لوڈ نہیں ہوتا؛ سب کچھ آپ کے براؤزر میں ہوتا ہے۔',
   steps: [
     'اپنا SVG مارک اپ ایڈیٹر میں چسپاں کریں، یا .svg فائل صفحے پر کہیں بھی چھوڑیں۔',
     'JSX ٹیب پہلے سے منتخب ہے — لکھتے ہی بدلتے ہوئے نتائج کو لائیو دیکھیں۔',
@@ -2702,7 +2702,7 @@ const jsxUr: ToolContent = {
 };
 
 const reactUr: ToolContent = {
-  title: 'SVG سے React کمپوننٹ کنورٹر — مفت آن لائن | VectorForge',
+  title: 'SVG سے React کمپوننٹ کنورٹر — مفت آن لائن | SvgToCode',
   description:
     'کسی بھی SVG کو فوراً ٹائپ شدہ React (.tsx) کمپوننٹ میں بدلیں۔ مفت SVG سے React کمپوننٹ کنورٹر — پراپس کی سہولت، صاف نتائج اور لائیو پیش منظر کے ساتھ۔',
   heading: 'SVG سے React کمپوننٹ کنورٹر',
@@ -2733,7 +2733,7 @@ const reactUr: ToolContent = {
 };
 
 const base64Ur: ToolContent = {
-  title: 'SVG سے Base64 کنورٹر — مفت آن لائن انکوڈر | VectorForge',
+  title: 'SVG سے Base64 کنورٹر — مفت آن لائن انکوڈر | SvgToCode',
   description:
     'SVG کو Base64 میں آن لائن انکوڈ کریں۔ مفت SVG سے Base64 کنورٹر — Unicode سے محفوظ انکوڈنگ، لائیو پیش منظر اور ایک کلک کاپی کے ساتھ۔',
   heading: 'SVG سے Base64 کنورٹر',
@@ -2764,12 +2764,12 @@ const base64Ur: ToolContent = {
 };
 
 const dataUriUr: ToolContent = {
-  title: 'SVG سے Data URI / CSS پس منظر جنریٹر — مفت | VectorForge',
+  title: 'SVG سے Data URI / CSS پس منظر جنریٹر — مفت | SvgToCode',
   description:
     'SVG کو background-image کے لیے تیار CSS data URI میں بدلیں۔ مفت جنریٹر — منیفیکیشن، بہتر انکوڈنگ اور لائیو پیش منظر کے ساتھ۔',
   heading: 'SVG سے Data URI کنورٹر',
   intro:
-    'کسی بھی SVG کو ایک مختصر data URI میں بدلیں جسے آپ سیدھا background-image میں چسپاں کر سکیں۔ VectorForge پہلے SVG کو منیفائی کرتا ہے اور پھر فیصد انکوڈ کرتا ہے، جس سے عام آئیکنز کے لیے URI Base64 سے چھوٹا رہتا ہے — اور کاپی کرنے سے پہلے آپ اسے لائیو پیش منظر میں بنتے دیکھ سکتے ہیں۔',
+    'کسی بھی SVG کو ایک مختصر data URI میں بدلیں جسے آپ سیدھا background-image میں چسپاں کر سکیں۔ SvgToCode پہلے SVG کو منیفائی کرتا ہے اور پھر فیصد انکوڈ کرتا ہے، جس سے عام آئیکنز کے لیے URI Base64 سے چھوٹا رہتا ہے — اور کاپی کرنے سے پہلے آپ اسے لائیو پیش منظر میں بنتے دیکھ سکتے ہیں۔',
   steps: [
     'اپنا SVG مارک اپ ایڈیٹر میں چسپاں کریں، یا .svg فائل صفحے پر کہیں بھی چھوڑیں۔',
     'CSS Data-URI ٹیب پہلے سے منتخب ہے — ترمیم کرتے ہی ٹکڑا لائیو تازہ ہوتا ہے۔',
@@ -2795,12 +2795,12 @@ const dataUriUr: ToolContent = {
 };
 
 const optimizerUr: ToolContent = {
-  title: 'SVG آپٹیمائزر — مفت آن لائن SVGO ٹول | VectorForge',
+  title: 'SVG آپٹیمائزر — مفت آن لائن SVGO ٹول | SvgToCode',
   description:
     'SVGO سے SVG فائلوں کو آن لائن آپٹیمائز کریں۔ مفت SVG آپٹیمائزر جو viewBox اور بصری معیار برقرار رکھتے ہوئے فائل کا حجم گھٹاتا ہے۔',
   heading: 'SVG آپٹیمائزر',
   intro:
-    'SVG فائلوں کو ان کی شکل بدلے بغیر چھوٹا کریں۔ VectorForge SVGO کی کثیر مرحلہ آپٹیمائزیشن سیدھا آپ کے براؤزر میں چلاتا ہے — اور جان بوجھ کر viewBox برقرار رکھتا ہے، تاکہ آپٹیمائزیشن کے بعد بھی جوابدہ پیمائش کام کرتی رہے۔ آپ بالکل دیکھتے ہیں کہ کتنے بائٹ اور کتنے فیصد کی بچت ہوئی۔',
+    'SVG فائلوں کو ان کی شکل بدلے بغیر چھوٹا کریں۔ SvgToCode SVGO کی کثیر مرحلہ آپٹیمائزیشن سیدھا آپ کے براؤزر میں چلاتا ہے — اور جان بوجھ کر viewBox برقرار رکھتا ہے، تاکہ آپٹیمائزیشن کے بعد بھی جوابدہ پیمائش کام کرتی رہے۔ آپ بالکل دیکھتے ہیں کہ کتنے بائٹ اور کتنے فیصد کی بچت ہوئی۔',
   steps: [
     'اپنا SVG مارک اپ ایڈیٹر میں چسپاں کریں، یا .svg فائل صفحے پر کہیں بھی چھوڑیں۔',
     'ٹول بار میں Optimize بٹن دبائیں — ایڈیٹر منیفائی شدہ نتائج کے ساتھ تازہ ہو جاتا ہے۔',
@@ -2826,7 +2826,7 @@ const optimizerUr: ToolContent = {
 };
 
 const pngUr: ToolContent = {
-  title: 'SVG سے PNG کنورٹر — مفت 1x/2x/4x برآمد | VectorForge',
+  title: 'SVG سے PNG کنورٹر — مفت 1x/2x/4x برآمد | SvgToCode',
   description:
     'SVG کو 1x، 2x اور 4x قرارداد پر PNG میں آن لائن بدلیں۔ مفت، لا محدود، براؤزر میں چلنے والا SVG سے PNG کنورٹر — لائیو پیش منظر کے ساتھ۔',
   heading: 'SVG سے PNG کنورٹر',
@@ -2859,12 +2859,12 @@ const pngUr: ToolContent = {
 /* ---------------- Tamil ---------------- */
 
 const jsxTa: ToolContent = {
-  title: 'SVG இலிருந்து JSX மாற்றி — இலவச ஆன்லைன் கருவி | VectorForge',
+  title: 'SVG இலிருந்து JSX மாற்றி — இலவச ஆன்லைன் கருவி | SvgToCode',
   description:
     'வினாடிகளில் SVG மார்க்கப்பை JSX ஆக மாற்றவும். தானியங்கு பண்பு மறுபெயரிடல், நடை-பொருள் மாற்றம் மற்றும் நேரடி முன்னோட்டத்துடன் இலவச ஆன்லைன் SVG இலிருந்து JSX மாற்றி. உங்கள் உலாவியில் 100% இயங்குகிறது.',
   heading: 'SVG இலிருந்து JSX மாற்றி',
   intro:
-    'எந்த SVG-ஐயும் ஒட்டி, உங்கள் React கூறுகளுக்குத் தயாரான சுத்தமான JSX-ஐப் பெறவும். VectorForge பண்புகளைத் தானாகவே மறுபெயரிடுகிறது (class ஆனது className ஆகிறது, stroke-width ஆனது strokeWidth ஆகிறது), இன்லைன் நடைகளை நடைப் பொருட்களாக மாற்றுகிறது, XML கருத்துகளை JSX கருத்துகளாக மாற்றுகிறது — உடனடியாக, நேரடி முன்னோட்டத்துடன். எதுவும் பதிவேற்றப்படுவதில்லை; எல்லாம் உங்கள் உலாவியிலேயே நடக்கிறது.',
+    'எந்த SVG-ஐயும் ஒட்டி, உங்கள் React கூறுகளுக்குத் தயாரான சுத்தமான JSX-ஐப் பெறவும். SvgToCode பண்புகளைத் தானாகவே மறுபெயரிடுகிறது (class ஆனது className ஆகிறது, stroke-width ஆனது strokeWidth ஆகிறது), இன்லைன் நடைகளை நடைப் பொருட்களாக மாற்றுகிறது, XML கருத்துகளை JSX கருத்துகளாக மாற்றுகிறது — உடனடியாக, நேரடி முன்னோட்டத்துடன். எதுவும் பதிவேற்றப்படுவதில்லை; எல்லாம் உங்கள் உலாவியிலேயே நடக்கிறது.',
   steps: [
     'உங்கள் SVG மார்க்கப்பை ஆசிரியரில் ஒட்டவும், அல்லது ஒரு .svg கோப்பைப் பக்கத்தில் எங்கும் விடவும்.',
     'JSX தாவல் ஏற்கனவே தேர்ந்தெடுக்கப்பட்டுள்ளது — நீங்கள் தட்டச்சு செய்யும்போது நேரடியாகப் புதுப்பிக்கப்படும் மாற்றப்பட்ட வெளியீட்டை மதிப்பாய்வு செய்யவும்.',
@@ -2890,7 +2890,7 @@ const jsxTa: ToolContent = {
 };
 
 const reactTa: ToolContent = {
-  title: 'SVG இலிருந்து React கூறு மாற்றி — இலவசம் ஆன்லைன் | VectorForge',
+  title: 'SVG இலிருந்து React கூறு மாற்றி — இலவசம் ஆன்லைன் | SvgToCode',
   description:
     'எந்த SVG-ஐயும் உடனடியாக வகைப்படுத்தப்பட்ட React (.tsx) கூறாக மாற்றவும். புராப்ஸ் ஆதரவு, சுத்தமான வெளியீடு மற்றும் நேரடி முன்னோட்டத்துடன் இலவச SVG இலிருந்து React கூறு மாற்றி.',
   heading: 'SVG இலிருந்து React கூறு மாற்றி',
@@ -2921,7 +2921,7 @@ const reactTa: ToolContent = {
 };
 
 const base64Ta: ToolContent = {
-  title: 'SVG இலிருந்து Base64 மாற்றி — இலவச ஆன்லைன் குறியாக்கி | VectorForge',
+  title: 'SVG இலிருந்து Base64 மாற்றி — இலவச ஆன்லைன் குறியாக்கி | SvgToCode',
   description:
     'SVG-ஐ ஆன்லைனில் Base64 ஆகக் குறியாக்கவும். Unicode-பாதுகாப்பான குறியாக்கம், நேரடி முன்னோட்டம் மற்றும் ஒரே-கிளிக் நகலுடன் இலவச SVG இலிருந்து Base64 மாற்றி.',
   heading: 'SVG இலிருந்து Base64 மாற்றி',
@@ -2952,12 +2952,12 @@ const base64Ta: ToolContent = {
 };
 
 const dataUriTa: ToolContent = {
-  title: 'SVG இலிருந்து Data URI / CSS பின்னணி உருவாக்கி — இலவசம் | VectorForge',
+  title: 'SVG இலிருந்து Data URI / CSS பின்னணி உருவாக்கி — இலவசம் | SvgToCode',
   description:
     'SVG-ஐ background-image க்குத் தயாரான CSS டேட்டா URI ஆக மாற்றவும். சுருக்கம், மேம்படுத்தப்பட்ட குறியாக்கம் மற்றும் நேரடி முன்னோட்டத்துடன் இலவச உருவாக்கி.',
   heading: 'SVG இலிருந்து Data URI மாற்றி',
   intro:
-    'எந்த SVG-ஐயும் நீங்கள் background-image இல் நேரடியாக ஒட்டக்கூடிய சிறிய டேட்டா URI ஆக மாற்றவும். VectorForge முதலில் SVG-ஐச் சுருக்கி பின்னர் சதவீத-குறியாக்கம் செய்கிறது, இது வழக்கமான சின்னங்களுக்கு URI-ஐ Base64-ஐ விடச் சிறியதாக வைக்கிறது — நகலெடுப்பதற்கு முன் நேரடி முன்னோட்டத்தில் அது வரையப்படுவதைக் காணலாம்.',
+    'எந்த SVG-ஐயும் நீங்கள் background-image இல் நேரடியாக ஒட்டக்கூடிய சிறிய டேட்டா URI ஆக மாற்றவும். SvgToCode முதலில் SVG-ஐச் சுருக்கி பின்னர் சதவீத-குறியாக்கம் செய்கிறது, இது வழக்கமான சின்னங்களுக்கு URI-ஐ Base64-ஐ விடச் சிறியதாக வைக்கிறது — நகலெடுப்பதற்கு முன் நேரடி முன்னோட்டத்தில் அது வரையப்படுவதைக் காணலாம்.',
   steps: [
     'உங்கள் SVG மார்க்கப்பை ஆசிரியரில் ஒட்டவும், அல்லது ஒரு .svg கோப்பைப் பக்கத்தில் எங்கும் விடவும்.',
     'CSS Data-URI தாவல் ஏற்கனவே தேர்ந்தெடுக்கப்பட்டுள்ளது — நீங்கள் திருத்தும்போது துணுக்கு நேரடியாகப் புதுப்பிக்கப்படும்.',
@@ -2983,12 +2983,12 @@ const dataUriTa: ToolContent = {
 };
 
 const optimizerTa: ToolContent = {
-  title: 'SVG மேம்படுத்தி — இலவச ஆன்லைன் SVGO கருவி | VectorForge',
+  title: 'SVG மேம்படுத்தி — இலவச ஆன்லைன் SVGO கருவி | SvgToCode',
   description:
     'SVGO மூலம் SVG கோப்புகளை ஆன்லைனில் மேம்படுத்தவும். viewBox மற்றும் காட்சித் தரத்தைப் பாதுகாத்துக் கொண்டே கோப்பு அளவைச் சுருக்கும் இலவச SVG மேம்படுத்தி.',
   heading: 'SVG மேம்படுத்தி',
   intro:
-    'SVG கோப்புகள் எப்படித் தோன்றுகின்றன என்பதை மாற்றாமல் அவற்றைச் சுருக்கவும். VectorForge SVGO பல-கடவு மேம்படுத்தலை உங்கள் உலாவியிலேயே நேரடியாக இயக்குகிறது — வேண்டுமென்றே viewBox-ஐப் பாதுகாக்கிறது, எனவே மேம்படுத்தலுக்குப் பிறகும் பதிலளிக்கும் அளவீடு தொடர்ந்து வேலை செய்யும். நீங்கள் எத்தனை பைட்டுகள், என்ன சதவீதம் சேமித்தீர்கள் என்பதைத் துல்லியமாகக் காண்பீர்கள்.',
+    'SVG கோப்புகள் எப்படித் தோன்றுகின்றன என்பதை மாற்றாமல் அவற்றைச் சுருக்கவும். SvgToCode SVGO பல-கடவு மேம்படுத்தலை உங்கள் உலாவியிலேயே நேரடியாக இயக்குகிறது — வேண்டுமென்றே viewBox-ஐப் பாதுகாக்கிறது, எனவே மேம்படுத்தலுக்குப் பிறகும் பதிலளிக்கும் அளவீடு தொடர்ந்து வேலை செய்யும். நீங்கள் எத்தனை பைட்டுகள், என்ன சதவீதம் சேமித்தீர்கள் என்பதைத் துல்லியமாகக் காண்பீர்கள்.',
   steps: [
     'உங்கள் SVG மார்க்கப்பை ஆசிரியரில் ஒட்டவும், அல்லது ஒரு .svg கோப்பைப் பக்கத்தில் எங்கும் விடவும்.',
     'கருவிப்பட்டியில் Optimize பொத்தானை அழுத்தவும் — ஆசிரியர் சுருக்கப்பட்ட முடிவுடன் புதுப்பிக்கப்படும்.',
@@ -3014,7 +3014,7 @@ const optimizerTa: ToolContent = {
 };
 
 const pngTa: ToolContent = {
-  title: 'SVG இலிருந்து PNG மாற்றி — இலவச 1x/2x/4x ஏற்றுமதி | VectorForge',
+  title: 'SVG இலிருந்து PNG மாற்றி — இலவச 1x/2x/4x ஏற்றுமதி | SvgToCode',
   description:
     'SVG-ஐ 1x, 2x மற்றும் 4x தெளிவுத்திறனில் PNG ஆக ஆன்லைனில் மாற்றவும். நேரடி முன்னோட்டத்துடன் இலவச, வரம்பற்ற, உலாவிக்குள் SVG இலிருந்து PNG மாற்றி.',
   heading: 'SVG இலிருந்து PNG மாற்றி',
@@ -3047,12 +3047,12 @@ const pngTa: ToolContent = {
 /* ---------------- Telugu ---------------- */
 
 const jsxTe: ToolContent = {
-  title: 'SVG నుండి JSX కన్వర్టర్ — ఉచిత ఆన్‌లైన్ సాధనం | VectorForge',
+  title: 'SVG నుండి JSX కన్వర్టర్ — ఉచిత ఆన్‌లైన్ సాధనం | SvgToCode',
   description:
     'సెకన్లలో SVG మార్కప్‌ను JSXగా మార్చండి. స్వయంచాలక అట్రిబ్యూట్ పేరు మార్పు, స్టైల్-ఆబ్జెక్ట్ మార్పిడి మరియు లైవ్ ప్రివ్యూతో ఉచిత ఆన్‌లైన్ SVG నుండి JSX కన్వర్టర్. మీ బ్రౌజర్‌లో 100% నడుస్తుంది.',
   heading: 'SVG నుండి JSX కన్వర్టర్',
   intro:
-    'ఏదైనా SVGని అతికించి, మీ React కాంపోనెంట్‌లకు సిద్ధంగా ఉన్న శుభ్రమైన JSX పొందండి. VectorForge అట్రిబ్యూట్‌లను స్వయంచాలకంగా పేరుమారుస్తుంది (class అనేది className అవుతుంది, stroke-width అనేది strokeWidth అవుతుంది), ఇన్‌లైన్ స్టైల్‌లను స్టైల్ ఆబ్జెక్ట్‌లుగా మారుస్తుంది మరియు XML వ్యాఖ్యలను JSX వ్యాఖ్యలుగా మారుస్తుంది — తక్షణమే, లైవ్ ప్రివ్యూతో. ఏదీ అప్‌లోడ్ కాదు; ప్రతిదీ మీ బ్రౌజర్‌లోనే జరుగుతుంది.',
+    'ఏదైనా SVGని అతికించి, మీ React కాంపోనెంట్‌లకు సిద్ధంగా ఉన్న శుభ్రమైన JSX పొందండి. SvgToCode అట్రిబ్యూట్‌లను స్వయంచాలకంగా పేరుమారుస్తుంది (class అనేది className అవుతుంది, stroke-width అనేది strokeWidth అవుతుంది), ఇన్‌లైన్ స్టైల్‌లను స్టైల్ ఆబ్జెక్ట్‌లుగా మారుస్తుంది మరియు XML వ్యాఖ్యలను JSX వ్యాఖ్యలుగా మారుస్తుంది — తక్షణమే, లైవ్ ప్రివ్యూతో. ఏదీ అప్‌లోడ్ కాదు; ప్రతిదీ మీ బ్రౌజర్‌లోనే జరుగుతుంది.',
   steps: [
     'మీ SVG మార్కప్‌ను ఎడిటర్‌లో అతికించండి, లేదా .svg ఫైల్‌ను పేజీలో ఎక్కడైనా వదలండి.',
     'JSX ట్యాబ్ ఇప్పటికే ఎంచుకోబడింది — మీరు టైప్ చేస్తున్నప్పుడు లైవ్‌గా నవీకరించబడే మార్చబడిన అవుట్‌పుట్‌ను సమీక్షించండి.',
@@ -3078,7 +3078,7 @@ const jsxTe: ToolContent = {
 };
 
 const reactTe: ToolContent = {
-  title: 'SVG నుండి React కాంపోనెంట్ కన్వర్టర్ — ఉచితం ఆన్‌లైన్ | VectorForge',
+  title: 'SVG నుండి React కాంపోనెంట్ కన్వర్టర్ — ఉచితం ఆన్‌లైన్ | SvgToCode',
   description:
     'ఏదైనా SVGని తక్షణమే టైప్ చేసిన React (.tsx) కాంపోనెంట్‌గా మార్చండి. ప్రాప్స్ మద్దతు, శుభ్రమైన అవుట్‌పుట్ మరియు లైవ్ ప్రివ్యూతో ఉచిత SVG నుండి React కాంపోనెంట్ కన్వర్టర్.',
   heading: 'SVG నుండి React కాంపోనెంట్ కన్వర్టర్',
@@ -3109,7 +3109,7 @@ const reactTe: ToolContent = {
 };
 
 const base64Te: ToolContent = {
-  title: 'SVG నుండి Base64 కన్వర్టర్ — ఉచిత ఆన్‌లైన్ ఎన్‌కోడర్ | VectorForge',
+  title: 'SVG నుండి Base64 కన్వర్టర్ — ఉచిత ఆన్‌లైన్ ఎన్‌కోడర్ | SvgToCode',
   description:
     'SVGని ఆన్‌లైన్‌లో Base64గా ఎన్‌కోడ్ చేయండి. యూనికోడ్-సురక్షిత ఎన్‌కోడింగ్, లైవ్ ప్రివ్యూ మరియు ఒకే-క్లిక్ కాపీతో ఉచిత SVG నుండి Base64 కన్వర్టర్.',
   heading: 'SVG నుండి Base64 కన్వర్టర్',
@@ -3140,12 +3140,12 @@ const base64Te: ToolContent = {
 };
 
 const dataUriTe: ToolContent = {
-  title: 'SVG నుండి Data URI / CSS నేపథ్య జనరేటర్ — ఉచితం | VectorForge',
+  title: 'SVG నుండి Data URI / CSS నేపథ్య జనరేటర్ — ఉచితం | SvgToCode',
   description:
     'SVGని background-image కోసం సిద్ధంగా ఉన్న CSS డేటా URIగా మార్చండి. మినిఫికేషన్, ఆప్టిమైజ్ చేసిన ఎన్‌కోడింగ్ మరియు లైవ్ ప్రివ్యూతో ఉచిత జనరేటర్.',
   heading: 'SVG నుండి Data URI కన్వర్టర్',
   intro:
-    'ఏదైనా SVGని మీరు నేరుగా background-imageలో అతికించగల కాంపాక్ట్ డేటా URIగా మార్చండి. VectorForge మొదట SVGని మినిఫై చేసి దానిని శాతం-ఎన్‌కోడ్ చేస్తుంది, ఇది సాధారణ చిహ్నాల కోసం URIని Base64 కంటే చిన్నగా ఉంచుతుంది — మరియు మీరు కాపీ చేయడానికి ముందు లైవ్ ప్రివ్యూలో అది రెండర్ అవ్వడాన్ని చూడగలరు.',
+    'ఏదైనా SVGని మీరు నేరుగా background-imageలో అతికించగల కాంపాక్ట్ డేటా URIగా మార్చండి. SvgToCode మొదట SVGని మినిఫై చేసి దానిని శాతం-ఎన్‌కోడ్ చేస్తుంది, ఇది సాధారణ చిహ్నాల కోసం URIని Base64 కంటే చిన్నగా ఉంచుతుంది — మరియు మీరు కాపీ చేయడానికి ముందు లైవ్ ప్రివ్యూలో అది రెండర్ అవ్వడాన్ని చూడగలరు.',
   steps: [
     'మీ SVG మార్కప్‌ను ఎడిటర్‌లో అతికించండి, లేదా .svg ఫైల్‌ను పేజీలో ఎక్కడైనా వదలండి.',
     'CSS Data-URI ట్యాబ్ ఇప్పటికే ఎంచుకోబడింది — మీరు సవరిస్తున్నప్పుడు స్నిప్పెట్ లైవ్‌గా నవీకరించబడుతుంది.',
@@ -3171,12 +3171,12 @@ const dataUriTe: ToolContent = {
 };
 
 const optimizerTe: ToolContent = {
-  title: 'SVG ఆప్టిమైజర్ — ఉచిత ఆన్‌లైన్ SVGO సాధనం | VectorForge',
+  title: 'SVG ఆప్టిమైజర్ — ఉచిత ఆన్‌లైన్ SVGO సాధనం | SvgToCode',
   description:
     'SVGOతో SVG ఫైళ్లను ఆన్‌లైన్‌లో ఆప్టిమైజ్ చేయండి. viewBox మరియు దృశ్య నాణ్యతను భద్రపరుస్తూ ఫైల్ పరిమాణాన్ని తగ్గించే ఉచిత SVG ఆప్టిమైజర్.',
   heading: 'SVG ఆప్టిమైజర్',
   intro:
-    'SVG ఫైళ్లు ఎలా కనిపిస్తాయో మార్చకుండా వాటిని తగ్గించండి. VectorForge SVGO మల్టీపాస్ ఆప్టిమైజేషన్‌ను నేరుగా మీ బ్రౌజర్‌లోనే నడుపుతుంది — మరియు ఉద్దేశపూర్వకంగా viewBoxను భద్రపరుస్తుంది, కాబట్టి ఆప్టిమైజేషన్ తర్వాత కూడా రెస్పాన్సివ్ స్కేలింగ్ పనిచేస్తూనే ఉంటుంది. మీరు ఎన్ని బైట్‌లు మరియు ఎంత శాతం ఆదా చేశారో ఖచ్చితంగా చూస్తారు.',
+    'SVG ఫైళ్లు ఎలా కనిపిస్తాయో మార్చకుండా వాటిని తగ్గించండి. SvgToCode SVGO మల్టీపాస్ ఆప్టిమైజేషన్‌ను నేరుగా మీ బ్రౌజర్‌లోనే నడుపుతుంది — మరియు ఉద్దేశపూర్వకంగా viewBoxను భద్రపరుస్తుంది, కాబట్టి ఆప్టిమైజేషన్ తర్వాత కూడా రెస్పాన్సివ్ స్కేలింగ్ పనిచేస్తూనే ఉంటుంది. మీరు ఎన్ని బైట్‌లు మరియు ఎంత శాతం ఆదా చేశారో ఖచ్చితంగా చూస్తారు.',
   steps: [
     'మీ SVG మార్కప్‌ను ఎడిటర్‌లో అతికించండి, లేదా .svg ఫైల్‌ను పేజీలో ఎక్కడైనా వదలండి.',
     'టూల్‌బార్‌లో Optimize బటన్‌ను నొక్కండి — ఎడిటర్ మినిఫై చేసిన ఫలితంతో నవీకరించబడుతుంది.',
@@ -3202,7 +3202,7 @@ const optimizerTe: ToolContent = {
 };
 
 const pngTe: ToolContent = {
-  title: 'SVG నుండి PNG కన్వర్టర్ — ఉచిత 1x/2x/4x ఎగుమతి | VectorForge',
+  title: 'SVG నుండి PNG కన్వర్టర్ — ఉచిత 1x/2x/4x ఎగుమతి | SvgToCode',
   description:
     'SVGని 1x, 2x మరియు 4x రిజల్యూషన్‌లో PNGగా ఆన్‌లైన్‌లో మార్చండి. లైవ్ ప్రివ్యూతో ఉచిత, అపరిమిత, బ్రౌజర్‌లోని SVG నుండి PNG కన్వర్టర్.',
   heading: 'SVG నుండి PNG కన్వర్టర్',
@@ -3235,12 +3235,12 @@ const pngTe: ToolContent = {
 /* ---------------- Marathi ---------------- */
 
 const jsxMr: ToolContent = {
-  title: 'SVG ते JSX रूपांतरक — विनामूल्य ऑनलाइन साधन | VectorForge',
+  title: 'SVG ते JSX रूपांतरक — विनामूल्य ऑनलाइन साधन | SvgToCode',
   description:
     'सेकंदांत SVG मार्कअपचे JSX मध्ये रूपांतर करा. विनामूल्य ऑनलाइन SVG ते JSX रूपांतरक — स्वयंचलित विशेषता नाव बदल, शैली-ऑब्जेक्ट रूपांतर आणि लाइव्ह पूर्वावलोकनासह. तुमच्या ब्राउझरमध्ये 100% चालते.',
   heading: 'SVG ते JSX रूपांतरक',
   intro:
-    'कोणतेही SVG चिकटवा आणि तुमच्या React घटकांसाठी तयार स्वच्छ JSX मिळवा. VectorForge विशेषता आपोआप पुन्हा नाव देते (class होतो className, stroke-width होतो strokeWidth), इनलाइन शैली शैली ऑब्जेक्टमध्ये बदलते आणि XML टिप्पण्या JSX टिप्पण्यांमध्ये बदलते — त्वरित, लाइव्ह पूर्वावलोकनासह. काहीही अपलोड होत नाही; सर्व काही तुमच्या ब्राउझरमध्येच घडते.',
+    'कोणतेही SVG चिकटवा आणि तुमच्या React घटकांसाठी तयार स्वच्छ JSX मिळवा. SvgToCode विशेषता आपोआप पुन्हा नाव देते (class होतो className, stroke-width होतो strokeWidth), इनलाइन शैली शैली ऑब्जेक्टमध्ये बदलते आणि XML टिप्पण्या JSX टिप्पण्यांमध्ये बदलते — त्वरित, लाइव्ह पूर्वावलोकनासह. काहीही अपलोड होत नाही; सर्व काही तुमच्या ब्राउझरमध्येच घडते.',
   steps: [
     'तुमचे SVG मार्कअप संपादकात चिकटवा, किंवा .svg फाइल पानावर कुठेही सोडा.',
     'JSX टॅब आधीच निवडलेला आहे — तुम्ही टाइप करत असताना लाइव्ह अद्यतनित होणारे रूपांतरित आउटपुट पहा.',
@@ -3266,7 +3266,7 @@ const jsxMr: ToolContent = {
 };
 
 const reactMr: ToolContent = {
-  title: 'SVG ते React घटक रूपांतरक — विनामूल्य ऑनलाइन | VectorForge',
+  title: 'SVG ते React घटक रूपांतरक — विनामूल्य ऑनलाइन | SvgToCode',
   description:
     'कोणतेही SVG त्वरित टाइप केलेल्या React (.tsx) घटकात बदला. विनामूल्य SVG ते React घटक रूपांतरक — प्रॉप्स समर्थन, स्वच्छ आउटपुट आणि लाइव्ह पूर्वावलोकनासह.',
   heading: 'SVG ते React घटक रूपांतरक',
@@ -3297,7 +3297,7 @@ const reactMr: ToolContent = {
 };
 
 const base64Mr: ToolContent = {
-  title: 'SVG ते Base64 रूपांतरक — विनामूल्य ऑनलाइन एन्कोडर | VectorForge',
+  title: 'SVG ते Base64 रूपांतरक — विनामूल्य ऑनलाइन एन्कोडर | SvgToCode',
   description:
     'SVG ला Base64 म्हणून ऑनलाइन एन्कोड करा. विनामूल्य SVG ते Base64 रूपांतरक — Unicode-सुरक्षित एन्कोडिंग, लाइव्ह पूर्वावलोकन आणि एक-क्लिक कॉपीसह.',
   heading: 'SVG ते Base64 रूपांतरक',
@@ -3328,12 +3328,12 @@ const base64Mr: ToolContent = {
 };
 
 const dataUriMr: ToolContent = {
-  title: 'SVG ते Data URI / CSS पार्श्वभूमी जनरेटर — विनामूल्य | VectorForge',
+  title: 'SVG ते Data URI / CSS पार्श्वभूमी जनरेटर — विनामूल्य | SvgToCode',
   description:
     'SVG ला background-image साठी तयार CSS data URI मध्ये बदला. विनामूल्य जनरेटर — मिनिफिकेशन, अनुकूल एन्कोडिंग आणि लाइव्ह पूर्वावलोकनासह.',
   heading: 'SVG ते Data URI रूपांतरक',
   intro:
-    'कोणतेही SVG एका संक्षिप्त data URI मध्ये बदला जे तुम्ही थेट background-image मध्ये चिकटवू शकता. VectorForge प्रथम SVG ला मिनिफाय करते आणि टक्केवारी-एन्कोड करते, ज्यामुळे सामान्य चिन्हांसाठी URI Base64 पेक्षा लहान राहतो — आणि कॉपी करण्यापूर्वी तुम्ही तो लाइव्ह पूर्वावलोकनात रंगताना पाहू शकता.',
+    'कोणतेही SVG एका संक्षिप्त data URI मध्ये बदला जे तुम्ही थेट background-image मध्ये चिकटवू शकता. SvgToCode प्रथम SVG ला मिनिफाय करते आणि टक्केवारी-एन्कोड करते, ज्यामुळे सामान्य चिन्हांसाठी URI Base64 पेक्षा लहान राहतो — आणि कॉपी करण्यापूर्वी तुम्ही तो लाइव्ह पूर्वावलोकनात रंगताना पाहू शकता.',
   steps: [
     'तुमचे SVG मार्कअप संपादकात चिकटवा, किंवा .svg फाइल पानावर कुठेही सोडा.',
     'CSS Data-URI टॅब आधीच निवडलेला आहे — तुम्ही संपादित करत असताना स्निपेट लाइव्ह अद्यतनित होतो.',
@@ -3359,12 +3359,12 @@ const dataUriMr: ToolContent = {
 };
 
 const optimizerMr: ToolContent = {
-  title: 'SVG ऑप्टिमायझर — विनामूल्य ऑनलाइन SVGO साधन | VectorForge',
+  title: 'SVG ऑप्टिमायझर — विनामूल्य ऑनलाइन SVGO साधन | SvgToCode',
   description:
     'SVGO ने SVG फाइल्स ऑनलाइन ऑप्टिमाइझ करा. विनामूल्य SVG ऑप्टिमायझर जो viewBox आणि दृश्य गुणवत्ता जतन करत फाइल आकार कमी करतो.',
   heading: 'SVG ऑप्टिमायझर',
   intro:
-    'SVG फाइल्सचा देखावा न बदलता त्या लहान करा. VectorForge SVGO मल्टीपास ऑप्टिमायझेशन थेट तुमच्या ब्राउझरमध्येच चालवते — आणि हेतुपुरस्सर viewBox जतन करते, ज्यामुळे ऑप्टिमायझेशननंतरही रिस्पॉन्सिव्ह स्केलिंग काम करत राहते. तुम्हाला नेमके किती बाइट आणि किती टक्के बचत झाली ते दिसते.',
+    'SVG फाइल्सचा देखावा न बदलता त्या लहान करा. SvgToCode SVGO मल्टीपास ऑप्टिमायझेशन थेट तुमच्या ब्राउझरमध्येच चालवते — आणि हेतुपुरस्सर viewBox जतन करते, ज्यामुळे ऑप्टिमायझेशननंतरही रिस्पॉन्सिव्ह स्केलिंग काम करत राहते. तुम्हाला नेमके किती बाइट आणि किती टक्के बचत झाली ते दिसते.',
   steps: [
     'तुमचे SVG मार्कअप संपादकात चिकटवा, किंवा .svg फाइल पानावर कुठेही सोडा.',
     'टूलबारमधील Optimize बटण दाबा — संपादक मिनिफाय केलेल्या निकालासह अद्यतनित होतो.',
@@ -3390,7 +3390,7 @@ const optimizerMr: ToolContent = {
 };
 
 const pngMr: ToolContent = {
-  title: 'SVG ते PNG रूपांतरक — विनामूल्य 1x/2x/4x निर्यात | VectorForge',
+  title: 'SVG ते PNG रूपांतरक — विनामूल्य 1x/2x/4x निर्यात | SvgToCode',
   description:
     'SVG ला 1x, 2x आणि 4x ठरावावर PNG मध्ये ऑनलाइन बदला. विनामूल्य, अमर्याद, ब्राउझरमधील SVG ते PNG रूपांतरक — लाइव्ह पूर्वावलोकनासह.',
   heading: 'SVG ते PNG रूपांतरक',
@@ -3423,12 +3423,12 @@ const pngMr: ToolContent = {
 /* ---------------- Turkish ---------------- */
 
 const jsxTr: ToolContent = {
-  title: 'SVG’den JSX’e Dönüştürücü — Ücretsiz Çevrimiçi Araç | VectorForge',
+  title: 'SVG’den JSX’e Dönüştürücü — Ücretsiz Çevrimiçi Araç | SvgToCode',
   description:
     'SVG işaretlemesini saniyeler içinde JSX’e dönüştürün. Otomatik öznitelik yeniden adlandırma, stil nesnesi dönüştürme ve canlı önizleme ile ücretsiz çevrimiçi SVG’den JSX’e dönüştürücü. Tarayıcınızda %100 çalışır.',
   heading: 'SVG’den JSX’e Dönüştürücü',
   intro:
-    'Herhangi bir SVG’yi yapıştırın ve React bileşenlerinize hazır temiz JSX elde edin. VectorForge öznitelikleri otomatik olarak yeniden adlandırır (class, className olur; stroke-width, strokeWidth olur), satır içi stilleri stil nesnelerine dönüştürür ve XML yorumlarını JSX yorumlarına çevirir — anında, canlı önizlemeyle. Hiçbir şey yüklenmez; her şey tarayıcınızda gerçekleşir.',
+    'Herhangi bir SVG’yi yapıştırın ve React bileşenlerinize hazır temiz JSX elde edin. SvgToCode öznitelikleri otomatik olarak yeniden adlandırır (class, className olur; stroke-width, strokeWidth olur), satır içi stilleri stil nesnelerine dönüştürür ve XML yorumlarını JSX yorumlarına çevirir — anında, canlı önizlemeyle. Hiçbir şey yüklenmez; her şey tarayıcınızda gerçekleşir.',
   steps: [
     'SVG işaretlemenizi düzenleyiciye yapıştırın ya da bir .svg dosyasını sayfanın herhangi bir yerine bırakın.',
     'JSX sekmesi zaten seçili — yazarken canlı güncellenen dönüştürülmüş çıktıyı inceleyin.',
@@ -3454,7 +3454,7 @@ const jsxTr: ToolContent = {
 };
 
 const reactTr: ToolContent = {
-  title: 'SVG’den React Bileşenine Dönüştürücü — Ücretsiz Çevrimiçi | VectorForge',
+  title: 'SVG’den React Bileşenine Dönüştürücü — Ücretsiz Çevrimiçi | SvgToCode',
   description:
     'Herhangi bir SVG’yi anında tipli bir React (.tsx) bileşenine çevirin. Props desteği, temiz çıktı ve canlı önizleme ile ücretsiz SVG’den React bileşenine dönüştürücü.',
   heading: 'SVG’den React Bileşenine Dönüştürücü',
@@ -3485,7 +3485,7 @@ const reactTr: ToolContent = {
 };
 
 const base64Tr: ToolContent = {
-  title: 'SVG’den Base64’e Dönüştürücü — Ücretsiz Çevrimiçi Kodlayıcı | VectorForge',
+  title: 'SVG’den Base64’e Dönüştürücü — Ücretsiz Çevrimiçi Kodlayıcı | SvgToCode',
   description:
     'SVG’yi çevrimiçi olarak Base64 olarak kodlayın. Unicode güvenli kodlama, canlı önizleme ve tek tıklamayla kopyalama ile ücretsiz SVG’den Base64’e dönüştürücü.',
   heading: 'SVG’den Base64’e Dönüştürücü',
@@ -3516,12 +3516,12 @@ const base64Tr: ToolContent = {
 };
 
 const dataUriTr: ToolContent = {
-  title: 'SVG’den Veri URI’sine / CSS Arka Planı Oluşturucu — Ücretsiz | VectorForge',
+  title: 'SVG’den Veri URI’sine / CSS Arka Planı Oluşturucu — Ücretsiz | SvgToCode',
   description:
     'SVG’yi background-image için CSS’e hazır bir veri URI’sine dönüştürün. Küçültme, optimize edilmiş kodlama ve canlı önizleme ile ücretsiz oluşturucu.',
   heading: 'SVG’den Veri URI’sine Dönüştürücü',
   intro:
-    'Herhangi bir SVG’yi doğrudan background-image içine yapıştırabileceğiniz kompakt bir veri URI’sine çevirin. VectorForge önce SVG’yi küçültür ve yüzdeyle kodlar; bu, tipik simgeler için URI’yi Base64’ten daha küçük tutar — ve kopyalamadan önce canlı önizlemede işlendiğini görebilirsiniz.',
+    'Herhangi bir SVG’yi doğrudan background-image içine yapıştırabileceğiniz kompakt bir veri URI’sine çevirin. SvgToCode önce SVG’yi küçültür ve yüzdeyle kodlar; bu, tipik simgeler için URI’yi Base64’ten daha küçük tutar — ve kopyalamadan önce canlı önizlemede işlendiğini görebilirsiniz.',
   steps: [
     'SVG işaretlemenizi düzenleyiciye yapıştırın ya da bir .svg dosyasını sayfanın herhangi bir yerine bırakın.',
     'CSS Data-URI sekmesi zaten seçili — siz düzenlerken parçacık canlı güncellenir.',
@@ -3547,12 +3547,12 @@ const dataUriTr: ToolContent = {
 };
 
 const optimizerTr: ToolContent = {
-  title: 'SVG Optimize Edici — Ücretsiz Çevrimiçi SVGO Aracı | VectorForge',
+  title: 'SVG Optimize Edici — Ücretsiz Çevrimiçi SVGO Aracı | SvgToCode',
   description:
     'SVG dosyalarını SVGO ile çevrimiçi optimize edin. viewBox’ı ve görsel kaliteyi korurken dosya boyutunu küçülten ücretsiz SVG optimize edici.',
   heading: 'SVG Optimize Edici',
   intro:
-    'SVG dosyalarını görünüşlerini değiştirmeden küçültün. VectorForge, SVGO çok geçişli optimizasyonunu doğrudan tarayıcınızda çalıştırır — ve kasıtlı olarak viewBox’ı korur, böylece duyarlı ölçekleme optimizasyondan sonra da çalışmaya devam eder. Kaç bayt ve yüzde kaç kazandığınızı tam olarak görürsünüz.',
+    'SVG dosyalarını görünüşlerini değiştirmeden küçültün. SvgToCode, SVGO çok geçişli optimizasyonunu doğrudan tarayıcınızda çalıştırır — ve kasıtlı olarak viewBox’ı korur, böylece duyarlı ölçekleme optimizasyondan sonra da çalışmaya devam eder. Kaç bayt ve yüzde kaç kazandığınızı tam olarak görürsünüz.',
   steps: [
     'SVG işaretlemenizi düzenleyiciye yapıştırın ya da bir .svg dosyasını sayfanın herhangi bir yerine bırakın.',
     'Araç çubuğundaki Optimize düğmesine basın — düzenleyici küçültülmüş sonuçla güncellenir.',
@@ -3578,7 +3578,7 @@ const optimizerTr: ToolContent = {
 };
 
 const pngTr: ToolContent = {
-  title: 'SVG’den PNG’ye Dönüştürücü — Ücretsiz 1x/2x/4x Dışa Aktarım | VectorForge',
+  title: 'SVG’den PNG’ye Dönüştürücü — Ücretsiz 1x/2x/4x Dışa Aktarım | SvgToCode',
   description:
     'SVG’yi 1x, 2x ve 4x çözünürlükte PNG’ye çevrimiçi dönüştürün. Canlı önizleme ile ücretsiz, sınırsız, tarayıcı içi SVG’den PNG’ye dönüştürücü.',
   heading: 'SVG’den PNG’ye Dönüştürücü',
@@ -3611,12 +3611,12 @@ const pngTr: ToolContent = {
 /* ---------------- Italian ---------------- */
 
 const jsxIt: ToolContent = {
-  title: 'Convertitore da SVG a JSX — Strumento online gratuito | VectorForge',
+  title: 'Convertitore da SVG a JSX — Strumento online gratuito | SvgToCode',
   description:
     'Converti il markup SVG in JSX in pochi secondi. Convertitore online gratuito da SVG a JSX con ridenominazione automatica degli attributi, conversione degli stili in oggetti e anteprima dal vivo. Funziona al 100% nel tuo browser.',
   heading: 'Convertitore da SVG a JSX',
   intro:
-    'Incolla qualsiasi SVG e ottieni JSX pulito, pronto per i tuoi componenti React. VectorForge rinomina gli attributi automaticamente (class diventa className, stroke-width diventa strokeWidth), converte gli stili inline in oggetti di stile e trasforma i commenti XML in commenti JSX — istantaneamente, con un’anteprima dal vivo. Non viene caricato nulla; tutto avviene nel tuo browser.',
+    'Incolla qualsiasi SVG e ottieni JSX pulito, pronto per i tuoi componenti React. SvgToCode rinomina gli attributi automaticamente (class diventa className, stroke-width diventa strokeWidth), converte gli stili inline in oggetti di stile e trasforma i commenti XML in commenti JSX — istantaneamente, con un’anteprima dal vivo. Non viene caricato nulla; tutto avviene nel tuo browser.',
   steps: [
     'Incolla il tuo markup SVG nell’editor, o rilascia un file .svg ovunque nella pagina.',
     'La scheda JSX è già selezionata — controlla l’output convertito che si aggiorna dal vivo mentre digiti.',
@@ -3642,7 +3642,7 @@ const jsxIt: ToolContent = {
 };
 
 const reactIt: ToolContent = {
-  title: 'Convertitore da SVG a componente React — Gratis online | VectorForge',
+  title: 'Convertitore da SVG a componente React — Gratis online | SvgToCode',
   description:
     'Trasforma qualsiasi SVG in un componente React tipizzato (.tsx) istantaneamente. Convertitore gratuito da SVG a componente React con supporto alle props, output pulito e anteprima dal vivo.',
   heading: 'Convertitore da SVG a componente React',
@@ -3673,7 +3673,7 @@ const reactIt: ToolContent = {
 };
 
 const base64It: ToolContent = {
-  title: 'Convertitore da SVG a Base64 — Codificatore online gratuito | VectorForge',
+  title: 'Convertitore da SVG a Base64 — Codificatore online gratuito | SvgToCode',
   description:
     'Codifica SVG come Base64 online. Convertitore gratuito da SVG a Base64 con codifica sicura per Unicode, anteprima dal vivo e copia con un clic.',
   heading: 'Convertitore da SVG a Base64',
@@ -3704,12 +3704,12 @@ const base64It: ToolContent = {
 };
 
 const dataUriIt: ToolContent = {
-  title: 'Generatore da SVG a Data URI / sfondo CSS — Gratis | VectorForge',
+  title: 'Generatore da SVG a Data URI / sfondo CSS — Gratis | SvgToCode',
   description:
     'Converti SVG in un data URI pronto per il CSS e background-image. Generatore gratuito con minificazione, codifica ottimizzata e anteprima dal vivo.',
   heading: 'Convertitore da SVG a Data URI',
   intro:
-    'Trasforma qualsiasi SVG in un data URI compatto che puoi incollare direttamente in background-image. VectorForge minifica prima l’SVG e lo codifica in percentuale, il che mantiene l’URI più piccolo del Base64 per le icone tipiche — e puoi vederlo renderizzato nell’anteprima dal vivo prima di copiarlo.',
+    'Trasforma qualsiasi SVG in un data URI compatto che puoi incollare direttamente in background-image. SvgToCode minifica prima l’SVG e lo codifica in percentuale, il che mantiene l’URI più piccolo del Base64 per le icone tipiche — e puoi vederlo renderizzato nell’anteprima dal vivo prima di copiarlo.',
   steps: [
     'Incolla il tuo markup SVG nell’editor, o rilascia un file .svg ovunque nella pagina.',
     'La scheda CSS Data-URI è già selezionata — lo snippet si aggiorna dal vivo mentre modifichi.',
@@ -3735,12 +3735,12 @@ const dataUriIt: ToolContent = {
 };
 
 const optimizerIt: ToolContent = {
-  title: 'Ottimizzatore SVG — Strumento SVGO online gratuito | VectorForge',
+  title: 'Ottimizzatore SVG — Strumento SVGO online gratuito | SvgToCode',
   description:
     'Ottimizza i file SVG online con SVGO. Ottimizzatore SVG gratuito che riduce la dimensione dei file preservando il viewBox e la qualità visiva.',
   heading: 'Ottimizzatore SVG',
   intro:
-    'Riduci i file SVG senza cambiare il loro aspetto. VectorForge esegue l’ottimizzazione multipasso SVGO direttamente nel tuo browser — e preserva deliberatamente il viewBox, in modo che il ridimensionamento responsivo continui a funzionare dopo l’ottimizzazione. Vedi esattamente quanti byte e quale percentuale hai risparmiato.',
+    'Riduci i file SVG senza cambiare il loro aspetto. SvgToCode esegue l’ottimizzazione multipasso SVGO direttamente nel tuo browser — e preserva deliberatamente il viewBox, in modo che il ridimensionamento responsivo continui a funzionare dopo l’ottimizzazione. Vedi esattamente quanti byte e quale percentuale hai risparmiato.',
   steps: [
     'Incolla il tuo markup SVG nell’editor, o rilascia un file .svg ovunque nella pagina.',
     'Premi il pulsante Optimize nella barra degli strumenti — l’editor si aggiorna con il risultato minificato.',
@@ -3766,7 +3766,7 @@ const optimizerIt: ToolContent = {
 };
 
 const pngIt: ToolContent = {
-  title: 'Convertitore da SVG a PNG — Esportazione gratuita 1x/2x/4x | VectorForge',
+  title: 'Convertitore da SVG a PNG — Esportazione gratuita 1x/2x/4x | SvgToCode',
   description:
     'Converti SVG in PNG alle risoluzioni 1x, 2x e 4x online. Convertitore da SVG a PNG gratuito, illimitato e nel browser, con anteprima dal vivo.',
   heading: 'Convertitore da SVG a PNG',
@@ -3799,12 +3799,12 @@ const pngIt: ToolContent = {
 /* ---------------- Dutch ---------------- */
 
 const jsxNl: ToolContent = {
-  title: 'SVG naar JSX converter — Gratis online tool | VectorForge',
+  title: 'SVG naar JSX converter — Gratis online tool | SvgToCode',
   description:
     'Zet SVG-markup in seconden om naar JSX. Gratis online SVG naar JSX converter met automatische attribuuthernoeming, stijl-naar-object-conversie en live voorbeeld. Draait 100% in je browser.',
   heading: 'SVG naar JSX converter',
   intro:
-    'Plak een willekeurige SVG en krijg schone JSX, klaar voor je React-componenten. VectorForge hernoemt attributen automatisch (class wordt className, stroke-width wordt strokeWidth), zet inline stijlen om in stijlobjecten en verandert XML-opmerkingen in JSX-opmerkingen — direct, met een live voorbeeld. Er wordt niets geüpload; alles gebeurt in je browser.',
+    'Plak een willekeurige SVG en krijg schone JSX, klaar voor je React-componenten. SvgToCode hernoemt attributen automatisch (class wordt className, stroke-width wordt strokeWidth), zet inline stijlen om in stijlobjecten en verandert XML-opmerkingen in JSX-opmerkingen — direct, met een live voorbeeld. Er wordt niets geüpload; alles gebeurt in je browser.',
   steps: [
     'Plak je SVG-markup in de editor, of zet een .svg-bestand ergens op de pagina neer.',
     'Het JSX-tabblad is al geselecteerd — bekijk de geconverteerde uitvoer die live bijwerkt terwijl je typt.',
@@ -3830,7 +3830,7 @@ const jsxNl: ToolContent = {
 };
 
 const reactNl: ToolContent = {
-  title: 'SVG naar React-component converter — Gratis online | VectorForge',
+  title: 'SVG naar React-component converter — Gratis online | SvgToCode',
   description:
     'Verander elke SVG direct in een getypeerde React (.tsx) component. Gratis SVG naar React-component converter met props-ondersteuning, schone uitvoer en live voorbeeld.',
   heading: 'SVG naar React-component converter',
@@ -3861,7 +3861,7 @@ const reactNl: ToolContent = {
 };
 
 const base64Nl: ToolContent = {
-  title: 'SVG naar Base64 converter — Gratis online encoder | VectorForge',
+  title: 'SVG naar Base64 converter — Gratis online encoder | SvgToCode',
   description:
     'Codeer SVG online als Base64. Gratis SVG naar Base64 converter met Unicode-veilige codering, live voorbeeld en kopiëren met één klik.',
   heading: 'SVG naar Base64 converter',
@@ -3892,12 +3892,12 @@ const base64Nl: ToolContent = {
 };
 
 const dataUriNl: ToolContent = {
-  title: 'SVG naar Data URI / CSS-achtergrondgenerator — Gratis | VectorForge',
+  title: 'SVG naar Data URI / CSS-achtergrondgenerator — Gratis | SvgToCode',
   description:
     'Zet SVG om in een CSS-klare data-URI voor background-image. Gratis generator met minificatie, geoptimaliseerde codering en live voorbeeld.',
   heading: 'SVG naar Data URI converter',
   intro:
-    'Verander elke SVG in een compacte data-URI die je rechtstreeks in background-image kunt plakken. VectorForge minificeert de SVG eerst en codeert hem procentueel, wat de URI voor typische pictogrammen kleiner houdt dan Base64 — en je kunt hem in het live voorbeeld gerenderd zien voordat je kopieert.',
+    'Verander elke SVG in een compacte data-URI die je rechtstreeks in background-image kunt plakken. SvgToCode minificeert de SVG eerst en codeert hem procentueel, wat de URI voor typische pictogrammen kleiner houdt dan Base64 — en je kunt hem in het live voorbeeld gerenderd zien voordat je kopieert.',
   steps: [
     'Plak je SVG-markup in de editor, of zet een .svg-bestand ergens op de pagina neer.',
     'Het tabblad CSS Data-URI is al geselecteerd — het fragment werkt live bij terwijl je bewerkt.',
@@ -3923,12 +3923,12 @@ const dataUriNl: ToolContent = {
 };
 
 const optimizerNl: ToolContent = {
-  title: 'SVG optimizer — Gratis online SVGO-tool | VectorForge',
+  title: 'SVG optimizer — Gratis online SVGO-tool | SvgToCode',
   description:
     'Optimaliseer SVG-bestanden online met SVGO. Gratis SVG optimizer die de bestandsgrootte verkleint terwijl de viewBox en visuele kwaliteit bewaard blijven.',
   heading: 'SVG optimizer',
   intro:
-    'Verklein SVG-bestanden zonder te veranderen hoe ze eruitzien. VectorForge draait SVGO-multipass-optimalisatie rechtstreeks in je browser — en bewaart bewust de viewBox, zodat responsief schalen na optimalisatie blijft werken. Je ziet precies hoeveel bytes en welk percentage je bespaard hebt.',
+    'Verklein SVG-bestanden zonder te veranderen hoe ze eruitzien. SvgToCode draait SVGO-multipass-optimalisatie rechtstreeks in je browser — en bewaart bewust de viewBox, zodat responsief schalen na optimalisatie blijft werken. Je ziet precies hoeveel bytes en welk percentage je bespaard hebt.',
   steps: [
     'Plak je SVG-markup in de editor, of zet een .svg-bestand ergens op de pagina neer.',
     'Druk op de knop Optimize in de werkbalk — de editor werkt bij met het geminificeerde resultaat.',
@@ -3954,7 +3954,7 @@ const optimizerNl: ToolContent = {
 };
 
 const pngNl: ToolContent = {
-  title: 'SVG naar PNG converter — Gratis 1x/2x/4x export | VectorForge',
+  title: 'SVG naar PNG converter — Gratis 1x/2x/4x export | SvgToCode',
   description:
     'Zet SVG online om naar PNG in 1x-, 2x- en 4x-resolutie. Gratis, onbeperkte, in-de-browser SVG naar PNG converter met live voorbeeld.',
   heading: 'SVG naar PNG converter',
@@ -3987,12 +3987,12 @@ const pngNl: ToolContent = {
 /* ---------------- Polish ---------------- */
 
 const jsxPl: ToolContent = {
-  title: 'Konwerter SVG na JSX — darmowe narzędzie online | VectorForge',
+  title: 'Konwerter SVG na JSX — darmowe narzędzie online | SvgToCode',
   description:
     'Zamieniaj znaczniki SVG na JSX w kilka sekund. Darmowy konwerter online SVG na JSX z automatyczną zmianą nazw atrybutów, konwersją stylów na obiekty i podglądem na żywo. Działa w 100% w Twojej przeglądarce.',
   heading: 'Konwerter SVG na JSX',
   intro:
-    'Wklej dowolny SVG i otrzymaj czysty JSX, gotowy do Twoich komponentów React. VectorForge automatycznie zmienia nazwy atrybutów (class staje się className, stroke-width staje się strokeWidth), konwertuje style wbudowane na obiekty stylów i zamienia komentarze XML na komentarze JSX — natychmiast, z podglądem na żywo. Nic nie jest przesyłane; wszystko dzieje się w Twojej przeglądarce.',
+    'Wklej dowolny SVG i otrzymaj czysty JSX, gotowy do Twoich komponentów React. SvgToCode automatycznie zmienia nazwy atrybutów (class staje się className, stroke-width staje się strokeWidth), konwertuje style wbudowane na obiekty stylów i zamienia komentarze XML na komentarze JSX — natychmiast, z podglądem na żywo. Nic nie jest przesyłane; wszystko dzieje się w Twojej przeglądarce.',
   steps: [
     'Wklej swoje znaczniki SVG do edytora albo upuść plik .svg w dowolnym miejscu strony.',
     'Karta JSX jest już wybrana — przejrzyj skonwertowane wyjście aktualizujące się na żywo podczas pisania.',
@@ -4018,7 +4018,7 @@ const jsxPl: ToolContent = {
 };
 
 const reactPl: ToolContent = {
-  title: 'Konwerter SVG na komponent React — darmowy online | VectorForge',
+  title: 'Konwerter SVG na komponent React — darmowy online | SvgToCode',
   description:
     'Zamień dowolny SVG w typowany komponent React (.tsx) natychmiast. Darmowy konwerter SVG na komponent React z obsługą propsów, czystym wyjściem i podglądem na żywo.',
   heading: 'Konwerter SVG na komponent React',
@@ -4049,7 +4049,7 @@ const reactPl: ToolContent = {
 };
 
 const base64Pl: ToolContent = {
-  title: 'Konwerter SVG na Base64 — darmowy koder online | VectorForge',
+  title: 'Konwerter SVG na Base64 — darmowy koder online | SvgToCode',
   description:
     'Koduj SVG jako Base64 online. Darmowy konwerter SVG na Base64 z kodowaniem bezpiecznym dla Unicode, podglądem na żywo i kopiowaniem jednym kliknięciem.',
   heading: 'Konwerter SVG na Base64',
@@ -4080,12 +4080,12 @@ const base64Pl: ToolContent = {
 };
 
 const dataUriPl: ToolContent = {
-  title: 'Generator SVG na Data URI / tło CSS — darmowy | VectorForge',
+  title: 'Generator SVG na Data URI / tło CSS — darmowy | SvgToCode',
   description:
     'Konwertuj SVG na gotowy dla CSS data URI dla background-image. Darmowy generator z minifikacją, zoptymalizowanym kodowaniem i podglądem na żywo.',
   heading: 'Konwerter SVG na Data URI',
   intro:
-    'Zamień dowolny SVG w zwarty data URI, który możesz wkleić prosto do background-image. VectorForge najpierw minifikuje SVG i koduje go procentowo, co dla typowych ikon utrzymuje URI mniejsze niż Base64 — i możesz zobaczyć, jak renderuje się w podglądzie na żywo, zanim skopiujesz.',
+    'Zamień dowolny SVG w zwarty data URI, który możesz wkleić prosto do background-image. SvgToCode najpierw minifikuje SVG i koduje go procentowo, co dla typowych ikon utrzymuje URI mniejsze niż Base64 — i możesz zobaczyć, jak renderuje się w podglądzie na żywo, zanim skopiujesz.',
   steps: [
     'Wklej swoje znaczniki SVG do edytora albo upuść plik .svg w dowolnym miejscu strony.',
     'Karta CSS Data-URI jest już wybrana — fragment aktualizuje się na żywo podczas edycji.',
@@ -4111,12 +4111,12 @@ const dataUriPl: ToolContent = {
 };
 
 const optimizerPl: ToolContent = {
-  title: 'Optymalizator SVG — darmowe narzędzie SVGO online | VectorForge',
+  title: 'Optymalizator SVG — darmowe narzędzie SVGO online | SvgToCode',
   description:
     'Optymalizuj pliki SVG online za pomocą SVGO. Darmowy optymalizator SVG, który zmniejsza rozmiar pliku, zachowując viewBox i jakość wizualną.',
   heading: 'Optymalizator SVG',
   intro:
-    'Zmniejszaj pliki SVG bez zmiany ich wyglądu. VectorForge uruchamia wieloprzebiegową optymalizację SVGO bezpośrednio w Twojej przeglądarce — i celowo zachowuje viewBox, aby skalowanie responsywne działało po optymalizacji. Widzisz dokładnie, ile bajtów i jaki procent zaoszczędziłeś.',
+    'Zmniejszaj pliki SVG bez zmiany ich wyglądu. SvgToCode uruchamia wieloprzebiegową optymalizację SVGO bezpośrednio w Twojej przeglądarce — i celowo zachowuje viewBox, aby skalowanie responsywne działało po optymalizacji. Widzisz dokładnie, ile bajtów i jaki procent zaoszczędziłeś.',
   steps: [
     'Wklej swoje znaczniki SVG do edytora albo upuść plik .svg w dowolnym miejscu strony.',
     'Naciśnij przycisk Optimize na pasku narzędzi — edytor zaktualizuje się zminifikowanym wynikiem.',
@@ -4142,7 +4142,7 @@ const optimizerPl: ToolContent = {
 };
 
 const pngPl: ToolContent = {
-  title: 'Konwerter SVG na PNG — darmowy eksport 1x/2x/4x | VectorForge',
+  title: 'Konwerter SVG na PNG — darmowy eksport 1x/2x/4x | SvgToCode',
   description:
     'Konwertuj SVG na PNG w rozdzielczości 1x, 2x i 4x online. Darmowy, nieograniczony konwerter SVG na PNG w przeglądarce z podglądem na żywo.',
   heading: 'Konwerter SVG na PNG',
@@ -4175,12 +4175,12 @@ const pngPl: ToolContent = {
 /* ---------------- Vietnamese ---------------- */
 
 const jsxVi: ToolContent = {
-  title: 'Bộ chuyển đổi SVG sang JSX — Công cụ trực tuyến miễn phí | VectorForge',
+  title: 'Bộ chuyển đổi SVG sang JSX — Công cụ trực tuyến miễn phí | SvgToCode',
   description:
     'Chuyển mã đánh dấu SVG thành JSX trong vài giây. Bộ chuyển đổi SVG sang JSX trực tuyến miễn phí với đổi tên thuộc tính tự động, chuyển đổi kiểu thành đối tượng và xem trước trực tiếp. Chạy 100% trong trình duyệt của bạn.',
   heading: 'Bộ chuyển đổi SVG sang JSX',
   intro:
-    'Dán bất kỳ SVG nào và nhận JSX sạch, sẵn sàng cho các component React của bạn. VectorForge tự động đổi tên các thuộc tính (class thành className, stroke-width thành strokeWidth), chuyển các kiểu nội tuyến thành đối tượng kiểu và biến các chú thích XML thành chú thích JSX — ngay lập tức, với xem trước trực tiếp. Không có gì được tải lên; mọi thứ diễn ra trong trình duyệt của bạn.',
+    'Dán bất kỳ SVG nào và nhận JSX sạch, sẵn sàng cho các component React của bạn. SvgToCode tự động đổi tên các thuộc tính (class thành className, stroke-width thành strokeWidth), chuyển các kiểu nội tuyến thành đối tượng kiểu và biến các chú thích XML thành chú thích JSX — ngay lập tức, với xem trước trực tiếp. Không có gì được tải lên; mọi thứ diễn ra trong trình duyệt của bạn.',
   steps: [
     'Dán mã đánh dấu SVG của bạn vào trình soạn thảo, hoặc thả một tệp .svg vào bất cứ đâu trên trang.',
     'Tab JSX đã được chọn sẵn — xem lại đầu ra đã chuyển đổi cập nhật trực tiếp khi bạn gõ.',
@@ -4206,7 +4206,7 @@ const jsxVi: ToolContent = {
 };
 
 const reactVi: ToolContent = {
-  title: 'Bộ chuyển đổi SVG sang component React — Miễn phí trực tuyến | VectorForge',
+  title: 'Bộ chuyển đổi SVG sang component React — Miễn phí trực tuyến | SvgToCode',
   description:
     'Biến bất kỳ SVG nào thành một component React có kiểu (.tsx) ngay lập tức. Bộ chuyển đổi SVG sang component React miễn phí với hỗ trợ props, đầu ra sạch và xem trước trực tiếp.',
   heading: 'Bộ chuyển đổi SVG sang component React',
@@ -4237,7 +4237,7 @@ const reactVi: ToolContent = {
 };
 
 const base64Vi: ToolContent = {
-  title: 'Bộ chuyển đổi SVG sang Base64 — Bộ mã hóa trực tuyến miễn phí | VectorForge',
+  title: 'Bộ chuyển đổi SVG sang Base64 — Bộ mã hóa trực tuyến miễn phí | SvgToCode',
   description:
     'Mã hóa SVG thành Base64 trực tuyến. Bộ chuyển đổi SVG sang Base64 miễn phí với mã hóa an toàn cho Unicode, xem trước trực tiếp và sao chép bằng một cú nhấp.',
   heading: 'Bộ chuyển đổi SVG sang Base64',
@@ -4268,12 +4268,12 @@ const base64Vi: ToolContent = {
 };
 
 const dataUriVi: ToolContent = {
-  title: 'Bộ tạo SVG sang Data URI / nền CSS — Miễn phí | VectorForge',
+  title: 'Bộ tạo SVG sang Data URI / nền CSS — Miễn phí | SvgToCode',
   description:
     'Chuyển SVG thành một data URI sẵn sàng cho CSS dành cho background-image. Bộ tạo miễn phí với thu nhỏ, mã hóa tối ưu và xem trước trực tiếp.',
   heading: 'Bộ chuyển đổi SVG sang Data URI',
   intro:
-    'Biến bất kỳ SVG nào thành một data URI nhỏ gọn mà bạn có thể dán thẳng vào background-image. VectorForge thu nhỏ SVG trước rồi mã hóa phần trăm, điều này giữ URI nhỏ hơn Base64 đối với các biểu tượng điển hình — và bạn có thể thấy nó hiển thị trong xem trước trực tiếp trước khi sao chép.',
+    'Biến bất kỳ SVG nào thành một data URI nhỏ gọn mà bạn có thể dán thẳng vào background-image. SvgToCode thu nhỏ SVG trước rồi mã hóa phần trăm, điều này giữ URI nhỏ hơn Base64 đối với các biểu tượng điển hình — và bạn có thể thấy nó hiển thị trong xem trước trực tiếp trước khi sao chép.',
   steps: [
     'Dán mã đánh dấu SVG của bạn vào trình soạn thảo, hoặc thả một tệp .svg vào bất cứ đâu trên trang.',
     'Tab CSS Data-URI đã được chọn sẵn — đoạn mã cập nhật trực tiếp khi bạn chỉnh sửa.',
@@ -4299,12 +4299,12 @@ const dataUriVi: ToolContent = {
 };
 
 const optimizerVi: ToolContent = {
-  title: 'Bộ tối ưu SVG — Công cụ SVGO trực tuyến miễn phí | VectorForge',
+  title: 'Bộ tối ưu SVG — Công cụ SVGO trực tuyến miễn phí | SvgToCode',
   description:
     'Tối ưu các tệp SVG trực tuyến bằng SVGO. Bộ tối ưu SVG miễn phí làm nhỏ kích thước tệp trong khi vẫn giữ viewBox và chất lượng hình ảnh.',
   heading: 'Bộ tối ưu SVG',
   intro:
-    'Làm nhỏ các tệp SVG mà không thay đổi vẻ ngoài của chúng. VectorForge chạy tối ưu đa lượt của SVGO ngay trong trình duyệt của bạn — và cố ý bảo toàn viewBox, để việc co giãn đáp ứng tiếp tục hoạt động sau khi tối ưu. Bạn thấy chính xác mình đã tiết kiệm được bao nhiêu byte và bao nhiêu phần trăm.',
+    'Làm nhỏ các tệp SVG mà không thay đổi vẻ ngoài của chúng. SvgToCode chạy tối ưu đa lượt của SVGO ngay trong trình duyệt của bạn — và cố ý bảo toàn viewBox, để việc co giãn đáp ứng tiếp tục hoạt động sau khi tối ưu. Bạn thấy chính xác mình đã tiết kiệm được bao nhiêu byte và bao nhiêu phần trăm.',
   steps: [
     'Dán mã đánh dấu SVG của bạn vào trình soạn thảo, hoặc thả một tệp .svg vào bất cứ đâu trên trang.',
     'Nhấn nút Optimize trên thanh công cụ — trình soạn thảo cập nhật với kết quả đã thu nhỏ.',
@@ -4330,7 +4330,7 @@ const optimizerVi: ToolContent = {
 };
 
 const pngVi: ToolContent = {
-  title: 'Bộ chuyển đổi SVG sang PNG — Xuất miễn phí 1x/2x/4x | VectorForge',
+  title: 'Bộ chuyển đổi SVG sang PNG — Xuất miễn phí 1x/2x/4x | SvgToCode',
   description:
     'Chuyển SVG sang PNG ở độ phân giải 1x, 2x và 4x trực tuyến. Bộ chuyển đổi SVG sang PNG miễn phí, không giới hạn, trong trình duyệt với xem trước trực tiếp.',
   heading: 'Bộ chuyển đổi SVG sang PNG',

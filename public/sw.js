@@ -1,4 +1,4 @@
-/* VectorForge service worker — offline support (cache v2). */
+/* SvgToCode service worker — offline support (cache v2). */
 const CACHE = 'vf-v2';
 const PRECACHE = ['/', '/hi/'];
 
