@@ -102,3 +102,4 @@ is uploaded anywhere** — everything runs 100% in your browser.
 ## License
 
 Copyright (c) 2026 dusmamud. All rights reserved — this project is **not** open source. The code is publicly viewable for reference only; copying, modifying, or hosting it (in original or modified form) requires prior written permission. See [LICENSE](./LICENSE).
+- **Tip:** pasting invalid markup shows a clear "Not a valid SVG" state instead of crashing the converter.
