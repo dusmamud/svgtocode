@@ -105,3 +105,4 @@ Copyright (c) 2026 dusmamud. All rights reserved — this project is **not** ope
 - **Tip:** pasting invalid markup shows a clear "Not a valid SVG" state instead of crashing the converter.
 - **Tip:** export the current output as a PNG at 1x, 2x, or 4x resolution via canvas.
 - **Tip:** previewed SVG is sanitized first (scripts, `foreignObject`, `on*` handlers and `javascript:` URLs are stripped) and rendered in an image context, so it cannot run scripts.
+- **Tip:** every push to `main` runs a verify job (typecheck + tests + build) first — the Cloudflare Pages deploy only happens if it passes.
